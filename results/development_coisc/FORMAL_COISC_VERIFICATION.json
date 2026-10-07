@@ -1,0 +1,42 @@
+{
+  "status": "independent_zero_training_recheck_passed",
+  "protocol_sha256": "6967221f9fac73fa89ed14fa623b7b70fc04cdc4c548511c116b8eebe287c92e",
+  "seeds": [
+    20260922,
+    20260923,
+    20260924
+  ],
+  "checks": [
+    {
+      "seed": 20260922,
+      "selection_windows": 11073,
+      "nonhead_tensor_equality": true,
+      "tp_recomputed": true,
+      "full_prediction_rows": 40,
+      "coisc_npz": "<outputs>/formal_coisc/seed_20260922/selection_coisc_predictions_and_sensitivity.npz"
+    },
+    {
+      "seed": 20260923,
+      "selection_windows": 11073,
+      "nonhead_tensor_equality": true,
+      "tp_recomputed": true,
+      "full_prediction_rows": 40,
+      "coisc_npz": "<outputs>/formal_coisc/seed_20260923/selection_coisc_predictions_and_sensitivity.npz"
+    },
+    {
+      "seed": 20260924,
+      "selection_windows": 11073,
+      "nonhead_tensor_equality": true,
+      "tp_recomputed": true,
+      "full_prediction_rows": 40,
+      "coisc_npz": "<outputs>/formal_coisc/seed_20260924/selection_coisc_predictions_and_sensitivity.npz"
+    }
+  ],
+  "global_rows": {
+    "selection_prediction_metrics": 240,
+    "sensitivity_metrics": 756,
+    "source_horizon_output_audit": 1890
+  },
+  "frozen_access": false,
+  "training": false
+}

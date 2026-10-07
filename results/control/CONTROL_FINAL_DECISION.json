@@ -1,0 +1,42 @@
+{
+  "status": "NO_CONTROL_SUPERIORITY",
+  "overall_support": false,
+  "per_seed": [
+    {
+      "seed": 20260922,
+      "primary_family_equal_Delta": 0.06438255094494956,
+      "ci_lower": 0.013811943753092925,
+      "ci_upper": 0.11808582863646651,
+      "decision": "NO_SUPERIORITY_SUPPORT"
+    },
+    {
+      "seed": 20260923,
+      "primary_family_equal_Delta": -0.6218834308627385,
+      "ci_lower": -1.329430337455408,
+      "ci_upper": -0.04719021160877925,
+      "decision": "SUPPORT"
+    },
+    {
+      "seed": 20260924,
+      "primary_family_equal_Delta": 0.013822453214192442,
+      "ci_lower": -0.022268594252777517,
+      "ci_upper": 0.0413080338143575,
+      "decision": "NO_SUPERIORITY_SUPPORT"
+    }
+  ],
+  "delivered23_prediction_result": "FAIL",
+  "control_evidence_scope": "surrogate-plant/model-in-the-loop only",
+  "no_physical_control_claim": true,
+  "no_training": true,
+  "no_tuning": true,
+  "no_plant_deletion": true,
+  "no_scenario_deletion": true,
+  "no_rescue": true,
+  "primary_plant_checkpoints": 24,
+  "secondary_plant_checkpoints": 9,
+  "scenario_count": 12,
+  "expected_runs": 2772,
+  "complete_runs": 2772,
+  "protocol_sha256": "0b9ad32c21b0f0a0cea31761997e091709ae5166a33f3b2f90985dece3cedf19",
+  "control_outcome_accessed": true
+}

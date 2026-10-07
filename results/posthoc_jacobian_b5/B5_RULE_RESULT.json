@@ -1,0 +1,37 @@
+{
+  "protocol_sha256": "403eee286d2998ecf2fa4148775063d5fe1696da33ef5a3ed50b3212982fc234",
+  "result": {
+    "variant": "JAC",
+    "per_seed": [
+      {
+        "seed": 20260922,
+        "D1_PLE": true,
+        "D2_WSR": false,
+        "D3_PSM": true,
+        "A_not_worse_than_COISC": false
+      },
+      {
+        "seed": 20260923,
+        "D1_PLE": true,
+        "D2_WSR": false,
+        "D3_PSM": true,
+        "A_not_worse_than_COISC": true
+      },
+      {
+        "seed": 20260924,
+        "D1_PLE": false,
+        "D2_WSR": false,
+        "D3_PSM": true,
+        "A_not_worse_than_COISC": false
+      }
+    ],
+    "counts": {
+      "D1_PLE": 2,
+      "D2_WSR": 0,
+      "D3_PSM": 3,
+      "A_not_worse_than_COISC": 1
+    },
+    "verdict": "B5_does_not_reproduce_profile"
+  },
+  "label": "POST-HOC exploratory; holdout reused, not independent confirmation; cannot change any locked verdict"
+}

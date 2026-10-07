@@ -1,0 +1,386 @@
+{
+  "schema_version": "1.0",
+  "status": "DRAFT_REQUIRES_EVALUATOR_BINDING_AND_VALIDATION",
+  "study_name": "COISC available-23 protocol amendment before numeric inference",
+  "reason": "User confirms that six original source files were not supplied by the senior researcher and requests that their absence not block further experiments.",
+  "original_protocol": {
+    "path": "<private>/frozen_evaluation/frozen_20260926T062548Z_c28722408e/FROZEN_PROTOCOL.json",
+    "sha256": "b6d7f68ceadc6a302dba514ab793e864e5fb48f3b507be6553a19ef78b58f463",
+    "original_population": 29,
+    "original_status": "NOT_EVALUABLE_MISSING_NUMERIC_SOURCE_DATA",
+    "preserved_without_changes": true
+  },
+  "original_manifest_sha256": "655dc58bd7ecc3624c13cd41244ad6acb53a6a56ebb75be63e660294606f54a2",
+  "relocation_audit": {
+    "path": "<private>/protocols_private/FROZEN_SOURCE_RELOCATION_AUDIT.json",
+    "sha256": "0a8cf0c0cfb5ffc52853e2e84fd7500981d26d0dc7c2d2942bee5a7a8a621862"
+  },
+  "amendment_scope": {
+    "population_from": 29,
+    "population_to": 23,
+    "external_from": 23,
+    "external_to": 17,
+    "final_from": 6,
+    "final_to": 6,
+    "reason_for_membership_change": "Documented source availability; not model performance.",
+    "original_source_ids_and_roles_retained": true,
+    "original_29_source_result_must_not_be_claimed": true,
+    "interpretation": "Results apply to the available 23-source population. Generalization to the six unavailable sources is not established.",
+    "eligibility": "Include all 23 exact-hash-matched identities below; no performance-based removals, replacement sources or post-inference inclusion changes."
+  },
+  "included_sources": [
+    {
+      "source_id": "S059",
+      "role": "frozen_external_test",
+      "sha256": "f8b261ab4778242eef44af96a6805e5fc0b3cced3bb500eb6dab5f74e2646057"
+    },
+    {
+      "source_id": "S066",
+      "role": "frozen_external_test",
+      "sha256": "ff391461d6a0254399b24885c15ff995f4780392077c39dde7a539ff141de0d0"
+    },
+    {
+      "source_id": "S067",
+      "role": "frozen_external_test",
+      "sha256": "fe546b46b8c782a678f48d3c8479c7003bdc9e4c5a42b209ddaa2c9d77c649c7"
+    },
+    {
+      "source_id": "S072",
+      "role": "frozen_external_test",
+      "sha256": "1853336232ecab3171a36e60e69e7da952c7da9d21142bc88a847f850faad45a"
+    },
+    {
+      "source_id": "S078",
+      "role": "frozen_external_test",
+      "sha256": "b06bef058b4f4e187c27bf9e7b7d2b441ee2ca4a432cfae67bd4171b13518fe1"
+    },
+    {
+      "source_id": "S083",
+      "role": "frozen_external_test",
+      "sha256": "0d8a0b8209c23317f3c674d0a5b4be33f0223a28e4b392d5a0634ff916cada38"
+    },
+    {
+      "source_id": "S088",
+      "role": "frozen_external_test",
+      "sha256": "f6d780e695331e1a222712557b499d64671ea2cd3a05e5b60f54c5d06bd57d41"
+    },
+    {
+      "source_id": "S094",
+      "role": "frozen_external_test",
+      "sha256": "118199e84a762e9cf03ffc988b2b5ef314120aecd720e8c003e16628ace14081"
+    },
+    {
+      "source_id": "S099",
+      "role": "frozen_external_test",
+      "sha256": "4be116cdc44faeb6a2be53a974556fbe1b4621f63ab0b9c2b588e7ae65622bf4"
+    },
+    {
+      "source_id": "S100",
+      "role": "frozen_external_test",
+      "sha256": "0c80436ce378aa568969a8a9e042c7d9e436907b39f502e8b396e5f6737c665c"
+    },
+    {
+      "source_id": "S106",
+      "role": "frozen_external_test",
+      "sha256": "ea52424593b538bee9f8a9838588a2bc78673a27bec812a4c9b4401031396a2d"
+    },
+    {
+      "source_id": "S111",
+      "role": "frozen_external_test",
+      "sha256": "c11ed191f0d5e2a77b524fc032844e99cade4fc7b00706bcf225c87d37cdfbde"
+    },
+    {
+      "source_id": "S117",
+      "role": "frozen_external_test",
+      "sha256": "94bd60854bf2cd6a22cd1687743874f21f97eb491ffaca99acedd0e8462c67d6"
+    },
+    {
+      "source_id": "S122",
+      "role": "frozen_external_test",
+      "sha256": "eaf3594d1829de335ee02355327322322209bdbf28b082b9dda89f62057a3020"
+    },
+    {
+      "source_id": "S128",
+      "role": "frozen_external_test",
+      "sha256": "b6a5a142eea9aaf31b233c8436006dbc0918f78ef5590408820920d693d87aca"
+    },
+    {
+      "source_id": "S133",
+      "role": "frozen_external_test",
+      "sha256": "28c56a979c60a0fb640a4ff03cf60d013bcd8d8770c89195d34e041561508f19"
+    },
+    {
+      "source_id": "S139",
+      "role": "frozen_external_test",
+      "sha256": "a286c1cfbd59f0d8e655b2e14860809aa5c5ac4f5d0fb10e26183d75bfae4613"
+    },
+    {
+      "source_id": "S024",
+      "role": "frozen_final_test",
+      "sha256": "53b55f4e1976debb1a6037baaaa061d4c39e2552a6d0973df42b1acc1bf69cb6"
+    },
+    {
+      "source_id": "S031",
+      "role": "frozen_final_test",
+      "sha256": "99e14183f940b9bd34701e09759f3a6face248e23604aafcfc90b8c3bfccd29f"
+    },
+    {
+      "source_id": "S032",
+      "role": "frozen_final_test",
+      "sha256": "fa0d5111f748e84497817462c66ced42ef5faabdd5d8db0774b62aa3ba7b8854"
+    },
+    {
+      "source_id": "S041",
+      "role": "frozen_final_test",
+      "sha256": "3a6ee9bb4aa89395687c53c5e2b15c099898319876b4f796ce5dd5b00d947f5c"
+    },
+    {
+      "source_id": "S046",
+      "role": "frozen_final_test",
+      "sha256": "ed1d6bffe9d73a2a91081ebd60315ba4b0cbf60c0528bc21823da0166d71bd10"
+    },
+    {
+      "source_id": "S051",
+      "role": "frozen_final_test",
+      "sha256": "d463b17a766a0e3eaa51163d6befc6ed4f4ce8e9b8214d44fc32129019fd132c"
+    }
+  ],
+  "unavailable_original_sources": [
+    {
+      "source_id": "S053",
+      "role": "frozen_external_test",
+      "sha256": "2c1760e3cd4ae2a85b8c0269d0e1670193450594febeb10a65991816ad42a485",
+      "reason": "Not supplied; no matching member in supplied archives."
+    },
+    {
+      "source_id": "S001",
+      "role": "frozen_external_test",
+      "sha256": "330a8c14344306401c8053363d0c5f10e776b0afc4cf493fc56d3d37fe0916cf",
+      "reason": "Not supplied; no matching member in supplied archives."
+    },
+    {
+      "source_id": "S003",
+      "role": "frozen_external_test",
+      "sha256": "3a0577622dd5526cdfd92b2a16f32c6de2ae9af5df4f3847eb1ee6450ffee02c",
+      "reason": "Not supplied; no matching member in supplied archives."
+    },
+    {
+      "source_id": "S008",
+      "role": "frozen_external_test",
+      "sha256": "9a730b9b55a6cb3e194668fecd2dd155853fe4da8b0cedf89eb1a8f7d9d180f8",
+      "reason": "Not supplied; no matching member in supplied archives."
+    },
+    {
+      "source_id": "S016",
+      "role": "frozen_external_test",
+      "sha256": "fb05ce1332ede852426d8b43f20d6976c25647c0d4e21d621816f97ccc4aabfd",
+      "reason": "Not supplied; no matching member in supplied archives."
+    },
+    {
+      "source_id": "S020",
+      "role": "frozen_external_test",
+      "sha256": "3d3d5e8b5bf1c756f2bd842e7bf6d17d679a43f5d63d0e44b5c158b4327ce482",
+      "reason": "Not supplied; no matching member in supplied archives."
+    }
+  ],
+  "checkpoint_and_normalization_binding": {
+    "reviewed_protocol": {
+      "path": "protocols/FROZEN_EVALUATION_PROTOCOL_DRAFT.json",
+      "sha256": "404a9e313dc9e54dd87b5a36c8189f66dd10cc1e0521cb3c8e69d27b4fd49898"
+    },
+    "coisc_protocol": {
+      "path": "protocols/COISC_VALIDATION_PROTOCOL_DRAFT.json",
+      "sha256": "6967221f9fac73fa89ed14fa623b7b70fc04cdc4c548511c116b8eebe287c92e"
+    },
+    "development_decision_frozen": true,
+    "checkpoint_pairs": [
+      {
+        "seed": 20260922,
+        "R0_sha256": "e1a16a5f07b546850c7b256f143406ba3d7522099beb4ce0220ee7f2cb1dae98",
+        "COISC_sha256": "3c68c00d1a5a08c132427353773e9e1307a2e35c69dbe5273feee90427071d2a"
+      },
+      {
+        "seed": 20260923,
+        "R0_sha256": "6760c84b393aa72d40db8c80d51b02c5fd6523ac462ab47e2983cfe859236a28",
+        "COISC_sha256": "ac8e02cccf0ee4eca3ec60a1fadba08bd1cacfb27f7ffbdcfe984a9e43b74dc4"
+      },
+      {
+        "seed": 20260924,
+        "R0_sha256": "e0148fc3623487d464e1d22145a984a45d7007d0bbeeb84780607d8d191650b7",
+        "COISC_sha256": "531e8b80e435435ac97675784e090261b79e3141738d0eeb804bf4b4b44a34ef"
+      }
+    ],
+    "normalization_sha256": "6e0a0a41664c962c7e0d36f3694bb42eddd3279a9ae82cc569d06a6fac572dc1"
+  },
+  "frozen_method": {
+    "base_model": "Vanilla-LSTM-MS",
+    "architecture": {
+      "history_shape": [
+        20,
+        12
+      ],
+      "future_heaters": 6,
+      "outputs": [
+        "T1",
+        "T2",
+        "T3",
+        "T4",
+        "T5",
+        "T6",
+        "Tp"
+      ],
+      "lstm_input_size": 12,
+      "lstm_hidden_size": 128,
+      "lstm_layers": 1,
+      "head": [
+        "Linear(134,128,bias=True)",
+        "GELU",
+        "Linear(128,7,bias=True)"
+      ],
+      "parameter_count": 90887,
+      "rollout": "native recursive rollout; recorded future six-heater inputs; predicted first six temperatures feed the next history; no teacher forcing and no Tp feedback"
+    },
+    "coisc": {
+      "trainable": [
+        "head.0.weight",
+        "head.0.bias",
+        "head.2.weight",
+        "head.2.bias"
+      ],
+      "encoder_and_non_head_frozen": true,
+      "steps": 75,
+      "batch": 128,
+      "lr": 5e-05,
+      "optimizer": "Adam",
+      "lambda_s": 939.1430335805455,
+      "epsilon_pre": 0.001,
+      "epsilon_sign": 0.0001,
+      "lag_seconds": [
+        102.108,
+        77.091,
+        30.108,
+        50.112,
+        10.0535,
+        180,
+        39.104
+      ],
+      "dbasr_subset": 8,
+      "synthetic_or_paired_labels": false,
+      "ordering_loss": false,
+      "checkpoint_rule": "final step75 state; no early stopping or selection",
+      "seeds": [
+        20260922,
+        20260923,
+        20260924
+      ]
+    },
+    "data_protocol": {
+      "population": "All 23 sources verified available before numeric inference: 17 original frozen_external_test + 6 original frozen_final_test",
+      "source_balanced_primary": true,
+      "history_seconds": 200,
+      "step_seconds": 10,
+      "prediction_steps": 12,
+      "report_horizons_seconds": [
+        10,
+        30,
+        60,
+        90,
+        120
+      ],
+      "outputs": [
+        "T1",
+        "T2",
+        "T3",
+        "T4",
+        "T5",
+        "T6",
+        "Tp"
+      ],
+      "development_sources_excluded": true,
+      "normalization": "locked development fit-field normalization; no refit"
+    }
+  },
+  "primary_endpoints": {
+    "same_four_endpoint_concepts_with_frozen_source_balanced_estimand": [
+      "Tp_120s_MAE",
+      "Tp_PLE",
+      "Tp_WSR",
+      "Tp_PSM_guard"
+    ],
+    "aggregation_clarification": "Frozen primary aggregation is equal-source/source-balanced. Development used legacy pooled aggregation. Endpoint concepts, numeric gates, lag, lambda, epsilon and checkpoints are unchanged.",
+    "prediction_noninferiority": {
+      "effect": "MAE_COISC - MAE_R0",
+      "horizon_seconds": 120,
+      "output": "Tp",
+      "margin_C": 0.005,
+      "decision": "PASS iff upper endpoint of the two-sided 95% percentile cluster-bootstrap CI <= +0.005 C"
+    },
+    "ple": {
+      "definition": "equal-source mean of per-source mean abs(S) over eligible pre-lag cells",
+      "decision": "PASS iff R0>0, point_COISC<=0.9*point_R0, and upper endpoint of the two-sided 95% percentile cluster-bootstrap CI of (PLE_COISC-0.9*PLE_R0)<=0"
+    },
+    "wsr": {
+      "definition": "equal-source mean of per-source wrong-sign fraction over eligible post-lag cells; S < -epsilon_sign",
+      "decision": "PASS iff R0>0, point_COISC<=0.9*point_R0, and upper endpoint of the two-sided 95% percentile cluster-bootstrap CI of (WSR_COISC-0.9*WSR_R0)<=0"
+    },
+    "psm": {
+      "definition": "equal-source weighted empirical median of post-lag abs(S), with each source total weight equal and each post cell weight inversely proportional to that source's post-cell count",
+      "decision": "PASS iff point_COISC>=max(0.2*point_R0,0.0005), lower endpoint of the two-sided 95% percentile cluster-bootstrap CI of (PSM_COISC-0.2*PSM_R0)>=0, and lower endpoint of the two-sided 95% percentile cluster-bootstrap CI of (PSM_COISC-0.0005)>=0",
+      "empty_region": "NA, never zero"
+    },
+    "overall": "PASS only when all four gates pass for all three seeds and completeness/integrity pass; any seed FAIL gives overall FAIL; missing/nonfinite/paired mismatch gives NOT_EVALUABLE and overall false"
+  },
+  "statistics": {
+    "bootstrap": {
+      "method": "percentile cluster bootstrap",
+      "replicates": 20000,
+      "seed": 20260926,
+      "percentiles": [
+        2.5,
+        97.5
+      ],
+      "quantile_method": "linear",
+      "cluster": "whole source with all its windows, horizons, outputs and paired R0/COISC values retained together",
+      "stratified_resampling": "Sample 17 available external source IDs with replacement and 6 available final source IDs with replacement; preserve duplicates and role counts. Each of the 23 source clusters has equal weight.",
+      "shared_draw_table": "one deterministic source multiplicity table shared by R0, COISC, all endpoints and all three model seeds"
+    },
+    "required_metrics": {
+      "prediction": "7 outputs x 5 horizons: source-balanced MAE, RMSE and bias; retain window-level raw results",
+      "audit": "source x horizon x output paired absolute-error delta, improvement/degradation/tie counts and source-level distributions",
+      "sensitivity": "PLE, WSR, weighted PSM by output, seed, source and cohort; retain sensitivity distributions",
+      "collateral": "seven-output macro prediction deltas by output, horizon and source; worsening distribution and strata",
+      "secondary": [
+        "UH excitation/event diagnostics",
+        "regime diagnostics",
+        "300 s/600 s free-run if eligible",
+        "inference time"
+      ]
+    },
+    "diagnostics": "Failure-source and regime analyses are descriptive only and cannot change inclusion, thresholds, model or decision."
+  },
+  "execution_constraints": {
+    "training": false,
+    "fine_tuning": false,
+    "normalization_refit": false,
+    "checkpoint_selection": false,
+    "threshold_tuning": false,
+    "selection_reread_for_tuning": false,
+    "result_rescue": false,
+    "original_frozen_evaluator_must_remain_unmodified": true,
+    "existing_72_test_report_is_not_validation_of_amended_evaluator": true
+  },
+  "readiness_requirements": [
+    "Use a separate adapter for 17/6 membership and source draws; retain frozen metric definitions and gates.",
+    "Validate the amended population handling and bind final evaluator/dependency hashes before numeric inference.",
+    "Verify all six checkpoints and normalization hashes, extract only the 23 exact-matching archive members and reverify extracted hashes.",
+    "Seal a distinct execution directory and amended protocol; preserve all previous artifacts.",
+    "Evaluate all fixed seed pairs and all registered secondary endpoints; preserve raw results and all failures."
+  ],
+  "execution_state": {
+    "numeric_contents_parsed": false,
+    "inference_started": false,
+    "bootstrap_replicates_run": 0,
+    "source_bytes_read_for_hash_only": true
+  },
+  "output_scope": "New available23_evaluation execution directory; results explicitly labeled as amended available-23 analysis. Original all29 artifacts remain unchanged."
+}

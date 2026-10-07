@@ -1,0 +1,55 @@
+{
+  "amendment": "AM1 (post-freeze, analysis script only)",
+  "created_utc": "2026-10-05T07:05:11Z",
+  "approved_by_author": "2026-10-05 (chat: approved, option A)",
+  "recorded_before_any_result": true,
+  "trigger": "onset_analyze.py analyze on mil_execution_20261003T104638Z_23b8f69525 exited with KeyError(R0_GUARD, 0, 0, 20261002) before writing any output",
+  "root_cause": "Q5 guard_units (line 222) and E1_seed_R0_GUARD (line 232) build the full 12-scenario matrix with R0_GUARD as reference, but the protocol schedules R0_GUARD only on R0-wrong-direction scenarios; the frozen selftest fabricated R0_GUARD on all 12 scenarios and so did not exercise this",
+  "change": "reference R0 with b_override R0_GUARD on wrong[s]; rows outside wrong[s] are discarded by subset_units, so the statistic is the one declared in direction_guard_arm.question_Q5 (same form as the already-frozen pooled() override)",
+  "statistical_definition_changed": false,
+  "protocol_changed": false,
+  "protocol_sha256": "23b8f695253145d91ebb0f9b843b35b94ed3b731547d00ec0ce2a275cbcb7210",
+  "frozen_onset_analyze_sha256": "0b912de9f3a2bf474c7511cb8e82798318a566f90e2eeefb7bd278452360a7f0",
+  "frozen_GATES_ANALYSIS_REPORT_sha256": "6bde7c585568aff9a9f5bfecb57ccd915f5d203323b77e4f44ce364bb698906c",
+  "am1_script": "onset_analyze_am1.py",
+  "am1_script_sha256": "875ee80733d076a48b36f67905748d82170e3afe12c0450473e41be9fbe15c51",
+  "diff_file": "logs/analyze_am1.diff",
+  "diff_sha256": "7c8e34df4f1d629936f2e3b411b2c402a34211a2ffaeb8a90b99f03e4da89f1f",
+  "am1_gate_outputs": [
+    "GATES_ANALYSIS_AM1_REPORT.json",
+    "gates/R6_selftest_am1/",
+    "gates/R6_selftest_am1_sparse/"
+  ],
+  "gates_required_before_analyze": [
+    "R6 check-formal exact on AM1 copy",
+    "original selftest tests pass on AM1 copy",
+    "AM1 dense selftest == frozen selftest output",
+    "frozen script raises KeyError on sparse guard rows",
+    "AM1 sparse == dense"
+  ],
+  "disclosure": "report as a post-freeze analysis-script correction in the supplementary deviations table",
+  "selftest_revision_note": "first AM1 selftest run compared summaries including runs_evaluated (row count), which legitimately differs by the number of dropped R0_GUARD rows (18720 vs 15768); all statistics and CSVs were byte-identical. Test changed to exclude the count and check the count difference explicitly. No MIL result had been computed at that point.",
+  "gate_results": {
+    "R6_check_formal": true,
+    "R6_selftest": true,
+    "tests": {
+      "e1_onset_minus_coisc_zero": true,
+      "e1_onset_minus_r0_equals_formal": true,
+      "e2_equals_donor": true,
+      "q1_all_triggered": true,
+      "q5_guard_zero": true,
+      "q4_policy_equals_donor": true,
+      "q5_policy_equals_q4": true,
+      "no_identifier_columns": true,
+      "am1_dense_equals_frozen_selftest": true,
+      "sparse_drops_guard_rows": true,
+      "frozen_script_fails_on_sparse_guard": true,
+      "am1_sparse_equals_dense": true
+    }
+  },
+  "GATES_ANALYSIS_AM1_REPORT_sha256": "a140d278dc0da249da9429a324005dbde0f23b3537d47f6f1bdababbbc46c669",
+  "frozen_files_unchanged": {
+    "onset_analyze": true,
+    "GATES_ANALYSIS_REPORT": true
+  }
+}

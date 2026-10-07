@@ -1,0 +1,73 @@
+{
+  "created_utc": "2026-10-02T06:03:12Z",
+  "protocol_sha256": "a3bd1ebd55537616e498f723d5087b1f4b827a34c5046ef49d3a1334bc60cffa",
+  "evidence_tier": "T3 post-hoc; does not revise T1",
+  "per_contrast": {
+    "A1_primary": {
+      "20260922": false,
+      "20260923": true,
+      "20260924": false
+    },
+    "A2": {
+      "20260922": false,
+      "20260923": true,
+      "20260924": false
+    },
+    "B1_primary": {
+      "20260922": false,
+      "20260923": true,
+      "20260924": false
+    },
+    "B2": {
+      "20260922": false,
+      "20260923": true,
+      "20260924": false
+    },
+    "B3_R0": {
+      "20260922": false,
+      "20260923": false,
+      "20260924": false
+    },
+    "B3_COISC": {
+      "20260922": false,
+      "20260923": false,
+      "20260924": false
+    },
+    "B3_L0": {
+      "20260922": false,
+      "20260923": false,
+      "20260924": false
+    },
+    "B4_secondary_DiD": {
+      "20260922": true,
+      "20260923": false,
+      "20260924": false
+    }
+  },
+  "overall_3_of_3": {
+    "A1_primary": false,
+    "A2": false,
+    "B1_primary": false,
+    "B2": false,
+    "B3_R0": false,
+    "B3_COISC": false,
+    "B3_L0": false
+  },
+  "B3_point_estimate_positive_seed_count": {
+    "B3_R0": 2,
+    "B3_COISC": 3,
+    "B3_L0": 3
+  },
+  "B3_worsened": {
+    "B3_R0": true,
+    "B3_COISC": true,
+    "B3_L0": true
+  },
+  "interpretation": {
+    "A_seed23": "The seed-23 gain is regularizer-specific relative to matched fine-tuning.",
+    "A_overall": "Partial attribution only: A1 supported on seeds 20260923; no overall regularizer control benefit.",
+    "B1": "Adding disturbance estimation from peripheral measurements did not produce a consistent COISC benefit; the non-equivalence finding is robust to this controller design choice."
+  },
+  "runs_evaluated": 5184,
+  "estimator_failures_total": 0
+}

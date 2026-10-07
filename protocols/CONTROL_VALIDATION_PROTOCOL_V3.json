@@ -1,0 +1,452 @@
+{
+  "protocol_name": "TIMC_COISC_CONTROL_V3_ONE_SHOT_FORMAL",
+  "status": "LOCKED_BEFORE_FORMAL_CONTROL_OUTCOME",
+  "control_evaluation_authorized": true,
+  "control_outcome_accessed": false,
+  "delivered23_confirmatory_result": "FAIL, immutable; this control review cannot rescue it",
+  "claim_scope": "conditional surrogate-plant/model-in-the-loop only; not physical control",
+  "controller_models": {
+    "paired_seed_ids": [
+      20260922,
+      20260923,
+      20260924
+    ],
+    "checkpoint_bindings": {
+      "20260922:R0": {
+        "path": "<outputs>/formal_coisc/seed_20260922/results/R0/selected.pt",
+        "sha256": "e1a16a5f07b546850c7b256f143406ba3d7522099beb4ce0220ee7f2cb1dae98"
+      },
+      "20260922:COISC": {
+        "path": "<outputs>/formal_coisc/seed_20260922/coisc_final.pt",
+        "sha256": "3c68c00d1a5a08c132427353773e9e1307a2e35c69dbe5273feee90427071d2a"
+      },
+      "20260923:R0": {
+        "path": "<outputs>/formal_coisc/seed_20260923/results/R0/selected.pt",
+        "sha256": "6760c84b393aa72d40db8c80d51b02c5fd6523ac462ab47e2983cfe859236a28"
+      },
+      "20260923:COISC": {
+        "path": "<outputs>/formal_coisc/seed_20260923/coisc_final.pt",
+        "sha256": "ac8e02cccf0ee4eca3ec60a1fadba08bd1cacfb27f7ffbdcfe984a9e43b74dc4"
+      },
+      "20260924:R0": {
+        "path": "<outputs>/formal_coisc/seed_20260924/results/R0/selected.pt",
+        "sha256": "e0148fc3623487d464e1d22145a984a45d7007d0bbeeb84780607d8d191650b7"
+      },
+      "20260924:COISC": {
+        "path": "<outputs>/formal_coisc/seed_20260924/coisc_final.pt",
+        "sha256": "531e8b80e435435ac97675784e090261b79e3141738d0eeb804bf4b4b44a34ef"
+      }
+    },
+    "only_difference": "internal R0 vs COISC model checkpoint; same algorithm/plant/history/reference/background"
+  },
+  "primary_plant_families": {
+    "F1": [
+      "P",
+      "A1",
+      "A3",
+      "A4",
+      "A5"
+    ],
+    "F2": [
+      "A2"
+    ],
+    "F3": [
+      "B2"
+    ],
+    "F4": [
+      "B1"
+    ]
+  },
+  "primary_checkpoint_counts": {
+    "F1": 17,
+    "F2": 3,
+    "F3": 3,
+    "F4": 1
+  },
+  "secondary_plant_panels": [
+    "B3 Vanilla-LSTM-1S",
+    "B4 Vanilla-LSTM-MS",
+    "V10 historical"
+  ],
+  "scenarios": {
+    "count": 12,
+    "source_population": {
+      "fit": 91,
+      "selection": 18
+    },
+    "reference_c": 37.0,
+    "duration_updates": 60,
+    "dt_s": 10,
+    "history_frames": 20,
+    "background": "locked per-scenario final observed aux1/aux2/aux3/aux4/aux5 raw powers",
+    "uh_command": "0..100 percent; raw heater power = percent*5",
+    "initial_uh": "final observed history UH raw / 5",
+    "future_truth_forbidden": true
+  },
+  "mpc": {
+    "sigma_y_c": 1.0,
+    "lambda_du": 1.0,
+    "lambda_u": 0.0,
+    "optimizer": "SLSQP",
+    "maxiter": 100,
+    "ftol": 1e-06,
+    "bounds_percent": [
+      0,
+      100
+    ],
+    "quantization_percent": 0.1
+  },
+  "primary_analysis": "CONTROL_STATISTICAL_PLAN_V2.json",
+  "qualification_status": "CONTROL_PROTOCOL_NEEDS_REVIEW",
+  "qualification_summary": "CONTROL_PLANT_REACHABILITY_SUMMARY.json",
+  "mandatory_preexecution_review": "CONTROL_FINAL_PREEXECUTION_REVIEW.md",
+  "restrictions": [
+    "no paired R0-MPC vs COISC-MPC closed-loop execution without separate human authorization",
+    "no outcome-based changes to models, checkpoints, scenarios, weights, solver, or statistical plan",
+    "no physical-system control claim",
+    "no delivered23 numeric access in this phase"
+  ],
+  "file_sha256": {
+    "CONTROL_HISTORY_CHANNEL_MAP.json": "6030163cf1e3a8125b289e4717f9fdeba18736efc13afeebbfbea73d5955c0a1",
+    "CONTROL_SCENARIO_LOCK_V2.json": "93e177a3de94809bd1ec2c1469d9d0003462be190b91d1ba4db2be3baf893eac",
+    "CONTROL_PLANT_FAMILY_LOCK.json": "9b34399ca7dddadaf8d06292e3d2b47a3a700b36e1210caa82062af71ddbf3f7",
+    "CONTROL_PLANT_REACHABILITY_AUDIT.csv": "b4ed660d4e6900316f0625b0e98d0a411ecfe194ca8104af94d7b39a19bf17ec",
+    "CONTROL_PLANT_REACHABILITY_SUMMARY.json": "e73d7ba78497c04619df83f8e40c4f9b8dd580037fe6d29b33f6ac2ed6726346",
+    "CONTROL_STATISTICAL_PLAN_V2.json": "b75211e3283de7e9c8fc2943a9f2917a82ee25c1e59d8e706be0ae00a5d4939c",
+    "CONTROL_MPC_IMPLEMENTATION_AUDIT_V2.json": "6a91008ed441f8e5c6986cc0e80740ba8bedd55daba161275a54a649d83ade35",
+    "CONTROL_MPC_UNIT_TEST_REPORT_V2.json": "41423b8884c94d943733604d8ddf9efed9a865edc1edc0632c8b975144024834",
+    "control_mpc.py": "8ef305db879183fa7c812a28247c466b346b4b9e9c10079a657d8e9f823a08a9",
+    "test_control_mpc.py": "52e00c3e4251b18f6abf1de5800aee9691fb84c9653a39366445b70d6e3bdb0d",
+    "prepare_control_v2.py": "16eae266f38859c5c16c478afda2460ea4c4e8860ee3d7f5d840b53aedb7c51e",
+    "qualify_control_plants_v2.py": "83dbe091716e2c1292dcd3a4b91be4ee96dcd5a3a45ddf6dc1f66c2b22814f71"
+  },
+  "prior_candidate_sha256": "17c51c522e158e387cbab856b1bd63a3e882c76bd6c085754a6e4d8760e139b9",
+  "protocol_mutable": false,
+  "execution_id": "control_20260926T151144602424Z_d1c2936d97",
+  "previous_v2_protocol_sha256": "d1c2936d9788a3b87072552f7d6cebaf53f96f577f02be9cb42c977f6de58b58",
+  "hash_integrity_audit_sha256": "5a2ed931c5d715bc99e91f470a026e7170ae84b0824d36590edc6dc6e6f9ce3c",
+  "reachability_strata_sha256": "dc1998baeb3d1588dc53d62ed2362da7af8f0431d38cfcf042fc7ef00e3db65a",
+  "reachability_rule": "600-s constant-extreme endpoint bracketing is a plant-only descriptive feasibility diagnostic, not a sufficient or necessary dynamic reachability criterion for time-varying receding-horizon control.",
+  "reachability_counts": {
+    "primary_combinations": 288,
+    "finite": 288,
+    "correct_uh_order": 288,
+    "bracketed": 150
+  },
+  "reachability_strata": [
+    "BRACKETED_AT_600S",
+    "BOTH_BELOW_37_AT_600S",
+    "BOTH_ABOVE_37_AT_600S"
+  ],
+  "reachability_strata_role": "secondary heterogeneity only; no exclusion, reweighting or rescue",
+  "primary_population": "all 24 primary plant checkpoints x 12 locked scenarios x 3 controller seeds x paired R0/COISC",
+  "secondary_population": "all 9 secondary plant checkpoints x 12 scenarios x 3 seeds x paired R0/COISC",
+  "oracle_benchmark": "one oracle-plant MPC run for each of 33 plant checkpoints x 12 scenarios, same solver/objective/reference/background; secondary only",
+  "expected_runs": {
+    "primary": 1728,
+    "secondary": 648,
+    "oracle": 396,
+    "total": 2772
+  },
+  "statistical_plan": "CONTROL_STATISTICAL_PLAN_V2.json",
+  "primary_support_rule": "all three seeds independently require upper endpoint of paired 20000-draw two-sided 95% percentile source-cluster CI < 0 on family-equal effect",
+  "oracle_not_primary": true,
+  "delivered23_prediction_result": "FAIL, immutable",
+  "control_evidence_scope": "surrogate-plant/model-in-the-loop only",
+  "no_physical_control_claim": true,
+  "no_training": true,
+  "no_tuning": true,
+  "no_plant_deletion": true,
+  "no_scenario_deletion": true,
+  "no_rescue": true,
+  "frozen_bound_files": [
+    {
+      "path": "protocols/CONTROL_SCENARIO_LOCK_V2.json",
+      "sha256": "93e177a3de94809bd1ec2c1469d9d0003462be190b91d1ba4db2be3baf893eac"
+    },
+    {
+      "path": "protocols/CONTROL_PLANT_FAMILY_LOCK.json",
+      "sha256": "9b34399ca7dddadaf8d06292e3d2b47a3a700b36e1210caa82062af71ddbf3f7"
+    },
+    {
+      "path": "<private>/protocols_private/CONTROL_HISTORY_CHANNEL_MAP.json",
+      "sha256": "6030163cf1e3a8125b289e4717f9fdeba18736efc13afeebbfbea73d5955c0a1"
+    },
+    {
+      "path": "<private>/protocols_private/CONTROL_STATISTICAL_PLAN_V2.json",
+      "sha256": "b75211e3283de7e9c8fc2943a9f2917a82ee25c1e59d8e706be0ae00a5d4939c"
+    },
+    {
+      "path": "<private>/protocols_private/CONTROL_MPC_IMPLEMENTATION_AUDIT_V2.json",
+      "sha256": "6a91008ed441f8e5c6986cc0e80740ba8bedd55daba161275a54a649d83ade35"
+    },
+    {
+      "path": "<private>/protocols_private/CONTROL_MPC_UNIT_TEST_REPORT_V2.json",
+      "sha256": "41423b8884c94d943733604d8ddf9efed9a865edc1edc0632c8b975144024834"
+    },
+    {
+      "path": "protocols/CONTROL_PLANT_REACHABILITY_AUDIT.csv",
+      "sha256": "b4ed660d4e6900316f0625b0e98d0a411ecfe194ca8104af94d7b39a19bf17ec"
+    },
+    {
+      "path": "<private>/protocols_private/CONTROL_PLANT_REACHABILITY_SUMMARY.json",
+      "sha256": "e73d7ba78497c04619df83f8e40c4f9b8dd580037fe6d29b33f6ac2ed6726346"
+    },
+    {
+      "path": "protocols/CONTROL_REACHABILITY_STRATA_LOCK.csv",
+      "sha256": "dc1998baeb3d1588dc53d62ed2362da7af8f0431d38cfcf042fc7ef00e3db65a"
+    },
+    {
+      "path": "<private>/protocols_private/CONTROL_HASH_INTEGRITY_AUDIT.json",
+      "sha256": "5a2ed931c5d715bc99e91f470a026e7170ae84b0824d36590edc6dc6e6f9ce3c"
+    },
+    {
+      "path": "<private>/protocols_private/CONTROL_ARTIFACT_INTEGRITY_AUDIT.json",
+      "sha256": "a17772f72cbb90bdc30bbc47addd31f9d320cf4bc287ab128581844bf37afbda"
+    },
+    {
+      "path": "<private>/protocols_private/CONTROL_CHECKPOINT_INTEGRITY_AUDIT.csv",
+      "sha256": "f91c29361972a036e39b1446aab86326e5d29a9ac583e8e12339b0155c1794d6"
+    },
+    {
+      "path": "timc_coisc/control_mpc.py",
+      "sha256": "8ef305db879183fa7c812a28247c466b346b4b9e9c10079a657d8e9f823a08a9"
+    },
+    {
+      "path": "timc_coisc/test_control_mpc.py",
+      "sha256": "52e00c3e4251b18f6abf1de5800aee9691fb84c9653a39366445b70d6e3bdb0d"
+    },
+    {
+      "path": "<private>/unreleased_code/prepare_control_v2.py",
+      "sha256": "16eae266f38859c5c16c478afda2460ea4c4e8860ee3d7f5d840b53aedb7c51e"
+    },
+    {
+      "path": "<private>/unreleased_code/qualify_control_plants_v2.py",
+      "sha256": "83dbe091716e2c1292dcd3a4b91be4ee96dcd5a3a45ddf6dc1f66c2b22814f71"
+    },
+    {
+      "path": "timc_coisc/run_formal_control_v3.py",
+      "sha256": "887110adb45bd1dba3ef2f1bfd5264bc81936c6291714585d06da8128fc256fc"
+    },
+    {
+      "path": "timc_coisc/analyze_formal_control_v3.py",
+      "sha256": "655a672b9eb70693d83555e9e2414d546c543e410ccfa014af677e695cc3e5e7"
+    },
+    {
+      "path": "<private>/unreleased_code/freeze_control_v3.py",
+      "sha256": "06b37ff4c053f6ea376a036e109406ea6625d7cca83f53400c2eebbde032aa83"
+    },
+    {
+      "path": "<private>/unreleased_code/control_integrity_v3.py",
+      "sha256": "1fa266d43f43a77c52a88b4629f1a3f43fe7aa6250dc88ba9c5097365160774a"
+    },
+    {
+      "path": "<private>/unreleased_code/test_formal_control_v3.py",
+      "sha256": "d1c36279ffb7137ddea0a6d71fdaca4e3615d98e1b664bcf3f04527220305460"
+    },
+    {
+      "path": "timc_coisc/paper_models.py",
+      "sha256": "76fb867e502744b69f761848d0771af2ed2fb9b113f7a372b86c136f76746626"
+    },
+    {
+      "path": "timc_coisc/paper_data.py",
+      "sha256": "ba5f9e9e20faabd0ff18244c8e9dc14ccf92d9963d77fdb016ebfeac1be07c99"
+    },
+    {
+      "path": "<private>/data/field_windows_development_109.npz",
+      "sha256": "6c56bf5904c40a8567b9bb3c1202efcd2c42d33365801ccdd9a515a0b74914ca"
+    },
+    {
+      "path": "<private>/unreleased_code/cooling_recovery.py",
+      "sha256": "eb9ff23f9bf51a6752e860a5acde91521fb28ab5570e2ddd2d895e6b375b161d"
+    },
+    {
+      "path": "timc_coisc/model_structural_ablation.py",
+      "sha256": "edb6d527053cba89e030d3702419db9c440f02c139dfc5c9ac26f0db3468122e"
+    },
+    {
+      "path": "<private>/unreleased_code/prepare_manual_step500_candidate.py",
+      "sha256": "a8275e5ca22b9a44fccfc6a9d932d78ae64873c4ffb37ab75a777c2d79ffed23"
+    },
+    {
+      "path": "<private>/unreleased_code/select_cooling_recovery.py",
+      "sha256": "f89bf09bd888f46b87870adf24013bb69faddeae86d77fd78817d8668d6d2828"
+    },
+    {
+      "path": "<private>/unreleased_code/structural_selection.py",
+      "sha256": "5d30605362fc95f7071b1748b9ec81c58ee7f3ffb1d58bb549b0eaec0911c6b5"
+    },
+    {
+      "path": "timc_coisc/structural_training_common.py",
+      "sha256": "19d2fc5e5530d3115644e546badeb113ca44f3cbf7c35f4f3c7625cb5b85efea"
+    },
+    {
+      "path": "<private>/unreleased_code/train_cooling_recovery.py",
+      "sha256": "3f6d5e5b4de31fccacb125866fb5800ecbabb7452c8d21b56b6472df8c03efe0"
+    },
+    {
+      "path": "<private>/unreleased_code/validate_v12_protocol.py",
+      "sha256": "73c4cdd87cc32d2db7999c9c494f3bce4c3a5940ac9c5a8804019d3624df0a80"
+    },
+    {
+      "path": "<private>/plants/P_seed20260922/selected.pt",
+      "sha256": "49dfe5e13838b7c85b26b0fd2dadc00dd4a551e46cb30633b7d6b948bfe8a616"
+    },
+    {
+      "path": "<private>/plants/P_seed20260923/selected.pt",
+      "sha256": "efa4ae2eade61add379f5163510a00d80e91be8485ef8bf6335f567566a225b4"
+    },
+    {
+      "path": "<private>/plants/P_seed20260924/selected.pt",
+      "sha256": "71aeaa8a09d719ab9efedd4ed1411a41ffe6042f26564c8f00f1ce92dfa05536"
+    },
+    {
+      "path": "<private>/plants/P_seed20260925/selected.pt",
+      "sha256": "9bcb1da601f72b789caf40d40e956e3895bcefa4aa322277efb44fcca523f9c8"
+    },
+    {
+      "path": "<private>/plants/P_seed20260926/selected.pt",
+      "sha256": "eb4ded81affc5686d6757c225b2f74e772d756c5d796804c5663adad58d4fe7c"
+    },
+    {
+      "path": "<private>/plants/A1_seed20260922/selected.pt",
+      "sha256": "3150b02ceb58d130beca8981620a37375ff2334626cf4f452c56cebe1b029eaf"
+    },
+    {
+      "path": "<private>/plants/A1_seed20260923/selected.pt",
+      "sha256": "d0c00f36e19d98617534f4d9a0a609f6a4f83d510faa226777c138372c041c7f"
+    },
+    {
+      "path": "<private>/plants/A1_seed20260924/selected.pt",
+      "sha256": "ce56956b2b40105f1aabf6225901df38ffb787527dcaa59db1b49d73ac77f33c"
+    },
+    {
+      "path": "<private>/plants/A2_seed20260922/selected.pt",
+      "sha256": "a44d857b0fb4c8fccf3739781e9561bc76d1dab2ad6aad1100d7c0dea6ce6def"
+    },
+    {
+      "path": "<private>/plants/A2_seed20260923/selected.pt",
+      "sha256": "8263c684506ec2433e0704c17951ef0f45a3dc50682fc2e21807c27ac7d9c5a5"
+    },
+    {
+      "path": "<private>/plants/A2_seed20260924/selected.pt",
+      "sha256": "3f84a88e6b512dc6e76dfec7b55a22b53d4b5b033a3e2d4aa3c62a5f8b5d681b"
+    },
+    {
+      "path": "<private>/plants/A3_seed20260922/selected.pt",
+      "sha256": "fe94acf2cacc78a6451cdc9659757a70ae633413ba7257f940398a499a30c4ff"
+    },
+    {
+      "path": "<private>/plants/A3_seed20260923/selected.pt",
+      "sha256": "95e3e5c51c020f827286f1f107d47af9800a27480834b323966912d87fe5c11f"
+    },
+    {
+      "path": "<private>/plants/A3_seed20260924/selected.pt",
+      "sha256": "8db183469be3128f245db61a029503bb8710524cdc833075f6b59d932ecc9754"
+    },
+    {
+      "path": "<private>/plants/A4_seed20260922/selected.pt",
+      "sha256": "cf46413b288cad482f7db9ba4b3d3c4dfe754e8ed3cdc04cdf6ff0646dd8d0fa"
+    },
+    {
+      "path": "<private>/plants/A4_seed20260923/selected.pt",
+      "sha256": "aebf7b973add63065c3c9667ebfb3bc1d3aa684c76bb9909c91ced4da77aae41"
+    },
+    {
+      "path": "<private>/plants/A4_seed20260924/selected.pt",
+      "sha256": "7d714b4e7d78d36b66c06f61d344f3afb87ce40c9e7a87abea252dd99b2a0842"
+    },
+    {
+      "path": "<private>/plants/A5_seed20260922/selected.pt",
+      "sha256": "43b5b1c9a543abeddd33dff6e3805543b1cc1b36b1d8689898f2d1639ac70940"
+    },
+    {
+      "path": "<private>/plants/A5_seed20260923/selected.pt",
+      "sha256": "f3699401ecc3ee01dcf6b073efd4dc8ff4a73571e66e06619923817f4dcf7281"
+    },
+    {
+      "path": "<private>/plants/A5_seed20260924/selected.pt",
+      "sha256": "48b80d6dc78da6f8adc9b1cf302854b704f62c8db2ed3723aaec0b5d2f02c68f"
+    },
+    {
+      "path": "<private>/plants/B2_seed20260922/selected.pt",
+      "sha256": "f85ae3e06e91650a37167bed6cf3886892a8530769a68b4817a9f75358a98b3e"
+    },
+    {
+      "path": "<private>/plants/B2_seed20260923/selected.pt",
+      "sha256": "df4804d94af3fe3d215e78b6093fb9a277f1e6d6fd3b2877d37efb4d294f1dc2"
+    },
+    {
+      "path": "<private>/plants/B2_seed20260924/selected.pt",
+      "sha256": "001d56ebc9d9422d0dd03318aac4210ab85acbbaa12048b14945d5746ae05339"
+    },
+    {
+      "path": "<private>/plants/B1_seed20260922/selected.pt",
+      "sha256": "a41de5e1d41d33f7e0f02fa650d47791668f2d565c8010642f035ede583df6e9"
+    },
+    {
+      "path": "<private>/plants/B4_seed20260922/selected.pt",
+      "sha256": "87e6a6fdd3f7ab564cc569e49e923b08b101d20a9bdc9e28bef7be1f265fd845"
+    },
+    {
+      "path": "<private>/plants/B4_seed20260923/selected.pt",
+      "sha256": "f63ef258ac14b16c8b146c69bdc29c87f71311b8e441c1273b2123f69d0d75eb"
+    },
+    {
+      "path": "<private>/plants/B4_seed20260924/selected.pt",
+      "sha256": "70523fad09dd7926d5c1a29ae654ee31803dff974a5433c18a3847f43ee2f033"
+    },
+    {
+      "path": "<private>/plants/B4_seed20260925/selected.pt",
+      "sha256": "cfa7efb613aa564fcb58d0ed5b3832f2907479dd1f6a719ed53c7c042353b1d5"
+    },
+    {
+      "path": "<private>/plants/B4_seed20260926/selected.pt",
+      "sha256": "07f16cbf6ec2d0d6a5acda3bfee08f887d3e1364d298b138ca63154aa51f72b0"
+    },
+    {
+      "path": "<private>/plants/B3_seed20260922/selected.pt",
+      "sha256": "61742528268b22e0c1503cc8471d4714253aa44b84c3548de5116f422762f978"
+    },
+    {
+      "path": "<private>/plants/B3_seed20260923/selected.pt",
+      "sha256": "f81bf9389b438f98f3b07e6a9033b65abe018df59a84665feb14e3a7833d3f38"
+    },
+    {
+      "path": "<private>/plants/B3_seed20260924/selected.pt",
+      "sha256": "91a0b7f3d27744a11ab7beea152c7c42aa4f28326de10a844f43683052d8f41c"
+    },
+    {
+      "path": "<private>/v10/SELECTED_native_rollout_g4state_tpsafe_v10_candidate.pth",
+      "sha256": "9d3553363911bdfc9ad4640c9b13f7b32b211fcdb7d6d09d9e99a101dc1e0a5c"
+    },
+    {
+      "path": "<private>/v10/SELECTED_native_rollout_g4state_tpsafe_v10_candidate.pt",
+      "sha256": "e55fe3a38dd74b2525187a2cbc8a8ee31f19e0f4a4ef96a0b2753c84dda99f35"
+    },
+    {
+      "path": "<outputs>/formal_coisc/seed_20260922/results/R0/selected.pt",
+      "sha256": "e1a16a5f07b546850c7b256f143406ba3d7522099beb4ce0220ee7f2cb1dae98"
+    },
+    {
+      "path": "<outputs>/formal_coisc/seed_20260922/coisc_final.pt",
+      "sha256": "3c68c00d1a5a08c132427353773e9e1307a2e35c69dbe5273feee90427071d2a"
+    },
+    {
+      "path": "<outputs>/formal_coisc/seed_20260923/results/R0/selected.pt",
+      "sha256": "6760c84b393aa72d40db8c80d51b02c5fd6523ac462ab47e2983cfe859236a28"
+    },
+    {
+      "path": "<outputs>/formal_coisc/seed_20260923/coisc_final.pt",
+      "sha256": "ac8e02cccf0ee4eca3ec60a1fadba08bd1cacfb27f7ffbdcfe984a9e43b74dc4"
+    },
+    {
+      "path": "<outputs>/formal_coisc/seed_20260924/results/R0/selected.pt",
+      "sha256": "e0148fc3623487d464e1d22145a984a45d7007d0bbeeb84780607d8d191650b7"
+    },
+    {
+      "path": "<outputs>/formal_coisc/seed_20260924/coisc_final.pt",
+      "sha256": "531e8b80e435435ac97675784e090261b79e3141738d0eeb804bf4b4b44a34ef"
+    }
+  ]
+}

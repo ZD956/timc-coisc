@@ -1,0 +1,60 @@
+{
+  "protocol_name": "POSTHOC_B5_JACOBIAN_BASELINE_V1",
+  "version": "0.1-draft",
+  "created": "2026-10-05",
+  "status": "DRAFT_NO_RUN_AWAITING_AUTHOR_REVIEW (only gates on existing models and already-reported results may run before freeze; freeze = sha256 in POSTHOC_B5_JACOBIAN_PROTOCOL.sha256; execution additionally requires EXECUTION_AUTHORIZATION.json naming that hash, written on the author's explicit instruction)",
+  "evidence_tier": "post hoc, exploratory. Cannot change any locked verdict (formal development gates, holdout NI FAIL 3/3, formal MIL NO_CONTROL_SUPERIORITY, post-hoc MIL A/B, mechanism H_map partial / H_gain reversed, onset-aligned E1 mixed / E2 conditional benefit not met). All outcomes are reported whatever their direction.",
+  "motivation": "Anticipated reviewer objection: the COISC diagnostic changes (lower pre-lag leakage and wrong-sign rate with post-lag magnitude retained) might be obtainable by generic input-sensitivity shrinkage without any lag structure. B5 adds one matched head-only baseline with an unstructured input-Jacobian norm penalty (double-backpropagation / Jacobian regularization family) and asks whether it reproduces the COISC holdout profile and at what accuracy cost.",
+  "prior_exposure_disclosure": [
+    "All development, holdout and MIL results of R0, COISC, L0, pre-only and the two sign-only variants for seeds 20260922/23/24 were seen, including holdout T_p ratios vs R0 (COISC: PLE 0.45-0.48, WSR 0.26-0.50, PSM 1.12-1.26; L0: PLE 0.88-0.95, WSR 0.83-0.91, PSM 1.00-1.03; Tp MAE at 120 s +0.015 to +0.043 C for COISC).",
+    "All onset-aligned study results (E1/E2) were seen.",
+    "No model with a Jacobian-norm penalty has been trained or evaluated on this project before this draft; lambda_jac is unknown at drafting time and is fixed by gate R1 before any adaptation.",
+    "The holdout set is reused; B5 holdout results are not independent confirmation."
+  ],
+  "variant": {
+    "JAC": "identical to COISC (adapted from the existing R0 selected.pt of each seed, head parameters only, 75 steps, batch 128, Adam lr 5e-5, grad clip 1.0, ordinary sampler, adaptation seed = study seed, same 8-window sensitivity subset and +/-25 W first-step finite difference) except the regularizer: L_jac = mean over the 8 windows and all 12 x 7 forecast cells of S^2, with no lag masks, no tolerance and no sign term. Loss = factual + lambda_jac * L_jac.",
+    "comparators": "existing R0, COISC (formal) and L0 (matched fine-tuning, lambda = 0) checkpoints of the same seeds, sha256-verified; no other variant is trained"
+  },
+  "lambda_rule": "Calibrate lambda_jac once with the unchanged screen.calibrate rule (two discarded fit-only 32-step pilots, seed 20260922, min over samplers of min(0.10*mean(pred)/mean(reg), 0.20*min batch ratio)) with reg = L_jac, as done for the pre-only and sign-only (own weight) variants. Computed by gate R1 in the same pass that reproduces lambda_prior; written into the frozen record before any adaptation. One weight only: no grid, no tuning, no rerun at another weight.",
+  "declared_expectation_before_running": "A generic squared-sensitivity penalty shrinks all cells, so PLE and PSM are expected to fall roughly together; WSR (fraction of post-lag cells below -1e-4) need not fall unless negative cells are pushed inside the tolerance. Any outcome, including B5 reproducing the COISC profile, is plausible and will be reported.",
+  "seeds": [
+    20260922,
+    20260923,
+    20260924
+  ],
+  "development_record": "per seed: selection-set T_p MAE at 10/30/60/90/120 s, macro 7-output MAE and PLE/WSR/PSM under prior masks for JAC and R0, plus the four formal per-seed gates under prior masks. Reported only; never used for stopping, selection or reweighting.",
+  "holdout_endpoints": {
+    "inference": "delivered-23 holdout, same windows, same frozen 20,000-draw source bootstrap (bootstrap_draws.npz), same summaries and contrast code as the onset-aligned study (onset_holdout.model_estimates / CONTRAST_METRICS)",
+    "contrasts": "JAC vs R0, vs COISC and vs L0 per seed: value, diff, ratio, 95 % percentile CI; NI at 0.005 C vs R0 for T_p MAE; CI vs 0.9 x R0 (PLE, WSR) and 0.2 x R0 (PSM)",
+    "primary_diagnostics": "T_p PLE, WSR, PSM under prior masks; T_p MAE at 120 s",
+    "secondary": "T_p WSR/PSM over all steps and onset masks; T6 PLE/WSR/PSM; all-output MAE"
+  },
+  "interpretation_rules_declared_before_running": {
+    "per_seed_conditions": "D1: T_p PLE_PRIOR ratio JAC/R0 <= 0.9; D2: T_p WSR_PRIOR ratio <= 0.9; D3: T_p PSM_PRIOR ratio >= 0.2; A: T_p MAE_120 JAC minus COISC <= 0 (point estimates)",
+    "B5_reproduces_COISC_profile": "D1, D2 and D3 on all 3 seeds and A on at least 2 seeds. Manuscript consequence: state that the reported diagnostic changes do not require the lag structure.",
+    "B5_reproduces_profile_at_higher_accuracy_cost": "D1, D2 and D3 on all 3 seeds but A on fewer than 2 seeds",
+    "B5_does_not_reproduce_profile": "D2 holds on at most 1 seed or D3 holds on at most 1 seed",
+    "B5_mixed": "any other combination",
+    "wording": "descriptive only; never 'confirm', 'prove' or 'cause'; a single rule-calibrated weight is reported as such and not generalized to all Jacobian penalties"
+  },
+  "reproduction_gates_before_any_new_result": {
+    "R1_calibration": "b5_common.calibrate reproduces lambda 939.1430335805455 and all 16 stored pilot records (prediction, regularizer, pre, sign, gradient_norm) exactly; lambda_jac computed in the same pass",
+    "R2_adaptation": "b5_common.adapt with the COISC terms reproduces formal coisc_final.pt bitwise, and with zero weights reproduces the ablation L0_final.pt bitwise, for all three seeds; non-head parameters unchanged",
+    "R3_holdout": "holdout re-inference of existing R0/COISC/L0 reproduces the onset-study HOLDOUT_SUMMARY.csv values and all 204 HOLDOUT_CONTRASTS.csv rows for these models (value, diff, ratio, CI, NI and threshold columns) within 1e-9",
+    "R4_rule_selftest": "the declared rule returns the known answers on already-reported models (COISC -> B5_reproduces_COISC_profile, A undefined and taken as met; L0 -> B5_mixed) and the expected verdict on five synthetic cases, one per branch",
+    "smoke": "2-step code-path run with throwaway adaptation seed 1 on the seed-20260922 R0; checkpoint deleted, metrics not inspected",
+    "stop_rule": "any gate failure stops execution and is reported; no change of rules to make a gate pass"
+  },
+  "execution": {
+    "order": "b5_train.py run -> b5_holdout.py run",
+    "outputs": "run/seed_<s>/JAC_final.pt, JAC_training.jsonl, SEED_COMPLETE.json; run/B5_DEVELOPMENT_RESULTS.json, B5_CHECKPOINT_BINDINGS.json; B5_HOLDOUT_SUMMARY.csv, B5_HOLDOUT_CONTRASTS.csv, B5_RULE_RESULT.json, holdout/*.npz",
+    "estimated_time": "about 10-20 min on the RTX 4060 laptop GPU (3 x 75 head-only steps plus 12 holdout inferences)",
+    "no_MIL": "B5 is a prediction-level baseline; no closed-loop run is planned under this protocol"
+  },
+  "code": "b5_common.py, b5_train.py, b5_holdout.py, b5_freeze.py (new, this folder); shared code imported read-only and hash-bound: posthoc_onset_aligned/onset_common.py, onset_train.py, onset_holdout.py and dbasr_screen/screen.py",
+  "anonymization": "outputs use seed labels and T1-T6/T_p only; source_id is never written",
+  "manuscript_use": "none without explicit author approval. If approved: one sentence in section 6.4 and one bullet of 7.4 revised, a row block in a supplementary table, Table S1 one row, and a reference for Jacobian regularization; the main text is at 5,972/6,000 words, so about 40-60 words must be cut elsewhere.",
+  "amendments": {},
+  "lambda_jac": 72.33776600658737,
+  "lambda_jac_note": "Computed 2026-10-05 by gate R1 (the same pass reproduced lambda_prior and all 16 pilot records exactly). Per-sampler values 101.37672227305123 (ordinary) and 72.33776600658737 (excitation); the minimum is used."
+}

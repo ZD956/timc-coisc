@@ -1,0 +1,55 @@
+{
+  "status": "POSTHOC_ITEM2A_PROTOCOL_FROZEN_BEFORE_HOLDOUT_INFERENCE_OF_ABLATIONS",
+  "created_local": "2026-09-29 +0800",
+  "parent_protocol_sha256": "15d873cc468b0cab777a3ab0ec05b1a4919049480951a5870b4423081705cab9",
+  "label": "POST-HOC. The delivered23 holdout has already been unsealed and its R0/COISC results are known; development ablation results are known. Descriptive mechanism analysis only; the locked delivered23 decision (prediction NI FAIL 3/3, sensitivity gates PASS 3/3) is unchanged regardless of outcome.",
+  "no_training": true,
+  "no_modification_of_existing_artifacts": true,
+  "models": {
+    "R0_and_COISC": "formal checkpoints listed in DELIVERED23_EVALUATION_PROTOCOL.json (hash-verified)",
+    "ablations": [
+      "L0",
+      "SIGN_B",
+      "SIGN_A",
+      "PRE_B"
+    ],
+    "ablation_checkpoint_sha256": {
+      "20260922": {
+        "L0": "51939e875de988f8179847cf12cb778fcdbb094e216f307414b8b7e8f5f3211c",
+        "SIGN_B": "7bcf99f4640f67c24a4697658b50c7772626b20dbf809349430c328c4feaba35",
+        "SIGN_A": "5778df771f6bb62dc98c9af364abbf8036a31c217228b2b110cd44b65fdeb4ff",
+        "PRE_B": "ae8a9509f51f41056e1c96993a61f50dfed6f78f2ed6f333e7357b173dba1a0c"
+      },
+      "20260923": {
+        "L0": "56042e3766b780ccdf3730f540e20085044ebdbe23d48b2ec7e0d07c9a052b9d",
+        "SIGN_B": "11a869e0eeaacba9ee27a5116b2b27420ca550c466eae62557cfaff7b92fa242",
+        "SIGN_A": "d885a605785e968a1f8dda924386493f0b206a8675354e537e759454bc0b48f8",
+        "PRE_B": "d199c8aac9912dcb300ad6868a946514d3c5cba656d4bbf5022e8bd5b4e279a3"
+      },
+      "20260924": {
+        "L0": "e4638df8a38e43660b676a5d1b87165080e7d7e9500a6b87b2f4ae6a04e1aea1",
+        "SIGN_B": "3a6da82b93f22856b1be0b2008c32a99d5053a11d55876ee84221717a336aa34",
+        "SIGN_A": "8ff44ae0cc10b98bef62e5b7297899d5a13b113d29427376cde2b71f84a2abb2",
+        "PRE_B": "a8bbca5dcf248d47a6296a7a3e83e0ba0ed94b9eab7ae8c51115aed02d35db49"
+      }
+    }
+  },
+  "data": "the 23 delivered sources exactly as stored in delivered23 window_level_raw_results.npz (history, future, target per source; identical across seeds and variants); no re-preprocessing",
+  "inference_path": "paper_models.VanillaLSTM(configs/normalization.json) with strict state_dict load; paper_eval.predict(batch=256); screen.sensitivity in batches of 256 under no_grad (identical to frozen_diagnostics.paired_inference)",
+  "reproduction_check": "R0 and COISC re-inferred through this path must equal the stored delivered23 prediction and sensitivity arrays (max abs diff reported; expected 0). If not zero but <=1e-5, report and proceed; if larger, stop and report HOLDOUT_PATH_NOT_REPRODUCED",
+  "aggregation": "equal-source over 23 sources in bootstrap_draws.npz source_order; 20000 frozen source-cluster draws (counts); PSM via frozen_evaluate.SourceMedian; percentile 95% CIs",
+  "endpoints_per_variant_and_seed": [
+    "Tp MAE at 10/30/60/90/120 s; all7 MAE averaged over outputs and the five horizons",
+    "Tp PLE, WSR, PSM with prior lags; Tp WSR/PSM with ALL_STEPS and T20_G0 masks from the parent protocol; T6 PLE with prior lags"
+  ],
+  "contrasts": {
+    "vs_R0": "formal delivered23 gate readouts applied to each ablation: Tp 120 s MAE contrast CI upper <= 0.005; PLE and WSR point <= 0.9xR0 and CI upper of (V - 0.9xR0) <= 0; PSM point >= max(0.2xR0, 0.0005) and CI lower of (V - 0.2xR0) >= 0 and (V - 0.0005) >= 0",
+    "COISC_vs_L0": "paired bootstrap CI of COISC - L0 for Tp 120 s MAE, PLE, WSR, PSM (prior lags) and WSR ALL_STEPS; primary attribution contrast",
+    "COISC_vs_PRE_B_and_SIGN_A": "same contrasts, supplementary"
+  },
+  "pre_specified_interpretation": {
+    "attribution": "the holdout PLE/WSR change of COISC is called regularizer-specific for a metric only if the COISC - L0 CI excludes 0 in the favourable direction on at least 2/3 seeds",
+    "NI_cost": "if L0's Tp 120 s MAE contrast vs R0 is near 0 while COISC's is not, the holdout NI failure is attributed to the regularizer rather than to extra head training; described, not tested",
+    "reporting": "all variants, seeds and endpoints reported; no rerun with other settings"
+  }
+}

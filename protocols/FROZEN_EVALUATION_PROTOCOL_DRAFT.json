@@ -1,0 +1,712 @@
+{
+  "schema_version": "1.0",
+  "status": "DRAFT_DESIGN_ONLY_NOT_AUTHORIZED_TO_UNSEAL",
+  "created_local_date": "2026-09-26",
+  "FROZEN_DATA_ACCESSED": false,
+  "current_task": {
+    "allowed": [
+      "explicit development protocol/checkpoint hashes",
+      "source-code inspection",
+      "in-memory unit fixtures",
+      "CPU forward-only checkpoint dry-run"
+    ],
+    "prohibited": [
+      "read/enumerate/stat/hash any frozen source or frozen source manifest",
+      "load any experimental dataset including selection",
+      "train or fine-tune",
+      "run frozen evaluation"
+    ],
+    "stop_after": "write draft and data-free verification evidence; no automatic next stage"
+  },
+  "provenance": {
+    "coisc_protocol": {
+      "path": "protocols/COISC_VALIDATION_PROTOCOL_DRAFT.json",
+      "sha256": "6967221f9fac73fa89ed14fa623b7b70fc04cdc4c548511c116b8eebe287c92e"
+    },
+    "development_decision": {
+      "path": "<outputs>/formal_coisc/FORMAL_COISC_DECISION.json",
+      "sha256": "0381fe0ec029ce243ed5d9c2808490d0e845f998edabf2fdcee519e8612ff954"
+    },
+    "development_results_frozen": true,
+    "development_result_changes": false,
+    "development_collateral_effect_motivation": "User reports approximately 3-4% seven-output macro-MAE degradation. No new selection analysis was performed for this draft.",
+    "checkpoint_pairs": [
+      {
+        "seed": 20260922,
+        "R0": {
+          "path": "<outputs>/formal_coisc/seed_20260922/results/R0/selected.pt",
+          "sha256": "e1a16a5f07b546850c7b256f143406ba3d7522099beb4ce0220ee7f2cb1dae98"
+        },
+        "COISC": {
+          "path": "<outputs>/formal_coisc/seed_20260922/coisc_final.pt",
+          "sha256": "3c68c00d1a5a08c132427353773e9e1307a2e35c69dbe5273feee90427071d2a"
+        },
+        "configuration": {
+          "path": "<outputs>/formal_coisc/seed_20260922/per_seed_config.json",
+          "sha256": "a85625bd2194c74ebcc2ed7afc62d8beb22598238472c6470b8cbf1fdb12a61b"
+        }
+      },
+      {
+        "seed": 20260923,
+        "R0": {
+          "path": "<outputs>/formal_coisc/seed_20260923/results/R0/selected.pt",
+          "sha256": "6760c84b393aa72d40db8c80d51b02c5fd6523ac462ab47e2983cfe859236a28"
+        },
+        "COISC": {
+          "path": "<outputs>/formal_coisc/seed_20260923/coisc_final.pt",
+          "sha256": "ac8e02cccf0ee4eca3ec60a1fadba08bd1cacfb27f7ffbdcfe984a9e43b74dc4"
+        },
+        "configuration": {
+          "path": "<outputs>/formal_coisc/seed_20260923/per_seed_config.json",
+          "sha256": "98d757132c1412e194af9ad78aac3775a3e193dac3b03506483d95f6c0b32120"
+        }
+      },
+      {
+        "seed": 20260924,
+        "R0": {
+          "path": "<outputs>/formal_coisc/seed_20260924/results/R0/selected.pt",
+          "sha256": "e0148fc3623487d464e1d22145a984a45d7007d0bbeeb84780607d8d191650b7"
+        },
+        "COISC": {
+          "path": "<outputs>/formal_coisc/seed_20260924/coisc_final.pt",
+          "sha256": "531e8b80e435435ac97675784e090261b79e3141738d0eeb804bf4b4b44a34ef"
+        },
+        "configuration": {
+          "path": "<outputs>/formal_coisc/seed_20260924/per_seed_config.json",
+          "sha256": "3aed90c848ac63b10b86a01d55275c158c3f3839b751f121cebffaf0b5984d9e"
+        }
+      }
+    ],
+    "checkpoint_policy": "Only these six exact files. Existing independent per-seed selected R0 and final COISC step75. No refitting, model averaging, seed selection or checkpoint replacement.",
+    "freeze_order": "Verify all listed file hashes and tensor equality before any future frozen access; bind final runner and all transitive local scripts and runtime versions before unsealing."
+  },
+  "method": {
+    "base_model": "Vanilla-LSTM-MS (paper_models.VanillaLSTM; build_model B4)",
+    "shared_architecture": {
+      "parameter_count": 90887,
+      "history_shape": [
+        20,
+        12
+      ],
+      "history_features": [
+        "T1",
+        "T2",
+        "T3",
+        "T4",
+        "T5",
+        "T6",
+        "aux1",
+        "UH",
+        "aux2",
+        "aux3",
+        "aux4",
+        "aux5"
+      ],
+      "future_heaters": 6,
+      "outputs": [
+        "T1",
+        "T2",
+        "T3",
+        "T4",
+        "T5",
+        "T6",
+        "Tp"
+      ],
+      "encoder": {
+        "type": "LSTM",
+        "input_size": 12,
+        "hidden_size": 128,
+        "num_layers": 1,
+        "batch_first": true,
+        "bidirectional": false,
+        "dropout": 0,
+        "bias": true
+      },
+      "head": [
+        "Linear(134,128,bias=True)",
+        "GELU(approximate=none)",
+        "Linear(128,7,bias=True)"
+      ],
+      "head_input": "last encoder hidden state (128) concatenated with normalized current six-heater action",
+      "output": "raw degrees C residual added to anchor: last six temperatures, plus their arithmetic mean as Tp anchor",
+      "output_zscore": false,
+      "Tp_input": false,
+      "Tp_feedback": false,
+      "hard_structured_head": false,
+      "fixed_exponential_lag_kernel": false
+    },
+    "normalization": {
+      "artifact": {
+        "path": "configs/normalization.json",
+        "sha256": "6e0a0a41664c962c7e0d36f3694bb42eddd3279a9ae82cc569d06a6fac572dc1"
+      },
+      "fitted_on": "original 91 fit-field histories only; never recompute",
+      "temperature_mean": [
+        32.09619903564453,
+        33.41856002807617,
+        31.05896759033203,
+        31.9261474609375,
+        43.32518768310547,
+        29.03607940673828
+      ],
+      "temperature_std": [
+        3.6582560539245605,
+        4.275683879852295,
+        3.148129463195801,
+        3.8351078033447266,
+        12.308270454406738,
+        2.9222912788391113
+      ],
+      "power_full_scale_raw": [
+        50,
+        500,
+        50,
+        50,
+        50,
+        50
+      ],
+      "transform": "(first six temperatures-mean)/std; heater/raw full scale; no clipping of temperature, output or normalized inputs; verify checkpoint buffers equal frozen normalization"
+    },
+    "historical_R0_training": {
+      "informational_only_never_execute": true,
+      "real_field_only": true,
+      "sampler": "existing sqrt(source window count) / window count probability; no excitation or cooling sampler",
+      "optimizer": "Adam, reset each stage; default betas [0.9,0.999], eps 1e-8, weight_decay 0, amsgrad false",
+      "stages": [
+        {
+          "steps": 300,
+          "batch": 256,
+          "lr": 0.0004,
+          "rollout": 0,
+          "adjacent": 0,
+          "endpoint": 0
+        },
+        {
+          "steps": 400,
+          "batch": 128,
+          "lr": 0.00015,
+          "rollout": 0.45,
+          "adjacent": 0.1,
+          "endpoint": 0.1
+        },
+        {
+          "steps": 500,
+          "batch": 128,
+          "lr": 5e-05,
+          "rollout": 0.35,
+          "adjacent": 0.08,
+          "endpoint": 0.1
+        }
+      ],
+      "gradient_clip_norm": 1,
+      "checkpoint": "Existing screen.train_variant selection source-macro prediction-only minimum every100 steps; already completed, not repeated"
+    },
+    "adaptation": {
+      "type": "head-only; encoder-isolated adaptation, NOT Tp-output-row-only",
+      "trainable": [
+        "head.0.weight",
+        "head.0.bias",
+        "head.2.weight",
+        "head.2.bias"
+      ],
+      "encoder_and_all_nonhead_tensors_frozen": true,
+      "steps": 75,
+      "batch": 128,
+      "lr": 5e-05,
+      "optimizer": "Adam",
+      "betas": [
+        0.9,
+        0.999
+      ],
+      "eps": 1e-08,
+      "weight_decay": 0,
+      "amsgrad": false,
+      "gradient_clip_norm": 1,
+      "DBASR_subset": 8,
+      "subset_rule": "first eight factual batch windows",
+      "lambda_s": 939.1430335805455,
+      "epsilon_pre": 0.001,
+      "epsilon_sign": 0.0001,
+      "lag_seconds": [
+        102.108,
+        77.091,
+        30.108,
+        50.112,
+        10.0535,
+        180,
+        39.104
+      ],
+      "lag_band_half_width_s": 10,
+      "factual_loss": "screen.factual with stage2: weighted_huber(one_step,y0)+0.35*weighted_huber(recursive,y)+0.08*adjacent_delta_huber+0.1*endpoint_temperature_huber; exact code hashes authoritative",
+      "sensitivity_loss": "lambda_s*(mean(relu(abs(S_pre)-epsilon_pre)^2)+mean(relu(-S_post)^2)); transition unconstrained; epsilon_sign is reporting threshold only",
+      "point_weights": [
+        1,
+        1,
+        1,
+        1,
+        1.8,
+        1,
+        2
+      ],
+      "horizon_weights": [
+        1,
+        1,
+        1,
+        1,
+        1.05,
+        1.1,
+        1.15,
+        1.2,
+        1.3,
+        1.4,
+        1.5,
+        1.65
+      ],
+      "smooth_l1_beta": 0.15,
+      "synthetic_or_paired_labels": false,
+      "ordering_loss": false,
+      "checkpoint_rule": "exact step75 final state; no early stopping",
+      "future_training_permitted": false
+    },
+    "inference": {
+      "seeds": [
+        20260922,
+        20260923,
+        20260924
+      ],
+      "paired": true,
+      "models_per_seed": [
+        "R0",
+        "COISC"
+      ],
+      "mode": "eval(), inference/no_grad, all parameters requires_grad False",
+      "dtype": "FP32 inference; FP64 metric aggregation",
+      "TF32": false,
+      "deterministic_algorithms": true,
+      "cudnn_benchmark": false,
+      "batch_size": 256,
+      "history_seconds": 200,
+      "step_seconds": 10,
+      "prediction_steps": 12,
+      "report_horizons_seconds": [
+        10,
+        30,
+        60,
+        90,
+        120
+      ],
+      "rollout": "unchanged paper_models.rollout: at k predict from current history and recorded future[:,k]; append predicted first6 outputs plus that action; discard oldest history row; repeat. No teacher forcing, no true future temperatures, no Tp feedback.",
+      "integrity": "check model state_dict byte/tensor equality before/after all inference; compare every non-head R0/COISC tensor including buffers"
+    }
+  },
+  "population": {
+    "source_counts_from_user_only": {
+      "frozen_external": 23,
+      "frozen_final": 6,
+      "total": 29
+    },
+    "identities_and_paths": "NOT read, enumerated, resolved, tested for existence, or hashed in this task; obtain ONLY from already locked membership after separate explicit authorization",
+    "inclusion": "all 29 pre-existing frozen sources; no manual selection; no dropping difficult sources or outlier windows; same source/window IDs, ordering, history, recorded control sequences and targets for both models and all seeds",
+    "primary_population": "all29, equal weight per source; preserve external/final role labels",
+    "cohort_reports": "also report external23 and final6 separately as fixed secondary strata; neither stratum may guide changes or become an alternative primary",
+    "development": "91 fit and18 selection are excluded from frozen inference; no development reevaluation, normalization refit or threshold design",
+    "preprocessing": "use locked native10s windows and original column units: raw power = five2s sample sum =5*mean W. 20-frame history,12-frame factual future, six-heater controls, seven output targets. No new interpolation, denoising, clipping, normalization, segmentation tuning or resampling.",
+    "missingness": "Keep every locked source in inventory. Invalid/nonfinite/missing primary data, mismatched hashes, duplicate source identity or mismatched paired windows prevent a valid overall PASS: emit NOT_EVALUABLE with exact reason and overall_PASS=false. Do not silently take a complete-case subset or replace a source. Empty diagnostic strata are NA, not zero.",
+    "schema_binding": "Frozen storage format/schema and identity-hash manifest intentionally uninspected. Their binding is a prerequisite to a later authorized implementation/run, not evidence of readiness now."
+  },
+  "primary_endpoints": {
+    "estimand": "paired change conditional on each fixed trained seed, across the source population. Sources are statistical clusters; overlapping windows and the three model seeds are not independent replicate subjects.",
+    "prediction": {
+      "source_MAE": "mean_i abs(Tpred_i,120,Tp - Ttrue_i,120,Tp)",
+      "aggregate": "arithmetic mean of source MAEs; equal1/29 weight",
+      "delta": "MAE_COISC - MAE_R0, positive=worse",
+      "noninferiority_margin_C": 0.005
+    },
+    "sensitivity": {
+      "S": "(rollout(history,u_plus)-rollout(history,u_minus))/((u_plus[:,0,1]-u_minus[:,0,1])/500)",
+      "units": "degrees C per unit UH full-scale fraction, NOT degrees C/W and NOT output-z-scored",
+      "perturbation": "ONLY current future[:,0,1]: raw +/-25, clipped to[0,500] (5W=5%fullscale). Use actual clipped denominator; all subsequent controls/other heaters equal. Neither initial history is perturbed; native feedback retains the perturbed action thereafter.",
+      "pre_mask": "h*10 < max(0,tau-10), h=1..12",
+      "post_mask": "h*10 > tau+10",
+      "transition": "tau-10 <= h*10 <= tau+10 unconstrained (lower bounded by0)",
+      "Tp_pre_horizons_s": [
+        10,
+        20
+      ],
+      "Tp_post_horizons_s": [
+        50,
+        60,
+        70,
+        80,
+        90,
+        100,
+        110,
+        120
+      ],
+      "PLE": "per-source mean abs(S) over windows and eligible pre horizons; equal-source mean",
+      "WSR": "per-source mean indicator(S < -0.0001) over windows and eligible post horizons; equal-source mean",
+      "PSM": "median abs(S) over post-lag cells of the equal-source weighted empirical distribution: cell weight1/(N_sources*N_post_cells_of_source). Each source's sorted post abs(S) is retained; not a mean of source medians.",
+      "weighted_median": "sort cells by abs(S), combine identical values; take first value whose cumulative weight exceeds0.5; if cumulative weight equals0.5, average this value and next positive-weight value. Equal cell weights reproduce numpy.median.",
+      "empty_regions": "NA plus zero eligible-cell count; T5 has no pre cells; T6 has no post cells; never fill NA with0"
+    },
+    "decision_proposal": {
+      "status": "pre-unsealing DRAFT for review; no outcome-dependent revision",
+      "principle": "Same four endpoint concepts with frozen source-balanced estimands and fixed numerical margins; confirmatory confidence bounds operationalize uncertainty, not new model-selection metrics.",
+      "per_seed": {
+        "Tp_prediction": "PASS iff upper endpoint of the two-sided 95% percentile cluster-bootstrap CI of delta_MAE <= +0.005 C",
+        "PLE": "PASS iff source-balanced R0 PLE>0 and point_COISC<=0.9*point_R0 and upper endpoint of the two-sided 95% percentile cluster-bootstrap CI of (PLE_COISC-0.9*PLE_R0)<=0",
+        "WSR": "PASS iff source-balanced R0 WSR>0 and point_COISC<=0.9*point_R0 and upper endpoint of the two-sided 95% percentile cluster-bootstrap CI of (WSR_COISC-0.9*WSR_R0)<=0",
+        "PSM": "PASS iff point_COISC>=max(0.2*point_R0,0.0005) AND lower endpoint of the two-sided 95% percentile cluster-bootstrap CI of (PSM_COISC-0.2*PSM_R0)>=0 AND lower endpoint of the two-sided 95% percentile cluster-bootstrap CI of (PSM_COISC-0.0005)>=0"
+      },
+      "overall": "PASS only if all four gates pass for each of the three seeds in primary all29 population, and integrity/completeness pass. No averaging away a failed seed. Any estimable gate failing gives FAIL. Missing/nonfinite/insufficient primary data gives NOT_EVALUABLE and overall_PASS=false.",
+      "interpretation": "CI failure to establish non-inferiority/improvement is not proof of harm/equality. Exact development point-only gates also reported for comparability, never override the primary CI decision.",
+      "multiplicity": "Conjunctive intersection-union claim: every pre-specified gate and seed must pass; no endpoint cherry-picking. No new individual confirmatory claims selected from secondary CIs; secondary intervals are descriptive."
+    },
+    "same_four_endpoint_concepts_with_frozen_source_balanced_estimand": [
+      "Tp_120s_MAE",
+      "Tp_PLE",
+      "Tp_WSR",
+      "Tp_PSM_guard"
+    ],
+    "aggregation_clarification": "The four endpoint concepts are the same. Frozen primary estimands are equal-source/source-balanced; development used legacy pooled aggregation. Numerical gates, margins, lag, lambda, epsilon and checkpoints are unchanged."
+  },
+  "statistics": {
+    "unit": "whole source cluster, all its windows/horizons/outputs and both models retained together",
+    "source_level_storage": "For each seed/source/horizon/output preserve n, sum_abs_error, sum_squared_error, sum_error; source MAE, MSE/RMSE,bias; PLE sums/counts,WSR wrong-sign counts/denominators, all post abs(S) or losslessly reconstructable raw S for exact PSM.",
+    "bootstrap": {
+      "replicates": 20000,
+      "rng": "numpy.random.default_rng(20260926), PCG64",
+      "seed": 20260926,
+      "CI_percentiles": [
+        2.5,
+        97.5
+      ],
+      "quantile_method": "linear",
+      "primary_stratification": "Resample23 external source IDs with replacement from23, and6 final IDs with replacement from6. Concatenate29 drawn clusters. Identity order lexicographic within locked roles; preserve role counts. No source-level observation shuffling within a cluster.",
+      "pairing": "same draw table for R0/COISC, all endpoints, outputs/horizons and all3 seeds; never independently draw R0 and COISC",
+      "weights": "each drawn cluster has1/29 weight; a source drawn m times contributes m whole-source copies. Do not deduplicate draws; do not weight long sources more.",
+      "recompute": "In each draw recompute both model estimates, paired absolute difference, relative change and gate contrasts. For PSM reconstruct weighted ECDF with cell weight m/(29*N_post_cells_source); never bootstrap already-pooled window observations.",
+      "secondary_cohorts": "external-only uses23 within-external draws; final-only uses6 within-final draws, both taken from same primary draw table. Small6-cluster uncertainty limitation reported.",
+      "seed_summary": "per-seed primary; optional equal-seed mean/median effects descriptive only, with shared source draws; do not treat3*29 as87 independent clusters",
+      "minimum_clusters_for_CI": 2,
+      "one_cluster": "NA CI; primary cannot PASS",
+      "nonfinite": "Do not discard bootstrap replicates. Any unexpected nonfinite absolute/gate result aborts valid inference. Zero-denominator relative replicates are counted and relative CI reported NA, while finite absolute/gate CIs remain valid.",
+      "save": "source draw indices, source-order mapping, RNG seed, replicate count and bootstrap draws SHA256; summary rows include n_sources and eligible windows/cells"
+    },
+    "relative_change": "100*(COISC/R0-1), ratio of source-balanced aggregate estimates, NOT mean of per-source ratios",
+    "zero_reference": "If point R0=0, relative change is NA with reason; if both R0=COISC=0 this is not evidence of improvement and PLE/WSR gate fails. Never add epsilon to a metric denominator.",
+    "report_precision": "Store unrounded FP64 values; round only for display. No numerical tolerance widening of gates."
+  },
+  "secondary_endpoints": {
+    "prediction": {
+      "outputs": [
+        "T1",
+        "T2",
+        "T3",
+        "T4",
+        "T5",
+        "T6",
+        "Tp"
+      ],
+      "horizons_s": [
+        10,
+        30,
+        60,
+        90,
+        120
+      ],
+      "metrics": [
+        "MAE_C",
+        "RMSE_C",
+        "bias_C"
+      ],
+      "source_level": "MAE=mean abs(error), RMSE=sqrt(mean error^2), bias=mean error; error=prediction-truth",
+      "source_balanced": "MAE=mean sourceMAE; RMSE=sqrt(mean sourceMSE); bias=mean sourcebias",
+      "all7": "mean of seven output MAEs/RMSEs/biases at each horizon; additionally pooled_RMSE=sqrt(mean output source-balanced MSE). Label aggregation explicitly; macro across horizons weights five horizons equally.",
+      "legacy": "separately labeled window_pooled results for comparison with development; never substitute these for source-balanced primary"
+    },
+    "audit": "source x5 horizons x7 outputs x3 seeds; R0_MAE,COISC_MAE,delta_MAE=COISC-R0,RMSE/bias and deltas, count, window absolute-error deltas and quantiles",
+    "improvement_counts": "delta_MAE<0 improved, >0 worsened, ==0 tied; no post-hoc tolerance. Report counts/denominators by output, horizon, source and seed; window-level counts descriptive only.",
+    "sensitivity": "PLE/WSR/PSM by every output, source, seed; source-balanced and window-pooled separately; retain S at every10s horizon and percentile10/25/50/75/90 distributions; empty pre/post NA",
+    "events": {
+      "config": {
+        "min_uh_change_W": 5,
+        "pre_dwell_frames": 3,
+        "dwell_frames": 6,
+        "hold_tolerance_W": 1,
+        "max_aux_change_W": 1,
+        "response_frames": 12,
+        "magnitude_bins_W": [
+          5,
+          20,
+          50
+        ]
+      },
+      "rule": "unchanged paper_data.extract_events; chronological first qualifying nonoverlapping event; retain true source and role; apply equally to all locked sources without event cherry-picking; missing events NA with counts",
+      "metrics": [
+        "post_action_trajectory_MAE",
+        "response_direction_agreement",
+        "onset_lag_error_when_both_detected",
+        "missed_onset",
+        "false_onset",
+        "amplitude",
+        "Spearman when >=5 events and both nonconstant"
+      ],
+      "onset": "3 consecutive same-sign future endpoints outside fixed response deadband; subtract linear extrapolation of preceding measured6 frames; last3 response frames for amplitude",
+      "interpretation": "real measured excitation-response validation, NOT causal/counterfactual ground truth",
+      "aggregation": "existing excitation_metrics details reused; its hard-coded fit/selection aggregate output MUST NOT be used for frozen roles; future adapter aggregates details by real role/source/direction/magnitude/output",
+      "source_weighting": "diagnostic equal event-containing source summaries with explicit source/event counts; no contribution to success gates"
+    },
+    "regime": {
+      "rule": "sign of true T(h)-measured T(0) with fixed per-output deadband; heating,cooling,near-steady; same thresholds for predicted direction",
+      "threshold_C": [
+        0.025106949981231728,
+        0.02568001146149004,
+        0.023586132975930818,
+        0.024577970153300977,
+        0.04628328596325579,
+        0.020546947946013867,
+        0.05129145146380387
+      ],
+      "response_threshold_C": [
+        0.025106949981231728,
+        0.02568001146149004,
+        0.023586132975930818,
+        0.024577970153300977,
+        0.04628328596325579,
+        0.020546947946013867,
+        0.05129145146380387
+      ],
+      "provenance": "already fit-field-only calibrated development values; never recalculate from frozen",
+      "metrics": [
+        "MAE",
+        "direction_agreement",
+        "n_sources",
+        "n_windows"
+      ],
+      "role": "diagnostic only"
+    },
+    "free_run": {
+      "horizons_seconds": [
+        300,
+        600
+      ],
+      "eligibility": "only continuous within-source segments verified by unchanged paper_data.reconstruct exact history/control/target/origin overlap or already locked timestamp-valid native10s segments; split at mismatch; never bridge gaps or sources, interpolate, synthesize or alter thresholds",
+      "windows": "unchanged free_run_windows: first forecast start frame20, stride30 or60, full remaining target requirement; no cherry-picking; all eligible nonoverlapping starts",
+      "rollout": "native recurrent temperature feedback first6 outputs; all future six-heater inputs are recorded measurements; no resets or teacher forcing inside rollout",
+      "metrics": [
+        "trajectory_MAE",
+        "trajectory_RMSE",
+        "trajectory_bias",
+        "endpoint_MAE",
+        "endpoint_RMSE",
+        "endpoint_bias"
+      ],
+      "aggregation": "within source then equal eligible-source aggregate; n_sources,segments,rollouts,frames and missing eligibility reasons",
+      "unsupported": "write NA/status=no_eligible_continuous_segment for each missing source/horizon; no primary failure solely for unsupported free-run",
+      "primary": false
+    },
+    "inference_time": {
+      "existing_function": "paper_eval.inference_time; batch1 one-step,10 warmup and100 timed calls; synchronize CUDA before/after; milliseconds/call",
+      "additional": "120s recursive rollout batch1 with same10 warmup/100 timed calls, plus full fixed batch256 throughput; sensitivity perturbation calls timed separately",
+      "ordering": "for each seed, alternate R0 and COISC timed blocks; device/dtype/thread count fixed; record hardware/software, warmup, batch, transfer excluded",
+      "primary": false
+    },
+    "failure_source": "T5/UH dual-power0-100%60s class if present in locked frozen membership; otherwise NA/not_present. Also report every source ranked by worsening, no deletion. Known selection source must never be imported into frozen cohort. All failure/regime analyses diagnostic, not selection."
+  },
+  "global_prediction_collateral_effect_audit": {
+    "mandatory": true,
+    "reason": "head-only adaptation can alter all seven outputs; Tp-only reporting forbidden",
+    "required": [
+      "per-output R0/COISC paired MAE/RMSE/bias and absolute/relative deltas",
+      "per-horizon deltas across7 outputs with equal source/output weights",
+      "per-source equal7-output x5-horizon macro-MAE delta",
+      "source worsening/improving/tied counts and fractions",
+      "source delta P10/P25/P50/P75/P90, min/max and all source rows",
+      "source-balanced seven-output xfive-horizon macro-MAE absolute/relative change and cluster-bootstrap95%CI",
+      "external/final strata separately",
+      "all seeds including failures"
+    ],
+    "interpretation": "Report any collateral degradation alongside primary PASS/FAIL; primary PASS is not global prediction superiority. No secondary gate replaces or rescues primary decision."
+  },
+  "execution_policy": {
+    "frozen_evaluation_authorized": false,
+    "training": false,
+    "fine_tune": false,
+    "early_stopping": false,
+    "checkpoint_selection": false,
+    "threshold_adjustment": false,
+    "lag_lambda_epsilon_change": false,
+    "source_deletion": false,
+    "synthetic_labels": false,
+    "second_unsealing_for_result_selection": false,
+    "before_access": [
+      "explicit user authorization for later stage",
+      "approve this statistical draft before data inspection",
+      "hash-bind frozen-specific adapter and all evaluator dependencies after data-free tests",
+      "archive exact FROZEN_PROTOCOL.json with external SHA sidecar before any source read",
+      "create one execution ID and immutable audit log",
+      "verify six checkpoints and normalization hash and byte-equality; fail closed on mismatch"
+    ],
+    "after_access": "No training, model/parameter/threshold/metric/source changes regardless of PASS or FAIL. Preserve all raw outputs, failures and decisions. No rerun to select results. A technical interruption is logged as INCOMPLETE; no automatic retry. Any necessary exact same-protocol resumption requires separate user direction, preserving prior artifacts, not a second analysis choice.",
+    "immutability": "Never overwrite development artifacts or any previous frozen attempt. Checkpoint/evaluator hashes verified before and after inference. No writes into source directories.",
+    "future_runner_requirement": "Read-only allowlisted frozen I/O, no call to screen.main/load_real, formal_coisc.main, paper_data.load_data or prepare_protocol.prepare; no optimizer construction, backward or calibration. This task creates NO frozen-loading execution entry point."
+  },
+  "predefined_outputs": {
+    "directory": "future separately authorized immutable frozen_evaluation/<execution_id>/; not created/run now",
+    "required": {
+      "FROZEN_PROTOCOL.json": "exact approved protocol including final code/checkpoint hashes, sealed before first access",
+      "FROZEN_PROTOCOL_AUDIT.json": "access ledger, start/end hashes, source inclusion and pairing validation, runtime/environment, no-training/equality checks, errors",
+      "per_seed_frozen_metrics.json": "all3 paired seeds, point estimates, CI, diagnostic and completeness statuses",
+      "frozen_model_summary.csv": "seed,variant,cohort,aggregation,parameter_count,inference timings,all horizons,all7 and Tp; no training time fabricated",
+      "frozen_prediction_metrics.csv": "seed,variant,cohort,source_id or aggregate,aggregation,horizon_s,output,n_windows,n_sources,MAE,RMSE,bias",
+      "frozen_sensitivity_metrics.csv": "seed,variant,cohort,source_id or aggregate,aggregation,output,PLE,WSR,PSM,eligible counts/status",
+      "frozen_source_horizon_output_audit.csv": "seed,cohort,source,horizon,output,paired metrics and delta_COISC_minus_R0,improved/worsened/tied counts",
+      "frozen_cluster_bootstrap.csv": "seed,cohort,endpoint/output/horizon,estimand,R0,COISC,absolute_effect,relative_effect,CI_lower,CI_upper,gate_contrast,threshold,n_sources,n_replicates,n_undefined_relative,status",
+      "frozen_free_run_metrics.csv": "every source/seed/model/300or600s plus aggregate,trajectory and endpoint metrics,counts or explicitNA reason",
+      "FROZEN_FINAL_DECISION.json": "four gates per seed with exact value,threshold,CI andPASS/FAIL/NOT_EVALUABLE;overall decision;no_rescue;mandatory collateral audit summary/link"
+    },
+    "additional": [
+      "window_level_raw_results.npz (source,role,segment,window/timestamp or relative index,true,origin,R0/COISC predictions and signed/absolute/squared errors perseed)",
+      "window_level_sensitivity.npz (paired S,lag masks,clipped denominator,all horizons/outputs perseed)",
+      "bootstrap_draws.npz (cluster multiplicities and source-order mapping,shared across seeds)",
+      "frozen_event_details.csv",
+      "frozen_event_summary.csv",
+      "frozen_regime_metrics.csv",
+      "frozen_collateral_effect_audit.csv",
+      "FROZEN_PROTOCOL.sha256"
+    ],
+    "no_results_now": "Only draft, hashing and data-free test reports produced now; never create fake per_seed_frozen_metrics or FROZEN_FINAL_DECISION."
+  },
+  "implementation_readiness": {
+    "current": "existing model, rollout, prediction, sensitivity, event-detail and free-run helpers hash-bound; data-free contracts only",
+    "not_claimed": "End-to-end frozen reader/paired cluster-bootstrap report writer is NOT implemented or run in this task.",
+    "known_adapter_requirements": [
+      "source-balanced primary aggregation rather than pooled formal_coisc.tp_metrics output",
+      "native source-cluster bootstrap using preserved raw cells, especially weighted PSM",
+      "event aggregation supporting actual frozen cohort labels",
+      "invert formal_coisc.delta_audit improvement_C when reporting COISC-minus-R0 delta",
+      "seven-output bias supplement (existing prediction_metrics rows omit bias)",
+      "explicit optional failure-source diagnostic instead of development-only target_diagnostic assert"
+    ],
+    "approval_boundary": "This is a protocol/specification deliverable. Any later adapter must implement only these pre-data-approved definitions, be independently tested and receive final code hashes before unsealing. No automatic next stage."
+  },
+  "artifact_manifest": [
+    {
+      "path": "protocols/COISC_VALIDATION_PROTOCOL_DRAFT.json",
+      "sha256": "6967221f9fac73fa89ed14fa623b7b70fc04cdc4c548511c116b8eebe287c92e"
+    },
+    {
+      "path": "timc_coisc/formal_coisc.py",
+      "sha256": "61d3c88f62aacbeb5b74d6da667d79668bccffdff85b88948c9221d75557ae99"
+    },
+    {
+      "path": "<private>/unreleased_code/formal_verify.py",
+      "sha256": "4ba7379bda2b30a3560c449bfe15f91c905cc59f744b72f6de73822435ae9ad4"
+    },
+    {
+      "path": "timc_coisc/screen.py",
+      "sha256": "2f1872e262c359a05b8cd678debe11ed4bf84402e76de4dffc282f3a321257eb"
+    },
+    {
+      "path": "<private>/unreleased_code/test_screen.py",
+      "sha256": "4050f9c95d6669b7f6df7baecdd7afafdacb34aefdca2ff28f70bcc38c748708"
+    },
+    {
+      "path": "timc_coisc/paper_models.py",
+      "sha256": "76fb867e502744b69f761848d0771af2ed2fb9b113f7a372b86c136f76746626"
+    },
+    {
+      "path": "timc_coisc/paper_eval.py",
+      "sha256": "56d746530bec230fa9cb18ed06f8b3a8e3a25c1995049383371642a2691ac757"
+    },
+    {
+      "path": "timc_coisc/paper_data.py",
+      "sha256": "ba5f9e9e20faabd0ff18244c8e9dc14ccf92d9963d77fdb016ebfeac1be07c99"
+    },
+    {
+      "path": "<private>/unreleased_code/run_experiments.py",
+      "sha256": "9430a045bd40088075b9d236c36d31e7a6502f3c803f686c915dab640ca13a98"
+    },
+    {
+      "path": "<private>/unreleased_code/prepare_protocol.py",
+      "sha256": "bba3cd6f0f80a6b643c2648b05b3bd52b541a1717aab20af7e76a55fd08c1f65"
+    },
+    {
+      "path": "<private>/unreleased_code/test_paper.py",
+      "sha256": "c851d118229968c97881591877035bc0767f580e51494e0fa8cd1eed9d07aceb"
+    },
+    {
+      "path": "configs/normalization.json",
+      "sha256": "6e0a0a41664c962c7e0d36f3694bb42eddd3279a9ae82cc569d06a6fac572dc1"
+    },
+    {
+      "path": "protocols/PAPER_PROTOCOL_DRAFT.json",
+      "sha256": "e0ce4c26ff4c93e5cb2bc88d2754ff73600cf7101d1c66901200bf27477af66c"
+    },
+    {
+      "path": "<outputs>/formal_coisc/FORMAL_COISC_DECISION.json",
+      "sha256": "0381fe0ec029ce243ed5d9c2808490d0e845f998edabf2fdcee519e8612ff954"
+    },
+    {
+      "path": "<outputs>/formal_coisc/protocol_execution_audit.json",
+      "sha256": "13d0c3c2e2333f88bdf424364d687033cfc1a5ac0cb3cdd8f407ff02a6aaf29f"
+    },
+    {
+      "path": "<outputs>/formal_coisc/FORMAL_COISC_VERIFICATION.json",
+      "sha256": "b2f0f4272aa5a9a09d2317370bbafea573e16f50816271ba87ac14af696964a4"
+    },
+    {
+      "path": "timc_coisc/model_structural_ablation.py",
+      "sha256": "edb6d527053cba89e030d3702419db9c440f02c139dfc5c9ac26f0db3468122e"
+    },
+    {
+      "path": "timc_coisc/structural_training_common.py",
+      "sha256": "19d2fc5e5530d3115644e546badeb113ca44f3cbf7c35f4f3c7625cb5b85efea"
+    },
+    {
+      "path": "<private>/unreleased_code/cooling_recovery.py",
+      "sha256": "eb9ff23f9bf51a6752e860a5acde91521fb28ab5570e2ddd2d895e6b375b161d"
+    },
+    {
+      "path": "<outputs>/formal_coisc/seed_20260922/results/R0/selected.pt",
+      "sha256": "e1a16a5f07b546850c7b256f143406ba3d7522099beb4ce0220ee7f2cb1dae98"
+    },
+    {
+      "path": "<outputs>/formal_coisc/seed_20260922/coisc_final.pt",
+      "sha256": "3c68c00d1a5a08c132427353773e9e1307a2e35c69dbe5273feee90427071d2a"
+    },
+    {
+      "path": "<outputs>/formal_coisc/seed_20260922/per_seed_config.json",
+      "sha256": "a85625bd2194c74ebcc2ed7afc62d8beb22598238472c6470b8cbf1fdb12a61b"
+    },
+    {
+      "path": "<outputs>/formal_coisc/seed_20260923/results/R0/selected.pt",
+      "sha256": "6760c84b393aa72d40db8c80d51b02c5fd6523ac462ab47e2983cfe859236a28"
+    },
+    {
+      "path": "<outputs>/formal_coisc/seed_20260923/coisc_final.pt",
+      "sha256": "ac8e02cccf0ee4eca3ec60a1fadba08bd1cacfb27f7ffbdcfe984a9e43b74dc4"
+    },
+    {
+      "path": "<outputs>/formal_coisc/seed_20260923/per_seed_config.json",
+      "sha256": "98d757132c1412e194af9ad78aac3775a3e193dac3b03506483d95f6c0b32120"
+    },
+    {
+      "path": "<outputs>/formal_coisc/seed_20260924/results/R0/selected.pt",
+      "sha256": "e0148fc3623487d464e1d22145a984a45d7007d0bbeeb84780607d8d191650b7"
+    },
+    {
+      "path": "<outputs>/formal_coisc/seed_20260924/coisc_final.pt",
+      "sha256": "531e8b80e435435ac97675784e090261b79e3141738d0eeb804bf4b4b44a34ef"
+    },
+    {
+      "path": "<outputs>/formal_coisc/seed_20260924/per_seed_config.json",
+      "sha256": "3aed90c848ac63b10b86a01d55275c158c3f3839b751f121cebffaf0b5984d9e"
+    },
+    {
+      "path": "<private>/unreleased_code/test_frozen_protocol_dry_run.py",
+      "sha256": "e4b8e5074a24aba0b1801bb380b0eefda492c9367e10924af8b7d64295fea220"
+    }
+  ]
+}

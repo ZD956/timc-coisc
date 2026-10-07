@@ -1,0 +1,116 @@
+{
+  "protocol_name": "POSTHOC_B5M_JACOBIAN_MATCHED_SHARE_V1",
+  "version": "FROZEN-1",
+  "created": "2026-10-05",
+  "status": "FROZEN_BEFORE_B5M_OUTCOME",
+  "evidence_tier": "post hoc, exploratory, second weight of the B5 baseline. Cannot change any locked verdict, including the B5 verdict (B5_does_not_reproduce_profile at lambda_jac = 72.34). All outcomes are reported whatever their direction.",
+  "motivation": "B5 used the shared calibration rule, which sets the regularizer share on a weakly trained 32-step pilot model. On the R0 checkpoints the resulting Jacobian penalty dominated the loss (mean regularizer/prediction ratio 48-85 during adaptation, against 1.1-1.7 for COISC), so B5 alone could be read as an over-penalized straw man. B5M adds one pre-registered weaker point whose initial regularizer contribution on R0 equals that of COISC.",
+  "prior_exposure_disclosure": [
+    "All B5 results were seen before this draft: holdout T_p ratios JAC/R0 PLE 0.90/0.82/1.11, WSR 1.07/1.07/1.49, PSM 1.10/1.05/0.98, T_p MAE at 120 s +0.034/+0.041/+0.037 C, all-output MAE 2.7-3.9 x R0, training logs of JAC and COISC.",
+    "All results of R0, COISC, L0, the ablation variants and the onset-aligned study were seen.",
+    "lambda_match was computed by gate R1 of this protocol (from regularizer values on R0 only, no training and no outcome) before this draft was completed; its approximate size (about 1-2) was also predictable from the step-1 entries of the seen COISC and JAC training logs.",
+    "Gate attempt 1 (GATES_ATTEMPT1_FAILED_REPORT.json) failed R3 because holdout inference ran in the same process after training: screen.seed_all disables TF32, while all stored holdout values were computed with default backend flags (largest summary difference 0.0082). The gate code was split into separate processes with an assertion on the backend flag; no rule was changed. A fresh-process recomputation reproduced all stored values exactly."
+  ],
+  "variant": {
+    "JAC_M": "identical to B5 JAC (b5_common.adapt with jacobian_terms: head only, 75 steps, batch 128, Adam lr 5e-5, grad clip 1.0, ordinary sampler, adaptation seed = study seed, L_jac = mean of S^2 over the 8-window subset and all 12 x 7 cells) except the weight lambda_match",
+    "comparators": "existing R0, COISC, L0 and B5 JAC checkpoints of the same seeds, sha256-verified"
+  },
+  "lambda_rule": "Matched initial loss share on the actual starting checkpoints: for each seed, on R0 with the first 8 adaptation batches of that seed (the batches used at adaptation steps 1-8, deterministic given the seed; no dropout in the model), compute L_coisc = L_pre + L_sign (prior masks) and L_jac on the 8-window subset. lambda_match = lambda_prior x sum(L_coisc) / sum(L_jac) pooled over 3 seeds x 8 batches, one shared value. One weight only: no grid, no tuning, no further weight under this protocol.",
+  "declared_expectation_before_running": "At about 1/58 of the B5 weight, JAC_M is expected to lie between L0 and JAC: little accuracy cost and a modest, roughly uniform sensitivity shrinkage. Whether WSR falls below 0.9 x R0 is open; L0 itself met the WSR condition on 2 of 3 seeds.",
+  "seeds": [
+    20260922,
+    20260923,
+    20260924
+  ],
+  "development_record": "as B5 (selection-set T_p MAE, macro MAE, PLE/WSR/PSM, formal per-seed gates under prior masks); reported only",
+  "holdout_endpoints": "as B5: delivered-23 holdout, frozen 20,000-draw source bootstrap, onset_holdout summaries and CONTRAST_METRICS; contrasts of JAC_M vs R0, COISC, L0 and JAC",
+  "interpretation_rules_declared_before_running": {
+    "per_variant": "the B5 rule unchanged (b5_holdout.rule): D1 T_p PLE_PRIOR ratio <= 0.9, D2 WSR_PRIOR ratio <= 0.9, D3 PSM_PRIOR ratio >= 0.2, A T_p MAE_120 minus COISC <= 0; verdicts B5_reproduces_COISC_profile / B5_reproduces_profile_at_higher_accuracy_cost / B5_does_not_reproduce_profile / B5_mixed",
+    "combined_over_both_weights": "profile_obtainable_without_lag_structure if JAC or JAC_M reproduces the COISC profile (manuscript then states that the diagnostic changes do not require the lag structure); neither_weight_reproduces_profile if both are B5_does_not_reproduce_profile; otherwise partial",
+    "wording": "descriptive only; two rule-defined weights are reported as such and not generalized to all Jacobian penalties"
+  },
+  "reproduction_gates_before_any_new_result": {
+    "R1_probe": "the probe on R0, batch 1 of each seed, reproduces the step-1 L_pre and L_sign of the formal COISC training log and the step-1 L_jac of the B5 JAC log exactly; lambda_match computed in the same pass",
+    "R2_adaptation": "b5_common.adapt reproduces the three B5 JAC_final.pt checkpoints bitwise",
+    "R3_holdout": "fresh-process holdout re-inference of R0/COISC/L0/JAC reproduces all B5_HOLDOUT_SUMMARY.csv values and all 459 B5_HOLDOUT_CONTRASTS.csv rows within 1e-9",
+    "R4_rule": "the B5 rule returns the known verdicts COISC -> reproduces, L0 -> mixed, JAC -> does_not_reproduce",
+    "smoke": "2-step code-path run with throwaway adaptation seed 1; checkpoint deleted, metrics not inspected",
+    "stop_rule": "any gate failure stops execution and is reported; no change of rules to make a gate pass"
+  },
+  "execution": {
+    "order": "b5m.py train -> b5m.py holdout (separate processes)",
+    "outputs": "run/seed_<s>/JAC_M_final.pt, JAC_M_training.jsonl, SEED_COMPLETE.json; run/B5M_DEVELOPMENT_RESULTS.json, B5M_CHECKPOINT_BINDINGS.json; B5M_HOLDOUT_SUMMARY.csv, B5M_HOLDOUT_CONTRASTS.csv, B5M_RULE_RESULT.json, holdout/*.npz",
+    "estimated_time": "about 10-15 min",
+    "no_MIL": "prediction-level baseline only"
+  },
+  "anonymization": "outputs use seed labels and T1-T6/T_p only; source_id is never written",
+  "manuscript_use": "none without explicit author approval; intended together with B5 in section 6.4, one bullet of 7.4, a supplementary table and Table S1 (two rows: B5/B5M and the TF32 gate attempt)",
+  "amendments": {},
+  "lambda_match": 1.257574712489055,
+  "execution_authorized": false,
+  "execution_authorization_rule": "b5m.py train and b5m.py holdout (separate processes, in that order) require EXECUTION_AUTHORIZATION.json written on the author's explicit instruction, naming this file's SHA-256",
+  "gate_summary": {
+    "R1_probe": true,
+    "R2_adaptation": true,
+    "R3_holdout": true,
+    "R4_rule": true,
+    "smoke": true
+  },
+  "gate_reports_sha256": {
+    "GATES_TRAIN_REPORT.json": "51a995adf66c3aefa4746174413a551c60c1b149085db851957c91f9c557cb11",
+    "GATES_HOLDOUT_REPORT.json": "1f3c5b8bb34729fe44aea784223ae2d48eb716f49d2f2f3d4ab65300bc1d606a"
+  },
+  "code_sha256": [
+    {
+      "path": "timc_coisc/b5m.py",
+      "sha256": "2ae8d5d368919f9e6424c2271565fe22e26e03bda7df20406b593198223c8fb2"
+    },
+    {
+      "path": "timc_coisc/b5_common.py",
+      "sha256": "30409bebe42e2e67d75456c2234aaed9cfe3bd9bc28a3b52271098171679ed01"
+    },
+    {
+      "path": "timc_coisc/b5_holdout.py",
+      "sha256": "df5cd96a3ab46a4588ec971a0d856ee1c6af5f321de1bb867d9a3a55a50c5fae"
+    },
+    {
+      "path": "timc_coisc/onset_common.py",
+      "sha256": "727c7b0c999f41b820f038cba34c2d888ce9a8c4db8fbbec341fbcfe10b3545d"
+    },
+    {
+      "path": "timc_coisc/onset_train.py",
+      "sha256": "3186fec1550824ba945b1cc680caa664bc8744f3f330c05182597252c0eebeda"
+    },
+    {
+      "path": "timc_coisc/onset_holdout.py",
+      "sha256": "dd58b3d595d54712cf017b145cb7fb43495759c0f6d5d9c7ecad71743448582c"
+    },
+    {
+      "path": "timc_coisc/screen.py",
+      "sha256": "2f1872e262c359a05b8cd678debe11ed4bf84402e76de4dffc282f3a321257eb"
+    }
+  ],
+  "bound_files": [
+    {
+      "path": "protocols/posthoc_jacobian_b5/POSTHOC_B5_JACOBIAN_PROTOCOL.json",
+      "sha256": "403eee286d2998ecf2fa4148775063d5fe1696da33ef5a3ed50b3212982fc234"
+    },
+    {
+      "path": "<outputs>/posthoc_jacobian_b5/run/B5_CHECKPOINT_BINDINGS.json",
+      "sha256": "aeb13d794a3c01e387b5c3be53781585b56f20cfe92a0094e7306175abaa6b2c"
+    },
+    {
+      "path": "<outputs>/posthoc_jacobian_b5/B5_HOLDOUT_SUMMARY.csv",
+      "sha256": "9067d509ccfd0acad338789d02fdf460d0da016f1b844a08ae5890c41f118a14"
+    },
+    {
+      "path": "<outputs>/posthoc_jacobian_b5/B5_HOLDOUT_CONTRASTS.csv",
+      "sha256": "7947fffa5c83095eb790d68173ad630c8008c747cfc55bf1c234fe03a254e540"
+    },
+    {
+      "path": "<outputs>/posthoc_jacobian_b5/B5_RULE_RESULT.json",
+      "sha256": "b72b276df8262cf848da926e9d421ec8a0c32b82c4e3f368376d24cebe5b20d5"
+    }
+  ],
+  "frozen_utc": "2026-10-05T09:16:28Z"
+}

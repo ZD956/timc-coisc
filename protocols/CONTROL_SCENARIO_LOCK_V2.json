@@ -1,0 +1,331 @@
+{
+  "status": "PRE_OUTCOME_LOCKED",
+  "source": "<private>/data/field_windows_development_109.npz",
+  "cache_sha256": "6c56bf5904c40a8567b9bb3c1202efcd2c42d33365801ccdd9a515a0b74914ca",
+  "previous_scenario_lock_sha256": "ea73b48622613af228896a4bf9ccdb9ce4fcf23ca28a13b84a10aae2c57425e3",
+  "history_channel_map_sha256": "6030163cf1e3a8125b289e4717f9fdeba18736efc13afeebbfbea73d5955c0a1",
+  "selection_rule": "10 fit + 2 selection source IDs evenly spaced in lexicographic order; midpoint existing window per source; metadata only",
+  "source_population": {
+    "fit": 91,
+    "selection": 18
+  },
+  "scenarios": [
+    {
+      "scenario_id": "S01",
+      "split": "train",
+      "source_id": "S005",
+      "cache_row_index": 23492,
+      "source_window_count": 292,
+      "history_sha256": "26c52bdf0539844fda028601def564136845c04e2ae26c3bb96d0274c7f5cfd9",
+      "history_shape": [
+        20,
+        12
+      ],
+      "future_truth_used": false,
+      "background_raw_aux": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "background_raw_sha256": "de47c9b27eb8d300dbb5f2c353e632c393262cf06340c4fa7f1b40c4cbd36f90",
+      "background_dtype": "float32",
+      "previous_uh_percent": 1.0,
+      "initial_Tp_C": 37.513999938964844,
+      "initial_Tp_origin_sha256": "bd71cc5f7ff85fd062b6ef3797be46f5e1cbdada9384e733a2eefdf503a0087c",
+      "future_heater_rule": "UH varies by controller or open-loop qualification; all five non-UH heaters held at this exact final-history-frame raw value for 600 s"
+    },
+    {
+      "scenario_id": "S02",
+      "split": "train",
+      "source_id": "S018",
+      "cache_row_index": 26963,
+      "source_window_count": 1339,
+      "history_sha256": "2d699a8eec397aac9cfe4a1b50c83c943a848177711e02f65985d58580ab56a8",
+      "history_shape": [
+        20,
+        12
+      ],
+      "future_truth_used": false,
+      "background_raw_aux": [
+        15.0,
+        15.0,
+        15.0,
+        15.0,
+        15.0
+      ],
+      "background_raw_sha256": "bf5395478b9dad23b311d03da107c0fb200b683900ccb0388edd15374040e224",
+      "background_dtype": "float32",
+      "previous_uh_percent": 3.0,
+      "initial_Tp_C": 39.944000244140625,
+      "initial_Tp_origin_sha256": "37e8b148394e4e50d6c4c137e3621ed86d79416d63dc98bb8c8d7b3d436247a4",
+      "future_heater_rule": "UH varies by controller or open-loop qualification; all five non-UH heaters held at this exact final-history-frame raw value for 600 s"
+    },
+    {
+      "scenario_id": "S03",
+      "split": "train",
+      "source_id": "S034",
+      "cache_row_index": 1237,
+      "source_window_count": 76,
+      "history_sha256": "129e3b3d49e036976c50604461ba065eb39f798b2862322733bc8ba68d66e239",
+      "history_shape": [
+        20,
+        12
+      ],
+      "future_truth_used": false,
+      "background_raw_aux": [
+        50.0,
+        50.0,
+        50.0,
+        50.0,
+        50.0
+      ],
+      "background_raw_sha256": "52df781fdc20cec823c064c3dab476d739ad27bb24fb05bb1b44b0923f783e5e",
+      "background_dtype": "float32",
+      "previous_uh_percent": 70.0,
+      "initial_Tp_C": 34.432762145996094,
+      "initial_Tp_origin_sha256": "4ec574cad8df51a1ca042e2d73901bda0e4a465e4affb7699db1258d0fa99846",
+      "future_heater_rule": "UH varies by controller or open-loop qualification; all five non-UH heaters held at this exact final-history-frame raw value for 600 s"
+    },
+    {
+      "scenario_id": "S04",
+      "split": "train",
+      "source_id": "S049",
+      "cache_row_index": 10407,
+      "source_window_count": 468,
+      "history_sha256": "cf8eedb20e75d4e3cc10d27265f3e5fca6da3515f2cb2b72e63491fd01283902",
+      "history_shape": [
+        20,
+        12
+      ],
+      "future_truth_used": false,
+      "background_raw_aux": [
+        10.0,
+        10.0,
+        10.0,
+        10.0,
+        10.0
+      ],
+      "background_raw_sha256": "444a5fea4fa800ff9588bf51d410a818adda8252349fc98e72dd5e455ced94c5",
+      "background_dtype": "float32",
+      "previous_uh_percent": 24.0,
+      "initial_Tp_C": 28.592233657836914,
+      "initial_Tp_origin_sha256": "fed29f100a7bff516d412e4ca5d853791c69e548ec4a0662a283d1a01b412678",
+      "future_heater_rule": "UH varies by controller or open-loop qualification; all five non-UH heaters held at this exact final-history-frame raw value for 600 s"
+    },
+    {
+      "scenario_id": "S05",
+      "split": "train",
+      "source_id": "S064",
+      "cache_row_index": 14136,
+      "source_window_count": 90,
+      "history_sha256": "dc6c1c12960860962bf6a42063ad3c09096bb6cfeb43ea6b0b1a9442ced66e35",
+      "history_shape": [
+        20,
+        12
+      ],
+      "future_truth_used": false,
+      "background_raw_aux": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "background_raw_sha256": "de47c9b27eb8d300dbb5f2c353e632c393262cf06340c4fa7f1b40c4cbd36f90",
+      "background_dtype": "float32",
+      "previous_uh_percent": 10.0,
+      "initial_Tp_C": 35.2599983215332,
+      "initial_Tp_origin_sha256": "2489e0897462f3df648f8e4f038bf61d2d6ce2cf1f477ecbc2801f4860445a3b",
+      "future_heater_rule": "UH varies by controller or open-loop qualification; all five non-UH heaters held at this exact final-history-frame raw value for 600 s"
+    },
+    {
+      "scenario_id": "S06",
+      "split": "train",
+      "source_id": "S080",
+      "cache_row_index": 16544,
+      "source_window_count": 142,
+      "history_sha256": "dd0f2233a77174f7cacc9da4475e0cf760624d270179eeba059705aa8b0ab5d7",
+      "history_shape": [
+        20,
+        12
+      ],
+      "future_truth_used": false,
+      "background_raw_aux": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "background_raw_sha256": "de47c9b27eb8d300dbb5f2c353e632c393262cf06340c4fa7f1b40c4cbd36f90",
+      "background_dtype": "float32",
+      "previous_uh_percent": 18.0,
+      "initial_Tp_C": 32.679954528808594,
+      "initial_Tp_origin_sha256": "b74f25e49b478cd29b52ab38fd3c8ab8c3f6cb9b7b08fb577fdbb9256eeb2417",
+      "future_heater_rule": "UH varies by controller or open-loop qualification; all five non-UH heaters held at this exact final-history-frame raw value for 600 s"
+    },
+    {
+      "scenario_id": "S07",
+      "split": "train",
+      "source_id": "S093",
+      "cache_row_index": 18487,
+      "source_window_count": 251,
+      "history_sha256": "98c13eeb62eefdb839211a9493ad9685dcd211cfa5c9319f066f016500865f1d",
+      "history_shape": [
+        20,
+        12
+      ],
+      "future_truth_used": false,
+      "background_raw_aux": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "background_raw_sha256": "de47c9b27eb8d300dbb5f2c353e632c393262cf06340c4fa7f1b40c4cbd36f90",
+      "background_dtype": "float32",
+      "previous_uh_percent": 28.0,
+      "initial_Tp_C": 32.55632019042969,
+      "initial_Tp_origin_sha256": "ed71f9a0a3a8af03a66a1b10f1cdb9e9609954f01f71bcdd1743a24b3ea89fcc",
+      "future_heater_rule": "UH varies by controller or open-loop qualification; all five non-UH heaters held at this exact final-history-frame raw value for 600 s"
+    },
+    {
+      "scenario_id": "S08",
+      "split": "train",
+      "source_id": "S109",
+      "cache_row_index": 20547,
+      "source_window_count": 262,
+      "history_sha256": "371fb8baf74e42e84f59e47fee534eb217375fd213f87c1f6c111857d9ff4f52",
+      "history_shape": [
+        20,
+        12
+      ],
+      "future_truth_used": false,
+      "background_raw_aux": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "background_raw_sha256": "de47c9b27eb8d300dbb5f2c353e632c393262cf06340c4fa7f1b40c4cbd36f90",
+      "background_dtype": "float32",
+      "previous_uh_percent": 30.0,
+      "initial_Tp_C": 32.034000396728516,
+      "initial_Tp_origin_sha256": "b6da62719737aef8a8dfa3bfbafdd2469d3577234492abe535161bb3ce5f47bc",
+      "future_heater_rule": "UH varies by controller or open-loop qualification; all five non-UH heaters held at this exact final-history-frame raw value for 600 s"
+    },
+    {
+      "scenario_id": "S09",
+      "split": "train",
+      "source_id": "S124",
+      "cache_row_index": 22090,
+      "source_window_count": 112,
+      "history_sha256": "08a0f4895c99625cdb5d1f405aab4d8e1e669b951e40156956b237226418f076",
+      "history_shape": [
+        20,
+        12
+      ],
+      "future_truth_used": false,
+      "background_raw_aux": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "background_raw_sha256": "de47c9b27eb8d300dbb5f2c353e632c393262cf06340c4fa7f1b40c4cbd36f90",
+      "background_dtype": "float32",
+      "previous_uh_percent": 65.0,
+      "initial_Tp_C": 33.10599899291992,
+      "initial_Tp_origin_sha256": "c6a53ecb157f713996f12fa3727d1331bf8b04e5fe2476648d46cbd8144d1438",
+      "future_heater_rule": "UH varies by controller or open-loop qualification; all five non-UH heaters held at this exact final-history-frame raw value for 600 s"
+    },
+    {
+      "scenario_id": "S10",
+      "split": "train",
+      "source_id": "S137",
+      "cache_row_index": 23307,
+      "source_window_count": 78,
+      "history_sha256": "043dbd152ef1fed83b5fe97e937748a8f41b0dc19ebc820da5ddb769e24ccc66",
+      "history_shape": [
+        20,
+        12
+      ],
+      "future_truth_used": false,
+      "background_raw_aux": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "background_raw_sha256": "de47c9b27eb8d300dbb5f2c353e632c393262cf06340c4fa7f1b40c4cbd36f90",
+      "background_dtype": "float32",
+      "previous_uh_percent": 95.0,
+      "initial_Tp_C": 33.36800003051758,
+      "initial_Tp_origin_sha256": "7addeb32b64af96eb3afd900d386d01d8da395f8913ee15cec9e888196e4baa3",
+      "future_heater_rule": "UH varies by controller or open-loop qualification; all five non-UH heaters held at this exact final-history-frame raw value for 600 s"
+    },
+    {
+      "scenario_id": "S11",
+      "split": "validation",
+      "source_id": "S002",
+      "cache_row_index": 9398,
+      "source_window_count": 253,
+      "history_sha256": "befb4339c98ea9789106300f0cad89cb9d5221c7ac1c15fe96e63db96e77203f",
+      "history_shape": [
+        20,
+        12
+      ],
+      "future_truth_used": false,
+      "background_raw_aux": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "background_raw_sha256": "de47c9b27eb8d300dbb5f2c353e632c393262cf06340c4fa7f1b40c4cbd36f90",
+      "background_dtype": "float32",
+      "previous_uh_percent": 10.34000015258789,
+      "initial_Tp_C": 37.02000045776367,
+      "initial_Tp_origin_sha256": "57a30ee7f016a8264224744eee321913b07b01d2340b98cb8f343b1868b82a02",
+      "future_heater_rule": "UH varies by controller or open-loop qualification; all five non-UH heaters held at this exact final-history-frame raw value for 600 s"
+    },
+    {
+      "scenario_id": "S12",
+      "split": "validation",
+      "source_id": "S138",
+      "cache_row_index": 9227,
+      "source_window_count": 89,
+      "history_sha256": "a05339ff4ea21b92d567e520fc0a197382d24ef70ab958d4d2802e375103ec6c",
+      "history_shape": [
+        20,
+        12
+      ],
+      "future_truth_used": false,
+      "background_raw_aux": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "background_raw_sha256": "de47c9b27eb8d300dbb5f2c353e632c393262cf06340c4fa7f1b40c4cbd36f90",
+      "background_dtype": "float32",
+      "previous_uh_percent": 95.0,
+      "initial_Tp_C": 32.4119987487793,
+      "initial_Tp_origin_sha256": "082e00809acf18709189e1de4ca75cef56e2c44a4db89ef8a6d45cc5f36afe37",
+      "future_heater_rule": "UH varies by controller or open-loop qualification; all five non-UH heaters held at this exact final-history-frame raw value for 600 s"
+    }
+  ],
+  "reference_c": 37.0,
+  "updates": 60,
+  "dt_s": 10,
+  "future_truth_used": false,
+  "outcome_used_to_select": false
+}

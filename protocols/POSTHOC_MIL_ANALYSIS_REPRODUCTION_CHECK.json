@@ -1,0 +1,44 @@
+{
+  "created_utc": "2026-09-29T13:16:58Z",
+  "purpose": "analysis pipeline reproduces the already-reported formal T1 COISC-R0 primary result",
+  "draws_identical_to_formal": true,
+  "rows": [
+    {
+      "seed": 20260922,
+      "point": 0.06438255094494956,
+      "ci_lower": 0.013811943753092925,
+      "ci_upper": 0.11808582863646651,
+      "reported": [
+        0.06438255094494956,
+        0.013811943753092925,
+        0.11808582863646651
+      ],
+      "exact": true
+    },
+    {
+      "seed": 20260923,
+      "point": -0.6218834308627385,
+      "ci_lower": -1.329430337455408,
+      "ci_upper": -0.04719021160877925,
+      "reported": [
+        -0.6218834308627385,
+        -1.329430337455408,
+        -0.04719021160877925
+      ],
+      "exact": true
+    },
+    {
+      "seed": 20260924,
+      "point": 0.013822453214192442,
+      "ci_lower": -0.022268594252777517,
+      "ci_upper": 0.0413080338143575,
+      "reported": [
+        0.013822453214192442,
+        -0.022268594252777517,
+        0.0413080338143575
+      ],
+      "exact": true
+    }
+  ],
+  "passed": true
+}

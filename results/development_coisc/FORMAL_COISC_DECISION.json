@@ -1,0 +1,95 @@
+{
+  "protocol_sha256": "6967221f9fac73fa89ed14fa623b7b70fc04cdc4c548511c116b8eebe287c92e",
+  "per_seed": [
+    {
+      "seed": 20260922,
+      "gates": {
+        "Tp_120s_MAE": {
+          "value": 0.3250470459461212,
+          "threshold": 0.3250661242008209,
+          "pass_": true
+        },
+        "PLE": {
+          "value": 0.029354711177463633,
+          "threshold": 0.03648100286438758,
+          "pass_": true
+        },
+        "WSR": {
+          "value": 0.024519100514765645,
+          "threshold": 0.11950013546464372,
+          "pass_": true
+        },
+        "PSM": {
+          "value": 0.03753662109375,
+          "threshold": 0.0063018798828125,
+          "pass_": true
+        },
+        "overall_pass": true
+      },
+      "PASS": true,
+      "nonhead_tensor_equality": true,
+      "requires_grad_scope_ok": true
+    },
+    {
+      "seed": 20260923,
+      "gates": {
+        "Tp_120s_MAE": {
+          "value": 0.31283727288246155,
+          "threshold": 0.3151491332054138,
+          "pass_": true
+        },
+        "PLE": {
+          "value": 0.029779795636748197,
+          "threshold": 0.039915456958112674,
+          "pass_": true
+        },
+        "WSR": {
+          "value": 0.15328953309852794,
+          "threshold": 0.23683622324573286,
+          "pass_": true
+        },
+        "PSM": {
+          "value": 0.029754638671875,
+          "threshold": 0.0056304931640625,
+          "pass_": true
+        },
+        "overall_pass": true
+      },
+      "PASS": true,
+      "nonhead_tensor_equality": true,
+      "requires_grad_scope_ok": true
+    },
+    {
+      "seed": 20260924,
+      "gates": {
+        "Tp_120s_MAE": {
+          "value": 0.3306814432144165,
+          "threshold": 0.33084190368652344,
+          "pass_": true
+        },
+        "PLE": {
+          "value": 0.02390809571060487,
+          "threshold": 0.03366455793655725,
+          "pass_": true
+        },
+        "WSR": {
+          "value": 0.025614106384900207,
+          "threshold": 0.05098211866702791,
+          "pass_": true
+        },
+        "PSM": {
+          "value": 0.0434112548828125,
+          "threshold": 0.008423097431659698,
+          "pass_": true
+        },
+        "overall_pass": true
+      },
+      "PASS": true,
+      "nonhead_tensor_equality": true,
+      "requires_grad_scope_ok": true
+    }
+  ],
+  "overall_PASS": true,
+  "overall_decision": "PASS",
+  "stop_rule": "Any seed failure is reported without rescue; no parameters or rules changed"
+}

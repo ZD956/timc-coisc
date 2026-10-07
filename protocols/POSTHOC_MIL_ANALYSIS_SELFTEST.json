@@ -1,0 +1,7 @@
+{
+  "created_utc": "2026-09-29T13:19:01Z",
+  "selftest_passed": true,
+  "zero_contrasts_exact": true,
+  "B1_equals_formal_COISC_minus_R0": true,
+  "contrast_rows": 24
+}

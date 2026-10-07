@@ -1,0 +1,489 @@
+{
+  "created_utc": "2026-09-29T13:14:24Z",
+  "outcome_blind": true,
+  "controller_seed": 20260922,
+  "scenario_index": 0,
+  "mhe_config": {
+    "window": 12,
+    "rho": 0.01,
+    "lower": -50.0,
+    "upper": 50.0,
+    "xatol": 0.05,
+    "grid_step": 1.0
+  },
+  "plants_used": "controller-internal models and wrappers of them only; no analysis-population plant",
+  "shift_identity": {
+    "passed": true
+  },
+  "G1": {
+    "passed": true,
+    "rows": [
+      {
+        "variant": "R0",
+        "scenario_index": 0,
+        "step": 0,
+        "bitwise_equal": true,
+        "d_hat": 0.0
+      },
+      {
+        "variant": "R0",
+        "scenario_index": 0,
+        "step": 1,
+        "bitwise_equal": true,
+        "d_hat": 0.0
+      },
+      {
+        "variant": "R0",
+        "scenario_index": 0,
+        "step": 2,
+        "bitwise_equal": true,
+        "d_hat": 0.0
+      },
+      {
+        "variant": "R0",
+        "scenario_index": 1,
+        "step": 0,
+        "bitwise_equal": true,
+        "d_hat": 0.0
+      },
+      {
+        "variant": "R0",
+        "scenario_index": 1,
+        "step": 1,
+        "bitwise_equal": true,
+        "d_hat": 0.0
+      },
+      {
+        "variant": "R0",
+        "scenario_index": 1,
+        "step": 2,
+        "bitwise_equal": true,
+        "d_hat": 0.0
+      },
+      {
+        "variant": "R0",
+        "scenario_index": 2,
+        "step": 0,
+        "bitwise_equal": true,
+        "d_hat": 0.0
+      },
+      {
+        "variant": "R0",
+        "scenario_index": 2,
+        "step": 1,
+        "bitwise_equal": true,
+        "d_hat": 0.0
+      },
+      {
+        "variant": "R0",
+        "scenario_index": 2,
+        "step": 2,
+        "bitwise_equal": true,
+        "d_hat": 0.0
+      },
+      {
+        "variant": "COISC",
+        "scenario_index": 0,
+        "step": 0,
+        "bitwise_equal": true,
+        "d_hat": 0.0
+      },
+      {
+        "variant": "COISC",
+        "scenario_index": 0,
+        "step": 1,
+        "bitwise_equal": true,
+        "d_hat": 0.0
+      },
+      {
+        "variant": "COISC",
+        "scenario_index": 0,
+        "step": 2,
+        "bitwise_equal": true,
+        "d_hat": 0.0
+      },
+      {
+        "variant": "COISC",
+        "scenario_index": 1,
+        "step": 0,
+        "bitwise_equal": true,
+        "d_hat": 0.0
+      },
+      {
+        "variant": "COISC",
+        "scenario_index": 1,
+        "step": 1,
+        "bitwise_equal": true,
+        "d_hat": 0.0
+      },
+      {
+        "variant": "COISC",
+        "scenario_index": 1,
+        "step": 2,
+        "bitwise_equal": true,
+        "d_hat": 0.0
+      },
+      {
+        "variant": "COISC",
+        "scenario_index": 2,
+        "step": 0,
+        "bitwise_equal": true,
+        "d_hat": 0.0
+      },
+      {
+        "variant": "COISC",
+        "scenario_index": 2,
+        "step": 1,
+        "bitwise_equal": true,
+        "d_hat": 0.0
+      },
+      {
+        "variant": "COISC",
+        "scenario_index": 2,
+        "step": 2,
+        "bitwise_equal": true,
+        "d_hat": 0.0
+      },
+      {
+        "variant": "L0",
+        "scenario_index": 0,
+        "step": 0,
+        "bitwise_equal": true,
+        "d_hat": 0.0
+      },
+      {
+        "variant": "L0",
+        "scenario_index": 0,
+        "step": 1,
+        "bitwise_equal": true,
+        "d_hat": 0.0
+      },
+      {
+        "variant": "L0",
+        "scenario_index": 0,
+        "step": 2,
+        "bitwise_equal": true,
+        "d_hat": 0.0
+      },
+      {
+        "variant": "L0",
+        "scenario_index": 1,
+        "step": 0,
+        "bitwise_equal": true,
+        "d_hat": 0.0
+      },
+      {
+        "variant": "L0",
+        "scenario_index": 1,
+        "step": 1,
+        "bitwise_equal": true,
+        "d_hat": 0.0
+      },
+      {
+        "variant": "L0",
+        "scenario_index": 1,
+        "step": 2,
+        "bitwise_equal": true,
+        "d_hat": 0.0
+      },
+      {
+        "variant": "L0",
+        "scenario_index": 2,
+        "step": 0,
+        "bitwise_equal": true,
+        "d_hat": 0.0
+      },
+      {
+        "variant": "L0",
+        "scenario_index": 2,
+        "step": 1,
+        "bitwise_equal": true,
+        "d_hat": 0.0
+      },
+      {
+        "variant": "L0",
+        "scenario_index": 2,
+        "step": 2,
+        "bitwise_equal": true,
+        "d_hat": 0.0
+      }
+    ],
+    "seconds": 34.456149599999996
+  },
+  "G2": {
+    "passed": true,
+    "criterion": "|d_hat| < 0.1 % at every update",
+    "d_hat": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "status": [
+      "INITIAL_ZERO",
+      "OK",
+      "OK",
+      "OK",
+      "OK",
+      "OK",
+      "OK",
+      "OK",
+      "OK",
+      "OK",
+      "OK",
+      "OK"
+    ],
+    "applied_UH": [
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "seconds": 6.0829618
+  },
+  "G3": {
+    "passed": true,
+    "criterion": "|d_hat - 10| <= 2 % at update 24 (estimate from updates 12..23)",
+    "d_hat": [
+      0.0,
+      8.23606797749979,
+      9.21553750018907,
+      9.5629738520451,
+      9.723123839134313,
+      9.809299401580983,
+      9.860742640096401,
+      9.893853234946794,
+      9.916394035206611,
+      9.93240816658178,
+      9.94419849435777,
+      9.95312490399993,
+      9.960043331142888,
+      9.959910992548284,
+      9.959721950882527,
+      9.959570122675498,
+      9.95954398910421,
+      9.959319752405513,
+      9.95922902300086,
+      9.959065748302194,
+      9.958909408626953,
+      9.958905982063202,
+      9.958887986172469,
+      9.958821146414982,
+      9.95880080979475
+    ],
+    "status": [
+      "INITIAL_ZERO",
+      "OK",
+      "OK",
+      "OK",
+      "OK",
+      "OK",
+      "OK",
+      "OK",
+      "OK",
+      "OK",
+      "OK",
+      "OK",
+      "OK",
+      "OK",
+      "OK",
+      "OK",
+      "OK",
+      "OK",
+      "OK",
+      "OK",
+      "OK",
+      "OK",
+      "OK",
+      "OK",
+      "OK"
+    ],
+    "cost": [
+      NaN,
+      8.248732256705412e-05,
+      9.215129496514002e-05,
+      9.5631823088355e-05,
+      9.723200639343406e-05,
+      9.809413850185141e-05,
+      9.860796510905197e-05,
+      9.893932520243067e-05,
+      9.916254487035474e-05,
+      9.932436680947861e-05,
+      9.944032168252034e-05,
+      9.953077230857051e-05,
+      9.959999273214485e-05,
+      9.959892886761452e-05,
+      9.959735263340616e-05,
+      9.959639045065916e-05,
+      9.959706678809807e-05,
+      9.959247458599957e-05,
+      9.95897078204898e-05,
+      9.959211878725612e-05,
+      9.959185335489459e-05,
+      9.959069169048888e-05,
+      9.9588158751268e-05,
+      9.958666536425304e-05,
+      9.958614798454376e-05
+    ],
+    "cost_at_zero": [
+      NaN,
+      0.00047077728534835234,
+      0.0011743794508826493,
+      0.0021880600723104887,
+      0.0035104918195732657,
+      0.0051400495157092035,
+      0.007074617341155924,
+      0.009311576550836824,
+      0.011847760798749126,
+      0.014679409770030395,
+      0.017802452640232027,
+      0.021212419740660345,
+      0.0249047164252766,
+      0.02482850610512186,
+      0.024759482395590265,
+      0.024693867794818896,
+      0.024628236377187324,
+      0.024563865273244626,
+      0.02450052222224662,
+      0.02444095605662571,
+      0.02438513411748823,
+      0.024335532666251918,
+      0.024292567063740635,
+      0.02425694992487277,
+      0.024229236453063803
+    ],
+    "applied_UH": [
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "seconds": 7.2298714999999945
+  },
+  "G5": {
+    "passed": true,
+    "rows": [
+      {
+        "perturbation": "plus_1000",
+        "step": 0,
+        "decisions_and_estimator_bitwise_equal": true,
+        "plant_Tp_actually_perturbed": true
+      },
+      {
+        "perturbation": "plus_1000",
+        "step": 1,
+        "decisions_and_estimator_bitwise_equal": true,
+        "plant_Tp_actually_perturbed": true
+      },
+      {
+        "perturbation": "plus_1000",
+        "step": 2,
+        "decisions_and_estimator_bitwise_equal": true,
+        "plant_Tp_actually_perturbed": true
+      },
+      {
+        "perturbation": "plus_1000",
+        "step": 3,
+        "decisions_and_estimator_bitwise_equal": true,
+        "plant_Tp_actually_perturbed": true
+      },
+      {
+        "perturbation": "plus_1000",
+        "step": 4,
+        "decisions_and_estimator_bitwise_equal": true,
+        "plant_Tp_actually_perturbed": true
+      },
+      {
+        "perturbation": "plus_1000",
+        "step": 5,
+        "decisions_and_estimator_bitwise_equal": true,
+        "plant_Tp_actually_perturbed": true
+      },
+      {
+        "perturbation": "nan",
+        "step": 0,
+        "decisions_and_estimator_bitwise_equal": true,
+        "plant_Tp_actually_perturbed": true
+      },
+      {
+        "perturbation": "nan",
+        "step": 1,
+        "decisions_and_estimator_bitwise_equal": true,
+        "plant_Tp_actually_perturbed": true
+      },
+      {
+        "perturbation": "nan",
+        "step": 2,
+        "decisions_and_estimator_bitwise_equal": true,
+        "plant_Tp_actually_perturbed": true
+      },
+      {
+        "perturbation": "nan",
+        "step": 3,
+        "decisions_and_estimator_bitwise_equal": true,
+        "plant_Tp_actually_perturbed": true
+      },
+      {
+        "perturbation": "nan",
+        "step": 4,
+        "decisions_and_estimator_bitwise_equal": true,
+        "plant_Tp_actually_perturbed": true
+      },
+      {
+        "perturbation": "nan",
+        "step": 5,
+        "decisions_and_estimator_bitwise_equal": true,
+        "plant_Tp_actually_perturbed": true
+      }
+    ],
+    "baseline_d_hat": [
+      0.0,
+      8.23606797749979,
+      9.21553750018907,
+      9.5629738520451,
+      9.723123839134313,
+      9.809299401580983
+    ],
+    "estimator_active_nonzero": true,
+    "seconds": 2.4004817000000003
+  },
+  "all_passed": true,
+  "seconds": 50.5265959
+}

@@ -1,0 +1,91 @@
+{
+  "protocol_name": "POSTHOC_MECHANISM_STEADY_MAP_V1",
+  "version": "1.0",
+  "created": "2026-10-03",
+  "status": "FROZEN_BEFORE_ANALYSIS (sha256 written to POSTHOC_MECHANISM_PROTOCOL.sha256 before any script in this folder is run)",
+  "evidence_tier": "post hoc, descriptive, hypothesis-generating; cannot change any locked verdict (holdout NI FAIL 3/3; formal MIL NO_CONTROL_SUPERIORITY; post-hoc MIL A/B results)",
+  "training": "none. No new closed-loop runs. Inference-only open-loop rollouts of existing frozen checkpoints plus reanalysis of existing traces.",
+  "prior_exposure_disclosure": [
+    "On 2026-10-02 the author/assistant already saw stratum-level MIL summaries: bracketed pairs starting below 37 C had MAE R0 1.98 / COISC 1.82 / matched plant 1.78 and formal (signed) steady_state_error R0 0.09 / COISC 1.07 / matched plant 0.40; bracketed pairs starting above 37 C were non-discriminative (~0.11 for all).",
+    "The steady-map hypothesis below was formed after seeing those numbers. Analyses M1 (decomposition) therefore re-describe already-seen data and are not tests. Analyses M2 (open-loop static map of controller models) and M3 (association between static-map mismatch and closed-loop offset) use quantities not yet computed or seen."
+  ],
+  "hypotheses": {
+    "H_map": "Closed-loop tracking error of the no-T_p-feedback MPC is driven by mismatch between the controller model's and the plant's static (600 s) map from u_h to T_p.",
+    "H_tradeoff": "Relative to R0, COISC improves the transient segment but worsens the steady segment in bracketed pairs.",
+    "H_gain": "COISC has smaller u_h->T_p gain than R0 within the 120 s MPC horizon (consistent with holdout T_p PSM 0.76-0.79 x R0) and/or at 600 s.",
+    "H_reg": "Differences in H_tradeoff/H_gain are regularizer-specific (COISC differs from L0, the lambda=0 matched head-only fine-tune), not a generic fine-tuning effect."
+  },
+  "data_sources": {
+    "formal_mil_execution": "<outputs>/control/control_v3a_20260926T153411234230Z_0b9ad32c21 (raw_runs/*.npz, R0/COISC/ORACLE)",
+    "posthoc_mil_execution": "<outputs>/posthoc_mil/execution_20261001T050813Z_a3bd1ebd55 (raw_runs/*.npz, variant L0 only; DE variants not used)",
+    "strata": "control_validation/CONTROL_PLANT_REACHABILITY_AUDIT.csv via analyze_formal_control_v3.source_strata (unchanged)",
+    "plant_lock": "control_validation/CONTROL_PLANT_FAMILY_LOCK.json primary_checkpoints (24)",
+    "scenario_lock": "control_validation/CONTROL_SCENARIO_LOCK_V2.json (12 scenarios, loaded with run_formal_control_v3a.load_scenarios)",
+    "controller_bindings": "CONTROL_VALIDATION_PROTOCOL_V3.json R0/COISC x 3 seeds; L0 bindings from POSTHOC_MIL_PROTOCOL.json controller_models.L0_bindings; all loaded with run_formal_control_v3a.load_model(binding,'B4') and sha256-checked"
+  },
+  "population": "primary panel only: 24 plants x 12 scenarios = 288 pairs; controller seeds 20260922/20260923/20260924 (reported as Seed 1/2/3); variants R0, COISC, L0, ORACLE (matched plant). Strata: BRACKETED_AT_600S (150), BOTH_ABOVE_37_AT_600S (121), BOTH_BELOW_37_AT_600S (17). Bracketed pairs are further split by initial side: start_below (initial T_p < 37) and start_above (>= 37). No pair is excluded.",
+  "M1_closed_loop_decomposition": {
+    "per_run_metrics": {
+      "MAE_all": "mean |y_k - 37| over k=1..60 (= formal MAE_track; reproduction check vs CONTROL_CHECKPOINT_RESULTS.csv must agree to 1e-9)",
+      "MAE_transient": "mean |y_k - 37| over steps 1..30 (0-300 s)",
+      "MAE_late": "mean |y_k - 37| over steps 31..60 (300-600 s)",
+      "ess_signed": "mean (y_k - 37) over steps 55..60 (= formal steady_state_error)",
+      "ess_abs": "|ess_signed|",
+      "u_late": "mean applied u_h over steps 55..60 (percent)",
+      "late_saturation": "fraction of steps 55..60 with u_h at 0 or 100",
+      "first_action_sign": "sign(u_1 - u_prev) where u_prev is the scenario previous_uh_percent",
+      "one_step_bias_late": "mean over decisions 55..60 of internal_predicted_Tp[k,0] - plant_Tp[k] (internal model's own one-step prediction minus realized plant value; 0 for ORACLE by construction)",
+      "perceived_error_late": "mean over decisions 55..60 of internal_predicted_Tp[k,11] - 37 (what the controller expects at the end of its horizon)"
+    },
+    "aggregation": "unweighted pair means within (seed, variant, stratum, initial side); paired contrasts COISC-R0, COISC-L0, L0-R0, and each variant minus ORACLE.",
+    "uncertainty": "source-cluster bootstrap: reuse the formal CONTROL_BOOTSTRAP_DRAWS.npz (20000 x 12 scenario draws, rng 20260927); each replicate takes all pairs belonging to the drawn scenarios (with multiplicity) inside the subset, and computes the unweighted mean. Percentile 95% CI. Replicates where the subset is empty are dropped and their count reported. Descriptive only; no multiplicity correction; no support decisions."
+  },
+  "M2_open_loop_static_map": {
+    "models": "9 controller checkpoints (R0, COISC, L0 x 3 seeds) and 24 primary plants.",
+    "rollout": "for each of the 12 scenario histories, constant u_h in {0,10,...,100} percent (raw = 5 x percent) for 60 steps, background heaters held at the scenario's locked background (same convention as qualify_control_plants_v2.rollout_plant: forward_one_step loop, outputs[:6] fed back, T_p not fed back). Record T_p at 120 s (step 12) and 600 s (step 60).",
+    "reproduction_gate": "plant T_p(600 s) at u_h 0/50/100 must reproduce CONTROL_PLANT_REACHABILITY_AUDIT.csv to |diff| <= 1e-4 C for all 288 x 3 values; otherwise stop and report.",
+    "metrics": {
+      "G120": "T_p(120 s; 100%) - T_p(120 s; 0%)",
+      "G600": "T_p(600 s; 100%) - T_p(600 s; 0%)",
+      "u_star": "for a model m and scenario s, the u_h at which the piecewise-linear interpolation of T_p(600 s; u) over the 11-level grid first crosses 37 C from below when scanning u upward; if T_p(600; u) > 37 for all u then u_star = 0; if < 37 for all u then u_star = 100",
+      "predicted_static_offset": "for a controller m and plant p on scenario s: T_p^plant(600 s; u_star_m) - 37 by linear interpolation on the plant grid. ORACLE analogue uses u_star of the plant itself.",
+      "map_offset_at_u_late": "T_p^controller(600 s; u) - T_p^plant(600 s; u) evaluated at the run's observed u_late (linear interpolation); a proxy for the static mismatch at the operating point actually reached",
+      "u_star_edge_cases": "upward crossing = first grid interval i with T(u_i) < 37 <= T(u_{i+1}). If T(0) >= 37 and no upward crossing exists and min T >= 37 -> 0; if max T < 37 -> 100; any remaining case (non-monotone curve with only downward crossings) uses the first crossing in either direction and is flagged u_star_rule=fallback_any_crossing; counts of fallback cases and of non-monotone curves (any adjacent decrease > 0.01 C) are reported."
+    },
+    "summaries": "per seed and variant: median and IQR over 12 scenarios of G120, G600, and the ratios COISC/R0, L0/R0, COISC/L0; plant family summaries of G120/G600 for context."
+  },
+  "M3_association": {
+    "primary_association": "Spearman rho between predicted_static_offset and observed ess_signed across the 150 bracketed pairs, per (seed, variant in R0/COISC/L0). Also across all 288 pairs.",
+    "contrast_association": "Spearman rho between [predicted_static_offset(COISC) - predicted_static_offset(R0)] and [ess_signed(COISC) - ess_signed(R0)] across bracketed pairs, per seed; same for COISC vs L0.",
+    "seed2_contrast": "report the above separately for Seed 2 (20260923), the only seed with a formal control benefit, and compare its R0 static-map mismatch with Seeds 1/3.",
+    "secondary_association": "Spearman rho between map_offset_at_u_late and ess_signed, same subsets; descriptive only, not used in interpretation rules (u_late is itself a closed-loop outcome).",
+    "bootstrap": "same source-cluster draws as M1, Spearman recomputed per replicate (average ranks for ties, including duplicates from resampling); replicates with constant input are dropped and counted."
+  },
+  "gates_stop_rules": "Any failure of: (a) formal MAE_all reproduction (1e-9), (b) L0 MAE_all reproduction vs POSTHOC_MIL_SECONDARY.csv (1e-9), (c) plant open-loop endpoint reproduction (1e-4 C), (d) [AM1] ORACLE one-step bias |internal_predicted_Tp[k,0]-plant_Tp[k]| <= 1e-6 on every step where the applied command equals optimal_sequence[k,0] (|gap|<1e-9), and every step with bias > 1e-6 must have a nonzero quantization gap, (e) checkpoint sha256 checks -> stop before M1-M3 outputs and report.",
+  "interpretation_rules_declared_before_M2_M3_are_seen": {
+    "H_map_consistent": "rho >= 0.5 with bootstrap lower bound > 0 in all 3 seeds for both R0 and COISC on bracketed pairs.",
+    "H_map_partial": "rho > 0 with lower bound > 0 in at least one seed/variant but not all.",
+    "H_map_not_supported": "otherwise; the manuscript sentence in section 7.1 attributing tracking error to steady-map mismatch would then be weakened.",
+    "H_tradeoff_consistent": "in bracketed start_below pairs, COISC-R0 MAE_transient point < 0 AND ess_abs point > 0 in at least 2 of 3 seeds; reported with CIs regardless of outcome.",
+    "H_gain_consistent": "median COISC/R0 G120 ratio < 1 in all 3 seeds (and separately for G600).",
+    "H_reg_consistent": "for each of H_tradeoff/H_gain metrics, the COISC-L0 contrast has the same sign as COISC-R0 in all 3 seeds.",
+    "reporting": "All four hypotheses are reported whichever way they come out, including unfavourable directions. Words 'confirm', 'prove', 'cause' are not used; allowed: 'consistent with', 'associated with', 'post hoc'."
+  },
+  "anonymization": "outputs use scenario labels S01-S12 (lock order) and plant names (P/A1-A5/B1/B2 + seed suffix as in the manuscript families F1-F4); source_id is never written to outputs.",
+  "outputs": [
+    "MECH_RUN_METRICS.csv",
+    "MECH_M1_SUMMARY.csv",
+    "MECH_STATIC_MAP_GRID.csv",
+    "MECH_M2_GAIN_SUMMARY.csv",
+    "MECH_M3_ASSOCIATION.csv",
+    "MECH_RESULTS_SUMMARY.json",
+    "MECH_RUN_LOG.txt"
+  ],
+  "manuscript_use": "none without explicit author approval. If approved, results enter at most section 6.7/7.1 and supplementary material as post hoc descriptive analyses, with the prior-exposure disclosure above.",
+  "amendments": {
+    "AM1": "2026-10-03, after the first run stopped at gate (d) and before any M1-M3 output existed (original freeze hashes kept in POSTHOC_MECHANISM_PROTOCOL.v1_original_freeze.sha256; stop log MECH_RUN_LOG_attempt1_gate_d_stop.txt). Observed max |ORACLE one-step bias| = 2.48e-5 C over late steps. Diagnosis: control_mpc.py computes predicted_trajectory from the unquantized optimum while the plant receives the 0.05%-quantized command; all 1451 of 17279 ORACLE steps with nonzero bias have a nonzero quantization gap, and bias is exactly 0 on all zero-gap steps. Gate (d) was mis-specified, not a data fault. Gate (d) is restated as above; no hypothesis, metric, subset or interpretation rule changed. Consequence for metrics: one_step_bias_late and perceived_error_late of all controllers include this quantization effect (order 1e-5 C)."
+  },
+  "scripts_bound_at_freeze": [
+    "mech_analysis.py"
+  ]
+}

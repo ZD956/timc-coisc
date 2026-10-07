@@ -1,0 +1,182 @@
+{
+  "created_utc": "2026-10-05T07:07:17Z",
+  "protocol_sha256": "23b8f695253145d91ebb0f9b843b35b94ed3b731547d00ec0ce2a275cbcb7210",
+  "evidence_tier": "POST-HOC exploratory (T3); descriptive only; does not revise any locked verdict",
+  "runs_evaluated": 12264,
+  "questions": {
+    "Q1_incidence": {
+      "triggered_seeds": [
+        20261002,
+        20261005
+      ],
+      "n_triggered": 2,
+      "n_fresh": 10,
+      "wrong_scenarios_per_seed": {
+        "20261001": 0,
+        "20261002": 1,
+        "20261003": 0,
+        "20261004": 0,
+        "20261005": 3,
+        "20261006": 0,
+        "20261007": 0,
+        "20261008": 0,
+        "20261009": 0,
+        "20261010": 0
+      }
+    },
+    "Q2_repair": {
+      "R0_wrong_pairs": 4,
+      "corrected": {
+        "COISC_onset": 4,
+        "COISC": 4,
+        "L0": 1
+      },
+      "dMAE_unit_bootstrap": {
+        "COISC_onset - R0": {
+          "units": 4,
+          "point": -1.9131018736783194,
+          "ci_lower": -3.1248853344153735,
+          "ci_upper": -0.5926972908521788
+        },
+        "L0 - R0": {
+          "units": 4,
+          "point": -0.05926209968679092,
+          "ci_lower": -0.0812104977034276,
+          "ci_upper": -0.02792219176791077
+        }
+      }
+    },
+    "Q4_policy": {
+      "policy_minus_always_R0": {
+        "point": -0.4015826661732201,
+        "ci_lower": -0.8322278200752204,
+        "ci_upper": -0.006030925513774819
+      },
+      "policy_minus_always_L0_same_trigger": {
+        "point": -0.3737546260190685,
+        "ci_lower": -0.7639784485643857,
+        "ci_upper": -0.012651654625705562
+      },
+      "triggered_seeds_where_COISC_onset_corrects_more_than_L0": 1
+    },
+    "E2_conditional_benefit": false,
+    "Q3_harm": {
+      "R0_correct_pairs": 109,
+      "made_wrong_or_zero": {
+        "COISC_onset": 16,
+        "COISC": 1,
+        "L0": 5
+      },
+      "dMAE_unit_bootstrap": {
+        "COISC_onset - R0": {
+          "units": 109,
+          "point": -0.07998970384941459,
+          "ci_lower": -0.14822821066066746,
+          "ci_upper": -0.013250187555184053
+        },
+        "L0 - R0": {
+          "units": 109,
+          "point": -0.013786006537088209,
+          "ci_lower": -0.05050611725369323,
+          "ci_upper": 0.01332784809135966
+        }
+      }
+    },
+    "Q5_guard": {
+      "R0_wrong_pairs": 4,
+      "COISC_onset_minus_R0_GUARD": {
+        "units": 4,
+        "point": -1.89684617815454,
+        "ci_lower": -3.100897916430741,
+        "ci_upper": -0.5889761267534267
+      },
+      "L0_minus_R0_GUARD": {
+        "units": 4,
+        "point": -0.04300640416301157,
+        "ci_lower": -0.0730172252343371,
+        "ci_upper": -0.008706010517731252
+      },
+      "R0_minus_R0_GUARD": {
+        "units": 4,
+        "point": 0.016255695523779354,
+        "ci_lower": 0.0037211640987521123,
+        "ci_upper": 0.02431811857846821
+      },
+      "policy_minus_guard_always": {
+        "point": -0.39887338358592367,
+        "ci_lower": -0.826721828342101,
+        "ci_upper": -0.005380539663119974
+      }
+    },
+    "E1_seed_R0_GUARD": {
+      "20260923": {
+        "R0_wrong_scenarios": 3,
+        "COISC_onset - R0_GUARD": {
+          "units": 3,
+          "point": -2.616827690315662,
+          "ci_lower": -3.489787692805521,
+          "ci_upper": -2.04932842192307
+        },
+        "COISC - R0_GUARD": {
+          "units": 3,
+          "point": -2.3863473814816776,
+          "ci_lower": -3.4682275474461073,
+          "ci_upper": -1.7233475725635208
+        },
+        "L0 - R0_GUARD": {
+          "units": 3,
+          "point": -0.8249644806182462,
+          "ci_lower": -2.4132011374616935,
+          "ci_upper": -0.01929830258188664
+        },
+        "R0 - R0_GUARD": {
+          "units": 3,
+          "point": 0.029365669200622852,
+          "ci_lower": 0.016232475112465956,
+          "ci_upper": 0.042414630472270363
+        }
+      }
+    }
+  },
+  "E1_MIL_COISC_onset_minus_COISC": {
+    "20260922": -0.050726854645348846,
+    "20260923": -0.12800601974032283,
+    "20260924": -0.05122813744742368
+  },
+  "unit_bootstrap": {
+    "seed": 20261004,
+    "draws": 20000,
+    "unit": "(seed, scenario) family-equal mean over the 24 primary plants"
+  },
+  "execution_gates": {
+    "R7_guard_identity": {
+      "runs": 6,
+      "pass_": true
+    },
+    "guard_fired_on_all_triggered_runs": true,
+    "first_action_check_consistent_with_runs": true
+  },
+  "E1_rule": {
+    "H1_WSR_le_0p9_R0": {
+      "20260922": true,
+      "20260923": true,
+      "20260924": true
+    },
+    "H2_PSM_ge_0p2_R0": {
+      "20260922": true,
+      "20260923": true,
+      "20260924": true
+    },
+    "H5_Tp120_not_worse_than_COISC": {
+      "20260922": false,
+      "20260923": false,
+      "20260924": false
+    },
+    "MIL_COISC_onset_better_than_COISC": {
+      "20260922": true,
+      "20260923": true,
+      "20260924": true
+    },
+    "verdict": "E1_mixed (neither declared rule met)"
+  }
+}

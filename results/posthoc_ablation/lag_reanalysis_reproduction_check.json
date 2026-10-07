@@ -1,0 +1,97 @@
+{
+  "protocol_sha256": "15d873cc468b0cab777a3ab0ec05b1a4919049480951a5870b4423081705cab9",
+  "tolerance": 1e-09,
+  "rows": [
+    {
+      "split": "development",
+      "seed": "20260922",
+      "variant": "R0",
+      "max_abs_diff": 2.5591698053079037e-07
+    },
+    {
+      "split": "development",
+      "seed": "20260922",
+      "variant": "R0_npz_float32",
+      "max_abs_diff": 0.0
+    },
+    {
+      "split": "development",
+      "seed": "20260922",
+      "variant": "COISC",
+      "max_abs_diff": 2.214685587004217e-08
+    },
+    {
+      "split": "development",
+      "seed": "20260923",
+      "variant": "R0",
+      "max_abs_diff": 1.353410909593622e-07
+    },
+    {
+      "split": "development",
+      "seed": "20260923",
+      "variant": "R0_npz_float32",
+      "max_abs_diff": 0.0
+    },
+    {
+      "split": "development",
+      "seed": "20260923",
+      "variant": "COISC",
+      "max_abs_diff": 5.6597506542521714e-08
+    },
+    {
+      "split": "development",
+      "seed": "20260924",
+      "variant": "R0",
+      "max_abs_diff": 2.4607084952998903e-08
+    },
+    {
+      "split": "development",
+      "seed": "20260924",
+      "variant": "R0_npz_float32",
+      "max_abs_diff": 0.0
+    },
+    {
+      "split": "development",
+      "seed": "20260924",
+      "variant": "COISC",
+      "max_abs_diff": 2.706807100336106e-08
+    },
+    {
+      "split": "holdout23",
+      "seed": "20260922",
+      "variant": "R0",
+      "max_abs_diff": 0.0
+    },
+    {
+      "split": "holdout23",
+      "seed": "20260922",
+      "variant": "COISC",
+      "max_abs_diff": 0.0
+    },
+    {
+      "split": "holdout23",
+      "seed": "20260923",
+      "variant": "R0",
+      "max_abs_diff": 0.0
+    },
+    {
+      "split": "holdout23",
+      "seed": "20260923",
+      "variant": "COISC",
+      "max_abs_diff": 0.0
+    },
+    {
+      "split": "holdout23",
+      "seed": "20260924",
+      "variant": "R0",
+      "max_abs_diff": 0.0
+    },
+    {
+      "split": "holdout23",
+      "seed": "20260924",
+      "variant": "COISC",
+      "max_abs_diff": 0.0
+    }
+  ],
+  "all_within_tolerance": false
+}

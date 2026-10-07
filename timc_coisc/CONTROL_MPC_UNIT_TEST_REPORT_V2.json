@@ -1,0 +1,173 @@
+{
+  "status": "READY_FOR_REVIEW_NOT_AUTHORIZED",
+  "tests": [
+    {
+      "test_name": "test_background_unchanged",
+      "expected": "PASS",
+      "actual": "PASS",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test_name": "test_bounds",
+      "expected": "PASS",
+      "actual": "PASS",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test_name": "test_cost_formula",
+      "expected": "PASS",
+      "actual": "PASS",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test_name": "test_full_vs_block_toy_conditioning",
+      "expected": "PASS",
+      "actual": "PASS",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test_name": "test_heating_needed",
+      "expected": "PASS",
+      "actual": "PASS",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test_name": "test_identical_models_identical_actions",
+      "expected": "PASS",
+      "actual": "PASS",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test_name": "test_initial_warm_start",
+      "expected": "PASS",
+      "actual": "PASS",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test_name": "test_invalid_shapes_rejected",
+      "expected": "PASS",
+      "actual": "PASS",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test_name": "test_no_future_truth_argument",
+      "expected": "PASS",
+      "actual": "PASS",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test_name": "test_plant_state_not_truth",
+      "expected": "PASS",
+      "actual": "PASS",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test_name": "test_quantization",
+      "expected": "PASS",
+      "actual": "PASS",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test_name": "test_recursive_rollout",
+      "expected": "PASS",
+      "actual": "PASS",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test_name": "test_repeat_determinism",
+      "expected": "PASS",
+      "actual": "PASS",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test_name": "test_saturation",
+      "expected": "PASS",
+      "actual": "PASS",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test_name": "test_shift_warm_start",
+      "expected": "PASS",
+      "actual": "PASS",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test_name": "test_solver_failure_hold",
+      "expected": "PASS",
+      "actual": "PASS",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test_name": "test_toy_closed_loop_requires_complete_schedule",
+      "expected": "PASS",
+      "actual": "PASS",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test_name": "test_toy_closed_loop_separate_states",
+      "expected": "PASS",
+      "actual": "PASS",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test_name": "test_toy_full12_conditioning",
+      "expected": "PASS",
+      "actual": "PASS",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test_name": "test_v2_default_weights",
+      "expected": "PASS",
+      "actual": "PASS",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test_name": "test_v2_same_solver_configuration",
+      "expected": "PASS",
+      "actual": "PASS",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test_name": "test_v2_scenario_background_and_uh_index",
+      "expected": "PASS",
+      "actual": "PASS",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test_name": "test_zero_error",
+      "expected": "PASS",
+      "actual": "PASS",
+      "status": "PASS",
+      "error": null
+    }
+  ],
+  "total_tests": 23,
+  "passed_tests": 23,
+  "failed_tests": 0,
+  "implementation_sha256": "6e9df9c53a380ef55e7af16c5518588f335eb4d0c1ab90d89a5be4112f61cd56",
+  "test_script_sha256": "ea371439ed9a9b916f17edc93b0e572bec711218613bb774d7b4834097db35fa",
+  "experimental_data_accessed": false,
+  "control_outcome_accessed": false
+}

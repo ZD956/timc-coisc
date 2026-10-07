@@ -1,0 +1,339 @@
+{
+  "protocol_name": "POSTHOC_ONSET_ALIGNED_COISC_V1",
+  "version": "FROZEN-1 (2026-10-03)",
+  "created": "2026-10-03",
+  "status": "FROZEN_BEFORE_ONSET_ALIGNED_OUTCOME",
+  "evidence_tier": "post hoc, exploratory. Cannot change any locked verdict (formal development gates, holdout NI FAIL 3/3, formal MIL NO_CONTROL_SUPERIORITY, post-hoc MIL A/B, mechanism H_map partial / H_gain reversed). All outcomes are reported whatever their direction.",
+  "motivation": "Manuscript section 7.2 states that the non-equivalence may partly reflect criterion windows mis-specified relative to the measured onset. E1 tests this directly by re-adapting COISC with windows set from fit-split onsets. E2 tests on fresh seeds whether the seed-2 pattern (COISC corrected all 72 wrong-direction first moves of R0, matched fine-tuning L0 corrected none) recurs and whether a pre-deployment first-action check can decide when to apply the adaptation.",
+  "prior_exposure_disclosure": [
+    "Holdout first-change onsets of T_p (10,10,20,30,20 s on 5 selection+holdout events) and T6 (60,40,80 s), and the holdout lag reanalysis (manuscript Figure 5, Supplementary Tables S2-S3), were seen before this draft.",
+    "Holdout pulse profiles were seen: the R0 T_p response is predominantly negative at 20-40 s; original COISC reduced this lobe to about one third without correcting its sign.",
+    "All MIL results for seeds 20260922/23/24 were seen, including the seed-2 wrong-direction first moves in scenarios S04/S07/S08 (72 pairs) and the 24 non-correct first moves of original COISC on seed 3.",
+    "Fit-split event onsets (tables below) were read on 2026-10-04 before this draft; they are model-independent measurements.",
+    "The holdout set is reused. E1 and E2 holdout results are therefore not independent confirmation."
+  ],
+  "lag_window_rule": {
+    "source": "results/development/B4_seed20260922/excitation_event_metrics.csv, split == fit only (23 events, 3 increases and 20 decreases; 17 from dual-cycle runs holding each level 60 s). true_onset_s is the paper_eval.onset first-change detector at 10-s resolution and does not depend on any model.",
+    "fit_onset_median_s": {
+      "T1": 60,
+      "T2": 40,
+      "T3": 40,
+      "T4": 45,
+      "T5": 30,
+      "T6": 70,
+      "Tp": 20
+    },
+    "fit_onset_detected_of_23": {
+      "T1": 15,
+      "T2": 19,
+      "T3": 15,
+      "T4": 18,
+      "T5": 23,
+      "T6": 11,
+      "Tp": 23
+    },
+    "rule": "tau_new_j = min(prior_j, fit_onset_median_j). Windows are only shortened, never lengthened, preserving the original rationale that the shortest lag is the conservative choice for a pre-lag penalty. Transition band g = 10 s, eps_pre, eps_sign unchanged.",
+    "prior_s": {
+      "T1": 102.108,
+      "T2": 77.091,
+      "T3": 30.108,
+      "T4": 50.112,
+      "T5": 10.0535,
+      "T6": 180.0,
+      "Tp": 39.104
+    },
+    "tau_new_s": {
+      "T1": 60,
+      "T2": 40,
+      "T3": 30.108,
+      "T4": 45,
+      "T5": 10.0535,
+      "T6": 70,
+      "Tp": 20
+    },
+    "resulting_masks_lead_s": {
+      "T1": {
+        "pre": [
+          10,
+          20,
+          30,
+          40
+        ],
+        "post": [
+          80,
+          90,
+          100,
+          110,
+          120
+        ]
+      },
+      "T2": {
+        "pre": [
+          10,
+          20
+        ],
+        "post": [
+          60,
+          70,
+          80,
+          90,
+          100,
+          110,
+          120
+        ]
+      },
+      "T3": "unchanged",
+      "T4": {
+        "pre": [
+          10,
+          20,
+          30
+        ],
+        "post": [
+          60,
+          70,
+          80,
+          90,
+          100,
+          110,
+          120
+        ]
+      },
+      "T5": "unchanged",
+      "T6": {
+        "pre": [
+          10,
+          20,
+          30,
+          40,
+          50
+        ],
+        "post": [
+          90,
+          100,
+          110,
+          120
+        ]
+      },
+      "Tp": {
+        "pre": [],
+        "post": [
+          40,
+          50,
+          60,
+          70,
+          80,
+          90,
+          100,
+          110,
+          120
+        ]
+      }
+    },
+    "declared_expectation_before_running": "For T_p the pre-lag set becomes empty and 20-30 s fall in the unconstrained band, so only the 40-s part of the negative lobe is directly constrained. The 20-s part, previously shrunk as pre-lag leakage, is no longer penalized and may remain negative or grow. A partial or null change of the early lobe is a plausible outcome."
+  },
+  "lambda_rule": "Recalibrate lambda once with the unchanged screen.calibrate rule (two discarded fit-only 32-step pilots, seed 20260922, min(0.10*mean(pred)/mean(reg), 0.20*min batch ratio)) using the new masks, as done for the ablation variants. The value is shared by all seeds and written into the frozen record before any adaptation.",
+  "variants": {
+    "R0": "existing checkpoints for seeds 20260922/23/24; trained with the unchanged protocol for E2 seeds",
+    "COISC": "original method (prior masks, lambda 939.1430335805455), included for E2 seeds only",
+    "COISC_onset": "identical to COISC (head only, 75 steps, batch 128, lr 5e-5, Adam, same seed handling) except tau_new masks and the recalibrated lambda",
+    "L0": "identical 75-step head-only fine-tuning with lambda = 0 (matched fine-tuning control)",
+    "COISC_onset_lamprior": "E1 only, diagnostic: tau_new masks with the prior lambda 939.1430335805455, to separate the window change from the lambda change. Development and holdout only, no MIL."
+  },
+  "E1_existing_seeds": {
+    "seeds": [
+      20260922,
+      20260923,
+      20260924
+    ],
+    "models": "COISC_onset and COISC_onset_lamprior adapted from the existing R0 selected.pt of each seed (checkpoint sha256 verified before adaptation)",
+    "development_gates_reported": "the four per-seed selection gates of the formal protocol, computed with tau_new masks (Tp_120s_MAE <= R0 + 0.005; PLE not defined for T_p and reported as NA; WSR <= 0.9 x R0; PSM >= max(0.2 x R0, 0.0005)). Gates are reported; all stages run regardless (no stopping), because the purpose is to measure, not to select.",
+    "holdout_endpoints": {
+      "H1_WSR_Tp_new": "source-equal WSR of T_p over post cells 40-120 s, COISC_onset vs paired R0 and vs original COISC",
+      "H2_PSM_Tp_new": "source-equal PSM of T_p over 40-120 s, ratio to R0",
+      "H3_early_lobe": "median S_Tp and fraction negative at 10-60 s (Supplementary Table S3 format)",
+      "H4_T6": "WSR and PSM of T6 over 90-120 s",
+      "H5_accuracy": "T_p MAE difference at 10/30/60/90/120 s with the frozen 20,000-draw source bootstrap (seed 20260926); NI at 0.005 C reported with the known resolution (SE 0.013-0.030, power 4-6 %)",
+      "H6_comparability": "all sensitivity metrics also under the prior masks and the existing lag-reanalysis scenarios (measured onsets, tau = 30 s, all steps)"
+    },
+    "MIL": "same bench, runner and analysis as POSTHOC_MIL (24 plants x 12 scenarios = 288 pairs per seed): 864 new COISC_onset runs. Existing R0/COISC/L0/ORACLE runs are reused after a reproduction gate (gate R5). Endpoints: family-equal Delta MAE vs R0 with cluster bootstrap, first-action split, G120/G600."
+  },
+  "E2_fresh_seeds": {
+    "seeds": [
+      20261001,
+      20261002,
+      20261003,
+      20261004,
+      20261005,
+      20261006,
+      20261007,
+      20261008,
+      20261009,
+      20261010
+    ],
+    "trainer_gate": "before E2, retrain R0 for seed 20260922 with the unchanged trainer; the selected.pt sha256 must equal the existing checkpoint, otherwise stop and report",
+    "models_per_seed": "R0, COISC, COISC_onset, L0",
+    "holdout": "inference-only diagnostics and accuracy for all four models (as E1)",
+    "first_action_check": "plant-free: for each checkpoint, solve the first MPC step on the 12 locked scenario initial states with the unchanged formal MPC controller (control_mpc.MPCController, horizon 12, SLSQP); correct = raise u_h if initial T_p < 37 C, lower if above. Computed for all four models.",
+    "MIL": "full 288-pair bench for R0, COISC_onset and L0 (8,640 runs, about 12 h on 6 workers), plus R0_GUARD runs on R0 wrong-direction pairs (see direction_guard_arm). Original COISC: first-action check and holdout only.",
+    "questions": {
+      "Q1_incidence": "number of fresh seeds whose R0 has at least one wrong-direction first move",
+      "Q2_repair": "among R0 wrong-direction scenarios, fraction corrected by COISC_onset, COISC and L0; Delta MAE in those pairs",
+      "Q3_harm": "among R0 correct scenarios, fraction made wrong or zero by each model; Delta MAE in those pairs",
+      "Q4_policy": "pre-specified deployment policy: use COISC_onset for a checkpoint if its R0 makes any wrong-direction first move on the 12 check states, else keep R0. Compare policy vs always-R0 and vs always-L0-under-same-trigger, family-equal MAE, pooled over triggered seeds with plant-family cluster bootstrap."
+    },
+    "assessability_rule": "if fewer than 2 of the 10 fresh seeds trigger, Q2/Q4 are reported as not assessable and only Q1/Q3 are reported",
+    "circularity_note": "the first-action check uses the same 12 initial states as the evaluation. It is a legitimate online check (the first action depends only on the initial state and the internal model) but not an out-of-sample predictor of later tracking."
+  },
+  "direction_guard_arm": {
+    "decision": "included (decided 2026-10-03) so that any E2 benefit of COISC_onset can be compared with a trivial action-sign rule",
+    "definition": "R0_GUARD = R0 inside the unchanged MPC, except at the first control step only: if sign(u_h[0] - previous u_h) is strictly opposite to sign(37 C - initial T_p), the applied command is quantize(previous u_h) (hold). All later steps are the unchanged MPC decisions, which receive the held command as their previous command. A zero first move is left unchanged.",
+    "labelling_note": "the guard and the first-action correctness label both use the logged initial T_p of the scenario, which is available before the first move. This is a commissioning-time check, not closed-loop T_p feedback (the controller still has none).",
+    "runs": "only (seed, scenario) pairs where R0's first action is wrong-direction, x 24 plants; for all other pairs R0_GUARD equals R0 by construction. E1: existing seeds (seed 20260923: 3 scenarios, 72 runs). E2: all triggered fresh seeds.",
+    "identity_spot_check": "for each seed with at least one R0_GUARD run, the lowest-index non-triggered scenario x plants 0 and 12 is also run with the guard (R0_GUARD_ID); it must not fire and must equal the R0 run bitwise (applied u_h and plant T_p)",
+    "question_Q5": "on R0 wrong-direction pairs pooled over triggered seeds: family-equal Delta MAE of COISC_onset minus R0_GUARD and of L0 minus R0_GUARD, cluster bootstrap with the shared draws; also policy (COISC_onset when triggered) vs guard-always"
+  },
+  "reproduction_gates_before_any_new_result": {
+    "R1_calibration": "the copied calibrate with prior masks reproduces lambda 939.1430335805455 and the 16 stored pilot regularizer records exactly; lambda_onset is computed in the same pass (pilot training does not depend on the masks) and written into the frozen record",
+    "R2_adaptation": "the copied adaptation with prior masks reproduces formal coisc_final.pt bitwise for all three existing seeds",
+    "R3_trainer": "R0 retrained for seed 20260922 has a state_dict bitwise equal to the existing selected.pt (E2 trainer gate)",
+    "R4_holdout": "recomputed holdout predictions/sensitivities of existing R0, COISC and L0 match the stored delivered-23 records within 1e-5",
+    "R5_MIL_runner": "12 existing R0 runs of seed 20260923 (plant 2k, scenario k, k = 0..11) re-executed with onset_mil.run_one are bitwise equal to the formal raw runs (applied u_h and plant T_p); the plant-free first decision of existing R0, COISC and L0 (3 seeds x 12 scenarios) equals the first applied u_h of all 24 formal/post-hoc MIL runs; the runner previous command equals the logged previous u_h exactly; guard unit test on synthetic decisions; guard identity preview on 2 non-triggered seed-20260923 runs",
+    "R6_MIL_analysis": "onset_analyze reproduces the formal COISC minus R0 contrast and the post-hoc MIL A1 (COISC - L0) and A2 (L0 - R0) contrasts for the three existing seeds exactly (point and CI); selftest with relabelled already-reported runs returns the known answers",
+    "R7_guard_identity": "see direction_guard_arm.identity_spot_check",
+    "stop_rule": "any gate failure stops execution and is reported; no change of rules to make a gate pass"
+  },
+  "interpretation_rules_declared_before_running": {
+    "E1_window_explanation_supported": "H1 WSR <= 0.9 x R0 on all 3 seeds and H2 PSM >= 0.2 x R0, AND H5 accuracy point estimate not worse than original COISC on at least 2 of 3 seeds",
+    "E1_window_explanation_not_supported": "H1 fails on 2 or more seeds, or windows are met but accuracy and MIL are no better than original COISC; the manuscript then states that window alignment did not change the conclusion",
+    "E2_conditional_benefit": "Q4 policy Delta MAE vs always-R0 with cluster-bootstrap upper bound < 0 over triggered seeds, AND COISC_onset corrects more R0 wrong first moves than L0 in at least 2 triggered seeds",
+    "wording": "descriptive only; never 'confirm', 'prove' or 'cause'"
+  },
+  "code_changes_required_at_implementation": [
+    "screen.lag_masks/regularizer: pass the lag list explicitly (default unchanged); verify the default path reproduces the original masks bit for bit",
+    "new runner formal_coisc_onset.py (copy of formal_coisc.py with tau_new, recalibrated lambda, new seeds, L0 and COISC_onset), new output root; original files untouched",
+    "holdout evaluation wrapper with parameterized masks (lag_reanalysis.masks already supports this)",
+    "MIL runner: new checkpoint bindings (path + sha256) in a new protocol; first-action-only mode for original COISC"
+  ],
+  "anonymization": "outputs use Seed labels, S01-S12, T1-T6/T_p and plant families F1-F4; source_id is never written",
+  "manuscript_use": "none without explicit author approval. If approved: E1 enters section 6.5/7.2 and Supplementary S2; E2 enters section 6.6/7.1 and Supplementary S3, with this disclosure; Table S1 gains one row. Word budget requires about 150-250 words of cuts.",
+  "amendments": {},
+  "lambda_onset": 7485.005103519812,
+  "lambda_onset_note": "Computed 2026-10-04 by gate R1 (same pass reproduced the prior lambda and all 16 pilot records exactly). Per-sampler values 9077.805330026704 (ordinary) and 7485.005103519812 (excitation); the minimum is used. About 8x the prior lambda because the initial regularizer value under the onset masks is smaller (shorter pre-lag windows, and longer post windows whose mean is diluted by non-violating cells); the rule scales lambda up to keep the same initial loss share.",
+  "mil_execution": {
+    "tasks": "E1: COISC_onset x 3 seeds x 288 pairs (864). E2: R0, COISC_onset, L0 x 10 seeds x 288 pairs (8640). R0_GUARD on every R0 wrong-direction (seed, scenario) x 24 plants for E1 and E2 seeds; R0_GUARD_ID identity runs. Existing E1 R0/COISC (formal) and L0 (post-hoc MIL) runs are reused (gate R5).",
+    "first_action_check": "computed once at the start of execution, plant-free, for E1 R0/COISC/L0/COISC_onset and E2 R0/COISC/COISC_onset/L0; it fixes the R0_GUARD task list before any closed-loop run",
+    "execution_order": "onset_train e1 -> onset_train e2 -> onset_holdout run -> onset_mil execute 6 -> onset_analyze analyze",
+    "workers": "6 processes, 2 torch threads each, plants split by index modulo 6"
+  },
+  "analysis_operationalization": {
+    "per_seed_contrasts": "af.hierarchical_effect on the 12 x 4 family-equal matrix with the formal 20000 shared draws (default_rng(20260927)); E1: COISC_onset vs R0, COISC, L0; E2: COISC_onset vs R0, L0 vs R0, COISC_onset vs L0",
+    "pooled_over_triggered_seeds": "mean of the per-seed 12 x 4 matrices over triggered E2 seeds, then af.hierarchical_effect with the same draws (Q4, Q5 policy)",
+    "subset_contrasts": "unit = (seed, scenario) family-equal mean over the 24 primary plants; percentile CI from 20000 unit-bootstrap draws, rng default_rng(20261004) (Q2, Q3, Q5 pair contrasts)",
+    "E1_rule": "H1: Tp_WSR_ONSET ratio COISC_onset/R0 <= 0.9 on all 3 seeds; H2: Tp_PSM_ONSET ratio >= 0.2 on all 3 seeds; H5: Tp_MAE_120 COISC_onset - COISC <= 0 (point) on >= 2 seeds; MIL: E1 COISC_onset - COISC point < 0. Supported = H1 and H2 and H5. Not supported = H1 fails on >= 2 seeds, or H1 and H2 met while H5 and MIL each hold on < 2 seeds. Otherwise reported as mixed.",
+    "E2_rule": "E2_conditional_benefit = Q4 policy minus always-R0 CI upper < 0 AND COISC_onset corrects more R0 wrong first moves than L0 in >= 2 triggered seeds; not assessable if < 2 triggered seeds",
+    "execution_checks": "R7 guard identity; guard fired on every R0_GUARD run; plant-free first decision equals the first applied u_h of every run of that checkpoint"
+  },
+  "execution_authorized": false,
+  "execution_authorization_rule": "onset_train e1/e2, onset_holdout run, onset_mil execute and onset_analyze analyze require EXECUTION_AUTHORIZATION.json written on the author's explicit instruction, naming this file's SHA-256",
+  "gate_summary": {
+    "R1": true,
+    "R2": true,
+    "R3": true,
+    "R4": true,
+    "R5": true,
+    "R6": true,
+    "R7_preview": true,
+    "guard_unit_test": true,
+    "estimated_MIL_wall_hours_6_workers_excluding_guard": 12.633412121000005
+  },
+  "gate_reports_sha256": {
+    "GATES_TRAIN_REPORT.json": "91e0a892971a179a900832e914e9284630c8e4f21c829af3330451a101487a3c",
+    "GATES_HOLDOUT_REPORT.json": "60a9f0b03d530a415ccf0d370245787c4893e9e632a677198b94f1093fc478e1",
+    "GATES_MIL_REPORT.json": "9a286d6c49203ca4e1562b5dc6dd5203ce30023ec884e7f0045efa537edb3f7a",
+    "GATES_ANALYSIS_REPORT.json": "6bde7c585568aff9a9f5bfecb57ccd915f5d203323b77e4f44ce364bb698906c"
+  },
+  "code_sha256": {
+    "onset_common.py": "727c7b0c999f41b820f038cba34c2d888ce9a8c4db8fbbec341fbcfe10b3545d",
+    "onset_train.py": "3186fec1550824ba945b1cc680caa664bc8744f3f330c05182597252c0eebeda",
+    "onset_holdout.py": "dd58b3d595d54712cf017b145cb7fb43495759c0f6d5d9c7ecad71743448582c",
+    "onset_mil.py": "c8d9310d21f7d22ab519c232fb404c3939e09973256bc2fb2edafeb365d89b4c",
+    "onset_analyze.py": "0b912de9f3a2bf474c7511cb8e82798318a566f90e2eeefb7bd278452360a7f0",
+    "onset_freeze.py": "9fb633337a429353754c6bf0cfab3331cd2d4e9a11bc079e1d9522d05207ceb1"
+  },
+  "bound_files": [
+    {
+      "path": "timc_coisc/screen.py",
+      "sha256": "2f1872e262c359a05b8cd678debe11ed4bf84402e76de4dffc282f3a321257eb"
+    },
+    {
+      "path": "timc_coisc/control_mpc.py",
+      "sha256": "8ef305db879183fa7c812a28247c466b346b4b9e9c10079a657d8e9f823a08a9"
+    },
+    {
+      "path": "timc_coisc/run_formal_control_v3a.py",
+      "sha256": "16011f3275fefe705ebb7c7294afcafcc5bb7bbae0495b8a43f105476ca9331e"
+    },
+    {
+      "path": "timc_coisc/analyze_formal_control_v3.py",
+      "sha256": "655a672b9eb70693d83555e9e2414d546c543e410ccfa014af677e695cc3e5e7"
+    },
+    {
+      "path": "protocols/CONTROL_VALIDATION_PROTOCOL_V3.json",
+      "sha256": "0b9ad32c21b0f0a0cea31761997e091709ae5166a33f3b2f90985dece3cedf19"
+    },
+    {
+      "path": "protocols/CONTROL_SCENARIO_LOCK_V2.json",
+      "sha256": "93e177a3de94809bd1ec2c1469d9d0003462be190b91d1ba4db2be3baf893eac"
+    },
+    {
+      "path": "protocols/CONTROL_PLANT_FAMILY_LOCK.json",
+      "sha256": "9b34399ca7dddadaf8d06292e3d2b47a3a700b36e1210caa82062af71ddbf3f7"
+    },
+    {
+      "path": "<outputs>/control/control_v3a_20260926T153411234230Z_0b9ad32c21/CONTROL_BOOTSTRAP_DRAWS.npz",
+      "sha256": "f4ddc45c9a7a5b3c887eeeffefeaa2812fe827286614397950fd6861b8755a4a"
+    },
+    {
+      "path": "<outputs>/control/control_v3a_20260926T153411234230Z_0b9ad32c21/CONTROL_PRIMARY_RESULTS.csv",
+      "sha256": "8b51f56f0d1e77113e73774ae8a6e412cb0cf16ac843d68149d8552cb3d8b7a3"
+    },
+    {
+      "path": "protocols/POSTHOC_MIL_PROTOCOL.json",
+      "sha256": "a3bd1ebd55537616e498f723d5087b1f4b827a34c5046ef49d3a1334bc60cffa"
+    },
+    {
+      "path": "<outputs>/posthoc_mil/execution_20261001T050813Z_a3bd1ebd55/TASKS.json",
+      "sha256": "1f385ba6b0d30a3c30becb90903bce0da2e1084de8eec2a4fb749151957cc165"
+    },
+    {
+      "path": "<outputs>/posthoc_mil/execution_20261001T050813Z_a3bd1ebd55/POSTHOC_MIL_PRIMARY_CONTRASTS.csv",
+      "sha256": "d459b0db1256c8658fde8e0b927710f4bdd47c16b5107b4f00009ea68df200fc"
+    },
+    {
+      "path": "<outputs>/formal_coisc/seed_20260922/results/R0/selected.pt",
+      "sha256": "e1a16a5f07b546850c7b256f143406ba3d7522099beb4ce0220ee7f2cb1dae98"
+    },
+    {
+      "path": "<outputs>/formal_coisc/seed_20260922/coisc_final.pt",
+      "sha256": "3c68c00d1a5a08c132427353773e9e1307a2e35c69dbe5273feee90427071d2a"
+    },
+    {
+      "path": "<outputs>/formal_coisc/seed_20260923/results/R0/selected.pt",
+      "sha256": "6760c84b393aa72d40db8c80d51b02c5fd6523ac462ab47e2983cfe859236a28"
+    },
+    {
+      "path": "<outputs>/formal_coisc/seed_20260923/coisc_final.pt",
+      "sha256": "ac8e02cccf0ee4eca3ec60a1fadba08bd1cacfb27f7ffbdcfe984a9e43b74dc4"
+    },
+    {
+      "path": "<outputs>/formal_coisc/seed_20260924/results/R0/selected.pt",
+      "sha256": "e0148fc3623487d464e1d22145a984a45d7007d0bbeeb84780607d8d191650b7"
+    },
+    {
+      "path": "<outputs>/formal_coisc/seed_20260924/coisc_final.pt",
+      "sha256": "531e8b80e435435ac97675784e090261b79e3141738d0eeb804bf4b4b44a34ef"
+    }
+  ],
+  "frozen_utc": "2026-10-03T09:30:13Z"
+}

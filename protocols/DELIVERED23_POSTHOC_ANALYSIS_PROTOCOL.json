@@ -1,0 +1,64 @@
+{
+  "confirmatory_decision": "FAIL",
+  "confirmatory_result_immutable": true,
+  "posthoc_analysis_can_not_rescue_primary": true,
+  "analysis_class": "DESCRIPTIVE / EXPLORATORY / POST-HOC",
+  "source_execution_id": "delivered23_20260926T111610620117Z_0415da4e90",
+  "source_execution_relative_path": "../delivered23_evaluation/delivered23_20260926T111610620117Z_0415da4e90",
+  "source_protocol_sha256": "27db7fd7b1539ed58e2b28cdb5bee9798bd5b8e6a706fda2f56dd4861c720d4a",
+  "source_manifest_sha256": "655dc58bd7ecc3624c13cd41244ad6acb53a6a56ebb75be63e660294606f54a2",
+  "population": {
+    "all23": 23,
+    "external17": 17,
+    "final6": 6,
+    "seeds": [
+      20260922,
+      20260923,
+      20260924
+    ]
+  },
+  "input_sha256": {
+    "DELIVERED23_FINAL_DECISION.json": "8e7f52f641c049e2d6957228fed2456d7db889c90c2c649dfdead337ca845bdb",
+    "per_seed_delivered23_metrics.json": "2c45049577cd24eda0c448e3d6a5b99f0232549ed53c2c0b224eb31344117b01",
+    "delivered23_prediction_metrics.csv": "1a3a7c16d4dd2a7cf7054126526094f6726198f0cd149116564abe8a0d9b07bb",
+    "delivered23_sensitivity_metrics.csv": "da573566d15759b5b9ff8403b21d848c4e05dd324b143f19d9c389458425039e",
+    "delivered23_source_horizon_output_audit.csv": "2dbeaf3c88fe4900d6f2b7d7b035e2ac603ca068526cbf37f6b024baa8d0bda7",
+    "delivered23_cluster_bootstrap.csv": "3ef36c50251014529cba9314f16e3be6af479ec76a0972381c914582ecb5a4d4",
+    "delivered23_collateral_effect_audit.csv": "c8c9abab11293ad4cde2321e5effae610f45ba97d1249950f5db1ecf9c4a29c3",
+    "window_level_raw_results.npz": "06909e55194fa425760404b62de41ea149528f8254f4ced0851a5e0ac0c3ec18",
+    "window_level_sensitivity.npz": "9c1f0d4ac6cb5f17b1f0c09b44aabbbdb069d780e7347be3dfbd02856cfde6f8",
+    "bootstrap_draws.npz": "a0ad1df990a850cb8c5d1b8668b21723860c65b06d54196e146cd0997288de67",
+    "DELIVERED23_EVALUATION_PROTOCOL.json": "27db7fd7b1539ed58e2b28cdb5bee9798bd5b8e6a706fda2f56dd4861c720d4a",
+    "DELIVERED23_PROTOCOL_AUDIT.json": "49ee60b76b30473cd97ea9f398f9488f44e554465f15c248d50341d0e7e30e84"
+  },
+  "source_metadata": "locked 01_locked_source_manifest.csv, restricted to the 23 immutable identities; source_group/domain/scene/machine/role are descriptive labels only",
+  "aggregation": {
+    "source_cluster": "Each source contributes equally within its specified cohort; windows are not independent clusters.",
+    "five_horizon_cohort_ci": "Read existing paired 20000-draw percentile source-cluster CI from sealed bootstrap CSV without recomputing primary.",
+    "five_horizon_macro": "Per source mean of five MAEs, then equal-source mean; exploratory CI from the already sealed shared draw table.",
+    "source_group_sensitivity": "PLE and WSR are equal-source means; PSM is source-balanced weighted median of post-lag cells using sealed S arrays, NA if no post cells.",
+    "source_macro": "For a source, seven-output macro MAE is the arithmetic mean of seven output MAEs at 120s.",
+    "leave_one_source_out": "Only 22-source descriptive point estimates; no gate or alternate primary population.",
+    "correlation": "Pearson and Spearman across 23 source-level paired deltas, each seed separately; descriptive only, no multiple-testing claims.",
+    "rollout": "For each source, mean absolute-error delta over its windows at each of 12 native 10s steps; then equal-source mean.",
+    "bias": "Signed prediction minus truth; compare bias and RMSE alongside MAE."
+  },
+  "limitations": [
+    "The three seeds share training and population structure and are not independent statistical replicates; seed mean/median are descriptive only.",
+    "Small scene/domain groups are descriptive only; no source is dropped from the original result.",
+    "Historical preprocessing provenance remains PARTIALLY_UNRESOLVED; 87/90 available development sources matched bitwise.",
+    "Head parameter drift and metric correlations are associations, not causal proof."
+  ],
+  "prohibited": [
+    "training",
+    "fine-tuning",
+    "new checkpoints",
+    "model inference",
+    "optimization",
+    "parameter changes",
+    "membership changes",
+    "new primary gates",
+    "primary decision rerun",
+    "confirmatory rescue"
+  ]
+}

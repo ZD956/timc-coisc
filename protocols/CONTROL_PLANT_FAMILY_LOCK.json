@@ -1,0 +1,374 @@
+{
+  "status": "PRE_OUTCOME_LOCKED",
+  "prior_panel_sha256": "4bf26ab703246f2f7e42413a53800218a12fbe350bbe314cadca55d232103311",
+  "prior_independence_audit_sha256": "543e8b3d83a3895e7c88aa72f722d54fb720f1af5c87d2011e99ea9245202d0b",
+  "all_33_checkpoints_retained": true,
+  "family_names": {
+    "F1": "V12B structured P/A1/A3/A4/A5",
+    "F2": "V12B multiscale unstructured A2",
+    "F3": "NARX-MLP B2",
+    "F4": "ARX-Ridge B1"
+  },
+  "primary_family_model_ids": {
+    "F1": [
+      "P",
+      "A1",
+      "A3",
+      "A4",
+      "A5"
+    ],
+    "F2": [
+      "A2"
+    ],
+    "F3": [
+      "B2"
+    ],
+    "F4": [
+      "B1"
+    ]
+  },
+  "primary_family_weights": {
+    "F1": 0.25,
+    "F2": 0.25,
+    "F3": 0.25,
+    "F4": 0.25
+  },
+  "primary_checkpoint_counts": {
+    "F1": 17,
+    "F2": 3,
+    "F3": 3,
+    "F4": 1
+  },
+  "primary_checkpoints": [
+    {
+      "plant_name": "P_seed20260922",
+      "tier": "Tier1",
+      "checkpoint_path": "<private>/plants/P_seed20260922/selected.pt",
+      "sha256": "49dfe5e13838b7c85b26b0fd2dadc00dd4a551e46cb30633b7d6b948bfe8a616",
+      "selection_rule": "all independently verified eligible completed development checkpoints; no accuracy criterion",
+      "model_id": "P",
+      "family": "F1"
+    },
+    {
+      "plant_name": "P_seed20260923",
+      "tier": "Tier1",
+      "checkpoint_path": "<private>/plants/P_seed20260923/selected.pt",
+      "sha256": "efa4ae2eade61add379f5163510a00d80e91be8485ef8bf6335f567566a225b4",
+      "selection_rule": "all independently verified eligible completed development checkpoints; no accuracy criterion",
+      "model_id": "P",
+      "family": "F1"
+    },
+    {
+      "plant_name": "P_seed20260924",
+      "tier": "Tier1",
+      "checkpoint_path": "<private>/plants/P_seed20260924/selected.pt",
+      "sha256": "71aeaa8a09d719ab9efedd4ed1411a41ffe6042f26564c8f00f1ce92dfa05536",
+      "selection_rule": "all independently verified eligible completed development checkpoints; no accuracy criterion",
+      "model_id": "P",
+      "family": "F1"
+    },
+    {
+      "plant_name": "P_seed20260925",
+      "tier": "Tier1",
+      "checkpoint_path": "<private>/plants/P_seed20260925/selected.pt",
+      "sha256": "9bcb1da601f72b789caf40d40e956e3895bcefa4aa322277efb44fcca523f9c8",
+      "selection_rule": "all independently verified eligible completed development checkpoints; no accuracy criterion",
+      "model_id": "P",
+      "family": "F1"
+    },
+    {
+      "plant_name": "P_seed20260926",
+      "tier": "Tier1",
+      "checkpoint_path": "<private>/plants/P_seed20260926/selected.pt",
+      "sha256": "eb4ded81affc5686d6757c225b2f74e772d756c5d796804c5663adad58d4fe7c",
+      "selection_rule": "all independently verified eligible completed development checkpoints; no accuracy criterion",
+      "model_id": "P",
+      "family": "F1"
+    },
+    {
+      "plant_name": "A1_seed20260922",
+      "tier": "Tier1",
+      "checkpoint_path": "<private>/plants/A1_seed20260922/selected.pt",
+      "sha256": "3150b02ceb58d130beca8981620a37375ff2334626cf4f452c56cebe1b029eaf",
+      "selection_rule": "all independently verified eligible completed development checkpoints; no accuracy criterion",
+      "model_id": "A1",
+      "family": "F1"
+    },
+    {
+      "plant_name": "A1_seed20260923",
+      "tier": "Tier1",
+      "checkpoint_path": "<private>/plants/A1_seed20260923/selected.pt",
+      "sha256": "d0c00f36e19d98617534f4d9a0a609f6a4f83d510faa226777c138372c041c7f",
+      "selection_rule": "all independently verified eligible completed development checkpoints; no accuracy criterion",
+      "model_id": "A1",
+      "family": "F1"
+    },
+    {
+      "plant_name": "A1_seed20260924",
+      "tier": "Tier1",
+      "checkpoint_path": "<private>/plants/A1_seed20260924/selected.pt",
+      "sha256": "ce56956b2b40105f1aabf6225901df38ffb787527dcaa59db1b49d73ac77f33c",
+      "selection_rule": "all independently verified eligible completed development checkpoints; no accuracy criterion",
+      "model_id": "A1",
+      "family": "F1"
+    },
+    {
+      "plant_name": "A2_seed20260922",
+      "tier": "Tier1",
+      "checkpoint_path": "<private>/plants/A2_seed20260922/selected.pt",
+      "sha256": "a44d857b0fb4c8fccf3739781e9561bc76d1dab2ad6aad1100d7c0dea6ce6def",
+      "selection_rule": "all independently verified eligible completed development checkpoints; no accuracy criterion",
+      "model_id": "A2",
+      "family": "F2"
+    },
+    {
+      "plant_name": "A2_seed20260923",
+      "tier": "Tier1",
+      "checkpoint_path": "<private>/plants/A2_seed20260923/selected.pt",
+      "sha256": "8263c684506ec2433e0704c17951ef0f45a3dc50682fc2e21807c27ac7d9c5a5",
+      "selection_rule": "all independently verified eligible completed development checkpoints; no accuracy criterion",
+      "model_id": "A2",
+      "family": "F2"
+    },
+    {
+      "plant_name": "A2_seed20260924",
+      "tier": "Tier1",
+      "checkpoint_path": "<private>/plants/A2_seed20260924/selected.pt",
+      "sha256": "3f84a88e6b512dc6e76dfec7b55a22b53d4b5b033a3e2d4aa3c62a5f8b5d681b",
+      "selection_rule": "all independently verified eligible completed development checkpoints; no accuracy criterion",
+      "model_id": "A2",
+      "family": "F2"
+    },
+    {
+      "plant_name": "A3_seed20260922",
+      "tier": "Tier1",
+      "checkpoint_path": "<private>/plants/A3_seed20260922/selected.pt",
+      "sha256": "fe94acf2cacc78a6451cdc9659757a70ae633413ba7257f940398a499a30c4ff",
+      "selection_rule": "all independently verified eligible completed development checkpoints; no accuracy criterion",
+      "model_id": "A3",
+      "family": "F1"
+    },
+    {
+      "plant_name": "A3_seed20260923",
+      "tier": "Tier1",
+      "checkpoint_path": "<private>/plants/A3_seed20260923/selected.pt",
+      "sha256": "95e3e5c51c020f827286f1f107d47af9800a27480834b323966912d87fe5c11f",
+      "selection_rule": "all independently verified eligible completed development checkpoints; no accuracy criterion",
+      "model_id": "A3",
+      "family": "F1"
+    },
+    {
+      "plant_name": "A3_seed20260924",
+      "tier": "Tier1",
+      "checkpoint_path": "<private>/plants/A3_seed20260924/selected.pt",
+      "sha256": "8db183469be3128f245db61a029503bb8710524cdc833075f6b59d932ecc9754",
+      "selection_rule": "all independently verified eligible completed development checkpoints; no accuracy criterion",
+      "model_id": "A3",
+      "family": "F1"
+    },
+    {
+      "plant_name": "A4_seed20260922",
+      "tier": "Tier1",
+      "checkpoint_path": "<private>/plants/A4_seed20260922/selected.pt",
+      "sha256": "cf46413b288cad482f7db9ba4b3d3c4dfe754e8ed3cdc04cdf6ff0646dd8d0fa",
+      "selection_rule": "all independently verified eligible completed development checkpoints; no accuracy criterion",
+      "model_id": "A4",
+      "family": "F1"
+    },
+    {
+      "plant_name": "A4_seed20260923",
+      "tier": "Tier1",
+      "checkpoint_path": "<private>/plants/A4_seed20260923/selected.pt",
+      "sha256": "aebf7b973add63065c3c9667ebfb3bc1d3aa684c76bb9909c91ced4da77aae41",
+      "selection_rule": "all independently verified eligible completed development checkpoints; no accuracy criterion",
+      "model_id": "A4",
+      "family": "F1"
+    },
+    {
+      "plant_name": "A4_seed20260924",
+      "tier": "Tier1",
+      "checkpoint_path": "<private>/plants/A4_seed20260924/selected.pt",
+      "sha256": "7d714b4e7d78d36b66c06f61d344f3afb87ce40c9e7a87abea252dd99b2a0842",
+      "selection_rule": "all independently verified eligible completed development checkpoints; no accuracy criterion",
+      "model_id": "A4",
+      "family": "F1"
+    },
+    {
+      "plant_name": "A5_seed20260922",
+      "tier": "Tier1",
+      "checkpoint_path": "<private>/plants/A5_seed20260922/selected.pt",
+      "sha256": "43b5b1c9a543abeddd33dff6e3805543b1cc1b36b1d8689898f2d1639ac70940",
+      "selection_rule": "all independently verified eligible completed development checkpoints; no accuracy criterion",
+      "model_id": "A5",
+      "family": "F1"
+    },
+    {
+      "plant_name": "A5_seed20260923",
+      "tier": "Tier1",
+      "checkpoint_path": "<private>/plants/A5_seed20260923/selected.pt",
+      "sha256": "f3699401ecc3ee01dcf6b073efd4dc8ff4a73571e66e06619923817f4dcf7281",
+      "selection_rule": "all independently verified eligible completed development checkpoints; no accuracy criterion",
+      "model_id": "A5",
+      "family": "F1"
+    },
+    {
+      "plant_name": "A5_seed20260924",
+      "tier": "Tier1",
+      "checkpoint_path": "<private>/plants/A5_seed20260924/selected.pt",
+      "sha256": "48b80d6dc78da6f8adc9b1cf302854b704f62c8db2ed3723aaec0b5d2f02c68f",
+      "selection_rule": "all independently verified eligible completed development checkpoints; no accuracy criterion",
+      "model_id": "A5",
+      "family": "F1"
+    },
+    {
+      "plant_name": "B2_seed20260922",
+      "tier": "Tier1",
+      "checkpoint_path": "<private>/plants/B2_seed20260922/selected.pt",
+      "sha256": "f85ae3e06e91650a37167bed6cf3886892a8530769a68b4817a9f75358a98b3e",
+      "selection_rule": "all independently verified eligible completed development checkpoints; no accuracy criterion",
+      "model_id": "B2",
+      "family": "F3"
+    },
+    {
+      "plant_name": "B2_seed20260923",
+      "tier": "Tier1",
+      "checkpoint_path": "<private>/plants/B2_seed20260923/selected.pt",
+      "sha256": "df4804d94af3fe3d215e78b6093fb9a277f1e6d6fd3b2877d37efb4d294f1dc2",
+      "selection_rule": "all independently verified eligible completed development checkpoints; no accuracy criterion",
+      "model_id": "B2",
+      "family": "F3"
+    },
+    {
+      "plant_name": "B2_seed20260924",
+      "tier": "Tier1",
+      "checkpoint_path": "<private>/plants/B2_seed20260924/selected.pt",
+      "sha256": "001d56ebc9d9422d0dd03318aac4210ab85acbbaa12048b14945d5746ae05339",
+      "selection_rule": "all independently verified eligible completed development checkpoints; no accuracy criterion",
+      "model_id": "B2",
+      "family": "F3"
+    },
+    {
+      "plant_name": "B1_seed20260922",
+      "tier": "Tier1",
+      "checkpoint_path": "<private>/plants/B1_seed20260922/selected.pt",
+      "sha256": "a41de5e1d41d33f7e0f02fa650d47791668f2d565c8010642f035ede583df6e9",
+      "selection_rule": "all independently verified eligible completed development checkpoints; no accuracy criterion",
+      "model_id": "B1",
+      "family": "F4"
+    }
+  ],
+  "secondary_checkpoints": [
+    {
+      "plant_name": "B4_seed20260922",
+      "tier": "Tier2",
+      "checkpoint_path": "<private>/plants/B4_seed20260922/selected.pt",
+      "sha256": "87e6a6fdd3f7ab564cc569e49e923b08b101d20a9bdc9e28bef7be1f265fd845",
+      "selection_rule": "all independently verified eligible completed development checkpoints; no accuracy criterion",
+      "model_id": "B4",
+      "secondary_panel": "architecture-near B3/B4"
+    },
+    {
+      "plant_name": "B4_seed20260923",
+      "tier": "Tier2",
+      "checkpoint_path": "<private>/plants/B4_seed20260923/selected.pt",
+      "sha256": "f63ef258ac14b16c8b146c69bdc29c87f71311b8e441c1273b2123f69d0d75eb",
+      "selection_rule": "all independently verified eligible completed development checkpoints; no accuracy criterion",
+      "model_id": "B4",
+      "secondary_panel": "architecture-near B3/B4"
+    },
+    {
+      "plant_name": "B4_seed20260924",
+      "tier": "Tier2",
+      "checkpoint_path": "<private>/plants/B4_seed20260924/selected.pt",
+      "sha256": "70523fad09dd7926d5c1a29ae654ee31803dff974a5433c18a3847f43ee2f033",
+      "selection_rule": "all independently verified eligible completed development checkpoints; no accuracy criterion",
+      "model_id": "B4",
+      "secondary_panel": "architecture-near B3/B4"
+    },
+    {
+      "plant_name": "B4_seed20260925",
+      "tier": "Tier2",
+      "checkpoint_path": "<private>/plants/B4_seed20260925/selected.pt",
+      "sha256": "cfa7efb613aa564fcb58d0ed5b3832f2907479dd1f6a719ed53c7c042353b1d5",
+      "selection_rule": "all independently verified eligible completed development checkpoints; no accuracy criterion",
+      "model_id": "B4",
+      "secondary_panel": "architecture-near B3/B4"
+    },
+    {
+      "plant_name": "B4_seed20260926",
+      "tier": "Tier2",
+      "checkpoint_path": "<private>/plants/B4_seed20260926/selected.pt",
+      "sha256": "07f16cbf6ec2d0d6a5acda3bfee08f887d3e1364d298b138ca63154aa51f72b0",
+      "selection_rule": "all independently verified eligible completed development checkpoints; no accuracy criterion",
+      "model_id": "B4",
+      "secondary_panel": "architecture-near B3/B4"
+    },
+    {
+      "plant_name": "B3_seed20260922",
+      "tier": "Tier2",
+      "checkpoint_path": "<private>/plants/B3_seed20260922/selected.pt",
+      "sha256": "61742528268b22e0c1503cc8471d4714253aa44b84c3548de5116f422762f978",
+      "selection_rule": "all independently verified eligible completed development checkpoints; no accuracy criterion",
+      "model_id": "B3",
+      "secondary_panel": "architecture-near B3/B4"
+    },
+    {
+      "plant_name": "B3_seed20260923",
+      "tier": "Tier2",
+      "checkpoint_path": "<private>/plants/B3_seed20260923/selected.pt",
+      "sha256": "f81bf9389b438f98f3b07e6a9033b65abe018df59a84665feb14e3a7833d3f38",
+      "selection_rule": "all independently verified eligible completed development checkpoints; no accuracy criterion",
+      "model_id": "B3",
+      "secondary_panel": "architecture-near B3/B4"
+    },
+    {
+      "plant_name": "B3_seed20260924",
+      "tier": "Tier2",
+      "checkpoint_path": "<private>/plants/B3_seed20260924/selected.pt",
+      "sha256": "91a0b7f3d27744a11ab7beea152c7c42aa4f28326de10a844f43683052d8f41c",
+      "selection_rule": "all independently verified eligible completed development checkpoints; no accuracy criterion",
+      "model_id": "B3",
+      "secondary_panel": "architecture-near B3/B4"
+    },
+    {
+      "plant_name": "V10",
+      "tier": "Tier1",
+      "checkpoint_path": "<private>/v10/SELECTED_native_rollout_g4state_tpsafe_v10_candidate.pth",
+      "sha256": "9d3553363911bdfc9ad4640c9b13f7b32b211fcdb7d6d09d9e99a101dc1e0a5c",
+      "torchscript_path": "<private>/v10/SELECTED_native_rollout_g4state_tpsafe_v10_candidate.pt",
+      "torchscript_sha256": "e55fe3a38dd74b2525187a2cbc8a8ee31f19e0f4a4ef96a0b2753c84dda99f35",
+      "selection_rule": "all eligible independent historical candidates; no accuracy criterion",
+      "model_id": "V10",
+      "secondary_panel": "historical V10"
+    }
+  ],
+  "checkpoint_weight_within_family": "equal, then four family effects receive 0.25 each",
+  "secondary_not_used_for_primary_decision": true,
+  "controller_checkpoint_bindings": {
+    "20260922:R0": {
+      "path": "<outputs>/formal_coisc/seed_20260922/results/R0/selected.pt",
+      "sha256": "e1a16a5f07b546850c7b256f143406ba3d7522099beb4ce0220ee7f2cb1dae98"
+    },
+    "20260922:COISC": {
+      "path": "<outputs>/formal_coisc/seed_20260922/coisc_final.pt",
+      "sha256": "3c68c00d1a5a08c132427353773e9e1307a2e35c69dbe5273feee90427071d2a"
+    },
+    "20260923:R0": {
+      "path": "<outputs>/formal_coisc/seed_20260923/results/R0/selected.pt",
+      "sha256": "6760c84b393aa72d40db8c80d51b02c5fd6523ac462ab47e2983cfe859236a28"
+    },
+    "20260923:COISC": {
+      "path": "<outputs>/formal_coisc/seed_20260923/coisc_final.pt",
+      "sha256": "ac8e02cccf0ee4eca3ec60a1fadba08bd1cacfb27f7ffbdcfe984a9e43b74dc4"
+    },
+    "20260924:R0": {
+      "path": "<outputs>/formal_coisc/seed_20260924/results/R0/selected.pt",
+      "sha256": "e0148fc3623487d464e1d22145a984a45d7007d0bbeeb84780607d8d191650b7"
+    },
+    "20260924:COISC": {
+      "path": "<outputs>/formal_coisc/seed_20260924/coisc_final.pt",
+      "sha256": "531e8b80e435435ac97675784e090261b79e3141738d0eeb804bf4b4b44a34ef"
+    }
+  },
+  "no_accuracy_or_control_outcome_filter": true
+}

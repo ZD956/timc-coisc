@@ -1,0 +1,118 @@
+{
+  "status": "FORMAL_DEVELOPMENT_VALIDATION_PROTOCOL_DRAFT_NO_RUN",
+  "name": "COISC head-only control-oriented sensitivity feasibility validation",
+  "motivation": "Q1 75-step head-only probe preserved Tp 120s MAE within the predeclared 0.005 C margin and reduced Tp PLE/WSR without sensitivity collapse.",
+  "q1_evidence": {
+    "seed": 20260922,
+    "steps": 75,
+    "trainable": [
+      "head.0.weight",
+      "head.0.bias",
+      "head.2.weight",
+      "head.2.bias"
+    ],
+    "frozen_encoder_unchanged": true,
+    "Tp_120s_MAE_R0_C": 0.3200661275032186,
+    "Tp_120s_MAE_Q1_C": 0.3250470459461212,
+    "Tp_120s_MAE_delta_C": 0.0049809184429026,
+    "Tp_PLE_R0": 0.04053444762709731,
+    "Tp_PLE_Q1": 0.029354711177463633,
+    "Tp_WSR_R0": 0.13277792829404858,
+    "Tp_WSR_Q1": 0.024519100514765645,
+    "Tp_PSM_R0": 0.0315093994140625,
+    "Tp_PSM_Q1": 0.03753662109375,
+    "q1_passed": true
+  },
+  "hypothesis": "With the Vanilla-LSTM-MS encoder fixed, a short head-only COISC adaptation can reduce Tp pre-lag leakage and wrong-sign sensitivity while preserving prediction accuracy.",
+  "data_protocol": {
+    "training_sources": "91 fit sources only",
+    "selection_sources": "18 selection sources only",
+    "windows": "real field windows only; 200s history, 10s sampling, 120s recursive rollout, seven outputs",
+    "normalization": "existing fit-field-only V12B normalization",
+    "synthetic_or_paired_data": false,
+    "frozen_external_or_final_data": false,
+    "selection_evaluation": "one final evaluation after the fixed head-only steps; no threshold, lambda, or checkpoint tuning"
+  },
+  "comparisons": {
+    "R0": "Vanilla-LSTM-MS base checkpoint selected by the existing source-macro prediction-MAE rule, with no head adaptation",
+    "COISC": "the same per-seed R0 checkpoint followed by fixed head-only adaptation; encoder and all non-head parameters frozen",
+    "paired_by_seed": true,
+    "seeds": [
+      20260922,
+      20260923,
+      20260924
+    ]
+  },
+  "training": {
+    "base_model": "existing B4 Vanilla-LSTM-MS real-field-only training protocol, 300/400/500 steps, 90887 parameters",
+    "head_only_steps": 75,
+    "head_only_batch": 128,
+    "head_only_learning_rate": 5e-05,
+    "optimizer": "Adam",
+    "fit_sampler": "existing source-balanced base sampler; no excitation sampler in this validation",
+    "loss": "unchanged B4 stage-2 factual one-step plus recursive weighted Huber/adjacent/endpoint terms + fixed DBASR sensitivity loss",
+    "dbasr_subset_per_batch": 8,
+    "lambda_s": 939.1430335805455,
+    "epsilon_pre": 0.001,
+    "epsilon_sign": 0.0001,
+    "lag_seconds": [
+      102.108,
+      77.091,
+      30.108,
+      50.112,
+      10.0535,
+      180.0,
+      39.104
+    ],
+    "no_parameter_or_loss_changes": true,
+    "no_early_stopping": true,
+    "no_probe_checkpoint_selection": true
+  },
+  "primary_endpoints": {
+    "Tp_prediction": "MAE at 120s",
+    "Tp_sensitivity": [
+      "PLE",
+      "WSR"
+    ],
+    "Tp_PSM_guard": "PSM must be at least 20% of paired R0 PSM and at least 5*epsilon_sign",
+    "per_seed_pass": {
+      "Tp_120s_MAE": "COISC <= paired R0 + 0.005 C",
+      "Tp_PLE": "COISC <= 90% of paired R0",
+      "Tp_WSR": "COISC <= 90% of paired R0",
+      "Tp_PSM": "COISC >= 20% of paired R0 and >= 0.0005"
+    },
+    "overall_pass": "all three predeclared seeds satisfy every per-seed endpoint; report paired mean, median, and seed-level values without post-hoc rescue"
+  },
+  "secondary_endpoints": {
+    "prediction": "MAE/RMSE for all seven outputs at 10/30/60/90/120s",
+    "distribution": "source x horizon x output absolute-error improvement and degradation counts",
+    "failure_source": "T5 on UH dual-power 0-100% 60s source, reported as a prespecified diagnostic, not a selection criterion",
+    "sensitivity": "PLE/WSR/PSM for all outputs, with empty lag regions reported NA",
+    "events": "existing two selection UH event sanity checks after final checkpoint; no model selection",
+    "free_run": "not part of this validation"
+  },
+  "integrity_and_reproducibility": {
+    "deterministic_fp32": true,
+    "tf32_disabled": true,
+    "gradient_clip_norm": 1.0,
+    "required_checks": [
+      "same source split and normalization for R0/COISC",
+      "only head.* parameters have requires_grad=true during adaptation",
+      "non-head checkpoint tensors byte-identical before and after adaptation",
+      "all 18 selection sources present and finite",
+      "no frozen files opened",
+      "no synthetic labels opened"
+    ]
+  },
+  "outputs": [
+    "per_seed_config.json",
+    "per_seed_base_and_coisc_metrics.json",
+    "model_summary.csv",
+    "selection_prediction_metrics.csv",
+    "sensitivity_metrics.csv",
+    "source_horizon_output_audit.csv",
+    "failure_source_T5_diagnostic.csv",
+    "protocol_execution_audit.json"
+  ],
+  "stop_rule": "If the primary endpoints fail for any seed, report COISC feasibility failure and stop the sensitivity-regularization line; do not alter lambda, lag, epsilon, source inclusion, or checkpoint rule. If all pass, proceed to the next predeclared COISC validation stage without changing this protocol."
+}

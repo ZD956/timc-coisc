@@ -1,0 +1,598 @@
+{
+  "analysis_class": "DESCRIPTIVE / EXPLORATORY / POST-HOC",
+  "confirmatory_decision": "FAIL",
+  "confirmatory_result_immutable": true,
+  "posthoc_analysis_can_not_rescue_primary": true,
+  "source_execution_id": "delivered23_20260926T111610620117Z_0415da4e90",
+  "protocol_sha256": "3e2c2db7a70d9f26e2c8121478aab60025ad8b094ccc8d372ac4c06f9da4accc",
+  "source_protocol_sha256": "27db7fd7b1539ed58e2b28cdb5bee9798bd5b8e6a706fda2f56dd4861c720d4a",
+  "n_sources": 23,
+  "external": 17,
+  "final": 6,
+  "n_seeds": 3,
+  "primary_tradeoff": [
+    {
+      "seed": 20260922,
+      "endpoint": "MAE",
+      "R0": 0.33321155816130404,
+      "COISC": 0.35244256070933166,
+      "absolute_delta": 0.01923100254802762,
+      "relative_delta_percent": 5.771409207455558,
+      "descriptive_absolute_delta_CI": [
+        -0.004440884330435392,
+        0.04773715499277126
+      ],
+      "original_gate": "FAIL"
+    },
+    {
+      "seed": 20260922,
+      "endpoint": "PLE",
+      "R0": 0.04647408963783007,
+      "COISC": 0.02109716959188026,
+      "absolute_delta": -0.02537692004594981,
+      "relative_delta_percent": -54.60444786269232,
+      "descriptive_absolute_delta_CI": [
+        -0.028652439513378113,
+        -0.02159103912579556
+      ],
+      "original_gate": "PASS"
+    },
+    {
+      "seed": 20260922,
+      "endpoint": "WSR",
+      "R0": 0.105666350152087,
+      "COISC": 0.02691036741252322,
+      "absolute_delta": -0.07875598273956377,
+      "relative_delta_percent": -74.53269903446957,
+      "descriptive_absolute_delta_CI": [
+        -0.09668216190178511,
+        -0.06110768904541294
+      ],
+      "original_gate": "PASS"
+    },
+    {
+      "seed": 20260922,
+      "endpoint": "PSM",
+      "R0": 0.0848388671875,
+      "COISC": 0.1000213623046875,
+      "absolute_delta": 0.0151824951171875,
+      "relative_delta_percent": 17.89568345323742,
+      "descriptive_absolute_delta_CI": [
+        0.012187957763671875,
+        0.017261505126953125
+      ],
+      "original_gate": "PASS"
+    },
+    {
+      "seed": 20260923,
+      "endpoint": "MAE",
+      "R0": 0.363086386180938,
+      "COISC": 0.40617797663490884,
+      "absolute_delta": 0.04309159045397082,
+      "relative_delta_percent": 11.868137196555995,
+      "descriptive_absolute_delta_CI": [
+        -0.013092616351504226,
+        0.10442745051705785
+      ],
+      "original_gate": "FAIL"
+    },
+    {
+      "seed": 20260923,
+      "endpoint": "PLE",
+      "R0": 0.049975492379157445,
+      "COISC": 0.024127351613880643,
+      "absolute_delta": -0.025848140765276802,
+      "relative_delta_percent": -51.721633013978895,
+      "descriptive_absolute_delta_CI": [
+        -0.02846427935909238,
+        -0.02316071539632536
+      ],
+      "original_gate": "PASS"
+    },
+    {
+      "seed": 20260923,
+      "endpoint": "WSR",
+      "R0": 0.21901217224069916,
+      "COISC": 0.11039256753935073,
+      "absolute_delta": -0.10861960470134843,
+      "relative_delta_percent": -49.595236461091815,
+      "descriptive_absolute_delta_CI": [
+        -0.12214750539028837,
+        -0.09361354235287841
+      ],
+      "original_gate": "PASS"
+    },
+    {
+      "seed": 20260923,
+      "endpoint": "PSM",
+      "R0": 0.061244964599609375,
+      "COISC": 0.07741928100585938,
+      "absolute_delta": 0.01617431640625,
+      "relative_delta_percent": 26.409218312052317,
+      "descriptive_absolute_delta_CI": [
+        0.00621795654296875,
+        0.024871826171875
+      ],
+      "original_gate": "PASS"
+    },
+    {
+      "seed": 20260924,
+      "endpoint": "MAE",
+      "R0": 0.3657006478780159,
+      "COISC": 0.3806257091395509,
+      "absolute_delta": 0.014925061261534978,
+      "relative_delta_percent": 4.0812236314422545,
+      "descriptive_absolute_delta_CI": [
+        -0.010566594001582757,
+        0.042927509008844435
+      ],
+      "original_gate": "FAIL"
+    },
+    {
+      "seed": 20260924,
+      "endpoint": "PLE",
+      "R0": 0.035137693275278985,
+      "COISC": 0.01574824650819196,
+      "absolute_delta": -0.019389446767087024,
+      "relative_delta_percent": -55.18133081527128,
+      "descriptive_absolute_delta_CI": [
+        -0.020638281558369977,
+        -0.018218812782890698
+      ],
+      "original_gate": "PASS"
+    },
+    {
+      "seed": 20260924,
+      "endpoint": "WSR",
+      "R0": 0.07797697560783812,
+      "COISC": 0.02998403974603306,
+      "absolute_delta": -0.04799293586180506,
+      "relative_delta_percent": -61.54757284146435,
+      "descriptive_absolute_delta_CI": [
+        -0.05710486612374645,
+        -0.038677525940025055
+      ],
+      "original_gate": "PASS"
+    },
+    {
+      "seed": 20260924,
+      "endpoint": "PSM",
+      "R0": 0.0894927978515625,
+      "COISC": 0.09998321533203125,
+      "absolute_delta": 0.01049041748046875,
+      "relative_delta_percent": 11.72208013640239,
+      "descriptive_absolute_delta_CI": [
+        0.00843048095703125,
+        0.0130462646484375
+      ],
+      "original_gate": "PASS"
+    }
+  ],
+  "three_seed_descriptive_mean_median": {
+    "MAE": {
+      "R0": {
+        "mean": 0.35399953074008605,
+        "median": 0.363086386180938
+      },
+      "COISC": {
+        "mean": 0.37974874882793047,
+        "median": 0.3806257091395509
+      },
+      "absolute_delta": {
+        "mean": 0.025749218087844472,
+        "median": 0.01923100254802762
+      },
+      "relative_delta_percent": {
+        "mean": 7.240256678484603,
+        "median": 5.771409207455558
+      }
+    },
+    "PLE": {
+      "R0": {
+        "mean": 0.043862425097422164,
+        "median": 0.04647408963783007
+      },
+      "COISC": {
+        "mean": 0.020324255904650954,
+        "median": 0.02109716959188026
+      },
+      "absolute_delta": {
+        "mean": -0.023538169192771213,
+        "median": -0.02537692004594981
+      },
+      "relative_delta_percent": {
+        "mean": -53.83580389731416,
+        "median": -54.60444786269232
+      }
+    },
+    "WSR": {
+      "R0": {
+        "mean": 0.13421849933354144,
+        "median": 0.105666350152087
+      },
+      "COISC": {
+        "mean": 0.055762324899302336,
+        "median": 0.02998403974603306
+      },
+      "absolute_delta": {
+        "mean": -0.07845617443423909,
+        "median": -0.07875598273956377
+      },
+      "relative_delta_percent": {
+        "mean": -61.89183611234191,
+        "median": -61.54757284146435
+      }
+    },
+    "PSM": {
+      "R0": {
+        "mean": 0.07852554321289062,
+        "median": 0.0848388671875
+      },
+      "COISC": {
+        "mean": 0.09247461954752605,
+        "median": 0.09998321533203125
+      },
+      "absolute_delta": {
+        "mean": 0.013949076334635416,
+        "median": 0.0151824951171875
+      },
+      "relative_delta_percent": {
+        "mean": 18.675660633897376,
+        "median": 17.89568345323742
+      }
+    }
+  },
+  "per_seed_source_distribution": [
+    {
+      "seed": 20260922,
+      "confirmatory_decision": "FAIL",
+      "worsened_sources": 14,
+      "improved_sources": 9,
+      "external17_Tp_120_delta_C": 0.0311522159957426,
+      "final6_Tp_120_delta_C": -0.0145457688871652,
+      "leave_one_out_delta_min_C": 0.00903397820046309,
+      "leave_one_out_delta_max_C": 0.024528977700699207,
+      "top5_worsened": [
+        {
+          "source_id": "S139",
+          "Tp_120s_delta_MAE_C": 0.2435655381944444
+        },
+        {
+          "source_id": "S128",
+          "Tp_120s_delta_MAE_C": 0.1749805670518141
+        },
+        {
+          "source_id": "S122",
+          "Tp_120s_delta_MAE_C": 0.0708349032664862
+        },
+        {
+          "source_id": "S059",
+          "Tp_120s_delta_MAE_C": 0.0343620300292968
+        },
+        {
+          "source_id": "S078",
+          "Tp_120s_delta_MAE_C": 0.0314033841623843
+        }
+      ],
+      "top5_improved": [
+        {
+          "source_id": "S024",
+          "Tp_120s_delta_MAE_C": -0.0973244508107503
+        },
+        {
+          "source_id": "S066",
+          "Tp_120s_delta_MAE_C": -0.0415760820562189
+        },
+        {
+          "source_id": "S100",
+          "Tp_120s_delta_MAE_C": -0.0387825504426033
+        },
+        {
+          "source_id": "S067",
+          "Tp_120s_delta_MAE_C": -0.0200446162617829
+        },
+        {
+          "source_id": "S117",
+          "Tp_120s_delta_MAE_C": -0.0180837399250752
+        }
+      ]
+    },
+    {
+      "seed": 20260923,
+      "confirmatory_decision": "FAIL",
+      "worsened_sources": 16,
+      "improved_sources": 7,
+      "external17_Tp_120_delta_C": 0.0799860471772525,
+      "final6_Tp_120_delta_C": -0.0614427035953271,
+      "leave_one_out_delta_min_C": 0.02272950934995602,
+      "leave_one_out_delta_max_C": 0.06334899369266596,
+      "top5_worsened": [
+        {
+          "source_id": "S139",
+          "Tp_120s_delta_MAE_C": 0.491057374742296
+        },
+        {
+          "source_id": "S128",
+          "Tp_120s_delta_MAE_C": 0.3578478556412917
+        },
+        {
+          "source_id": "S133",
+          "Tp_120s_delta_MAE_C": 0.2183404485863375
+        },
+        {
+          "source_id": "S078",
+          "Tp_120s_delta_MAE_C": 0.0617180981682342
+        },
+        {
+          "source_id": "S094",
+          "Tp_120s_delta_MAE_C": 0.0581706291021302
+        }
+      ],
+      "top5_improved": [
+        {
+          "source_id": "S024",
+          "Tp_120s_delta_MAE_C": -0.4025712807973226
+        },
+        {
+          "source_id": "S100",
+          "Tp_120s_delta_MAE_C": -0.0531866012081023
+        },
+        {
+          "source_id": "S067",
+          "Tp_120s_delta_MAE_C": -0.0221098920748165
+        },
+        {
+          "source_id": "S117",
+          "Tp_120s_delta_MAE_C": -0.0147415109582849
+        },
+        {
+          "source_id": "S046",
+          "Tp_120s_delta_MAE_C": -0.0122076793610774
+        }
+      ]
+    },
+    {
+      "seed": 20260924,
+      "confirmatory_decision": "FAIL",
+      "worsened_sources": 12,
+      "improved_sources": 11,
+      "external17_Tp_120_delta_C": 0.0344263404344818,
+      "final6_Tp_120_delta_C": -0.0403285630618145,
+      "leave_one_out_delta_min_C": 0.005667103828741797,
+      "leave_one_out_delta_max_C": 0.02379792331318276,
+      "top5_worsened": [
+        {
+          "source_id": "S139",
+          "Tp_120s_delta_MAE_C": 0.2186001247829861
+        },
+        {
+          "source_id": "S128",
+          "Tp_120s_delta_MAE_C": 0.1693752912374643
+        },
+        {
+          "source_id": "S122",
+          "Tp_120s_delta_MAE_C": 0.0690714768537386
+        },
+        {
+          "source_id": "S133",
+          "Tp_120s_delta_MAE_C": 0.0591395044901284
+        },
+        {
+          "source_id": "S072",
+          "Tp_120s_delta_MAE_C": 0.0453087562738462
+        }
+      ],
+      "top5_improved": [
+        {
+          "source_id": "S024",
+          "Tp_120s_delta_MAE_C": -0.1802779038747151
+        },
+        {
+          "source_id": "S032",
+          "Tp_120s_delta_MAE_C": -0.0335776060819625
+        },
+        {
+          "source_id": "S088",
+          "Tp_120s_delta_MAE_C": -0.0278360127099876
+        },
+        {
+          "source_id": "S031",
+          "Tp_120s_delta_MAE_C": -0.0246211748856764
+        },
+        {
+          "source_id": "S078",
+          "Tp_120s_delta_MAE_C": -0.0225791931152343
+        }
+      ]
+    }
+  ],
+  "source_level_correlations": [
+    {
+      "seed": 20260922,
+      "x": "Tp_PLE_delta",
+      "y": "Tp_120s_MAE_delta",
+      "n_sources": 23,
+      "pearson": 0.3119231413735414,
+      "spearman": -0.14525691699604742
+    },
+    {
+      "seed": 20260922,
+      "x": "Tp_WSR_delta",
+      "y": "Tp_120s_MAE_delta",
+      "n_sources": 23,
+      "pearson": 0.25535807399069504,
+      "spearman": 0.06324110671936758
+    },
+    {
+      "seed": 20260922,
+      "x": "Tp_PSM_delta",
+      "y": "Tp_120s_MAE_delta",
+      "n_sources": 23,
+      "pearson": 0.3650607264899021,
+      "spearman": 0.3982213438735178
+    },
+    {
+      "seed": 20260922,
+      "x": "Tp_PLE_delta",
+      "y": "all7_120s_macro_MAE_delta",
+      "n_sources": 23,
+      "pearson": 0.31379504589114887,
+      "spearman": 0.07312252964426878
+    },
+    {
+      "seed": 20260922,
+      "x": "Tp_WSR_delta",
+      "y": "all7_120s_macro_MAE_delta",
+      "n_sources": 23,
+      "pearson": 0.49997951699051646,
+      "spearman": 0.4130434782608696
+    },
+    {
+      "seed": 20260922,
+      "x": "Tp_PSM_delta",
+      "y": "all7_120s_macro_MAE_delta",
+      "n_sources": 23,
+      "pearson": 0.43821240992159755,
+      "spearman": 0.4041501976284585
+    },
+    {
+      "seed": 20260923,
+      "x": "Tp_PLE_delta",
+      "y": "Tp_120s_MAE_delta",
+      "n_sources": 23,
+      "pearson": -0.08271121083095956,
+      "spearman": -0.46047430830039526
+    },
+    {
+      "seed": 20260923,
+      "x": "Tp_WSR_delta",
+      "y": "Tp_120s_MAE_delta",
+      "n_sources": 23,
+      "pearson": 0.2039964351980187,
+      "spearman": -0.018774703557312256
+    },
+    {
+      "seed": 20260923,
+      "x": "Tp_PSM_delta",
+      "y": "Tp_120s_MAE_delta",
+      "n_sources": 23,
+      "pearson": 0.25988103331868984,
+      "spearman": 0.46245059288537554
+    },
+    {
+      "seed": 20260923,
+      "x": "Tp_PLE_delta",
+      "y": "all7_120s_macro_MAE_delta",
+      "n_sources": 23,
+      "pearson": -0.0016606713807023128,
+      "spearman": -0.08399209486166008
+    },
+    {
+      "seed": 20260923,
+      "x": "Tp_WSR_delta",
+      "y": "all7_120s_macro_MAE_delta",
+      "n_sources": 23,
+      "pearson": 0.3226666064533772,
+      "spearman": -0.09980237154150197
+    },
+    {
+      "seed": 20260923,
+      "x": "Tp_PSM_delta",
+      "y": "all7_120s_macro_MAE_delta",
+      "n_sources": 23,
+      "pearson": 0.2774036349712466,
+      "spearman": 0.1808300395256917
+    },
+    {
+      "seed": 20260924,
+      "x": "Tp_PLE_delta",
+      "y": "Tp_120s_MAE_delta",
+      "n_sources": 23,
+      "pearson": -0.21562416404978368,
+      "spearman": -0.09486166007905138
+    },
+    {
+      "seed": 20260924,
+      "x": "Tp_WSR_delta",
+      "y": "Tp_120s_MAE_delta",
+      "n_sources": 23,
+      "pearson": 0.05309180381765573,
+      "spearman": -0.05138339920948617
+    },
+    {
+      "seed": 20260924,
+      "x": "Tp_PSM_delta",
+      "y": "Tp_120s_MAE_delta",
+      "n_sources": 23,
+      "pearson": 0.5201338550783835,
+      "spearman": 0.4100790513833992
+    },
+    {
+      "seed": 20260924,
+      "x": "Tp_PLE_delta",
+      "y": "all7_120s_macro_MAE_delta",
+      "n_sources": 23,
+      "pearson": -0.29940692668018815,
+      "spearman": -0.16699604743083005
+    },
+    {
+      "seed": 20260924,
+      "x": "Tp_WSR_delta",
+      "y": "all7_120s_macro_MAE_delta",
+      "n_sources": 23,
+      "pearson": 0.14152059690567576,
+      "spearman": 0.042490118577075096
+    },
+    {
+      "seed": 20260924,
+      "x": "Tp_PSM_delta",
+      "y": "all7_120s_macro_MAE_delta",
+      "n_sources": 23,
+      "pearson": 0.6310654417045309,
+      "spearman": 0.3339920948616601
+    }
+  ],
+  "head_row_drift_output_error_associations": [
+    {
+      "seed": 20260922,
+      "x": "head.2 row delta L2",
+      "y": "five-horizon output MAE delta",
+      "n_outputs": 7,
+      "pearson": -0.24041095044395938,
+      "spearman": 0.21428571428571433
+    },
+    {
+      "seed": 20260923,
+      "x": "head.2 row delta L2",
+      "y": "five-horizon output MAE delta",
+      "n_outputs": 7,
+      "pearson": 0.491350968407129,
+      "spearman": 0.21428571428571433
+    },
+    {
+      "seed": 20260924,
+      "x": "head.2 row delta L2",
+      "y": "five-horizon output MAE delta",
+      "n_outputs": 7,
+      "pearson": -0.5257426417953567,
+      "spearman": -0.3571428571428572
+    }
+  ],
+  "preprocessing_provenance_status": "PREPROCESSING_PROVENANCE_PARTIALLY_UNRESOLVED",
+  "notes": [
+    "Three seeds are not independent statistical samples; mean and median are descriptive only.",
+    "All subgroup and leave-one-out results are post-hoc and do not alter the original all23 FAIL.",
+    "Historical preprocessing provenance is partially unresolved; four legacy metadata mismatches remain informational."
+  ],
+  "answers_A_to_I": {
+    "A": "Heterogeneous, not universal and not attributable to one source alone: 12-16 of 23 sources worsen per seed; all 23 leave-one-source-out point deltas remain positive. Several high-power fixed sources contribute strongly, partly offset by improving sources.",
+    "B": "Yes, Tp degradation generally accumulates over the 10-120 s recursive rollout. Seed 20260923 already worsens at 10 s; seed 20260924 changes from improvement at 10 s to degradation by 120 s.",
+    "C": "Yes, descriptively: external17 Tp 120 s delta is positive in all three seeds, whereas final6 delta is negative in all three. Cohort, source_group, domain and heater scope are confounded here; this is not an alternate primary result.",
+    "D": "T3 and T4 have consistent positive five-horizon MAE deltas in all three seeds; Tp 120 s worsens in all three. T1 also worsens modestly. T2 and T6 are less uniform.",
+    "E": "T5 five-horizon macro MAE improves slightly in all three seeds, but its 120 s MAE worsens in two seeds and improves in one; improvement is not uniform across horizons.",
+    "F": "No stable PLE/WSR-vs-prediction association is established: source-level Pearson/Spearman signs and sizes vary. PSM change is positively correlated with Tp degradation in these samples, but all correlations are exploratory (23 clustered sources and dependent model seeds), not a confirmatory statistical finding.",
+    "G": "No reproducible association between head.2 output-row L2 drift and output MAE degradation: the seven-output Pearson correlations change sign across seeds. Non-head tensors are equal, while the shared head.0 and all output rows change; drift magnitude is not causal proof.",
+    "H": "The most plausible working explanation is that sensitivity-constrained adaptation of a shared head shifts factual predictions (including bias and error spread), with recursive rollout amplifying some shifts. Source-domain heterogeneity and the inconsistent drift correlations prevent a causal mechanism claim.",
+    "I": "A separately authorized control-level validation could test whether improved local UH sensitivity/ordering yields better action decisions despite degraded 120 s Tp prediction. Keep the existing checkpoints and original FAIL fixed; this is only a hypothesis, not an experiment launched here."
+  }
+}

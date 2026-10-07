@@ -1,0 +1,95 @@
+{
+  "label": "POST-HOC B5 Jacobian baseline: holdout gates on existing models only",
+  "R3_holdout_reproduction": {
+    "models": 9,
+    "summary_max_abs_diff": 0.0,
+    "contrast_rows": 204,
+    "contrast_mismatches": [],
+    "pass_": true
+  },
+  "R4_rule_selftest": {
+    "COISC": {
+      "variant": "COISC",
+      "per_seed": [
+        {
+          "seed": 20260922,
+          "D1_PLE": true,
+          "D2_WSR": true,
+          "D3_PSM": true,
+          "A_not_worse_than_COISC": true
+        },
+        {
+          "seed": 20260923,
+          "D1_PLE": true,
+          "D2_WSR": true,
+          "D3_PSM": true,
+          "A_not_worse_than_COISC": true
+        },
+        {
+          "seed": 20260924,
+          "D1_PLE": true,
+          "D2_WSR": true,
+          "D3_PSM": true,
+          "A_not_worse_than_COISC": true
+        }
+      ],
+      "counts": {
+        "D1_PLE": 3,
+        "D2_WSR": 3,
+        "D3_PSM": 3,
+        "A_not_worse_than_COISC": 3
+      },
+      "verdict": "B5_reproduces_COISC_profile"
+    },
+    "L0": {
+      "variant": "L0",
+      "per_seed": [
+        {
+          "seed": 20260922,
+          "D1_PLE": true,
+          "D2_WSR": true,
+          "D3_PSM": true,
+          "A_not_worse_than_COISC": true
+        },
+        {
+          "seed": 20260923,
+          "D1_PLE": false,
+          "D2_WSR": false,
+          "D3_PSM": true,
+          "A_not_worse_than_COISC": true
+        },
+        {
+          "seed": 20260924,
+          "D1_PLE": false,
+          "D2_WSR": true,
+          "D3_PSM": true,
+          "A_not_worse_than_COISC": true
+        }
+      ],
+      "counts": {
+        "D1_PLE": 1,
+        "D2_WSR": 2,
+        "D3_PSM": 3,
+        "A_not_worse_than_COISC": 3
+      },
+      "verdict": "B5_mixed"
+    },
+    "known_answers": {
+      "COISC": "B5_reproduces_COISC_profile",
+      "L0": "B5_mixed"
+    },
+    "synthetic_branches": [
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    "pass_": true
+  },
+  "all_pass": true,
+  "code_sha256": {
+    "b5_common.py": "30409bebe42e2e67d75456c2234aaed9cfe3bd9bc28a3b52271098171679ed01",
+    "b5_holdout.py": "df5cd96a3ab46a4588ec971a0d856ee1c6af5f321de1bb867d9a3a55a50c5fae"
+  }
+}

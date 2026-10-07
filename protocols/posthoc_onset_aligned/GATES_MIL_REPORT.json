@@ -1,0 +1,282 @@
+{
+  "created_utc": "2026-10-03T09:19:24Z",
+  "outcome_blind": true,
+  "note": "R5 re-executes 12 already-reported formal R0 runs and recomputes already-reported first actions of existing R0/COISC/L0.",
+  "R5_previous_consistency": {
+    "rows": [
+      {
+        "scenario": "S01",
+        "abs_diff": 0.0,
+        "exact": true
+      },
+      {
+        "scenario": "S02",
+        "abs_diff": 0.0,
+        "exact": true
+      },
+      {
+        "scenario": "S03",
+        "abs_diff": 0.0,
+        "exact": true
+      },
+      {
+        "scenario": "S04",
+        "abs_diff": 0.0,
+        "exact": true
+      },
+      {
+        "scenario": "S05",
+        "abs_diff": 0.0,
+        "exact": true
+      },
+      {
+        "scenario": "S06",
+        "abs_diff": 0.0,
+        "exact": true
+      },
+      {
+        "scenario": "S07",
+        "abs_diff": 0.0,
+        "exact": true
+      },
+      {
+        "scenario": "S08",
+        "abs_diff": 0.0,
+        "exact": true
+      },
+      {
+        "scenario": "S09",
+        "abs_diff": 0.0,
+        "exact": true
+      },
+      {
+        "scenario": "S10",
+        "abs_diff": 0.0,
+        "exact": true
+      },
+      {
+        "scenario": "S11",
+        "abs_diff": 0.0,
+        "exact": true
+      },
+      {
+        "scenario": "S12",
+        "abs_diff": 0.0,
+        "exact": true
+      }
+    ],
+    "max_abs_diff": 0.0,
+    "pass_": true
+  },
+  "R5_first_action_reproduction": {
+    "models": 9,
+    "checks": 108,
+    "mismatches": 0,
+    "wrong_direction_counts": {
+      "20260922:R0": 0,
+      "20260922:COISC": 0,
+      "20260922:L0": 0,
+      "20260923:R0": 3,
+      "20260923:COISC": 0,
+      "20260923:L0": 3,
+      "20260924:R0": 0,
+      "20260924:COISC": 0,
+      "20260924:L0": 0
+    },
+    "pass_": true
+  },
+  "R5_rerun": {
+    "rows": [
+      {
+        "plant_index": 0,
+        "scenario": "S01",
+        "applied_UH_bitwise": true,
+        "plant_Tp_bitwise": true,
+        "runtime_s": 5.065057799999977
+      },
+      {
+        "plant_index": 2,
+        "scenario": "S02",
+        "applied_UH_bitwise": true,
+        "plant_Tp_bitwise": true,
+        "runtime_s": 11.949396500000006
+      },
+      {
+        "plant_index": 4,
+        "scenario": "S03",
+        "applied_UH_bitwise": true,
+        "plant_Tp_bitwise": true,
+        "runtime_s": 32.808176799999984
+      },
+      {
+        "plant_index": 6,
+        "scenario": "S04",
+        "applied_UH_bitwise": true,
+        "plant_Tp_bitwise": true,
+        "runtime_s": 47.73647089999997
+      },
+      {
+        "plant_index": 8,
+        "scenario": "S05",
+        "applied_UH_bitwise": true,
+        "plant_Tp_bitwise": true,
+        "runtime_s": 8.027363700000024
+      },
+      {
+        "plant_index": 10,
+        "scenario": "S06",
+        "applied_UH_bitwise": true,
+        "plant_Tp_bitwise": true,
+        "runtime_s": 32.64179010000004
+      },
+      {
+        "plant_index": 12,
+        "scenario": "S07",
+        "applied_UH_bitwise": true,
+        "plant_Tp_bitwise": true,
+        "runtime_s": 40.50951300000003
+      },
+      {
+        "plant_index": 14,
+        "scenario": "S08",
+        "applied_UH_bitwise": true,
+        "plant_Tp_bitwise": true,
+        "runtime_s": 47.47644159999999
+      },
+      {
+        "plant_index": 16,
+        "scenario": "S09",
+        "applied_UH_bitwise": true,
+        "plant_Tp_bitwise": true,
+        "runtime_s": 41.66783680000003
+      },
+      {
+        "plant_index": 18,
+        "scenario": "S10",
+        "applied_UH_bitwise": true,
+        "plant_Tp_bitwise": true,
+        "runtime_s": 44.2401256
+      },
+      {
+        "plant_index": 20,
+        "scenario": "S11",
+        "applied_UH_bitwise": true,
+        "plant_Tp_bitwise": true,
+        "runtime_s": 5.278959900000018
+      },
+      {
+        "plant_index": 22,
+        "scenario": "S12",
+        "applied_UH_bitwise": true,
+        "plant_Tp_bitwise": true,
+        "runtime_s": 27.146470600000043
+      }
+    ],
+    "pass_": true
+  },
+  "R7_guard_identity_preview": {
+    "rows": [
+      {
+        "plant_index": 0,
+        "scenario": "S01",
+        "guard_fired": false,
+        "applied_UH_bitwise": true,
+        "plant_Tp_bitwise": true
+      },
+      {
+        "plant_index": 12,
+        "scenario": "S01",
+        "guard_fired": false,
+        "applied_UH_bitwise": true,
+        "plant_Tp_bitwise": true
+      }
+    ],
+    "pass_": true
+  },
+  "guard_unit_test": {
+    "cases": [
+      {
+        "command": 40.0,
+        "previous": 50.0,
+        "initial_Tp": 35.0,
+        "applied": 50.0,
+        "fired": true,
+        "ok": true
+      },
+      {
+        "command": 60.0,
+        "previous": 50.0,
+        "initial_Tp": 35.0,
+        "applied": 60.0,
+        "fired": false,
+        "ok": true
+      },
+      {
+        "command": 50.0,
+        "previous": 50.0,
+        "initial_Tp": 35.0,
+        "applied": 50.0,
+        "fired": false,
+        "ok": true
+      },
+      {
+        "command": 60.0,
+        "previous": 50.0,
+        "initial_Tp": 39.0,
+        "applied": 50.0,
+        "fired": true,
+        "ok": true
+      },
+      {
+        "command": 40.0,
+        "previous": 50.0,
+        "initial_Tp": 39.0,
+        "applied": 40.0,
+        "fired": false,
+        "ok": true
+      },
+      {
+        "command": 50.0,
+        "previous": 50.0,
+        "initial_Tp": 39.0,
+        "applied": 50.0,
+        "fired": false,
+        "ok": true
+      },
+      {
+        "command": 0.0,
+        "previous": 12.34,
+        "initial_Tp": 36.9,
+        "applied": 12.3,
+        "fired": true,
+        "ok": true
+      },
+      {
+        "command": 100.0,
+        "previous": 99.96,
+        "initial_Tp": 38.0,
+        "applied": 100.0,
+        "fired": true,
+        "ok": true
+      },
+      {
+        "command": 50.0000000001,
+        "previous": 50.0,
+        "initial_Tp": 39.0,
+        "applied": 50.0000000001,
+        "fired": false,
+        "ok": true
+      }
+    ],
+    "pass_": true
+  },
+  "timing": {
+    "mean_runtime_s": 28.712300275000008,
+    "planned_runs_excluding_guard": 9504,
+    "estimated_wall_hours_6_workers": 12.633412121000005
+  },
+  "all_pass": true,
+  "code_sha256": {
+    "onset_mil.py": "c8d9310d21f7d22ab519c232fb404c3939e09973256bc2fb2edafeb365d89b4c"
+  }
+}

@@ -1,0 +1,470 @@
+{
+  "created_utc": "2026-09-29T13:15:40Z",
+  "outcome_blind": true,
+  "note": "G4 reruns 48 already-reported formal nominal runs; G6 uses the V10 plant outside the analysis population.",
+  "G4_reuse_reproduction": {
+    "passed": true,
+    "runs": 48,
+    "rows": [
+      {
+        "plant": "P_seed20260922",
+        "scenario_index": 0,
+        "variant": "R0",
+        "formal_file": "0002.npz",
+        "applied_UH_bitwise": true,
+        "plant_Tp_bitwise": true,
+        "runtime_s": 4.5241264
+      },
+      {
+        "plant": "P_seed20260922",
+        "scenario_index": 0,
+        "variant": "COISC",
+        "formal_file": "0003.npz",
+        "applied_UH_bitwise": true,
+        "plant_Tp_bitwise": true,
+        "runtime_s": 4.2649802
+      },
+      {
+        "plant": "P_seed20260923",
+        "scenario_index": 1,
+        "variant": "R0",
+        "formal_file": "0093.npz",
+        "applied_UH_bitwise": true,
+        "plant_Tp_bitwise": true,
+        "runtime_s": 10.2356434
+      },
+      {
+        "plant": "P_seed20260923",
+        "scenario_index": 1,
+        "variant": "COISC",
+        "formal_file": "0094.npz",
+        "applied_UH_bitwise": true,
+        "plant_Tp_bitwise": true,
+        "runtime_s": 13.475280000000001
+      },
+      {
+        "plant": "P_seed20260924",
+        "scenario_index": 2,
+        "variant": "R0",
+        "formal_file": "0184.npz",
+        "applied_UH_bitwise": true,
+        "plant_Tp_bitwise": true,
+        "runtime_s": 31.228929499999992
+      },
+      {
+        "plant": "P_seed20260924",
+        "scenario_index": 2,
+        "variant": "COISC",
+        "formal_file": "0185.npz",
+        "applied_UH_bitwise": true,
+        "plant_Tp_bitwise": true,
+        "runtime_s": 38.4605966
+      },
+      {
+        "plant": "P_seed20260925",
+        "scenario_index": 3,
+        "variant": "R0",
+        "formal_file": "0275.npz",
+        "applied_UH_bitwise": true,
+        "plant_Tp_bitwise": true,
+        "runtime_s": 48.824523400000004
+      },
+      {
+        "plant": "P_seed20260925",
+        "scenario_index": 3,
+        "variant": "COISC",
+        "formal_file": "0276.npz",
+        "applied_UH_bitwise": true,
+        "plant_Tp_bitwise": true,
+        "runtime_s": 54.57241020000001
+      },
+      {
+        "plant": "P_seed20260926",
+        "scenario_index": 4,
+        "variant": "R0",
+        "formal_file": "0366.npz",
+        "applied_UH_bitwise": true,
+        "plant_Tp_bitwise": true,
+        "runtime_s": 10.002495900000014
+      },
+      {
+        "plant": "P_seed20260926",
+        "scenario_index": 4,
+        "variant": "COISC",
+        "formal_file": "0367.npz",
+        "applied_UH_bitwise": true,
+        "plant_Tp_bitwise": true,
+        "runtime_s": 8.187661399999996
+      },
+      {
+        "plant": "A1_seed20260922",
+        "scenario_index": 5,
+        "variant": "R0",
+        "formal_file": "0457.npz",
+        "applied_UH_bitwise": true,
+        "plant_Tp_bitwise": true,
+        "runtime_s": 28.392393200000015
+      },
+      {
+        "plant": "A1_seed20260922",
+        "scenario_index": 5,
+        "variant": "COISC",
+        "formal_file": "0458.npz",
+        "applied_UH_bitwise": true,
+        "plant_Tp_bitwise": true,
+        "runtime_s": 31.950119700000016
+      },
+      {
+        "plant": "A1_seed20260923",
+        "scenario_index": 6,
+        "variant": "R0",
+        "formal_file": "0548.npz",
+        "applied_UH_bitwise": true,
+        "plant_Tp_bitwise": true,
+        "runtime_s": 36.97753869999997
+      },
+      {
+        "plant": "A1_seed20260923",
+        "scenario_index": 6,
+        "variant": "COISC",
+        "formal_file": "0549.npz",
+        "applied_UH_bitwise": true,
+        "plant_Tp_bitwise": true,
+        "runtime_s": 47.44016909999999
+      },
+      {
+        "plant": "A1_seed20260924",
+        "scenario_index": 7,
+        "variant": "R0",
+        "formal_file": "0639.npz",
+        "applied_UH_bitwise": true,
+        "plant_Tp_bitwise": true,
+        "runtime_s": 50.115587500000004
+      },
+      {
+        "plant": "A1_seed20260924",
+        "scenario_index": 7,
+        "variant": "COISC",
+        "formal_file": "0640.npz",
+        "applied_UH_bitwise": true,
+        "plant_Tp_bitwise": true,
+        "runtime_s": 53.37486030000002
+      },
+      {
+        "plant": "A2_seed20260922",
+        "scenario_index": 8,
+        "variant": "R0",
+        "formal_file": "0730.npz",
+        "applied_UH_bitwise": true,
+        "plant_Tp_bitwise": true,
+        "runtime_s": 37.60753880000004
+      },
+      {
+        "plant": "A2_seed20260922",
+        "scenario_index": 8,
+        "variant": "COISC",
+        "formal_file": "0731.npz",
+        "applied_UH_bitwise": true,
+        "plant_Tp_bitwise": true,
+        "runtime_s": 21.820070399999963
+      },
+      {
+        "plant": "A2_seed20260923",
+        "scenario_index": 9,
+        "variant": "R0",
+        "formal_file": "0821.npz",
+        "applied_UH_bitwise": true,
+        "plant_Tp_bitwise": true,
+        "runtime_s": 39.13545419999991
+      },
+      {
+        "plant": "A2_seed20260923",
+        "scenario_index": 9,
+        "variant": "COISC",
+        "formal_file": "0822.npz",
+        "applied_UH_bitwise": true,
+        "plant_Tp_bitwise": true,
+        "runtime_s": 39.946189000000004
+      },
+      {
+        "plant": "A2_seed20260924",
+        "scenario_index": 10,
+        "variant": "R0",
+        "formal_file": "0912.npz",
+        "applied_UH_bitwise": true,
+        "plant_Tp_bitwise": true,
+        "runtime_s": 5.498340199999916
+      },
+      {
+        "plant": "A2_seed20260924",
+        "scenario_index": 10,
+        "variant": "COISC",
+        "formal_file": "0913.npz",
+        "applied_UH_bitwise": true,
+        "plant_Tp_bitwise": true,
+        "runtime_s": 5.452508200000011
+      },
+      {
+        "plant": "A3_seed20260922",
+        "scenario_index": 11,
+        "variant": "R0",
+        "formal_file": "1003.npz",
+        "applied_UH_bitwise": true,
+        "plant_Tp_bitwise": true,
+        "runtime_s": 21.004160399999932
+      },
+      {
+        "plant": "A3_seed20260922",
+        "scenario_index": 11,
+        "variant": "COISC",
+        "formal_file": "1004.npz",
+        "applied_UH_bitwise": true,
+        "plant_Tp_bitwise": true,
+        "runtime_s": 42.850324099999966
+      },
+      {
+        "plant": "A3_seed20260923",
+        "scenario_index": 0,
+        "variant": "R0",
+        "formal_file": "1010.npz",
+        "applied_UH_bitwise": true,
+        "plant_Tp_bitwise": true,
+        "runtime_s": 5.7263030999999955
+      },
+      {
+        "plant": "A3_seed20260923",
+        "scenario_index": 0,
+        "variant": "COISC",
+        "formal_file": "1011.npz",
+        "applied_UH_bitwise": true,
+        "plant_Tp_bitwise": true,
+        "runtime_s": 5.663300499999991
+      },
+      {
+        "plant": "A3_seed20260924",
+        "scenario_index": 1,
+        "variant": "R0",
+        "formal_file": "1101.npz",
+        "applied_UH_bitwise": true,
+        "plant_Tp_bitwise": true,
+        "runtime_s": 18.252780200000075
+      },
+      {
+        "plant": "A3_seed20260924",
+        "scenario_index": 1,
+        "variant": "COISC",
+        "formal_file": "1102.npz",
+        "applied_UH_bitwise": true,
+        "plant_Tp_bitwise": true,
+        "runtime_s": 19.742354399999954
+      },
+      {
+        "plant": "A4_seed20260922",
+        "scenario_index": 2,
+        "variant": "R0",
+        "formal_file": "1192.npz",
+        "applied_UH_bitwise": true,
+        "plant_Tp_bitwise": true,
+        "runtime_s": 40.60517850000008
+      },
+      {
+        "plant": "A4_seed20260922",
+        "scenario_index": 2,
+        "variant": "COISC",
+        "formal_file": "1193.npz",
+        "applied_UH_bitwise": true,
+        "plant_Tp_bitwise": true,
+        "runtime_s": 46.57117200000005
+      },
+      {
+        "plant": "A4_seed20260923",
+        "scenario_index": 3,
+        "variant": "R0",
+        "formal_file": "1283.npz",
+        "applied_UH_bitwise": true,
+        "plant_Tp_bitwise": true,
+        "runtime_s": 60.774160999999935
+      },
+      {
+        "plant": "A4_seed20260923",
+        "scenario_index": 3,
+        "variant": "COISC",
+        "formal_file": "1284.npz",
+        "applied_UH_bitwise": true,
+        "plant_Tp_bitwise": true,
+        "runtime_s": 59.07857589999992
+      },
+      {
+        "plant": "A4_seed20260924",
+        "scenario_index": 4,
+        "variant": "R0",
+        "formal_file": "1374.npz",
+        "applied_UH_bitwise": true,
+        "plant_Tp_bitwise": true,
+        "runtime_s": 11.484849999999938
+      },
+      {
+        "plant": "A4_seed20260924",
+        "scenario_index": 4,
+        "variant": "COISC",
+        "formal_file": "1375.npz",
+        "applied_UH_bitwise": true,
+        "plant_Tp_bitwise": true,
+        "runtime_s": 9.846019500000011
+      },
+      {
+        "plant": "A5_seed20260922",
+        "scenario_index": 5,
+        "variant": "R0",
+        "formal_file": "1465.npz",
+        "applied_UH_bitwise": true,
+        "plant_Tp_bitwise": true,
+        "runtime_s": 36.429714099999956
+      },
+      {
+        "plant": "A5_seed20260922",
+        "scenario_index": 5,
+        "variant": "COISC",
+        "formal_file": "1466.npz",
+        "applied_UH_bitwise": true,
+        "plant_Tp_bitwise": true,
+        "runtime_s": 38.35199679999994
+      },
+      {
+        "plant": "A5_seed20260923",
+        "scenario_index": 6,
+        "variant": "R0",
+        "formal_file": "1556.npz",
+        "applied_UH_bitwise": true,
+        "plant_Tp_bitwise": true,
+        "runtime_s": 50.36073979999992
+      },
+      {
+        "plant": "A5_seed20260923",
+        "scenario_index": 6,
+        "variant": "COISC",
+        "formal_file": "1557.npz",
+        "applied_UH_bitwise": true,
+        "plant_Tp_bitwise": true,
+        "runtime_s": 54.308429699999806
+      },
+      {
+        "plant": "A5_seed20260924",
+        "scenario_index": 7,
+        "variant": "R0",
+        "formal_file": "1647.npz",
+        "applied_UH_bitwise": true,
+        "plant_Tp_bitwise": true,
+        "runtime_s": 54.759274199999936
+      },
+      {
+        "plant": "A5_seed20260924",
+        "scenario_index": 7,
+        "variant": "COISC",
+        "formal_file": "1648.npz",
+        "applied_UH_bitwise": true,
+        "plant_Tp_bitwise": true,
+        "runtime_s": 58.087873100000024
+      },
+      {
+        "plant": "B2_seed20260922",
+        "scenario_index": 8,
+        "variant": "R0",
+        "formal_file": "1738.npz",
+        "applied_UH_bitwise": true,
+        "plant_Tp_bitwise": true,
+        "runtime_s": 42.596552900000006
+      },
+      {
+        "plant": "B2_seed20260922",
+        "scenario_index": 8,
+        "variant": "COISC",
+        "formal_file": "1739.npz",
+        "applied_UH_bitwise": true,
+        "plant_Tp_bitwise": true,
+        "runtime_s": 25.175626200000124
+      },
+      {
+        "plant": "B2_seed20260923",
+        "scenario_index": 9,
+        "variant": "R0",
+        "formal_file": "1829.npz",
+        "applied_UH_bitwise": true,
+        "plant_Tp_bitwise": true,
+        "runtime_s": 39.417943599999944
+      },
+      {
+        "plant": "B2_seed20260923",
+        "scenario_index": 9,
+        "variant": "COISC",
+        "formal_file": "1830.npz",
+        "applied_UH_bitwise": true,
+        "plant_Tp_bitwise": true,
+        "runtime_s": 38.507924900000035
+      },
+      {
+        "plant": "B2_seed20260924",
+        "scenario_index": 10,
+        "variant": "R0",
+        "formal_file": "1920.npz",
+        "applied_UH_bitwise": true,
+        "plant_Tp_bitwise": true,
+        "runtime_s": 5.252891300000101
+      },
+      {
+        "plant": "B2_seed20260924",
+        "scenario_index": 10,
+        "variant": "COISC",
+        "formal_file": "1921.npz",
+        "applied_UH_bitwise": true,
+        "plant_Tp_bitwise": true,
+        "runtime_s": 5.140951800000039
+      },
+      {
+        "plant": "B1_seed20260922",
+        "scenario_index": 11,
+        "variant": "R0",
+        "formal_file": "2011.npz",
+        "applied_UH_bitwise": true,
+        "plant_Tp_bitwise": true,
+        "runtime_s": 24.35230320000005
+      },
+      {
+        "plant": "B1_seed20260922",
+        "scenario_index": 11,
+        "variant": "COISC",
+        "formal_file": "2012.npz",
+        "applied_UH_bitwise": true,
+        "plant_Tp_bitwise": true,
+        "runtime_s": 33.74474830000008
+      }
+    ],
+    "consequence": "reuse formal R0/COISC primary raw runs"
+  },
+  "G6_timing_smoke": {
+    "passed": true,
+    "results_discarded": true,
+    "rows": [
+      {
+        "variant": "R0-DE",
+        "scenario_index": 0,
+        "runtime_s": 27.69065979999982,
+        "estimator_time_s": 20.744798700000274
+      },
+      {
+        "variant": "COISC-DE",
+        "scenario_index": 1,
+        "runtime_s": 29.29353839999999,
+        "estimator_time_s": 20.387781800000994
+      }
+    ],
+    "mean_de_runtime_s": 28.492099099999905,
+    "mean_nominal_runtime_s_from_G4": 30.616115954166663,
+    "new_runs": 3456,
+    "estimated_serial_hours": 27.86217918099993,
+    "workers": 6,
+    "threads_per_worker": 2,
+    "estimated_wall_hours_6_workers": 4.643696530166655
+  },
+  "all_passed": true
+}

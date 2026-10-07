@@ -1,0 +1,781 @@
+{
+  "status": "DEVELOPMENT_DRAFT_NO_FROZEN_TEST",
+  "data_source_split": {
+    "training_windows": {
+      "field": 28140,
+      "paired": 105600,
+      "structured": 2240
+    },
+    "training_sampling_groups": {
+      "field": 91,
+      "paired": 4800,
+      "structured": 14
+    },
+    "training_scenario_counts": {
+      "field": {
+        "allzero__Tp_cool_to_rise": 76,
+        "allzero__Tp_flat": 3022,
+        "allzero__Tp_multi_turn": 48,
+        "allzero__Tp_rise_to_cool": 146,
+        "allzero__Tp_sustained_cooling": 510,
+        "allzero__Tp_sustained_rise": 1927,
+        "powered_high__Tp_cool_to_rise": 32,
+        "powered_high__Tp_flat": 264,
+        "powered_high__Tp_multi_turn": 5,
+        "powered_high__Tp_rise_to_cool": 4,
+        "powered_high__Tp_sustained_cooling": 9,
+        "powered_high__Tp_sustained_rise": 3946,
+        "powered_normal__Tp_cool_to_rise": 260,
+        "powered_normal__Tp_flat": 5112,
+        "powered_normal__Tp_multi_turn": 89,
+        "powered_normal__Tp_rise_to_cool": 252,
+        "powered_normal__Tp_sustained_cooling": 1090,
+        "powered_normal__Tp_sustained_rise": 11348
+      },
+      "paired": {
+        "allzero__Tp_flat": 1765,
+        "allzero__Tp_sustained_rise": 352,
+        "powered_high__Tp_flat": 1045,
+        "powered_high__Tp_sustained_rise": 23249,
+        "powered_normal__Tp_flat": 40698,
+        "powered_normal__Tp_sustained_rise": 38491
+      },
+      "structured": {
+        "allzero__Tp_flat": 239,
+        "allzero__Tp_sustained_rise": 67,
+        "powered_high__Tp_flat": 3,
+        "powered_high__Tp_sustained_rise": 1409,
+        "powered_normal__Tp_flat": 278,
+        "powered_normal__Tp_sustained_rise": 244
+      }
+    },
+    "selection_windows": {
+      "field": 11073,
+      "paired": 26400,
+      "structured": 560
+    },
+    "field_gradient_source_count": 91,
+    "field_selection_source_count": 18,
+    "formal_data_status": "formal_training_data_complete",
+    "formula_sha256": "332f10028a84f7c411eeea92d3a0d6cc79c0decf02e376ebff102a7f04f04e4f",
+    "paired_candidate_levels_W": [
+      0.0,
+      0.5,
+      1.0,
+      2.0,
+      3.0,
+      4.0,
+      5.0,
+      6.0,
+      7.0,
+      8.0,
+      9.0,
+      10.0,
+      15.0,
+      20.0,
+      30.0,
+      40.0,
+      50.0,
+      60.0,
+      70.0,
+      80.0,
+      90.0,
+      100.0
+    ],
+    "frozen_29_opened": false,
+    "trend_only_used": false,
+    "data_hashes": {
+      "field_windows_development_109.npz": "6c56bf5904c40a8567b9bb3c1202efcd2c42d33365801ccdd9a515a0b74914ca",
+      "paired_UH_candidate_families_6000x22.npz": "deaeffbd05601a372d029734ef78af956e2bc22cd7f3d3e4401477e965a480bc",
+      "structured_native10s_trajectories_2800.npz": "1a4e82aecf2a5fcbc80ef3853289d749a5fe4b18b081c62232f6c7946e221db1"
+    },
+    "fit_sources": [
+      "S005",
+      "S006",
+      "S007",
+      "S009",
+      "S010",
+      "S011",
+      "S012",
+      "S013",
+      "S014",
+      "S015",
+      "S018",
+      "S019",
+      "S022",
+      "S023",
+      "S025",
+      "S026",
+      "S027",
+      "S028",
+      "S029",
+      "S030",
+      "S034",
+      "S035",
+      "S036",
+      "S039",
+      "S040",
+      "S042",
+      "S043",
+      "S044",
+      "S047",
+      "S048",
+      "S049",
+      "S052",
+      "S055",
+      "S056",
+      "S057",
+      "S058",
+      "S060",
+      "S061",
+      "S062",
+      "S063",
+      "S064",
+      "S069",
+      "S070",
+      "S071",
+      "S073",
+      "S074",
+      "S075",
+      "S076",
+      "S077",
+      "S079",
+      "S080",
+      "S081",
+      "S084",
+      "S085",
+      "S086",
+      "S087",
+      "S089",
+      "S090",
+      "S091",
+      "S092",
+      "S093",
+      "S095",
+      "S096",
+      "S097",
+      "S102",
+      "S103",
+      "S104",
+      "S105",
+      "S107",
+      "S108",
+      "S109",
+      "S112",
+      "S113",
+      "S114",
+      "S115",
+      "S116",
+      "S118",
+      "S119",
+      "S121",
+      "S123",
+      "S124",
+      "S125",
+      "S126",
+      "S127",
+      "S130",
+      "S131",
+      "S132",
+      "S134",
+      "S135",
+      "S136",
+      "S137"
+    ],
+    "selection_sources": [
+      "S002",
+      "S004",
+      "S017",
+      "S033",
+      "S037",
+      "S038",
+      "S045",
+      "S050",
+      "S054",
+      "S065",
+      "S068",
+      "S082",
+      "S098",
+      "S101",
+      "S110",
+      "S120",
+      "S129",
+      "S138"
+    ],
+    "frozen_metadata": [
+      {
+        "source_id": "S024",
+        "sha256": "53b55f4e1976debb1a6037baaaa061d4c39e2552a6d0973df42b1acc1bf69cb6",
+        "exists_at_original_path": false
+      },
+      {
+        "source_id": "S031",
+        "sha256": "99e14183f940b9bd34701e09759f3a6face248e23604aafcfc90b8c3bfccd29f",
+        "exists_at_original_path": false
+      },
+      {
+        "source_id": "S032",
+        "sha256": "fa0d5111f748e84497817462c66ced42ef5faabdd5d8db0774b62aa3ba7b8854",
+        "exists_at_original_path": false
+      },
+      {
+        "source_id": "S041",
+        "sha256": "3a6ee9bb4aa89395687c53c5e2b15c099898319876b4f796ce5dd5b00d947f5c",
+        "exists_at_original_path": false
+      },
+      {
+        "source_id": "S046",
+        "sha256": "ed1d6bffe9d73a2a91081ebd60315ba4b0cbf60c0528bc21823da0166d71bd10",
+        "exists_at_original_path": false
+      },
+      {
+        "source_id": "S051",
+        "sha256": "d463b17a766a0e3eaa51163d6befc6ed4f4ce8e9b8214d44fc32129019fd132c",
+        "exists_at_original_path": false
+      },
+      {
+        "source_id": "S053",
+        "sha256": "2c1760e3cd4ae2a85b8c0269d0e1670193450594febeb10a65991816ad42a485",
+        "exists_at_original_path": false
+      },
+      {
+        "source_id": "S059",
+        "sha256": "f8b261ab4778242eef44af96a6805e5fc0b3cced3bb500eb6dab5f74e2646057",
+        "exists_at_original_path": false
+      },
+      {
+        "source_id": "S066",
+        "sha256": "ff391461d6a0254399b24885c15ff995f4780392077c39dde7a539ff141de0d0",
+        "exists_at_original_path": false
+      },
+      {
+        "source_id": "S067",
+        "sha256": "fe546b46b8c782a678f48d3c8479c7003bdc9e4c5a42b209ddaa2c9d77c649c7",
+        "exists_at_original_path": false
+      },
+      {
+        "source_id": "S072",
+        "sha256": "1853336232ecab3171a36e60e69e7da952c7da9d21142bc88a847f850faad45a",
+        "exists_at_original_path": false
+      },
+      {
+        "source_id": "S078",
+        "sha256": "b06bef058b4f4e187c27bf9e7b7d2b441ee2ca4a432cfae67bd4171b13518fe1",
+        "exists_at_original_path": false
+      },
+      {
+        "source_id": "S083",
+        "sha256": "0d8a0b8209c23317f3c674d0a5b4be33f0223a28e4b392d5a0634ff916cada38",
+        "exists_at_original_path": false
+      },
+      {
+        "source_id": "S088",
+        "sha256": "f6d780e695331e1a222712557b499d64671ea2cd3a05e5b60f54c5d06bd57d41",
+        "exists_at_original_path": false
+      },
+      {
+        "source_id": "S094",
+        "sha256": "118199e84a762e9cf03ffc988b2b5ef314120aecd720e8c003e16628ace14081",
+        "exists_at_original_path": false
+      },
+      {
+        "source_id": "S099",
+        "sha256": "4be116cdc44faeb6a2be53a974556fbe1b4621f63ab0b9c2b588e7ae65622bf4",
+        "exists_at_original_path": false
+      },
+      {
+        "source_id": "S100",
+        "sha256": "0c80436ce378aa568969a8a9e042c7d9e436907b39f502e8b396e5f6737c665c",
+        "exists_at_original_path": false
+      },
+      {
+        "source_id": "S106",
+        "sha256": "ea52424593b538bee9f8a9838588a2bc78673a27bec812a4c9b4401031396a2d",
+        "exists_at_original_path": false
+      },
+      {
+        "source_id": "S111",
+        "sha256": "c11ed191f0d5e2a77b524fc032844e99cade4fc7b00706bcf225c87d37cdfbde",
+        "exists_at_original_path": false
+      },
+      {
+        "source_id": "S117",
+        "sha256": "94bd60854bf2cd6a22cd1687743874f21f97eb491ffaca99acedd0e8462c67d6",
+        "exists_at_original_path": false
+      },
+      {
+        "source_id": "S122",
+        "sha256": "eaf3594d1829de335ee02355327322322209bdbf28b082b9dda89f62057a3020",
+        "exists_at_original_path": false
+      },
+      {
+        "source_id": "S128",
+        "sha256": "b6a5a142eea9aaf31b233c8436006dbc0918f78ef5590408820920d693d87aca",
+        "exists_at_original_path": false
+      },
+      {
+        "source_id": "S133",
+        "sha256": "28c56a979c60a0fb640a4ff03cf60d013bcd8d8770c89195d34e041561508f19",
+        "exists_at_original_path": false
+      },
+      {
+        "source_id": "S139",
+        "sha256": "a286c1cfbd59f0d8e655b2e14860809aa5c5ac4f5d0fb10e26183d75bfae4613",
+        "exists_at_original_path": false
+      },
+      {
+        "source_id": "S001",
+        "sha256": "330a8c14344306401c8053363d0c5f10e776b0afc4cf493fc56d3d37fe0916cf",
+        "exists_at_original_path": false
+      },
+      {
+        "source_id": "S003",
+        "sha256": "3a0577622dd5526cdfd92b2a16f32c6de2ae9af5df4f3847eb1ee6450ffee02c",
+        "exists_at_original_path": false
+      },
+      {
+        "source_id": "S008",
+        "sha256": "9a730b9b55a6cb3e194668fecd2dd155853fe4da8b0cedf89eb1a8f7d9d180f8",
+        "exists_at_original_path": false
+      },
+      {
+        "source_id": "S016",
+        "sha256": "fb05ce1332ede852426d8b43f20d6976c25647c0d4e21d621816f97ccc4aabfd",
+        "exists_at_original_path": false
+      },
+      {
+        "source_id": "S020",
+        "sha256": "3d3d5e8b5bf1c756f2bd842e7bf6d17d679a43f5d63d0e44b5c158b4327ce482",
+        "exists_at_original_path": false
+      }
+    ],
+    "auxiliary_provenance": {
+      "04_paired_family_manifest.csv": "all training mothers in fit; all validation mothers in selection",
+      "06_structured_trajectory_manifest.csv": "all training mothers in fit; all validation mothers in selection"
+    },
+    "identical_fit_selection_windows": 0,
+    "raw_development_files_present": 0,
+    "normalization": "same V12B temperature transform, fitted on fit field histories only; power fixed scales; no output z-score",
+    "code_hashes": {
+      "cooling_recovery.py": "eb9ff23f9bf51a6752e860a5acde91521fb28ab5570e2ddd2d895e6b375b161d",
+      "model_structural_ablation.py": "edb6d527053cba89e030d3702419db9c440f02c139dfc5c9ac26f0db3468122e",
+      "prepare_manual_step500_candidate.py": "a8275e5ca22b9a44fccfc6a9d932d78ae64873c4ffb37ab75a777c2d79ffed23",
+      "select_cooling_recovery.py": "f89bf09bd888f46b87870adf24013bb69faddeae86d77fd78817d8668d6d2828",
+      "structural_selection.py": "5d30605362fc95f7071b1748b9ec81c58ee7f3ffb1d58bb549b0eaec0911c6b5",
+      "structural_training_common.py": "19d2fc5e5530d3115644e546badeb113ca44f3cbf7c35f4f3c7625cb5b85efea",
+      "train_cooling_recovery.py": "3f6d5e5b4de31fccacb125866fb5800ecbabb7452c8d21b56b6472df8c03efe0",
+      "validate_v12_protocol.py": "73c4cdd87cc32d2db7999c9c494f3bce4c3a5940ac9c5a8804019d3624df0a80"
+    }
+  },
+  "preprocessing": {
+    "history_s": 200,
+    "step_s": 10,
+    "history_shape": [
+      20,
+      12
+    ],
+    "output_names": [
+      "T1",
+      "T2",
+      "T3",
+      "T4",
+      "T5",
+      "T6",
+      "Tp"
+    ],
+    "Tp_input_or_feedback": false,
+    "power": "sum five 2-second samples = 5 * mean Watts",
+    "stats": {
+      "temperature_mean": [
+        32.09619903564453,
+        33.41856002807617,
+        31.05896759033203,
+        31.9261474609375,
+        43.32518768310547,
+        29.03607940673828
+      ],
+      "temperature_std": [
+        3.6582560539245605,
+        4.275683879852295,
+        3.148129463195801,
+        3.8351078033447266,
+        12.308270454406738,
+        2.9222912788391113
+      ],
+      "uh_mean": 85.64430401484002,
+      "uh_std": 124.9983509117194,
+      "auxiliary_mean": 23.05996801705757,
+      "auxiliary_std": 54.828186377656884
+    },
+    "raw_csv_status": "original paths absent; use original locked NPZ values without resampling",
+    "continuous_trajectory_reconstruction": "join adjacent same-source windows only with exact 19-frame history plus 11-frame future overlap, next origin and feedback equality; split on any mismatch; relative time only",
+    "trajectory_summary": {
+      "fit": {
+        "segments": 108,
+        "frames": 31488,
+        "max_frames": 2625,
+        "multiwindow_segments": 108
+      },
+      "selection": {
+        "segments": 19,
+        "frames": 11662,
+        "max_frames": 2111,
+        "multiwindow_segments": 19
+      }
+    }
+  },
+  "models": {
+    "P": {
+      "model_id": "P",
+      "name": "Proposed-V12B",
+      "multistep": true,
+      "paired": true,
+      "order": true,
+      "cooling": true,
+      "initialization": "independent random seed, no historical checkpoint",
+      "A1_note": null,
+      "seeds": [
+        20260922,
+        20260923,
+        20260924,
+        20260925,
+        20260926
+      ],
+      "parameter_count": 157560
+    },
+    "B4": {
+      "model_id": "B4",
+      "name": "Vanilla-LSTM-MS",
+      "multistep": true,
+      "paired": true,
+      "order": false,
+      "cooling": true,
+      "initialization": "independent random seed, no historical checkpoint",
+      "A1_note": null,
+      "seeds": [
+        20260922,
+        20260923,
+        20260924,
+        20260925,
+        20260926
+      ],
+      "parameter_count": 90887
+    },
+    "A1": {
+      "model_id": "A1",
+      "name": "NoMS",
+      "multistep": false,
+      "paired": true,
+      "order": false,
+      "cooling": true,
+      "initialization": "independent random seed, no historical checkpoint",
+      "A1_note": "strict one-step only: recursive order regularizer also disabled",
+      "seeds": [
+        20260922,
+        20260923,
+        20260924
+      ],
+      "parameter_count": 157560
+    },
+    "A2": {
+      "model_id": "A2",
+      "name": "Unstructured",
+      "multistep": true,
+      "paired": true,
+      "order": true,
+      "cooling": true,
+      "initialization": "independent random seed, no historical checkpoint",
+      "A1_note": null,
+      "seeds": [
+        20260922,
+        20260923,
+        20260924
+      ],
+      "parameter_count": 116580
+    },
+    "A3": {
+      "model_id": "A3",
+      "name": "NoPair",
+      "multistep": true,
+      "paired": false,
+      "order": false,
+      "cooling": true,
+      "initialization": "independent random seed, no historical checkpoint",
+      "A1_note": null,
+      "seeds": [
+        20260922,
+        20260923,
+        20260924
+      ],
+      "parameter_count": 157560
+    },
+    "A4": {
+      "model_id": "A4",
+      "name": "NoOrder",
+      "multistep": true,
+      "paired": true,
+      "order": false,
+      "cooling": true,
+      "initialization": "independent random seed, no historical checkpoint",
+      "A1_note": null,
+      "seeds": [
+        20260922,
+        20260923,
+        20260924
+      ],
+      "parameter_count": 157560
+    },
+    "A5": {
+      "model_id": "A5",
+      "name": "NoCooling",
+      "multistep": true,
+      "paired": true,
+      "order": true,
+      "cooling": false,
+      "initialization": "independent random seed, no historical checkpoint",
+      "A1_note": null,
+      "seeds": [
+        20260922,
+        20260923,
+        20260924
+      ],
+      "parameter_count": 157560
+    },
+    "B3": {
+      "model_id": "B3",
+      "name": "Vanilla-LSTM-1S",
+      "multistep": false,
+      "paired": true,
+      "order": false,
+      "cooling": true,
+      "initialization": "independent random seed, no historical checkpoint",
+      "A1_note": null,
+      "seeds": [
+        20260922,
+        20260923,
+        20260924
+      ],
+      "parameter_count": 90887
+    },
+    "B2": {
+      "model_id": "B2",
+      "name": "NARX-MLP",
+      "multistep": false,
+      "paired": true,
+      "order": false,
+      "cooling": true,
+      "initialization": "independent random seed, no historical checkpoint",
+      "A1_note": null,
+      "seeds": [
+        20260922,
+        20260923,
+        20260924
+      ],
+      "parameter_count": 130823
+    },
+    "B1": {
+      "model_id": "B1",
+      "name": "ARX-Ridge",
+      "multistep": false,
+      "paired": true,
+      "order": false,
+      "cooling": true,
+      "initialization": "independent random seed, no historical checkpoint",
+      "A1_note": null,
+      "seeds": [
+        20260922
+      ],
+      "parameter_count": 1729
+    }
+  },
+  "regime_thresholds": {
+    "method": "MAD(second differences)/(.67448975*sqrt(6)); stable all-heater changes <=0.5 W; endpoint deadband=max(.02 C,3*sqrt(2)*sigma)",
+    "fitted_on": "91 fit sources only",
+    "sigma_C": [
+      0.0059177648622134715,
+      0.006052836748455956,
+      0.005559304856416108,
+      0.005793083121066562,
+      0.010909075120071438,
+      0.00484296207510447,
+      0.01208951104898546
+    ],
+    "regime_deadband_C": [
+      0.025106949981231728,
+      0.02568001146149004,
+      0.023586132975930818,
+      0.024577970153300977,
+      0.04628328596325579,
+      0.020546947946013867,
+      0.05129145146380387
+    ],
+    "response_deadband_C": [
+      0.025106949981231728,
+      0.02568001146149004,
+      0.023586132975930818,
+      0.024577970153300977,
+      0.04628328596325579,
+      0.020546947946013867,
+      0.05129145146380387
+    ],
+    "eligible_triplets": 20560
+  },
+  "UH_event_extraction": {
+    "min_uh_change_W": 5.0,
+    "pre_dwell_frames": 3,
+    "dwell_frames": 6,
+    "hold_tolerance_W": 1.0,
+    "max_aux_change_W": 1.0,
+    "response_frames": 12,
+    "magnitude_bins_W": [
+      5,
+      20,
+      50
+    ],
+    "nonoverlap": "retain first chronological qualifying event; require next event outside previous response window",
+    "onset": "3 consecutive same-sign endpoints outside noise deadband, relative to linear extrapolation of measured pre-action 60 s trend",
+    "lag_censoring": "no onset by 120 s is right-censored; lag MAE uses both-detected pairs and always reports misses/false detections",
+    "interpretation": "real measured excitation-response validation; not causal or counterfactual ground truth"
+  },
+  "event_counts": {
+    "fit/decrease/medium": 4,
+    "fit/increase/medium": 1,
+    "fit/decrease/large": 14,
+    "fit/increase/large": 2,
+    "fit/decrease/small": 2,
+    "selection/increase/large": 1,
+    "selection/decrease/large": 1
+  },
+  "free_run_counts": {
+    "300": 367,
+    "600": 179
+  },
+  "metrics": {
+    "horizons_s": [
+      10,
+      30,
+      60,
+      90,
+      120
+    ],
+    "point_metrics": [
+      "MAE",
+      "RMSE"
+    ],
+    "overall": "arithmetic mean of 7 point MAEs/RMSEs; additionally pooled RMSE",
+    "regime": "per-point true T(h)-measured T(0); same noise deadband for prediction direction; near-steady is a third class",
+    "selection_population": "all 11073 measured selection windows; no auxiliary labels in checkpoint scoring",
+    "free_run": "all eligible nonoverlapping starts at 300/600 s stride; true future powers; predicted external temperature feedback",
+    "excitation": "automatically extract on all 109 sources; report fit diagnostics separately, selection is validation; no event cherry-picking"
+  },
+  "checkpoint_selection_rule": {
+    "score": "minimum equal-source mean MAE, equally weighted over 7 points and 10/30/60/90/120 s endpoints",
+    "ties": "earliest checkpoint",
+    "stage0": "select by same rule at steps 100/200/300, load selected stage0 before recovery",
+    "recovery": "continue final stage1 into stage2; select global best recovery checkpoint every 100 steps including stage0 reference",
+    "selection_data": "18 selection sources only; all windows"
+  },
+  "training": {
+    "precision": "FP32",
+    "optimizer": "Adam",
+    "gradient_clip_norm": 1.0,
+    "stages": [
+      {
+        "name": "one_step_warmup",
+        "steps": 300,
+        "batch": 256,
+        "lr": 0.0004,
+        "source_weights": {
+          "field": 0.4,
+          "paired": 0.4,
+          "structured": 0.2
+        },
+        "rollout": 0,
+        "adjacent": 0,
+        "endpoint": 0,
+        "cooling_fraction": 0
+      },
+      {
+        "name": "v12b_recovery",
+        "steps": 400,
+        "batch": 128,
+        "lr": 0.00015,
+        "source_weights": {
+          "field": 0.6,
+          "paired": 0.25,
+          "structured": 0.15
+        },
+        "rollout": 0.45,
+        "adjacent": 0.1,
+        "endpoint": 0.1,
+        "cooling_fraction": 0.25
+      },
+      {
+        "name": "v12b_consolidation",
+        "steps": 500,
+        "batch": 128,
+        "lr": 5e-05,
+        "source_weights": {
+          "field": 0.75,
+          "paired": 0.15,
+          "structured": 0.1
+        },
+        "rollout": 0.35,
+        "adjacent": 0.08,
+        "endpoint": 0.1,
+        "cooling_fraction": 0.2
+      }
+    ],
+    "loss": "original V12B point/horizon weighted SmoothL1 beta=.15",
+    "order": {
+      "weight": 0.35,
+      "every": 4,
+      "candidate_mothers": 4,
+      "levels": 22,
+      "implementation": "vectorized mathematically identical V12B candidate grid loss"
+    },
+    "initialization": "all from scratch with common fit-field-only normalization; stage0 repeated independently for every model/seed; no historical V10/V11/V12B weights",
+    "A3": "remove paired data from every stage, ordering off; renormalize remaining field/structured mixture",
+    "A1": "strict single-step only, including removal of recursive order loss; this bundled consequence is explicit",
+    "baseline": "B2/B3 one-step; B4 adds same recursive temperature/adjacent/endpoint losses; no explicit order penalty; auxiliary supervised data and field cooling distribution held common",
+    "ridge": {
+      "alphas": [
+        1e-06,
+        0.0001,
+        0.01,
+        1.0,
+        100.0
+      ],
+      "objective": "weighted mean one-step squared error + alpha*coefficient L2, bias unpenalized",
+      "mixture": "recovery .60/.25/.15; same field cooling and source-group probabilities; all training rows",
+      "selection": "same recursive selection source-macro MAE"
+    },
+    "smoke": {
+      "seeds": [
+        20260922
+      ],
+      "steps_per_stage": 4,
+      "batch": 8,
+      "checkpoint_selection": "fixed source-balanced 2 windows/source; smoke only",
+      "final_selection": "same fixed 2 windows/source; smoke only"
+    }
+  },
+  "runtime": {
+    "python": "3.9.23",
+    "torch": "2.5.1+cu121",
+    "numpy": "2.0.2",
+    "cuda": "12.1",
+    "cudnn": 90100,
+    "device": "NVIDIA GeForce RTX 4060 Laptop GPU"
+  },
+  "scientific_limitations": [
+    "selection is development, not independent final test",
+    "overlapping windows are correlated; source-macro checkpoint criterion and source identities retained",
+    "historical formula labels are generated auxiliary supervision, never measured excitation targets",
+    "real raw timestamps unavailable; reconstructed trajectories require exact overlap",
+    "warmup plus V12B recovery is a controlled from-scratch paper adaptation, not historical checkpoint reproduction",
+    "A1 disables recursive ordering too to satisfy strict one-step-only requirement",
+    "common fit-field normalization differs from historical mixed auxiliary normalization to keep NoPair independent"
+  ],
+  "frozen_test_run": false
+}

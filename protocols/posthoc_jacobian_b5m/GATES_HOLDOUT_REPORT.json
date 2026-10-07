@@ -1,0 +1,28 @@
+{
+  "label": "POST-HOC B5M: holdout gates on existing models and already-reported results only",
+  "R3_holdout": {
+    "models": 12,
+    "summary_max_abs_diff": 0.0,
+    "contrast_rows": 459,
+    "reference_rows": 459,
+    "mismatches": [],
+    "pass_": true
+  },
+  "R4_rule": {
+    "verdicts": {
+      "COISC": "B5_reproduces_COISC_profile",
+      "L0": "B5_mixed",
+      "JAC": "B5_does_not_reproduce_profile"
+    },
+    "known": {
+      "COISC": "B5_reproduces_COISC_profile",
+      "L0": "B5_mixed",
+      "JAC": "B5_does_not_reproduce_profile"
+    },
+    "pass_": true
+  },
+  "all_pass": true,
+  "code_sha256": {
+    "b5m.py": "2ae8d5d368919f9e6424c2271565fe22e26e03bda7df20406b593198223c8fb2"
+  }
+}

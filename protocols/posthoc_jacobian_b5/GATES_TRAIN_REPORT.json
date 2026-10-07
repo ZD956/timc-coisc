@@ -1,0 +1,75 @@
+{
+  "label": "POST-HOC B5 Jacobian baseline: pre-freeze reproduction gates on existing models only",
+  "R1_calibration": {
+    "lambda_prior_reproduced": 939.1430335805455,
+    "lambda_prior_formal": 939.1430335805455,
+    "records_max_abs_diff": 0.0,
+    "order_ok": true,
+    "n_records": 16,
+    "pass_": true,
+    "lambda_jac": 72.33776600658737,
+    "lambda_jac_per_sampler": [
+      101.37672227305123,
+      72.33776600658737
+    ],
+    "time_s": 15.828497199999997
+  },
+  "R2_adaptation": {
+    "per_seed": [
+      {
+        "seed": 20260922,
+        "variant": "COISC",
+        "reference": "<outputs>/formal_coisc/seed_20260922/coisc_final.pt",
+        "reference_sha256": "3c68c00d1a5a08c132427353773e9e1307a2e35c69dbe5273feee90427071d2a",
+        "bitwise_equal": true,
+        "nonhead_equal": true
+      },
+      {
+        "seed": 20260922,
+        "variant": "L0",
+        "reference": "<outputs>/posthoc_ablation/seed_20260922/L0_final.pt",
+        "reference_sha256": "51939e875de988f8179847cf12cb778fcdbb094e216f307414b8b7e8f5f3211c",
+        "bitwise_equal": true,
+        "nonhead_equal": true
+      },
+      {
+        "seed": 20260923,
+        "variant": "COISC",
+        "reference": "<outputs>/formal_coisc/seed_20260923/coisc_final.pt",
+        "reference_sha256": "ac8e02cccf0ee4eca3ec60a1fadba08bd1cacfb27f7ffbdcfe984a9e43b74dc4",
+        "bitwise_equal": true,
+        "nonhead_equal": true
+      },
+      {
+        "seed": 20260923,
+        "variant": "L0",
+        "reference": "<outputs>/posthoc_ablation/seed_20260923/L0_final.pt",
+        "reference_sha256": "56042e3766b780ccdf3730f540e20085044ebdbe23d48b2ec7e0d07c9a052b9d",
+        "bitwise_equal": true,
+        "nonhead_equal": true
+      },
+      {
+        "seed": 20260924,
+        "variant": "COISC",
+        "reference": "<outputs>/formal_coisc/seed_20260924/coisc_final.pt",
+        "reference_sha256": "531e8b80e435435ac97675784e090261b79e3141738d0eeb804bf4b4b44a34ef",
+        "bitwise_equal": true,
+        "nonhead_equal": true
+      },
+      {
+        "seed": 20260924,
+        "variant": "L0",
+        "reference": "<outputs>/posthoc_ablation/seed_20260924/L0_final.pt",
+        "reference_sha256": "e4638df8a38e43660b676a5d1b87165080e7d7e9500a6b87b2f4ae6a04e1aea1",
+        "bitwise_equal": true,
+        "nonhead_equal": true
+      }
+    ],
+    "pass_": true
+  },
+  "all_pass": true,
+  "code_sha256": {
+    "b5_common.py": "30409bebe42e2e67d75456c2234aaed9cfe3bd9bc28a3b52271098171679ed01",
+    "b5_train.py": "d8c62df89d56bb902f3f6bfcf54aed5b060f6cb37b148c280beda939aa9029b7"
+  }
+}

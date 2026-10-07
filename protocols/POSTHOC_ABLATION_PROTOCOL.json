@@ -1,0 +1,166 @@
+{
+  "status": "POSTHOC_PROTOCOL_FROZEN_BEFORE_ANY_ABLATION_RUN",
+  "created_local": "2026-09-29 18:20 +0800",
+  "label": "POST-HOC mechanism analyses. Written after the formal development, delivered23 holdout and MIL control results were known. Not confirmatory; no gate here can rescue or overturn any locked decision.",
+  "no_modification_of_existing_artifacts": true,
+  "inputs_sha256": {
+    "screen.py": "2f1872e262c359a05b8cd678debe11ed4bf84402e76de4dffc282f3a321257eb",
+    "formal_coisc.py": "61d3c88f62aacbeb5b74d6da667d79668bccffdff85b88948c9221d75557ae99",
+    "development/calibration.json": "4736126edf32d004f184b1e3a0bcb0a80bdde6c46fa0f144b74e61c9d54eabbb",
+    "development_data_sha256_asserted_by_screen.load_real": "6c56bf5904c40a8567b9bb3c1202efcd2c42d33365801ccdd9a515a0b74914ca",
+    "R0_selected_pt": {
+      "20260922": "e1a16a5f07b546850c7b256f143406ba3d7522099beb4ce0220ee7f2cb1dae98",
+      "20260923": "6760c84b393aa72d40db8c80d51b02c5fd6523ac462ab47e2983cfe859236a28",
+      "20260924": "e0148fc3623487d464e1d22145a984a45d7007d0bbeeb84780607d8d191650b7"
+    },
+    "COISC_final_pt": {
+      "20260922": "3c68c00d1a5a08c132427353773e9e1307a2e35c69dbe5273feee90427071d2a",
+      "20260923": "ac8e02cccf0ee4eca3ec60a1fadba08bd1cacfb27f7ffbdcfe984a9e43b74dc4",
+      "20260924": "531e8b80e435435ac97675784e090261b79e3141738d0eeb804bf4b4b44a34ef"
+    },
+    "delivered23/window_level_sensitivity.npz": "9c1f0d4ac6cb5f17b1f0c09b44aabbbdb069d780e7347be3dfbd02856cfde6f8",
+    "delivered23/window_level_raw_results.npz": "06909e55194fa425760404b62de41ea149528f8254f4ced0851a5e0ac0c3ec18",
+    "delivered23/bootstrap_draws.npz": "a0ad1df990a850cb8c5d1b8668b21723860c65b06d54196e146cd0997288de67"
+  },
+  "item1_matched_head_only_ablation": {
+    "data": "development only: 91 fit sources for training, 18 selection sources (11073 windows) for evaluation; no holdout access",
+    "seeds": [
+      20260922,
+      20260923,
+      20260924
+    ],
+    "start_state": "formal_coisc/seed_<seed>/results/R0/selected.pt (the paired R0 of the formal run)",
+    "identical_to_formal_COISC_except_loss_weights": {
+      "trainable": "head.* only",
+      "steps": 75,
+      "batch": 128,
+      "optimizer": "Adam",
+      "lr": 5e-05,
+      "grad_clip": 1.0,
+      "sampler": "screen.sample with probs[False], rng=np.random.default_rng(seed), screen.seed_all(seed)",
+      "factual_loss": "screen.factual with old['training']['stages'][2]",
+      "regularizer_subset": 8,
+      "epsilon_pre": 0.001,
+      "epsilon_sign": 0.0001,
+      "lag_seconds": [
+        102.108,
+        77.091,
+        30.108,
+        50.112,
+        10.0535,
+        180.0,
+        39.104
+      ],
+      "final_state": "step 75, no early stopping, no checkpoint selection"
+    },
+    "loss": "factual + w_pre*L_pre + w_sign*L_sign",
+    "lambda_rule": "per sampler: min(0.10*mean(p)/mean(q), 0.20*min(p/q)) over the 8 calibration records; minimum over the two samplers; q = the regularizer term actually used by the variant",
+    "variants": {
+      "COISC_REPRO": {
+        "w_pre": 939.1430335805455,
+        "w_sign": 939.1430335805455,
+        "role": "harness check; must reproduce formal COISC"
+      },
+      "L0": {
+        "w_pre": 0.0,
+        "w_sign": 0.0,
+        "role": "primary: factual-loss-only head fine-tuning, same steps and data stream"
+      },
+      "SIGN_B": {
+        "w_pre": 0.0,
+        "w_sign": 41509.975974307185,
+        "role": "primary sign-only; lambda recalibrated by the same rule on q=L_sign"
+      },
+      "SIGN_A": {
+        "w_pre": 0.0,
+        "w_sign": 939.1430335805455,
+        "role": "supplement sign-only at the COISC lambda"
+      },
+      "PRE_B": {
+        "w_pre": 959.6118564482011,
+        "w_sign": 0.0,
+        "role": "supplement pre-only; lambda recalibrated by the same rule on q=L_pre"
+      }
+    },
+    "harness_check": "COISC_REPRO head tensors bitwise equal to coisc_final.pt; if not bitwise, report max abs difference and Tp metric differences; if Tp 120 s MAE, PLE, WSR or PSM differ by more than 1e-6 relative to formal values, the ablation is reported as HARNESS_NOT_REPRODUCED and interpreted only with that caveat",
+    "endpoints": [
+      "Tp MAE at 10/30/60/90/120 s (window-pooled, as in formal gates)",
+      "Tp PLE, WSR, PSM with prior lags (window-pooled, as in formal gates) and source-equal versions over 18 selection sources",
+      "seven-output macro MAE from paper_eval.prediction_metrics",
+      "PLE/WSR/PSM for all seven outputs where defined",
+      "training logs: factual loss, L_pre, L_sign per step"
+    ],
+    "descriptive_gate_readout": "the four formal development gates relative to paired R0 are computed for every variant and reported as descriptive readouts, not decisions",
+    "pre_specified_interpretation": {
+      "attribution": "COISC's PLE/WSR changes are attributed to the regularizer only to the extent L0 does not reproduce them; if L0 also meets the PLE and WSR 0.9xR0 readouts on at least 2/3 seeds, the manuscript must state that the sensitivity change is not specific to the regularizer",
+      "accuracy_cost": "Tp 120 s MAE of L0 versus R0 and versus COISC separates the cost of extra head training from the cost of the regularizer",
+      "component_roles": "SIGN_B and PRE_B indicate which term drives WSR and PLE changes; no component is declared necessary or sufficient from 3 seeds",
+      "reporting": "all variants and all seeds reported; no variant dropped; no re-running with other settings"
+    }
+  },
+  "item3_alternative_lag_reanalysis": {
+    "training": "none; uses existing sensitivity arrays",
+    "arrays": {
+      "development": "formal_coisc R0 selection_predictions_and_sensitivity.npz and COISC selection_coisc_predictions_and_sensitivity.npz for 3 seeds; item1 ablation sensitivities as secondary",
+      "holdout": "delivered23 window_level_sensitivity.npz; record identity [seed, source, cohort, variant] from window_level_raw_results.npz"
+    },
+    "mask_definition": "t in {10..120 s}; pre = t < max(0, tau - g); post = t > tau + g; g = guard (formal g = 10)",
+    "scenarios": {
+      "Tp": {
+        "PRIOR": {
+          "tau": 39.104,
+          "g": 10
+        },
+        "T30": {
+          "tau": 30.0,
+          "g": 10
+        },
+        "T20_measured_median": {
+          "tau": 20.0,
+          "g": 10
+        },
+        "T20_G0": {
+          "tau": 20.0,
+          "g": 0
+        },
+        "T10_measured_min": {
+          "tau": 10.0,
+          "g": 10
+        },
+        "T10_G0": {
+          "tau": 10.0,
+          "g": 0
+        },
+        "ALL_STEPS": "post = all 12 steps; pre undefined; lag-free"
+      },
+      "T6": {
+        "PRIOR": {
+          "tau": 180.0,
+          "g": 10
+        },
+        "T60_measured_median": {
+          "tau": 60.0,
+          "g": 10
+        },
+        "T80": {
+          "tau": 80.0,
+          "g": 10
+        },
+        "T40_G0": {
+          "tau": 40.0,
+          "g": 0
+        },
+        "ALL_STEPS": "post = all 12 steps; pre undefined; lag-free"
+      }
+    },
+    "measured_onset_provenance": "paper_eval.onset on 5 UH events (2 selection + 3 holdout), 10 s resolution; Tp onsets 10,10,20,30,20 s; T6 onsets 60,40,-,-,80 s; crude detector, small n",
+    "metrics": "PLE, WSR, PSM per scenario; empty regions reported as undefined, never imputed",
+    "aggregation": {
+      "development": "window-pooled over 11073 selection windows (formal convention) and source-equal over 18 sources",
+      "holdout": "equal-source over the 23 delivered sources (formal convention; PSM via frozen_evaluate.SourceMedian), with the frozen 20000-draw source-cluster bootstrap (bootstrap_draws.npz counts, source_order) giving percentile CIs for COISC-0.9*R0 (PLE, WSR) and COISC-0.2*R0 (PSM)"
+    },
+    "profiles": "lag-free per-step profiles (k = 1..12) of fraction S<-1e-4, median S and median |S| for all seven outputs, R0 vs COISC, development pooled and holdout equal-source",
+    "reproduction_check": "PRIOR scenario must reproduce the formal development (per_seed_base_and_coisc_metrics.json) and holdout (delivered23_sensitivity_metrics.csv, all23 equal_source) Tp values to within 1e-9",
+    "interpretation": "descriptive robustness of the PLE/WSR/PSM readouts to the lag prior; the manuscript frames PLE as consistency with a specified lag prior, not with measured physical delay"
+  }
+}

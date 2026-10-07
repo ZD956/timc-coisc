@@ -1,0 +1,573 @@
+{
+  "protocol_name": "TIMC_POSTHOC_MIL_ITEM2B_AND_DISTURBANCE_ESTIMATING_MPC",
+  "version": "FROZEN-1 (2026-09-29)",
+  "status": "FROZEN_BEFORE_POSTHOC_MIL_OUTCOME",
+  "execution_authorized": false,
+  "evidence_tier": "T3 POST-HOC, PROTOCOL-FIRST. Written after the T1 control verdict (NO_CONTROL_SUPERIORITY) was known. Nothing in this protocol can revise any T1 verdict.",
+  "immutable_prior_verdicts": {
+    "delivered23_prediction": "FAIL (NI not established on 3/3 seeds)",
+    "formal_control_v3": "NO_CONTROL_SUPERIORITY (COISC-R0 supported on seed 20260923 only)",
+    "formal_control_bound_protocol_sha256": "see 01_experiment_materials/03_control_validation/CONTROL_VALIDATION_PROTOCOL_V3.sha256"
+  },
+  "questions": {
+    "Q_A_item2b": "Under the unchanged formal MPC, is the COISC-vs-R0 tracking difference (in particular the seed-20260923 gain) attributable to the lag-aware regularizer, or also produced by matched head-only fine-tuning without it (L0, lambda = 0)?",
+    "Q_B_disturbance_estimation": "Does the non-equivalence between sensitivity consistency and control performance persist when the MPC is given disturbance estimation from the only signals measurable in deployment (peripheral points T_1..T_6 and heater commands)? Does COISC benefit more than R0 from such estimation?"
+  },
+  "deployment_observability_constraint": {
+    "fact": "Author-confirmed 2026-09-29: the primary target T_p (Tp) is not measured in deployment; only T_1..T_6 are measurable.",
+    "consequence": "Classical offset-free MPC on T_p is not achievable in general, because a T_p offset is unobservable. The variant below is therefore called disturbance-estimating MPC (DE-MPC), not offset-free MPC. It compensates only the part of plant-model mismatch that is expressible as an equivalent constant UH input disturbance and observable through T_1..T_6.",
+    "enforcement": "The estimator receives only plant output[:6] and applied inputs. A unit test must assert that perturbing plant output[6] leaves every estimator output and controller decision bitwise unchanged."
+  },
+  "controller_models": {
+    "architecture": "B4 Vanilla-LSTM-MS, loaded with the unchanged run_formal_control_v3a.load_model(binding, 'B4') normalization checks",
+    "variants": {
+      "R0": "formal R0 checkpoints (bound in CONTROL_VALIDATION_PROTOCOL_V3.json)",
+      "COISC": "formal COISC checkpoints (bound in CONTROL_VALIDATION_PROTOCOL_V3.json)",
+      "L0": "post-hoc item-1 matched head-only fine-tuning with lambda = 0 (same optimizer, lr, steps, batches and seed as COISC)"
+    },
+    "L0_bindings": {
+      "20260922": {
+        "path": "<outputs>/posthoc_ablation/seed_20260922/L0_final.pt",
+        "sha256": "51939e875de988f8179847cf12cb778fcdbb094e216f307414b8b7e8f5f3211c"
+      },
+      "20260923": {
+        "path": "<outputs>/posthoc_ablation/seed_20260923/L0_final.pt",
+        "sha256": "56042e3766b780ccdf3730f540e20085044ebdbe23d48b2ec7e0d07c9a052b9d"
+      },
+      "20260924": {
+        "path": "<outputs>/posthoc_ablation/seed_20260924/L0_final.pt",
+        "sha256": "e4638df8a38e43660b676a5d1b87165080e7d7e9500a6b87b2f4ae6a04e1aea1"
+      }
+    },
+    "L0_provenance_protocol_sha256": "15d873cc...05cab9 (POSTHOC_ABLATION_PROTOCOL.json, item 1)"
+  },
+  "unchanged_from_formal_control_v3": [
+    "CONTROL_SCENARIO_LOCK_V2.json: 12 locked scenarios, reference 37.0 C, 60 updates of 10 s, locked background aux1/aux2/aux3/aux4/aux5, initial UH from history",
+    "CONTROL_PLANT_FAMILY_LOCK.json: primary families F1 {P,A1,A3,A4,A5} (17), F2 {A2} (3), F3 {B2} (3), F4 {B1} (1) = 24 plant checkpoints",
+    "control_mpc.py (sha 8ef305db...a08a9): MPCConfig, objective, SLSQP settings, bounds, 0.1 % quantization, warm start, apply_plant_step",
+    "primary endpoint: 600-s mean absolute plant-Tp tracking error over 60 updates",
+    "estimand: family-equal paired effect per seed, 12 source clusters; 20000-draw percentile bootstrap with rng 20260927, draws shared across contrasts, checkpoints and seeds",
+    "torch.set_num_threads(2) per worker process"
+  ],
+  "population": {
+    "panel": "primary only (24 plant checkpoints x 12 scenarios x 3 controller seeds). The secondary panels (B3, B4, V10) and oracle runs are not repeated; the formal results for those remain as reported.",
+    "reason_for_primary_only": "All support rules in the formal plan use the primary panel; the secondary panels were descriptive. Declared before execution to bound compute."
+  },
+  "arm_A_item2b_nominal_mpc": {
+    "new_runs": "L0 with the unchanged formal MPCController: 24 x 12 x 3 = 864 runs",
+    "reused_runs": "R0 and COISC primary raw runs from formal execution control_v3a_20260926T153411234230Z_0b9ad32c21, subject to gate G4",
+    "contrasts": {
+      "A1_primary": "COISC - L0",
+      "A2": "L0 - R0"
+    }
+  },
+  "arm_B_disturbance_estimating_mpc": {
+    "new_runs": "R0-DE, COISC-DE, L0-DE: 3 x 864 = 2592 runs",
+    "disturbance_model": "Constant additive input disturbance d (percent of UH full scale). The internal model is evaluated with effective UH = clip(u + d, 0, 100) percent, applied to the UH channel of all 20 history frames and to all 12 future UH commands. The SLSQP decision variable, bounds, move penalty and quantization still act on u only.",
+    "estimator": {
+      "type": "moving-horizon estimation of the scalar d, re-solved at every update k",
+      "k_equals_0": "d_hat = 0 (no closed-loop data yet)",
+      "window": "s = max(0, k - W) with W = 12 updates (120 s, equal to the MPC horizon)",
+      "prediction": "internal-model open-loop rollout (rollout_native_120s) from the stored closed-loop history at update s, driven by the applied commands u_s..u_{k-1} shifted by d and by the locked background",
+      "cost": "J(d) = mean over updates i in [s, k) and points j = 1..6 of (T_hat_ij(d) - T_ij_measured)^2 in C^2, plus rho * (d/100)^2 with rho = 0.01",
+      "measured_signals_used": "plant output[:6] (T_1..T_6) and applied heater powers only; never plant output[6]",
+      "parameter_status": "W, rho, bounds and xatol are fixed here a priori and are not tuned on any outcome. rho only makes the minimizer unique when UH is not excited within the window. The grid step (1 %) is likewise fixed a priori.",
+      "solver_draft_1": "scipy.optimize.minimize_scalar(method='bounded', bounds=(-50, 50), options={'xatol': 0.05})",
+      "solver": "global grid d in {-50, -49, ..., 50} (101 batched rollouts), then scipy.optimize.minimize_scalar(method='bounded', options={'xatol': 0.05}) on [g-1, g+1] clipped to the bounds, where g is the grid minimiser; the returned d is the lowest-cost point among {grid minimiser, refined point, d = 0} (ties broken by smaller |d|)"
+    },
+    "failure_handling": "If the estimator raises or returns a non-finite value, d_hat keeps its previous value and the event is logged. MPC solver failures are handled exactly as in control_mpc.py (hold the previous command).",
+    "contrasts": {
+      "B1_primary": "COISC-DE - R0-DE",
+      "B2": "COISC-DE - L0-DE",
+      "B3_R0": "R0-DE - R0",
+      "B3_COISC": "COISC-DE - COISC",
+      "B3_L0": "L0-DE - L0",
+      "B4_secondary_DiD": "(COISC-DE - R0-DE) - (COISC - R0)"
+    }
+  },
+  "decision_rules": {
+    "per_contrast_support": "Identical to the formal plan: a contrast is SUPPORTED on a seed if the upper endpoint of the two-sided 95 % percentile CI is < 0. An overall claim requires support on all three seeds. A missing required run makes the contrast NOT_EVALUABLE.",
+    "multiplicity": "No correction. Every contrast is reported with its per-seed CI; the 3/3 rule is the only basis for an overall statement.",
+    "interpretation_A": {
+      "A1 supported on 20260923": "The seed-23 gain is regularizer-specific relative to matched fine-tuning.",
+      "A1 not supported on 20260923 and A2 supported on 20260923": "The seed-23 gain is at least partly produced by head-only fine-tuning itself, not specifically by the regularizer.",
+      "A1 and A2 both not supported on 20260923": "The seed-23 gain cannot be attributed to either factor.",
+      "overall regularizer control benefit": "requires A1 supported on 3/3 seeds"
+    },
+    "interpretation_B": {
+      "B1 supported on 3/3": "Under DE-MPC, COISC gave lower tracking error than R0 on every seed (post-hoc, conditional on the MIL plant panel). This does not overturn the formal T1 verdict.",
+      "B1 not supported on 3/3": "Adding disturbance estimation from peripheral measurements did not produce a consistent COISC benefit; the non-equivalence finding is robust to this controller design choice.",
+      "B3_X supported on 3/3": "Disturbance estimation reduced tracking error for variant X.",
+      "B3_X point estimate > 0 on >= 2 seeds": "Report that disturbance estimation worsened tracking for variant X; do not tune or rescue.",
+      "B4": "Descriptive only. A negative DiD means COISC gained more than R0 from disturbance estimation; no support claim is made from B4."
+    },
+    "forbidden": [
+      "calling DE-MPC 'offset-free'",
+      "replacing or re-analysing the formal R0-vs-COISC T1 result",
+      "changing W, rho, bounds, plants, scenarios or MPC settings after any outcome is seen",
+      "reporting secondary endpoints as if they were primary",
+      "pooling seeds to override the per-seed rule"
+    ]
+  },
+  "secondary_endpoints_descriptive": [
+    "terminal signed offset: mean (plant Tp - 37.0) over the last 30 updates",
+    "UH total variation and saturation fraction",
+    "solver success rate, iterations, time per update",
+    "d_hat trajectory summary per run (final value, max |d_hat|, estimator failures)",
+    "reachability-stratum breakdown using CONTROL_REACHABILITY_STRATA_LOCK.csv (heterogeneity only; no exclusion)"
+  ],
+  "pre_execution_gates_outcome_blind": {
+    "G0_hashes": "All bound files (formal protocol set, control_mpc.py, L0 checkpoints, new code files) match their SHA-256 at freeze.",
+    "G1_de_disabled_equivalence": "With d fixed at 0, the DE controller reproduces the nominal MPCController decisions bitwise on the first 3 updates of 3 synthetic histories built from the scenario cache (no plant outcome used).",
+    "G2_matched_plant": "Plant = the internal R0 model of seed 20260922, 12 closed-loop updates on one scenario: |d_hat| < 0.1 % at every update.",
+    "G3_bias_recovery": "Plant = the same internal model wrapped so that it receives UH + 10 %; 24 closed-loop updates: |d_hat - 10| <= 2 % at update 24. Failure means the estimator is not identifiable under this design; execution is then NOT authorized and any redesign requires a new protocol version that discloses this failure.",
+    "G4_reuse_reproduction": "Rerun 48 formal nominal runs (for each of the 24 primary plants, scenario index = plant index mod 12, seed 20260923, both R0 and COISC) and require bitwise equality of applied_UH and plant_Tp with the stored raw runs. If equality fails, the 1728 primary R0/COISC nominal runs are rerun inside this execution and used for all contrasts; the discrepancy is reported.",
+    "G5_observability": "Unit test from deployment_observability_constraint.enforcement.",
+    "G6_timing_smoke": "Two DE runs on the V10 historical plant (not in the analysis population); results discarded, used only to set the worker count."
+  },
+  "compute_plan": {
+    "formal_reference_runtime": "about 14 s per nominal run (2 threads), from the formal execution audit",
+    "new_runs": "864 nominal L0 + 2592 DE = 3456 runs (+48 for G4; +1728 if G4 fails)",
+    "estimated_wall_time": "about 15 h serial; about 3 h with 6 worker processes x 2 threads on the 16-core machine (to be confirmed by G6)",
+    "parallelism": "partition by plant checkpoint; each run is deterministic and written atomically; resume under the same protocol hash is allowed and logged"
+  },
+  "outputs": [
+    "POSTHOC_MIL_EXECUTION_AUDIT.json (gates, resume log, failures)",
+    "raw_runs/*.npz (same fields as the formal runs plus d_hat and estimator status per update)",
+    "POSTHOC_MIL_PRIMARY_CONTRASTS.csv (per contrast x seed: point, CI, decision)",
+    "POSTHOC_MIL_SECONDARY.csv",
+    "POSTHOC_MIL_RESULTS_SUMMARY.json with the interpretation sentence chosen from decision_rules"
+  ],
+  "code_to_be_written_and_bound_at_freeze": {
+    "de_mpc.py": "DisturbanceEstimatingMPC wrapper around the unchanged MPCController and objective; MHE estimator",
+    "run_posthoc_mil.py": "scheduler and runner reusing run_formal_control_v3a.load_model / load_scenarios",
+    "analyze_posthoc_mil.py": "contrasts using the formal hierarchical_effect and the shared 20000 draws",
+    "test_de_mpc.py": "gates G1, G2, G3, G5",
+    "sha256": {
+      "de_mpc.py": "2f46ea66c4f34f5e19ea01622a5a44b906edfb57f55b5a16fe2ed2312d1634b5",
+      "run_posthoc_mil.py": "d72a4512589e3e5c802270bd005a3e2035577cd44d6913d77059e5933b8d6c18",
+      "analyze_posthoc_mil.py": "966ca6337b3428b0532df8995e46042f196d4d3537ec56a0a635ed27b7d1d0c7",
+      "test_de_mpc.py": "aa62985034ac62658233782ec81ca67916fae1e2aa8939c0610c3622a9cb1c75"
+    }
+  },
+  "manuscript_use": "Report as a post-hoc robustness analysis of the control study (T3). Arm A answers the attribution question left open by item 2b. Arm B addresses the expected reviewer question about offset/disturbance handling under the deployment constraint that T_p is unmeasured.",
+  "execution_authorization_rule": "execute requires EXECUTION_AUTHORIZATION.json written on the author's explicit instruction, naming this protocol SHA-256",
+  "author_decisions_2026_09_29": {
+    "population": "APPROVED: primary panel only (24 x 12 x 3)",
+    "de_parameters": "APPROVED: W = 12, rho = 0.01, d bounds +-50 %, xatol 0.05",
+    "reuse_formal_R0_COISC": "APPROVED: reuse, subject to G4",
+    "seed23_attribution_rule": "APPROVED: if A1 holds only on some seeds, report partial attribution only"
+  },
+  "g4_outcome": {
+    "passed": true,
+    "rerun_formal_nominal": false
+  },
+  "gate_summary": {
+    "G1": true,
+    "G2": true,
+    "G3": true,
+    "G5": true,
+    "G4": true,
+    "G6_estimated_wall_hours_6_workers": 4.643696530166655,
+    "analysis_reproduces_formal_primary": true,
+    "analysis_selftest": true
+  },
+  "frozen_utc": "2026-09-29T13:41:36Z",
+  "bound_files": [
+    {
+      "path": "protocols/CONTROL_VALIDATION_PROTOCOL_V3.json",
+      "sha256": "0b9ad32c21b0f0a0cea31761997e091709ae5166a33f3b2f90985dece3cedf19"
+    },
+    {
+      "path": "<outputs>/control/control_v3a_20260926T153411234230Z_0b9ad32c21/CONTROL_EXECUTION_MANIFEST.json",
+      "sha256": "af7db085ef7cf5ec77ff7d2c37f7cee6e47cd3c54e79ca652da905ae90575739"
+    },
+    {
+      "path": "<outputs>/control/control_v3a_20260926T153411234230Z_0b9ad32c21/CONTROL_BOOTSTRAP_DRAWS.npz",
+      "sha256": "f4ddc45c9a7a5b3c887eeeffefeaa2812fe827286614397950fd6861b8755a4a"
+    },
+    {
+      "path": "<outputs>/control/control_v3a_20260926T153411234230Z_0b9ad32c21/CONTROL_PRIMARY_RESULTS.csv",
+      "sha256": "8b51f56f0d1e77113e73774ae8a6e412cb0cf16ac843d68149d8552cb3d8b7a3"
+    },
+    {
+      "path": "timc_coisc/control_mpc.py",
+      "sha256": "8ef305db879183fa7c812a28247c466b346b4b9e9c10079a657d8e9f823a08a9"
+    },
+    {
+      "path": "timc_coisc/run_formal_control_v3a.py",
+      "sha256": "16011f3275fefe705ebb7c7294afcafcc5bb7bbae0495b8a43f105476ca9331e"
+    },
+    {
+      "path": "timc_coisc/analyze_formal_control_v3.py",
+      "sha256": "655a672b9eb70693d83555e9e2414d546c543e410ccfa014af677e695cc3e5e7"
+    },
+    {
+      "path": "timc_coisc/run_formal_control_v3.py",
+      "sha256": "887110adb45bd1dba3ef2f1bfd5264bc81936c6291714585d06da8128fc256fc"
+    },
+    {
+      "path": "protocols/CONTROL_SCENARIO_LOCK_V2.json",
+      "sha256": "93e177a3de94809bd1ec2c1469d9d0003462be190b91d1ba4db2be3baf893eac"
+    },
+    {
+      "path": "protocols/CONTROL_PLANT_FAMILY_LOCK.json",
+      "sha256": "9b34399ca7dddadaf8d06292e3d2b47a3a700b36e1210caa82062af71ddbf3f7"
+    },
+    {
+      "path": "protocols/CONTROL_PLANT_REACHABILITY_AUDIT.csv",
+      "sha256": "b4ed660d4e6900316f0625b0e98d0a411ecfe194ca8104af94d7b39a19bf17ec"
+    },
+    {
+      "path": "protocols/CONTROL_REACHABILITY_STRATA_LOCK.csv",
+      "sha256": "dc1998baeb3d1588dc53d62ed2362da7af8f0431d38cfcf042fc7ef00e3db65a"
+    },
+    {
+      "path": "protocols/POSTHOC_MIL_PROTOCOL_DRAFT.json",
+      "sha256": "558a1285c44aaead9e180ead9f48f9ccec06361d82e4544795851684808ac73e"
+    },
+    {
+      "path": "protocols/POSTHOC_MIL_TEST_REPORT.json",
+      "sha256": "761635af608217378774cec1cad235d021ba06696d09ba26a91b92341ee71601"
+    },
+    {
+      "path": "protocols/POSTHOC_MIL_GATE_REPORT.json",
+      "sha256": "6ae6e72be16403ac21952b3a4f8c0500b103af703ecbf8c80b0c118029ca99ac"
+    },
+    {
+      "path": "protocols/POSTHOC_MIL_ANALYSIS_REPRODUCTION_CHECK.json",
+      "sha256": "562ee0a008be890dd040f43f8d58111644caad2905ff65b702f65fddccf10b72"
+    },
+    {
+      "path": "protocols/POSTHOC_MIL_ANALYSIS_SELFTEST.json",
+      "sha256": "01edbe4664cb372425feb0296e04a224368398485c8c86e80d315dc3b2be122d"
+    },
+    {
+      "path": "<private>/protocols_private/CONTROL_HISTORY_CHANNEL_MAP.json",
+      "sha256": "6030163cf1e3a8125b289e4717f9fdeba18736efc13afeebbfbea73d5955c0a1"
+    },
+    {
+      "path": "<private>/protocols_private/CONTROL_STATISTICAL_PLAN_V2.json",
+      "sha256": "b75211e3283de7e9c8fc2943a9f2917a82ee25c1e59d8e706be0ae00a5d4939c"
+    },
+    {
+      "path": "<private>/protocols_private/CONTROL_MPC_IMPLEMENTATION_AUDIT_V2.json",
+      "sha256": "6a91008ed441f8e5c6986cc0e80740ba8bedd55daba161275a54a649d83ade35"
+    },
+    {
+      "path": "<private>/protocols_private/CONTROL_MPC_UNIT_TEST_REPORT_V2.json",
+      "sha256": "41423b8884c94d943733604d8ddf9efed9a865edc1edc0632c8b975144024834"
+    },
+    {
+      "path": "<private>/protocols_private/CONTROL_PLANT_REACHABILITY_SUMMARY.json",
+      "sha256": "e73d7ba78497c04619df83f8e40c4f9b8dd580037fe6d29b33f6ac2ed6726346"
+    },
+    {
+      "path": "<private>/protocols_private/CONTROL_HASH_INTEGRITY_AUDIT.json",
+      "sha256": "5a2ed931c5d715bc99e91f470a026e7170ae84b0824d36590edc6dc6e6f9ce3c"
+    },
+    {
+      "path": "<private>/protocols_private/CONTROL_ARTIFACT_INTEGRITY_AUDIT.json",
+      "sha256": "a17772f72cbb90bdc30bbc47addd31f9d320cf4bc287ab128581844bf37afbda"
+    },
+    {
+      "path": "<private>/protocols_private/CONTROL_CHECKPOINT_INTEGRITY_AUDIT.csv",
+      "sha256": "f91c29361972a036e39b1446aab86326e5d29a9ac583e8e12339b0155c1794d6"
+    },
+    {
+      "path": "timc_coisc/test_control_mpc.py",
+      "sha256": "52e00c3e4251b18f6abf1de5800aee9691fb84c9653a39366445b70d6e3bdb0d"
+    },
+    {
+      "path": "<private>/unreleased_code/prepare_control_v2.py",
+      "sha256": "16eae266f38859c5c16c478afda2460ea4c4e8860ee3d7f5d840b53aedb7c51e"
+    },
+    {
+      "path": "<private>/unreleased_code/qualify_control_plants_v2.py",
+      "sha256": "83dbe091716e2c1292dcd3a4b91be4ee96dcd5a3a45ddf6dc1f66c2b22814f71"
+    },
+    {
+      "path": "<private>/unreleased_code/freeze_control_v3.py",
+      "sha256": "06b37ff4c053f6ea376a036e109406ea6625d7cca83f53400c2eebbde032aa83"
+    },
+    {
+      "path": "<private>/unreleased_code/control_integrity_v3.py",
+      "sha256": "1fa266d43f43a77c52a88b4629f1a3f43fe7aa6250dc88ba9c5097365160774a"
+    },
+    {
+      "path": "<private>/unreleased_code/test_formal_control_v3.py",
+      "sha256": "d1c36279ffb7137ddea0a6d71fdaca4e3615d98e1b664bcf3f04527220305460"
+    },
+    {
+      "path": "timc_coisc/paper_models.py",
+      "sha256": "76fb867e502744b69f761848d0771af2ed2fb9b113f7a372b86c136f76746626"
+    },
+    {
+      "path": "timc_coisc/paper_data.py",
+      "sha256": "ba5f9e9e20faabd0ff18244c8e9dc14ccf92d9963d77fdb016ebfeac1be07c99"
+    },
+    {
+      "path": "<private>/data/field_windows_development_109.npz",
+      "sha256": "6c56bf5904c40a8567b9bb3c1202efcd2c42d33365801ccdd9a515a0b74914ca"
+    },
+    {
+      "path": "<private>/unreleased_code/cooling_recovery.py",
+      "sha256": "eb9ff23f9bf51a6752e860a5acde91521fb28ab5570e2ddd2d895e6b375b161d"
+    },
+    {
+      "path": "timc_coisc/model_structural_ablation.py",
+      "sha256": "edb6d527053cba89e030d3702419db9c440f02c139dfc5c9ac26f0db3468122e"
+    },
+    {
+      "path": "<private>/unreleased_code/prepare_manual_step500_candidate.py",
+      "sha256": "a8275e5ca22b9a44fccfc6a9d932d78ae64873c4ffb37ab75a777c2d79ffed23"
+    },
+    {
+      "path": "<private>/unreleased_code/select_cooling_recovery.py",
+      "sha256": "f89bf09bd888f46b87870adf24013bb69faddeae86d77fd78817d8668d6d2828"
+    },
+    {
+      "path": "<private>/unreleased_code/structural_selection.py",
+      "sha256": "5d30605362fc95f7071b1748b9ec81c58ee7f3ffb1d58bb549b0eaec0911c6b5"
+    },
+    {
+      "path": "timc_coisc/structural_training_common.py",
+      "sha256": "19d2fc5e5530d3115644e546badeb113ca44f3cbf7c35f4f3c7625cb5b85efea"
+    },
+    {
+      "path": "<private>/unreleased_code/train_cooling_recovery.py",
+      "sha256": "3f6d5e5b4de31fccacb125866fb5800ecbabb7452c8d21b56b6472df8c03efe0"
+    },
+    {
+      "path": "<private>/unreleased_code/validate_v12_protocol.py",
+      "sha256": "73c4cdd87cc32d2db7999c9c494f3bce4c3a5940ac9c5a8804019d3624df0a80"
+    },
+    {
+      "path": "<private>/plants/P_seed20260922/selected.pt",
+      "sha256": "49dfe5e13838b7c85b26b0fd2dadc00dd4a551e46cb30633b7d6b948bfe8a616"
+    },
+    {
+      "path": "<private>/plants/P_seed20260923/selected.pt",
+      "sha256": "efa4ae2eade61add379f5163510a00d80e91be8485ef8bf6335f567566a225b4"
+    },
+    {
+      "path": "<private>/plants/P_seed20260924/selected.pt",
+      "sha256": "71aeaa8a09d719ab9efedd4ed1411a41ffe6042f26564c8f00f1ce92dfa05536"
+    },
+    {
+      "path": "<private>/plants/P_seed20260925/selected.pt",
+      "sha256": "9bcb1da601f72b789caf40d40e956e3895bcefa4aa322277efb44fcca523f9c8"
+    },
+    {
+      "path": "<private>/plants/P_seed20260926/selected.pt",
+      "sha256": "eb4ded81affc5686d6757c225b2f74e772d756c5d796804c5663adad58d4fe7c"
+    },
+    {
+      "path": "<private>/plants/A1_seed20260922/selected.pt",
+      "sha256": "3150b02ceb58d130beca8981620a37375ff2334626cf4f452c56cebe1b029eaf"
+    },
+    {
+      "path": "<private>/plants/A1_seed20260923/selected.pt",
+      "sha256": "d0c00f36e19d98617534f4d9a0a609f6a4f83d510faa226777c138372c041c7f"
+    },
+    {
+      "path": "<private>/plants/A1_seed20260924/selected.pt",
+      "sha256": "ce56956b2b40105f1aabf6225901df38ffb787527dcaa59db1b49d73ac77f33c"
+    },
+    {
+      "path": "<private>/plants/A2_seed20260922/selected.pt",
+      "sha256": "a44d857b0fb4c8fccf3739781e9561bc76d1dab2ad6aad1100d7c0dea6ce6def"
+    },
+    {
+      "path": "<private>/plants/A2_seed20260923/selected.pt",
+      "sha256": "8263c684506ec2433e0704c17951ef0f45a3dc50682fc2e21807c27ac7d9c5a5"
+    },
+    {
+      "path": "<private>/plants/A2_seed20260924/selected.pt",
+      "sha256": "3f84a88e6b512dc6e76dfec7b55a22b53d4b5b033a3e2d4aa3c62a5f8b5d681b"
+    },
+    {
+      "path": "<private>/plants/A3_seed20260922/selected.pt",
+      "sha256": "fe94acf2cacc78a6451cdc9659757a70ae633413ba7257f940398a499a30c4ff"
+    },
+    {
+      "path": "<private>/plants/A3_seed20260923/selected.pt",
+      "sha256": "95e3e5c51c020f827286f1f107d47af9800a27480834b323966912d87fe5c11f"
+    },
+    {
+      "path": "<private>/plants/A3_seed20260924/selected.pt",
+      "sha256": "8db183469be3128f245db61a029503bb8710524cdc833075f6b59d932ecc9754"
+    },
+    {
+      "path": "<private>/plants/A4_seed20260922/selected.pt",
+      "sha256": "cf46413b288cad482f7db9ba4b3d3c4dfe754e8ed3cdc04cdf6ff0646dd8d0fa"
+    },
+    {
+      "path": "<private>/plants/A4_seed20260923/selected.pt",
+      "sha256": "aebf7b973add63065c3c9667ebfb3bc1d3aa684c76bb9909c91ced4da77aae41"
+    },
+    {
+      "path": "<private>/plants/A4_seed20260924/selected.pt",
+      "sha256": "7d714b4e7d78d36b66c06f61d344f3afb87ce40c9e7a87abea252dd99b2a0842"
+    },
+    {
+      "path": "<private>/plants/A5_seed20260922/selected.pt",
+      "sha256": "43b5b1c9a543abeddd33dff6e3805543b1cc1b36b1d8689898f2d1639ac70940"
+    },
+    {
+      "path": "<private>/plants/A5_seed20260923/selected.pt",
+      "sha256": "f3699401ecc3ee01dcf6b073efd4dc8ff4a73571e66e06619923817f4dcf7281"
+    },
+    {
+      "path": "<private>/plants/A5_seed20260924/selected.pt",
+      "sha256": "48b80d6dc78da6f8adc9b1cf302854b704f62c8db2ed3723aaec0b5d2f02c68f"
+    },
+    {
+      "path": "<private>/plants/B2_seed20260922/selected.pt",
+      "sha256": "f85ae3e06e91650a37167bed6cf3886892a8530769a68b4817a9f75358a98b3e"
+    },
+    {
+      "path": "<private>/plants/B2_seed20260923/selected.pt",
+      "sha256": "df4804d94af3fe3d215e78b6093fb9a277f1e6d6fd3b2877d37efb4d294f1dc2"
+    },
+    {
+      "path": "<private>/plants/B2_seed20260924/selected.pt",
+      "sha256": "001d56ebc9d9422d0dd03318aac4210ab85acbbaa12048b14945d5746ae05339"
+    },
+    {
+      "path": "<private>/plants/B1_seed20260922/selected.pt",
+      "sha256": "a41de5e1d41d33f7e0f02fa650d47791668f2d565c8010642f035ede583df6e9"
+    },
+    {
+      "path": "<private>/plants/B4_seed20260922/selected.pt",
+      "sha256": "87e6a6fdd3f7ab564cc569e49e923b08b101d20a9bdc9e28bef7be1f265fd845"
+    },
+    {
+      "path": "<private>/plants/B4_seed20260923/selected.pt",
+      "sha256": "f63ef258ac14b16c8b146c69bdc29c87f71311b8e441c1273b2123f69d0d75eb"
+    },
+    {
+      "path": "<private>/plants/B4_seed20260924/selected.pt",
+      "sha256": "70523fad09dd7926d5c1a29ae654ee31803dff974a5433c18a3847f43ee2f033"
+    },
+    {
+      "path": "<private>/plants/B4_seed20260925/selected.pt",
+      "sha256": "cfa7efb613aa564fcb58d0ed5b3832f2907479dd1f6a719ed53c7c042353b1d5"
+    },
+    {
+      "path": "<private>/plants/B4_seed20260926/selected.pt",
+      "sha256": "07f16cbf6ec2d0d6a5acda3bfee08f887d3e1364d298b138ca63154aa51f72b0"
+    },
+    {
+      "path": "<private>/plants/B3_seed20260922/selected.pt",
+      "sha256": "61742528268b22e0c1503cc8471d4714253aa44b84c3548de5116f422762f978"
+    },
+    {
+      "path": "<private>/plants/B3_seed20260923/selected.pt",
+      "sha256": "f81bf9389b438f98f3b07e6a9033b65abe018df59a84665feb14e3a7833d3f38"
+    },
+    {
+      "path": "<private>/plants/B3_seed20260924/selected.pt",
+      "sha256": "91a0b7f3d27744a11ab7beea152c7c42aa4f28326de10a844f43683052d8f41c"
+    },
+    {
+      "path": "<private>/v10/SELECTED_native_rollout_g4state_tpsafe_v10_candidate.pth",
+      "sha256": "9d3553363911bdfc9ad4640c9b13f7b32b211fcdb7d6d09d9e99a101dc1e0a5c"
+    },
+    {
+      "path": "<private>/v10/SELECTED_native_rollout_g4state_tpsafe_v10_candidate.pt",
+      "sha256": "e55fe3a38dd74b2525187a2cbc8a8ee31f19e0f4a4ef96a0b2753c84dda99f35"
+    },
+    {
+      "path": "<outputs>/formal_coisc/seed_20260922/results/R0/selected.pt",
+      "sha256": "e1a16a5f07b546850c7b256f143406ba3d7522099beb4ce0220ee7f2cb1dae98"
+    },
+    {
+      "path": "<outputs>/formal_coisc/seed_20260922/coisc_final.pt",
+      "sha256": "3c68c00d1a5a08c132427353773e9e1307a2e35c69dbe5273feee90427071d2a"
+    },
+    {
+      "path": "<outputs>/formal_coisc/seed_20260923/results/R0/selected.pt",
+      "sha256": "6760c84b393aa72d40db8c80d51b02c5fd6523ac462ab47e2983cfe859236a28"
+    },
+    {
+      "path": "<outputs>/formal_coisc/seed_20260923/coisc_final.pt",
+      "sha256": "ac8e02cccf0ee4eca3ec60a1fadba08bd1cacfb27f7ffbdcfe984a9e43b74dc4"
+    },
+    {
+      "path": "<outputs>/formal_coisc/seed_20260924/results/R0/selected.pt",
+      "sha256": "e0148fc3623487d464e1d22145a984a45d7007d0bbeeb84780607d8d191650b7"
+    },
+    {
+      "path": "<outputs>/formal_coisc/seed_20260924/coisc_final.pt",
+      "sha256": "531e8b80e435435ac97675784e090261b79e3141738d0eeb804bf4b4b44a34ef"
+    },
+    {
+      "path": "<private>/protocols_private/CONTROL_TECHNICAL_AMENDMENT_V3A.json",
+      "sha256": "9b20253c8ecd7372fed32cf7651bafde39fe5b786de15c0569009c36ba14b7e2"
+    },
+    {
+      "path": "<private>/protocols_private/CONTROL_EXECUTION_BINDING_V3A.json",
+      "sha256": "68badcfa3251366d7669f6dd92e703d96acfe75221b00a6d73e5ad7b85b9d945"
+    },
+    {
+      "path": "<private>/protocols_private/CONTROL_NORMALIZATION_BINDING_AUDIT.json",
+      "sha256": "e71b0fdea285ec888c384d9a505edcc8dc017130487f498ca9d5b836911d86d6"
+    },
+    {
+      "path": "<private>/protocols_private/CONTROL_LOADER_PREFLIGHT_V3A.json",
+      "sha256": "54ac783df64d65faea199e5c1578410b673848875f63b80885092e7084658ab1"
+    },
+    {
+      "path": "<private>/protocols_private/CONTROL_MPC_UNIT_TEST_REPORT_V3A.json",
+      "sha256": "16515ec3e11eacb1bada67e3546a2fa010bdd38012384f833b5fe8f5df97094d"
+    },
+    {
+      "path": "<private>/unreleased_code/audit_control_normalization_v3a.py",
+      "sha256": "7192f8b4dd21c55298c86317454abcda87bb6e331964bfb17a56c0503126df82"
+    },
+    {
+      "path": "<private>/unreleased_code/preflight_control_v3a.py",
+      "sha256": "8487159ac181faf4c571aef39fc872195150d37ef85f74f181bf401e1285bd02"
+    },
+    {
+      "path": "<private>/unreleased_code/bind_control_v3a.py",
+      "sha256": "7c0ce6745f3707029786db14d72be921a96652e7d5b9aae73ef8ae4cbe40a030"
+    },
+    {
+      "path": "<private>/unreleased_code/execute_control_v3a_pipeline.py",
+      "sha256": "2c6b8643befbf7dc5130464290d3f7bf730b372653475fe9d87cc2beb899324e"
+    },
+    {
+      "path": "configs/normalization.json",
+      "sha256": "6e0a0a41664c962c7e0d36f3694bb42eddd3279a9ae82cc569d06a6fac572dc1"
+    },
+    {
+      "path": "timc_coisc/de_mpc.py",
+      "sha256": "2f46ea66c4f34f5e19ea01622a5a44b906edfb57f55b5a16fe2ed2312d1634b5"
+    },
+    {
+      "path": "timc_coisc/run_posthoc_mil.py",
+      "sha256": "d72a4512589e3e5c802270bd005a3e2035577cd44d6913d77059e5933b8d6c18"
+    },
+    {
+      "path": "timc_coisc/analyze_posthoc_mil.py",
+      "sha256": "966ca6337b3428b0532df8995e46042f196d4d3537ec56a0a635ed27b7d1d0c7"
+    },
+    {
+      "path": "timc_coisc/test_de_mpc.py",
+      "sha256": "aa62985034ac62658233782ec81ca67916fae1e2aa8939c0610c3622a9cb1c75"
+    }
+  ],
+  "pre_freeze_amendments": [
+    {
+      "id": "AM1",
+      "gate": "G2",
+      "outcome_blind": true,
+      "observed": "With the DRAFT-1 solver (bounded Brent on [-50, 50] only), G2 FAILED: on the matched plant d_hat drifted to about -2.7 % although J(0) = 0 exactly. Cause: the clip of effective UH at 0 % makes J(d) non-unimodal (plateaus for d below minus the applied UH), and Brent converged to a non-global point.",
+      "change": "Global 1 % grid before local refinement, plus d = 0 as a candidate. W, rho, bounds and xatol unchanged.",
+      "after_change": "G1, G2, G3, G5 all PASS (POSTHOC_MIL_TEST_REPORT.json).",
+      "no_population_outcome_seen": true
+    }
+  ]
+}

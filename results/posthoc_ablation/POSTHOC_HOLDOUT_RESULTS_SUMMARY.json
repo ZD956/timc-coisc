@@ -1,0 +1,103 @@
+{
+  "protocol_sha256": "d44b63e3aa8c00d4b424a5b08f2262f516e356e7f0be8e1c97440ab33c002ad4",
+  "label": "POST-HOC item 2a; delivered23 holdout, inference only; locked delivered23 decision unchanged",
+  "reproduction": "R0 and COISC re-inferred predictions and sensitivities equal stored delivered23 arrays exactly (max abs diff 0.0, 3 seeds x 23 sources)",
+  "formal_readouts_vs_R0_pass_counts_of_3": {
+    "COISC": {
+      "MAE_NI": 0,
+      "PLE": 3,
+      "WSR": 3,
+      "PSM": 3
+    },
+    "L0": {
+      "MAE_NI": 1,
+      "PLE": 0,
+      "WSR": 1,
+      "PSM": 3
+    },
+    "SIGN_B": {
+      "MAE_NI": 0,
+      "PLE": 3,
+      "WSR": 3,
+      "PSM": 3
+    },
+    "SIGN_A": {
+      "MAE_NI": 0,
+      "PLE": 3,
+      "WSR": 3,
+      "PSM": 3
+    },
+    "PRE_B": {
+      "MAE_NI": 0,
+      "PLE": 3,
+      "WSR": 3,
+      "PSM": 3
+    }
+  },
+  "Tp_120s_dMAE_vs_R0": {
+    "COISC": [
+      0.0192,
+      0.0431,
+      0.0149
+    ],
+    "L0": [
+      0.0015,
+      -0.0022,
+      -0.0034
+    ],
+    "SIGN_B": [
+      0.0187,
+      0.0737,
+      0.0073
+    ],
+    "SIGN_A": [
+      0.0053,
+      0.0278,
+      0.0009
+    ],
+    "PRE_B": [
+      0.0144,
+      0.0172,
+      0.0104
+    ]
+  },
+  "L0_NI_CI_upper": [
+    0.0148,
+    0.0004,
+    0.0052
+  ],
+  "COISC_minus_L0": {
+    "Tp_MAE_120": "+0.018/+0.045/+0.018, all CIs include 0",
+    "all7_MAE_5h": "+0.0075/+0.0104/+0.0088, all CIs exclude 0",
+    "PLE_WSR_PSM_prior": "favourable direction, all CIs exclude 0 on 3/3 seeds",
+    "WSR_ALL_STEPS": "-0.095/-0.101/-0.012, CIs exclude 0",
+    "PSM_ALL_STEPS": "-0.014/-0.012/-0.010, CIs exclude 0 (lower lag-free magnitude)"
+  },
+  "T6_PLE_ratio_vs_R0": {
+    "COISC": [
+      0.8,
+      0.55,
+      0.37
+    ],
+    "SIGN_B": [
+      10.0,
+      11.8,
+      2.9
+    ],
+    "SIGN_A": [
+      4.0,
+      7.2,
+      1.0
+    ],
+    "PRE_B": [
+      0.79,
+      0.57,
+      0.36
+    ]
+  },
+  "prespecified_rule_outcomes": {
+    "attribution": "met: COISC-L0 CIs exclude 0 favourably for PLE, WSR and PSM on 3/3 seeds; holdout sensitivity changes are regularizer-specific",
+    "NI_cost": "L0 point estimates about 0 while COISC +0.015 to +0.043: the holdout Tp accuracy loss is attributed to the regularizer, not extra head training (descriptive; COISC-L0 Tp CIs include 0). L0 itself fails the 0.005 NI readout on 2/3 seeds, so the NI test is underpowered at 23 sources",
+    "components": "sign-only terms inflate T6 UH sensitivity up to about 12x R0 because T6 has no post region; the pre term restrains this; PRE_B is cheaper in Tp MAE than COISC (COISC-PRE_B CI excludes 0 on 2/3 seeds) but gives weaker WSR reduction"
+  }
+}

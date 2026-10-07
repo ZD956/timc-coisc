@@ -1,0 +1,578 @@
+{
+  "overall_decision": "FAIL",
+  "overall_PASS": false,
+  "per_seed": [
+    {
+      "seed": 20260922,
+      "draw_sha256": "8540bc713259c189fdb24bd60539d8ad7cac7fc2f49c015aefb09b473b8bef18",
+      "primary_values": {
+        "MAE": {
+          "R0": 0.33321155816130404,
+          "COISC": 0.35244256070933166,
+          "contrast_ci": [
+            -0.004440884330435392,
+            0.04773715499277126
+          ]
+        },
+        "PLE": {
+          "R0": 0.04647408963783007,
+          "COISC": 0.02109716959188026,
+          "contrast_ci": [
+            -0.02367446546566245,
+            -0.017329636961300066
+          ]
+        },
+        "WSR": {
+          "R0": 0.105666350152087,
+          "COISC": 0.02691036741252322,
+          "contrast_ci": [
+            -0.08392423383988236,
+            -0.05276803196536253
+          ]
+        },
+        "PSM": {
+          "R0": 0.0848388671875,
+          "COISC": 0.1000213623046875,
+          "ratio_contrast_ci": [
+            0.06782512664794922,
+            0.09851093292236326
+          ],
+          "floor_contrast_ci": [
+            0.08058091354370117,
+            0.1193577880859375
+          ]
+        }
+      },
+      "decision": "FAIL",
+      "gates": {
+        "Tp_120s_MAE": {
+          "value": 0.01923100254802762,
+          "threshold": 0.005,
+          "ci": [
+            -0.004440884330435392,
+            0.04773715499277126
+          ],
+          "decision": "FAIL"
+        },
+        "PLE": {
+          "R0": 0.04647408963783007,
+          "value": 0.02109716959188026,
+          "threshold": 0.041826680674047066,
+          "ci_of_COISC_minus_09R0": [
+            -0.02367446546566245,
+            -0.017329636961300066
+          ],
+          "ci_threshold": 0.0,
+          "decision": "PASS"
+        },
+        "WSR": {
+          "R0": 0.105666350152087,
+          "value": 0.02691036741252322,
+          "threshold": 0.0950997151368783,
+          "ci_of_COISC_minus_09R0": [
+            -0.08392423383988236,
+            -0.05276803196536253
+          ],
+          "ci_threshold": 0.0,
+          "decision": "PASS"
+        },
+        "PSM": {
+          "R0": 0.0848388671875,
+          "value": 0.1000213623046875,
+          "threshold": 0.0169677734375,
+          "ratio_contrast_ci": [
+            0.06782512664794922,
+            0.09851093292236326
+          ],
+          "floor_contrast_ci": [
+            0.08058091354370117,
+            0.1193577880859375
+          ],
+          "ci_threshold": 0.0,
+          "decision": "PASS"
+        }
+      }
+    },
+    {
+      "seed": 20260923,
+      "draw_sha256": "8540bc713259c189fdb24bd60539d8ad7cac7fc2f49c015aefb09b473b8bef18",
+      "primary_values": {
+        "MAE": {
+          "R0": 0.363086386180938,
+          "COISC": 0.40617797663490884,
+          "contrast_ci": [
+            -0.013092616351504226,
+            0.10442745051705785
+          ]
+        },
+        "PLE": {
+          "R0": 0.049975492379157445,
+          "COISC": 0.024127351613880643,
+          "contrast_ci": [
+            -0.023253764380742493,
+            -0.018431815509524507
+          ]
+        },
+        "WSR": {
+          "R0": 0.21901217224069916,
+          "COISC": 0.11039256753935073,
+          "contrast_ci": [
+            -0.09762951165739327,
+            -0.07492508058146412
+          ]
+        },
+        "PSM": {
+          "R0": 0.061244964599609375,
+          "COISC": 0.07741928100585938,
+          "ratio_contrast_ci": [
+            0.046504878997802736,
+            0.08528156280517576
+          ],
+          "floor_contrast_ci": [
+            0.05603285980224609,
+            0.10011264038085937
+          ]
+        }
+      },
+      "decision": "FAIL",
+      "gates": {
+        "Tp_120s_MAE": {
+          "value": 0.04309159045397082,
+          "threshold": 0.005,
+          "ci": [
+            -0.013092616351504226,
+            0.10442745051705785
+          ],
+          "decision": "FAIL"
+        },
+        "PLE": {
+          "R0": 0.049975492379157445,
+          "value": 0.024127351613880643,
+          "threshold": 0.0449779431412417,
+          "ci_of_COISC_minus_09R0": [
+            -0.023253764380742493,
+            -0.018431815509524507
+          ],
+          "ci_threshold": 0.0,
+          "decision": "PASS"
+        },
+        "WSR": {
+          "R0": 0.21901217224069916,
+          "value": 0.11039256753935073,
+          "threshold": 0.19711095501662926,
+          "ci_of_COISC_minus_09R0": [
+            -0.09762951165739327,
+            -0.07492508058146412
+          ],
+          "ci_threshold": 0.0,
+          "decision": "PASS"
+        },
+        "PSM": {
+          "R0": 0.061244964599609375,
+          "value": 0.07741928100585938,
+          "threshold": 0.012248992919921875,
+          "ratio_contrast_ci": [
+            0.046504878997802736,
+            0.08528156280517576
+          ],
+          "floor_contrast_ci": [
+            0.05603285980224609,
+            0.10011264038085937
+          ],
+          "ci_threshold": 0.0,
+          "decision": "PASS"
+        }
+      }
+    },
+    {
+      "seed": 20260924,
+      "draw_sha256": "8540bc713259c189fdb24bd60539d8ad7cac7fc2f49c015aefb09b473b8bef18",
+      "primary_values": {
+        "MAE": {
+          "R0": 0.3657006478780159,
+          "COISC": 0.3806257091395509,
+          "contrast_ci": [
+            -0.010566594001582757,
+            0.042927509008844435
+          ]
+        },
+        "PLE": {
+          "R0": 0.035137693275278985,
+          "COISC": 0.01574824650819196,
+          "contrast_ci": [
+            -0.01709574563405359,
+            -0.014740915857353157
+          ]
+        },
+        "WSR": {
+          "R0": 0.07797697560783812,
+          "COISC": 0.02998403974603306,
+          "contrast_ci": [
+            -0.04833269337586509,
+            -0.031753810182250534
+          ]
+        },
+        "PSM": {
+          "R0": 0.0894927978515625,
+          "COISC": 0.09998321533203125,
+          "ratio_contrast_ci": [
+            0.06862258911132812,
+            0.09789352416992181
+          ],
+          "floor_contrast_ci": [
+            0.08281298828125,
+            0.11924334716796875
+          ]
+        }
+      },
+      "decision": "FAIL",
+      "gates": {
+        "Tp_120s_MAE": {
+          "value": 0.014925061261534978,
+          "threshold": 0.005,
+          "ci": [
+            -0.010566594001582757,
+            0.042927509008844435
+          ],
+          "decision": "FAIL"
+        },
+        "PLE": {
+          "R0": 0.035137693275278985,
+          "value": 0.01574824650819196,
+          "threshold": 0.031623923947751084,
+          "ci_of_COISC_minus_09R0": [
+            -0.01709574563405359,
+            -0.014740915857353157
+          ],
+          "ci_threshold": 0.0,
+          "decision": "PASS"
+        },
+        "WSR": {
+          "R0": 0.07797697560783812,
+          "value": 0.02998403974603306,
+          "threshold": 0.0701792780470543,
+          "ci_of_COISC_minus_09R0": [
+            -0.04833269337586509,
+            -0.031753810182250534
+          ],
+          "ci_threshold": 0.0,
+          "decision": "PASS"
+        },
+        "PSM": {
+          "R0": 0.0894927978515625,
+          "value": 0.09998321533203125,
+          "threshold": 0.0178985595703125,
+          "ratio_contrast_ci": [
+            0.06862258911132812,
+            0.09789352416992181
+          ],
+          "floor_contrast_ci": [
+            0.08281298828125,
+            0.11924334716796875
+          ],
+          "ci_threshold": 0.0,
+          "decision": "PASS"
+        }
+      }
+    }
+  ],
+  "no_rescue": true,
+  "collateral_effect_report": "frozen_collateral_effect_audit.csv",
+  "scope": "fixed seeds;source-balanced all23",
+  "complete_source_count": 23,
+  "external_complete_count": 17,
+  "final_complete_count": 6,
+  "source_hashes_verified": true,
+  "checkpoint_hashes_verified": true,
+  "manifest_sha256": "655dc58bd7ecc3624c13cd41244ad6acb53a6a56ebb75be63e660294606f54a2",
+  "protocol_sha256": "27db7fd7b1539ed58e2b28cdb5bee9798bd5b8e6a706fda2f56dd4861c720d4a",
+  "evaluator_sha256": "be22231f5217fe89c49f43af34a998fad0bba813dba890e26f77633405719bcb",
+  "bootstrap_complete": true,
+  "replicates_requested": 20000,
+  "replicates_run": 20000,
+  "preprocessing_provenance_status": "PREPROCESSING_PROVENANCE_PARTIALLY_UNRESOLVED",
+  "legacy_manifest_metadata_mismatch_count": 4,
+  "training": false,
+  "fine_tuning": false,
+  "checkpoint_selection": false,
+  "source_deletion": false,
+  "rescue": false,
+  "per_seed_complete_gates": [
+    {
+      "seed": 20260922,
+      "decision": "FAIL",
+      "gates": {
+        "Tp_120s_MAE": {
+          "R0": 0.33321155816130404,
+          "COISC": 0.35244256070933166,
+          "absolute_effect": 0.01923100254802762,
+          "relative_effect_percent": 5.771409207455558,
+          "CI_lower": -0.004440884330435392,
+          "CI_upper": 0.04773715499277126,
+          "threshold": 0.005,
+          "gate_contrast": {
+            "value": 0.01923100254802762,
+            "threshold": 0.005,
+            "ci": [
+              -0.004440884330435392,
+              0.04773715499277126
+            ],
+            "decision": "FAIL"
+          },
+          "decision": "FAIL"
+        },
+        "PLE": {
+          "R0": 0.04647408963783007,
+          "COISC": 0.02109716959188026,
+          "absolute_effect": -0.02537692004594981,
+          "relative_effect_percent": -54.60444786269232,
+          "CI_lower": -0.02367446546566245,
+          "CI_upper": -0.017329636961300066,
+          "threshold": 0.041826680674047066,
+          "gate_contrast": {
+            "R0": 0.04647408963783007,
+            "value": 0.02109716959188026,
+            "threshold": 0.041826680674047066,
+            "ci_of_COISC_minus_09R0": [
+              -0.02367446546566245,
+              -0.017329636961300066
+            ],
+            "ci_threshold": 0.0,
+            "decision": "PASS"
+          },
+          "decision": "PASS"
+        },
+        "WSR": {
+          "R0": 0.105666350152087,
+          "COISC": 0.02691036741252322,
+          "absolute_effect": -0.07875598273956377,
+          "relative_effect_percent": -74.53269903446957,
+          "CI_lower": -0.08392423383988236,
+          "CI_upper": -0.05276803196536253,
+          "threshold": 0.0950997151368783,
+          "gate_contrast": {
+            "R0": 0.105666350152087,
+            "value": 0.02691036741252322,
+            "threshold": 0.0950997151368783,
+            "ci_of_COISC_minus_09R0": [
+              -0.08392423383988236,
+              -0.05276803196536253
+            ],
+            "ci_threshold": 0.0,
+            "decision": "PASS"
+          },
+          "decision": "PASS"
+        },
+        "PSM": {
+          "R0": 0.0848388671875,
+          "COISC": 0.1000213623046875,
+          "absolute_effect": 0.0151824951171875,
+          "relative_effect_percent": 17.89568345323742,
+          "CI_lower": 0.06782512664794922,
+          "CI_upper": 0.09851093292236326,
+          "threshold": 0.0169677734375,
+          "gate_contrast": {
+            "R0": 0.0848388671875,
+            "value": 0.1000213623046875,
+            "threshold": 0.0169677734375,
+            "ratio_contrast_ci": [
+              0.06782512664794922,
+              0.09851093292236326
+            ],
+            "floor_contrast_ci": [
+              0.08058091354370117,
+              0.1193577880859375
+            ],
+            "ci_threshold": 0.0,
+            "decision": "PASS"
+          },
+          "decision": "PASS"
+        }
+      }
+    },
+    {
+      "seed": 20260923,
+      "decision": "FAIL",
+      "gates": {
+        "Tp_120s_MAE": {
+          "R0": 0.363086386180938,
+          "COISC": 0.40617797663490884,
+          "absolute_effect": 0.04309159045397082,
+          "relative_effect_percent": 11.868137196555995,
+          "CI_lower": -0.013092616351504226,
+          "CI_upper": 0.10442745051705785,
+          "threshold": 0.005,
+          "gate_contrast": {
+            "value": 0.04309159045397082,
+            "threshold": 0.005,
+            "ci": [
+              -0.013092616351504226,
+              0.10442745051705785
+            ],
+            "decision": "FAIL"
+          },
+          "decision": "FAIL"
+        },
+        "PLE": {
+          "R0": 0.049975492379157445,
+          "COISC": 0.024127351613880643,
+          "absolute_effect": -0.025848140765276802,
+          "relative_effect_percent": -51.721633013978895,
+          "CI_lower": -0.023253764380742493,
+          "CI_upper": -0.018431815509524507,
+          "threshold": 0.0449779431412417,
+          "gate_contrast": {
+            "R0": 0.049975492379157445,
+            "value": 0.024127351613880643,
+            "threshold": 0.0449779431412417,
+            "ci_of_COISC_minus_09R0": [
+              -0.023253764380742493,
+              -0.018431815509524507
+            ],
+            "ci_threshold": 0.0,
+            "decision": "PASS"
+          },
+          "decision": "PASS"
+        },
+        "WSR": {
+          "R0": 0.21901217224069916,
+          "COISC": 0.11039256753935073,
+          "absolute_effect": -0.10861960470134843,
+          "relative_effect_percent": -49.595236461091815,
+          "CI_lower": -0.09762951165739327,
+          "CI_upper": -0.07492508058146412,
+          "threshold": 0.19711095501662926,
+          "gate_contrast": {
+            "R0": 0.21901217224069916,
+            "value": 0.11039256753935073,
+            "threshold": 0.19711095501662926,
+            "ci_of_COISC_minus_09R0": [
+              -0.09762951165739327,
+              -0.07492508058146412
+            ],
+            "ci_threshold": 0.0,
+            "decision": "PASS"
+          },
+          "decision": "PASS"
+        },
+        "PSM": {
+          "R0": 0.061244964599609375,
+          "COISC": 0.07741928100585938,
+          "absolute_effect": 0.01617431640625,
+          "relative_effect_percent": 26.409218312052317,
+          "CI_lower": 0.046504878997802736,
+          "CI_upper": 0.08528156280517576,
+          "threshold": 0.012248992919921875,
+          "gate_contrast": {
+            "R0": 0.061244964599609375,
+            "value": 0.07741928100585938,
+            "threshold": 0.012248992919921875,
+            "ratio_contrast_ci": [
+              0.046504878997802736,
+              0.08528156280517576
+            ],
+            "floor_contrast_ci": [
+              0.05603285980224609,
+              0.10011264038085937
+            ],
+            "ci_threshold": 0.0,
+            "decision": "PASS"
+          },
+          "decision": "PASS"
+        }
+      }
+    },
+    {
+      "seed": 20260924,
+      "decision": "FAIL",
+      "gates": {
+        "Tp_120s_MAE": {
+          "R0": 0.3657006478780159,
+          "COISC": 0.3806257091395509,
+          "absolute_effect": 0.014925061261534978,
+          "relative_effect_percent": 4.0812236314422545,
+          "CI_lower": -0.010566594001582757,
+          "CI_upper": 0.042927509008844435,
+          "threshold": 0.005,
+          "gate_contrast": {
+            "value": 0.014925061261534978,
+            "threshold": 0.005,
+            "ci": [
+              -0.010566594001582757,
+              0.042927509008844435
+            ],
+            "decision": "FAIL"
+          },
+          "decision": "FAIL"
+        },
+        "PLE": {
+          "R0": 0.035137693275278985,
+          "COISC": 0.01574824650819196,
+          "absolute_effect": -0.019389446767087024,
+          "relative_effect_percent": -55.18133081527128,
+          "CI_lower": -0.01709574563405359,
+          "CI_upper": -0.014740915857353157,
+          "threshold": 0.031623923947751084,
+          "gate_contrast": {
+            "R0": 0.035137693275278985,
+            "value": 0.01574824650819196,
+            "threshold": 0.031623923947751084,
+            "ci_of_COISC_minus_09R0": [
+              -0.01709574563405359,
+              -0.014740915857353157
+            ],
+            "ci_threshold": 0.0,
+            "decision": "PASS"
+          },
+          "decision": "PASS"
+        },
+        "WSR": {
+          "R0": 0.07797697560783812,
+          "COISC": 0.02998403974603306,
+          "absolute_effect": -0.04799293586180506,
+          "relative_effect_percent": -61.54757284146435,
+          "CI_lower": -0.04833269337586509,
+          "CI_upper": -0.031753810182250534,
+          "threshold": 0.0701792780470543,
+          "gate_contrast": {
+            "R0": 0.07797697560783812,
+            "value": 0.02998403974603306,
+            "threshold": 0.0701792780470543,
+            "ci_of_COISC_minus_09R0": [
+              -0.04833269337586509,
+              -0.031753810182250534
+            ],
+            "ci_threshold": 0.0,
+            "decision": "PASS"
+          },
+          "decision": "PASS"
+        },
+        "PSM": {
+          "R0": 0.0894927978515625,
+          "COISC": 0.09998321533203125,
+          "absolute_effect": 0.01049041748046875,
+          "relative_effect_percent": 11.72208013640239,
+          "CI_lower": 0.06862258911132812,
+          "CI_upper": 0.09789352416992181,
+          "threshold": 0.0178985595703125,
+          "gate_contrast": {
+            "R0": 0.0894927978515625,
+            "value": 0.09998321533203125,
+            "threshold": 0.0178985595703125,
+            "ratio_contrast_ci": [
+              0.06862258911132812,
+              0.09789352416992181
+            ],
+            "floor_contrast_ci": [
+              0.08281298828125,
+              0.11924334716796875
+            ],
+            "ci_threshold": 0.0,
+            "decision": "PASS"
+          },
+          "decision": "PASS"
+        }
+      }
+    }
+  ]
+}
