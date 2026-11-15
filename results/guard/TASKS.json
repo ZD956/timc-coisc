@@ -1,0 +1,866 @@
+[
+  {
+    "plant_index": 0,
+    "scenario_index": 11,
+    "seed": 20261109,
+    "variant": "R0_GUARD"
+  },
+  {
+    "plant_index": 1,
+    "scenario_index": 11,
+    "seed": 20261109,
+    "variant": "R0_GUARD"
+  },
+  {
+    "plant_index": 2,
+    "scenario_index": 11,
+    "seed": 20261109,
+    "variant": "R0_GUARD"
+  },
+  {
+    "plant_index": 3,
+    "scenario_index": 11,
+    "seed": 20261109,
+    "variant": "R0_GUARD"
+  },
+  {
+    "plant_index": 4,
+    "scenario_index": 11,
+    "seed": 20261109,
+    "variant": "R0_GUARD"
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 11,
+    "seed": 20261109,
+    "variant": "R0_GUARD"
+  },
+  {
+    "plant_index": 6,
+    "scenario_index": 11,
+    "seed": 20261109,
+    "variant": "R0_GUARD"
+  },
+  {
+    "plant_index": 7,
+    "scenario_index": 11,
+    "seed": 20261109,
+    "variant": "R0_GUARD"
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 11,
+    "seed": 20261109,
+    "variant": "R0_GUARD"
+  },
+  {
+    "plant_index": 9,
+    "scenario_index": 11,
+    "seed": 20261109,
+    "variant": "R0_GUARD"
+  },
+  {
+    "plant_index": 10,
+    "scenario_index": 11,
+    "seed": 20261109,
+    "variant": "R0_GUARD"
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 11,
+    "seed": 20261109,
+    "variant": "R0_GUARD"
+  },
+  {
+    "plant_index": 12,
+    "scenario_index": 11,
+    "seed": 20261109,
+    "variant": "R0_GUARD"
+  },
+  {
+    "plant_index": 13,
+    "scenario_index": 11,
+    "seed": 20261109,
+    "variant": "R0_GUARD"
+  },
+  {
+    "plant_index": 14,
+    "scenario_index": 11,
+    "seed": 20261109,
+    "variant": "R0_GUARD"
+  },
+  {
+    "plant_index": 15,
+    "scenario_index": 11,
+    "seed": 20261109,
+    "variant": "R0_GUARD"
+  },
+  {
+    "plant_index": 16,
+    "scenario_index": 11,
+    "seed": 20261109,
+    "variant": "R0_GUARD"
+  },
+  {
+    "plant_index": 17,
+    "scenario_index": 11,
+    "seed": 20261109,
+    "variant": "R0_GUARD"
+  },
+  {
+    "plant_index": 18,
+    "scenario_index": 11,
+    "seed": 20261109,
+    "variant": "R0_GUARD"
+  },
+  {
+    "plant_index": 19,
+    "scenario_index": 11,
+    "seed": 20261109,
+    "variant": "R0_GUARD"
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 11,
+    "seed": 20261109,
+    "variant": "R0_GUARD"
+  },
+  {
+    "plant_index": 21,
+    "scenario_index": 11,
+    "seed": 20261109,
+    "variant": "R0_GUARD"
+  },
+  {
+    "plant_index": 22,
+    "scenario_index": 11,
+    "seed": 20261109,
+    "variant": "R0_GUARD"
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 11,
+    "seed": 20261109,
+    "variant": "R0_GUARD"
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 9,
+    "seed": 20261118,
+    "variant": "R0_GUARD"
+  },
+  {
+    "plant_index": 1,
+    "scenario_index": 9,
+    "seed": 20261118,
+    "variant": "R0_GUARD"
+  },
+  {
+    "plant_index": 2,
+    "scenario_index": 9,
+    "seed": 20261118,
+    "variant": "R0_GUARD"
+  },
+  {
+    "plant_index": 3,
+    "scenario_index": 9,
+    "seed": 20261118,
+    "variant": "R0_GUARD"
+  },
+  {
+    "plant_index": 4,
+    "scenario_index": 9,
+    "seed": 20261118,
+    "variant": "R0_GUARD"
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 9,
+    "seed": 20261118,
+    "variant": "R0_GUARD"
+  },
+  {
+    "plant_index": 6,
+    "scenario_index": 9,
+    "seed": 20261118,
+    "variant": "R0_GUARD"
+  },
+  {
+    "plant_index": 7,
+    "scenario_index": 9,
+    "seed": 20261118,
+    "variant": "R0_GUARD"
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 9,
+    "seed": 20261118,
+    "variant": "R0_GUARD"
+  },
+  {
+    "plant_index": 9,
+    "scenario_index": 9,
+    "seed": 20261118,
+    "variant": "R0_GUARD"
+  },
+  {
+    "plant_index": 10,
+    "scenario_index": 9,
+    "seed": 20261118,
+    "variant": "R0_GUARD"
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 9,
+    "seed": 20261118,
+    "variant": "R0_GUARD"
+  },
+  {
+    "plant_index": 12,
+    "scenario_index": 9,
+    "seed": 20261118,
+    "variant": "R0_GUARD"
+  },
+  {
+    "plant_index": 13,
+    "scenario_index": 9,
+    "seed": 20261118,
+    "variant": "R0_GUARD"
+  },
+  {
+    "plant_index": 14,
+    "scenario_index": 9,
+    "seed": 20261118,
+    "variant": "R0_GUARD"
+  },
+  {
+    "plant_index": 15,
+    "scenario_index": 9,
+    "seed": 20261118,
+    "variant": "R0_GUARD"
+  },
+  {
+    "plant_index": 16,
+    "scenario_index": 9,
+    "seed": 20261118,
+    "variant": "R0_GUARD"
+  },
+  {
+    "plant_index": 17,
+    "scenario_index": 9,
+    "seed": 20261118,
+    "variant": "R0_GUARD"
+  },
+  {
+    "plant_index": 18,
+    "scenario_index": 9,
+    "seed": 20261118,
+    "variant": "R0_GUARD"
+  },
+  {
+    "plant_index": 19,
+    "scenario_index": 9,
+    "seed": 20261118,
+    "variant": "R0_GUARD"
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 9,
+    "seed": 20261118,
+    "variant": "R0_GUARD"
+  },
+  {
+    "plant_index": 21,
+    "scenario_index": 9,
+    "seed": 20261118,
+    "variant": "R0_GUARD"
+  },
+  {
+    "plant_index": 22,
+    "scenario_index": 9,
+    "seed": 20261118,
+    "variant": "R0_GUARD"
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 9,
+    "seed": 20261118,
+    "variant": "R0_GUARD"
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 9,
+    "seed": 20261124,
+    "variant": "R0_GUARD"
+  },
+  {
+    "plant_index": 1,
+    "scenario_index": 9,
+    "seed": 20261124,
+    "variant": "R0_GUARD"
+  },
+  {
+    "plant_index": 2,
+    "scenario_index": 9,
+    "seed": 20261124,
+    "variant": "R0_GUARD"
+  },
+  {
+    "plant_index": 3,
+    "scenario_index": 9,
+    "seed": 20261124,
+    "variant": "R0_GUARD"
+  },
+  {
+    "plant_index": 4,
+    "scenario_index": 9,
+    "seed": 20261124,
+    "variant": "R0_GUARD"
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 9,
+    "seed": 20261124,
+    "variant": "R0_GUARD"
+  },
+  {
+    "plant_index": 6,
+    "scenario_index": 9,
+    "seed": 20261124,
+    "variant": "R0_GUARD"
+  },
+  {
+    "plant_index": 7,
+    "scenario_index": 9,
+    "seed": 20261124,
+    "variant": "R0_GUARD"
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 9,
+    "seed": 20261124,
+    "variant": "R0_GUARD"
+  },
+  {
+    "plant_index": 9,
+    "scenario_index": 9,
+    "seed": 20261124,
+    "variant": "R0_GUARD"
+  },
+  {
+    "plant_index": 10,
+    "scenario_index": 9,
+    "seed": 20261124,
+    "variant": "R0_GUARD"
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 9,
+    "seed": 20261124,
+    "variant": "R0_GUARD"
+  },
+  {
+    "plant_index": 12,
+    "scenario_index": 9,
+    "seed": 20261124,
+    "variant": "R0_GUARD"
+  },
+  {
+    "plant_index": 13,
+    "scenario_index": 9,
+    "seed": 20261124,
+    "variant": "R0_GUARD"
+  },
+  {
+    "plant_index": 14,
+    "scenario_index": 9,
+    "seed": 20261124,
+    "variant": "R0_GUARD"
+  },
+  {
+    "plant_index": 15,
+    "scenario_index": 9,
+    "seed": 20261124,
+    "variant": "R0_GUARD"
+  },
+  {
+    "plant_index": 16,
+    "scenario_index": 9,
+    "seed": 20261124,
+    "variant": "R0_GUARD"
+  },
+  {
+    "plant_index": 17,
+    "scenario_index": 9,
+    "seed": 20261124,
+    "variant": "R0_GUARD"
+  },
+  {
+    "plant_index": 18,
+    "scenario_index": 9,
+    "seed": 20261124,
+    "variant": "R0_GUARD"
+  },
+  {
+    "plant_index": 19,
+    "scenario_index": 9,
+    "seed": 20261124,
+    "variant": "R0_GUARD"
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 9,
+    "seed": 20261124,
+    "variant": "R0_GUARD"
+  },
+  {
+    "plant_index": 21,
+    "scenario_index": 9,
+    "seed": 20261124,
+    "variant": "R0_GUARD"
+  },
+  {
+    "plant_index": 22,
+    "scenario_index": 9,
+    "seed": 20261124,
+    "variant": "R0_GUARD"
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 9,
+    "seed": 20261124,
+    "variant": "R0_GUARD"
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 3,
+    "seed": 20261132,
+    "variant": "R0_GUARD"
+  },
+  {
+    "plant_index": 1,
+    "scenario_index": 3,
+    "seed": 20261132,
+    "variant": "R0_GUARD"
+  },
+  {
+    "plant_index": 2,
+    "scenario_index": 3,
+    "seed": 20261132,
+    "variant": "R0_GUARD"
+  },
+  {
+    "plant_index": 3,
+    "scenario_index": 3,
+    "seed": 20261132,
+    "variant": "R0_GUARD"
+  },
+  {
+    "plant_index": 4,
+    "scenario_index": 3,
+    "seed": 20261132,
+    "variant": "R0_GUARD"
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 3,
+    "seed": 20261132,
+    "variant": "R0_GUARD"
+  },
+  {
+    "plant_index": 6,
+    "scenario_index": 3,
+    "seed": 20261132,
+    "variant": "R0_GUARD"
+  },
+  {
+    "plant_index": 7,
+    "scenario_index": 3,
+    "seed": 20261132,
+    "variant": "R0_GUARD"
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 3,
+    "seed": 20261132,
+    "variant": "R0_GUARD"
+  },
+  {
+    "plant_index": 9,
+    "scenario_index": 3,
+    "seed": 20261132,
+    "variant": "R0_GUARD"
+  },
+  {
+    "plant_index": 10,
+    "scenario_index": 3,
+    "seed": 20261132,
+    "variant": "R0_GUARD"
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 3,
+    "seed": 20261132,
+    "variant": "R0_GUARD"
+  },
+  {
+    "plant_index": 12,
+    "scenario_index": 3,
+    "seed": 20261132,
+    "variant": "R0_GUARD"
+  },
+  {
+    "plant_index": 13,
+    "scenario_index": 3,
+    "seed": 20261132,
+    "variant": "R0_GUARD"
+  },
+  {
+    "plant_index": 14,
+    "scenario_index": 3,
+    "seed": 20261132,
+    "variant": "R0_GUARD"
+  },
+  {
+    "plant_index": 15,
+    "scenario_index": 3,
+    "seed": 20261132,
+    "variant": "R0_GUARD"
+  },
+  {
+    "plant_index": 16,
+    "scenario_index": 3,
+    "seed": 20261132,
+    "variant": "R0_GUARD"
+  },
+  {
+    "plant_index": 17,
+    "scenario_index": 3,
+    "seed": 20261132,
+    "variant": "R0_GUARD"
+  },
+  {
+    "plant_index": 18,
+    "scenario_index": 3,
+    "seed": 20261132,
+    "variant": "R0_GUARD"
+  },
+  {
+    "plant_index": 19,
+    "scenario_index": 3,
+    "seed": 20261132,
+    "variant": "R0_GUARD"
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 3,
+    "seed": 20261132,
+    "variant": "R0_GUARD"
+  },
+  {
+    "plant_index": 21,
+    "scenario_index": 3,
+    "seed": 20261132,
+    "variant": "R0_GUARD"
+  },
+  {
+    "plant_index": 22,
+    "scenario_index": 3,
+    "seed": 20261132,
+    "variant": "R0_GUARD"
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 3,
+    "seed": 20261132,
+    "variant": "R0_GUARD"
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 3,
+    "seed": 20261135,
+    "variant": "R0_GUARD"
+  },
+  {
+    "plant_index": 1,
+    "scenario_index": 3,
+    "seed": 20261135,
+    "variant": "R0_GUARD"
+  },
+  {
+    "plant_index": 2,
+    "scenario_index": 3,
+    "seed": 20261135,
+    "variant": "R0_GUARD"
+  },
+  {
+    "plant_index": 3,
+    "scenario_index": 3,
+    "seed": 20261135,
+    "variant": "R0_GUARD"
+  },
+  {
+    "plant_index": 4,
+    "scenario_index": 3,
+    "seed": 20261135,
+    "variant": "R0_GUARD"
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 3,
+    "seed": 20261135,
+    "variant": "R0_GUARD"
+  },
+  {
+    "plant_index": 6,
+    "scenario_index": 3,
+    "seed": 20261135,
+    "variant": "R0_GUARD"
+  },
+  {
+    "plant_index": 7,
+    "scenario_index": 3,
+    "seed": 20261135,
+    "variant": "R0_GUARD"
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 3,
+    "seed": 20261135,
+    "variant": "R0_GUARD"
+  },
+  {
+    "plant_index": 9,
+    "scenario_index": 3,
+    "seed": 20261135,
+    "variant": "R0_GUARD"
+  },
+  {
+    "plant_index": 10,
+    "scenario_index": 3,
+    "seed": 20261135,
+    "variant": "R0_GUARD"
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 3,
+    "seed": 20261135,
+    "variant": "R0_GUARD"
+  },
+  {
+    "plant_index": 12,
+    "scenario_index": 3,
+    "seed": 20261135,
+    "variant": "R0_GUARD"
+  },
+  {
+    "plant_index": 13,
+    "scenario_index": 3,
+    "seed": 20261135,
+    "variant": "R0_GUARD"
+  },
+  {
+    "plant_index": 14,
+    "scenario_index": 3,
+    "seed": 20261135,
+    "variant": "R0_GUARD"
+  },
+  {
+    "plant_index": 15,
+    "scenario_index": 3,
+    "seed": 20261135,
+    "variant": "R0_GUARD"
+  },
+  {
+    "plant_index": 16,
+    "scenario_index": 3,
+    "seed": 20261135,
+    "variant": "R0_GUARD"
+  },
+  {
+    "plant_index": 17,
+    "scenario_index": 3,
+    "seed": 20261135,
+    "variant": "R0_GUARD"
+  },
+  {
+    "plant_index": 18,
+    "scenario_index": 3,
+    "seed": 20261135,
+    "variant": "R0_GUARD"
+  },
+  {
+    "plant_index": 19,
+    "scenario_index": 3,
+    "seed": 20261135,
+    "variant": "R0_GUARD"
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 3,
+    "seed": 20261135,
+    "variant": "R0_GUARD"
+  },
+  {
+    "plant_index": 21,
+    "scenario_index": 3,
+    "seed": 20261135,
+    "variant": "R0_GUARD"
+  },
+  {
+    "plant_index": 22,
+    "scenario_index": 3,
+    "seed": 20261135,
+    "variant": "R0_GUARD"
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 3,
+    "seed": 20261135,
+    "variant": "R0_GUARD"
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 11,
+    "seed": 20261137,
+    "variant": "R0_GUARD"
+  },
+  {
+    "plant_index": 1,
+    "scenario_index": 11,
+    "seed": 20261137,
+    "variant": "R0_GUARD"
+  },
+  {
+    "plant_index": 2,
+    "scenario_index": 11,
+    "seed": 20261137,
+    "variant": "R0_GUARD"
+  },
+  {
+    "plant_index": 3,
+    "scenario_index": 11,
+    "seed": 20261137,
+    "variant": "R0_GUARD"
+  },
+  {
+    "plant_index": 4,
+    "scenario_index": 11,
+    "seed": 20261137,
+    "variant": "R0_GUARD"
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 11,
+    "seed": 20261137,
+    "variant": "R0_GUARD"
+  },
+  {
+    "plant_index": 6,
+    "scenario_index": 11,
+    "seed": 20261137,
+    "variant": "R0_GUARD"
+  },
+  {
+    "plant_index": 7,
+    "scenario_index": 11,
+    "seed": 20261137,
+    "variant": "R0_GUARD"
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 11,
+    "seed": 20261137,
+    "variant": "R0_GUARD"
+  },
+  {
+    "plant_index": 9,
+    "scenario_index": 11,
+    "seed": 20261137,
+    "variant": "R0_GUARD"
+  },
+  {
+    "plant_index": 10,
+    "scenario_index": 11,
+    "seed": 20261137,
+    "variant": "R0_GUARD"
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 11,
+    "seed": 20261137,
+    "variant": "R0_GUARD"
+  },
+  {
+    "plant_index": 12,
+    "scenario_index": 11,
+    "seed": 20261137,
+    "variant": "R0_GUARD"
+  },
+  {
+    "plant_index": 13,
+    "scenario_index": 11,
+    "seed": 20261137,
+    "variant": "R0_GUARD"
+  },
+  {
+    "plant_index": 14,
+    "scenario_index": 11,
+    "seed": 20261137,
+    "variant": "R0_GUARD"
+  },
+  {
+    "plant_index": 15,
+    "scenario_index": 11,
+    "seed": 20261137,
+    "variant": "R0_GUARD"
+  },
+  {
+    "plant_index": 16,
+    "scenario_index": 11,
+    "seed": 20261137,
+    "variant": "R0_GUARD"
+  },
+  {
+    "plant_index": 17,
+    "scenario_index": 11,
+    "seed": 20261137,
+    "variant": "R0_GUARD"
+  },
+  {
+    "plant_index": 18,
+    "scenario_index": 11,
+    "seed": 20261137,
+    "variant": "R0_GUARD"
+  },
+  {
+    "plant_index": 19,
+    "scenario_index": 11,
+    "seed": 20261137,
+    "variant": "R0_GUARD"
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 11,
+    "seed": 20261137,
+    "variant": "R0_GUARD"
+  },
+  {
+    "plant_index": 21,
+    "scenario_index": 11,
+    "seed": 20261137,
+    "variant": "R0_GUARD"
+  },
+  {
+    "plant_index": 22,
+    "scenario_index": 11,
+    "seed": 20261137,
+    "variant": "R0_GUARD"
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 11,
+    "seed": 20261137,
+    "variant": "R0_GUARD"
+  }
+]

@@ -1,0 +1,10 @@
+{
+  "protocol_sha256": "46fc592f925cc6475074a2e56630b79c3ca12f9e67a731ee7041d72446bb60df",
+  "resumes": [
+    {
+      "at_utc": "2026-11-03T12:13Z",
+      "reason": "background pipeline killed at ~11:35Z during R0 training of seed 20261123 (step 1000/1200, no checkpoint written); 22 seeds complete",
+      "action": "incomplete folder moved (not deleted) to study_aborted/seed_20261123_interrupted_1135Z; same-protocol technical resume on author instruction 'resume'; training is deterministic so seed 20261123 is retrained from scratch"
+    }
+  ]
+}

@@ -1,0 +1,606 @@
+{
+  "title": "Pre-registered closed-loop confirmation: does head-only COISC adaptation remove the closed-loop cost of R0 reversed first moves without degrading other operating points?",
+  "version": "FROZEN-1",
+  "status": "FROZEN_BEFORE_ANY_STUDY_RUN",
+  "created_utc": "2026-11-05",
+  "author_approval": "Author approved option B on 2026-11-05 (panel A: R0-wrong pairs on all 24 plants; panel B: 40 seeds x 12 scenarios x 6 fixed plants).",
+  "what_is_already_known_before_any_run": [
+    "The 40 seeds 20261101-20261140, their R0/COISC/L0 checkpoints and holdout metrics (SCREENING_PROTOCOL sha 46fc592f...).",
+    "Plant-free first decisions of every model on the 12 locked scenarios; the 6 R0-wrong pairs are (20261109,S12), (20261118,S10), (20261124,S10), (20261132,S04), (20261135,S04), (20261137,S12). COISC first move is correct on 4, zero on 1, wrong on 1 of them.",
+    "Closed-loop MIL of R0/COISC/L0 on 13 earlier seeds (onset-aligned study), where any COISC benefit was concentrated on seeds with R0-wrong first moves.",
+    "No closed-loop run of any of the 40 new seeds exists; the outcomes below are unseen."
+  ],
+  "models": {
+    "variants": [
+      "R0",
+      "COISC",
+      "L0"
+    ],
+    "source": "<outputs>/screening/study/seed_*/ (R0 = results/R0/selected.pt, COISC_final.pt, L0_final.pt); all checkpoint SHA-256 bound at freeze",
+    "no_retraining": true,
+    "COISC_onset_excluded_reason": "secondary variant of the screening study; not part of this paper's main comparison"
+  },
+  "bench": {
+    "runner": "timc_coisc/onset_mil.run_one, unchanged (60 control updates, 37 C reference, frozen MPCConfig, no T_p feedback to the controller)",
+    "scenarios": "12 locked scenarios S01-S12 (CONTROL_SCENARIO_LOCK_V2)",
+    "plants": "24 primary learned plants in 4 families (CONTROL_PLANT_FAMILY_LOCK), family-equal weighting",
+    "panel_A": "R0-wrong pairs x all 24 plants x 3 variants",
+    "panel_B": "40 seeds x 12 scenarios x plants (0,5,11,8,20,23) x 3 variants; plants fixed by model id before any run: F1 = P, A1, A3 (first seed of each); F2 = A2; F3 = B2; F4 = B1",
+    "metric": "MAE_track (deg C) of plant T_p against 37 C over the 60 updates (analyze_formal_control_v3.trace_metrics, unchanged)"
+  },
+  "hypotheses": {
+    "H1_primary": "On the R0-wrong pairs, COISC improves closed-loop tracking over R0: unit = pair, effect = family-equal mean over 24 plants of MAE[COISC] - MAE[R0]; supported iff every pair is evaluable and the 95% percentile bootstrap CI upper bound (20,000 draws over pairs, seed 20261105) is < 0.",
+    "H2_primary": "On all other seed-scenario pairs, COISC is non-inferior to R0: unit = seed, effect = mean over that seed's non-R0-wrong scenarios of the family-equal mean over the 6 panel-B plants of MAE[COISC] - MAE[R0]; supported iff all 40 seeds are evaluable and the 95% bootstrap CI upper bound (over seeds) is < 0.10 C.",
+    "verdict": "SUPPORTED iff H1 and H2 are both supported; otherwise PARTIAL_H1_ONLY, PARTIAL_H2_ONLY or NOT_SUPPORTED. The verdict is reported whatever it is.",
+    "margin_justification": "0.10 C is about 5% of the mean closed-loop MAE_track of R0 on this bench (1.95 C over the 13 earlier seeds); it is fixed a priori as a small fraction of the bench MAE, before any closed-loop run of these 40 seeds. No physical tolerance is claimed for it."
+  },
+  "secondary_descriptive": [
+    "Panel A: L0 - R0 and COISC - L0 (matched fine-tuning control), point, CI, per-pair values; number of pairs improved",
+    "Panel B: the same three contrasts over unaffected pairs and over all pairs",
+    "Panel B: mean MAE_track, total variation of u, saturation fraction and solver success rate per variant"
+  ],
+  "missing_data_rule": "A run is non-evaluable only by trace_metrics (non-finite or out-of-range trace). A (seed, scenario, plant) cell is used only if all three variants are evaluable; dropped cells are counted and reported. No run, plant, scenario or seed is deleted for any other reason.",
+  "gates_before_freeze": {
+    "G1": "cl_mil.py gate: 12 stored E2 runs of seed 20261001 (R0 and L0) re-executed bitwise (applied_UH and plant_Tp)",
+    "G2": "cl_analyze.py gate: metric extraction reproduces all 576 stored E2 R0/L0 MAE_track values of seed 20261001 exactly; synthetic selftest recovers planted effects and verdict logic",
+    "smoke": "cl_mil.py smoke and cl_analyze.py smoke on screening smoke checkpoints (seed 1), outside the study directory"
+  },
+  "execution": "cl_mil.py execute 6, then cl_analyze.py analyze; same-hash resume skips finished runs; the Windows power-throttling (EcoQoS) flag of the worker processes may be cleared without affecting results",
+  "deviations_policy": "Any change after freeze is logged as an amendment with reason and disclosed in the manuscript.",
+  "execution_authorized": false,
+  "execution_authorization_rule": "cl_mil.py execute and cl_analyze.py analyze require EXECUTION_AUTHORIZATION.json written on the author's explicit instruction, naming this file's SHA-256",
+  "planned_runs": 8964,
+  "gate_summary": {
+    "GATE_G1_MIL_REPORT.json": true,
+    "GATE_G2_ANALYSIS_REPORT.json": true
+  },
+  "gate_reports_sha256": {
+    "GATE_G1_MIL_REPORT.json": "77f3a3eea599d60161a1eed4f09759609eb55b74e9dee4fc120d847d38efd3bc",
+    "GATE_G2_ANALYSIS_REPORT.json": "6e10831557472569da4cb24e06ae9b472b5e9a56456aed164bfd1ee080b9da30"
+  },
+  "code_sha256": {
+    "cl_common.py": "ec742dafd2bb57dc69230e073a06a56257e46285a7daadd48467ba59a9884d9a",
+    "cl_mil.py": "e70ea453d779f573d2248fa2d4ef377301e6a563408b90359e3058054227f7cc",
+    "cl_analyze.py": "b97a795b7b87ec3b924b901287f40d71e02ceb242fa449fd5775de11e5b907a4",
+    "cl_freeze.py": "3b9b448418abaa9d28314513e5b18a46debfe5ea12e66876f678d9588f89faa9"
+  },
+  "bound_files": [
+    {
+      "path": "timc_coisc/onset_mil.py",
+      "sha256": "c8d9310d21f7d22ab519c232fb404c3939e09973256bc2fb2edafeb365d89b4c"
+    },
+    {
+      "path": "timc_coisc/onset_analyze_am1.py",
+      "sha256": "875ee80733d076a48b36f67905748d82170e3afe12c0450473e41be9fbe15c51"
+    },
+    {
+      "path": "timc_coisc/onset_common.py",
+      "sha256": "727c7b0c999f41b820f038cba34c2d888ce9a8c4db8fbbec341fbcfe10b3545d"
+    },
+    {
+      "path": "<outputs>/posthoc_onset_aligned/mil_execution_20261003T104638Z_23b8f69525/TASKS.json",
+      "sha256": "11562e3558af4f592e0c139c126ae130c43d445f089925dc13f30827290731b1"
+    },
+    {
+      "path": "<outputs>/posthoc_onset_aligned/mil_execution_20261003T104638Z_23b8f69525/ONSET_MIL_SECONDARY.csv",
+      "sha256": "b0a9bfb7c0c1490c4298e9dbd63d1407418b90613717c8af71d745533e755e09"
+    },
+    {
+      "path": "protocols/screening/SCREENING_PROTOCOL.json",
+      "sha256": "46fc592f925cc6475074a2e56630b79c3ca12f9e67a731ee7041d72446bb60df"
+    },
+    {
+      "path": "<outputs>/screening/study/FIRST_ACTION_CHECK.json",
+      "sha256": "68de611d11e9f23343e6dd1e7e52f17a1f896f8275fa02469fc4e38cf82b1bff"
+    },
+    {
+      "path": "<outputs>/screening/study/SCREENING_RESULTS.json",
+      "sha256": "3b26c06c3cf320c513a9c9999c8ab968e6a6b356a6875a504173f1080b80057e"
+    },
+    {
+      "path": "timc_coisc/control_mpc.py",
+      "sha256": "8ef305db879183fa7c812a28247c466b346b4b9e9c10079a657d8e9f823a08a9"
+    },
+    {
+      "path": "timc_coisc/run_formal_control_v3a.py",
+      "sha256": "16011f3275fefe705ebb7c7294afcafcc5bb7bbae0495b8a43f105476ca9331e"
+    },
+    {
+      "path": "timc_coisc/analyze_formal_control_v3.py",
+      "sha256": "655a672b9eb70693d83555e9e2414d546c543e410ccfa014af677e695cc3e5e7"
+    },
+    {
+      "path": "protocols/CONTROL_VALIDATION_PROTOCOL_V3.json",
+      "sha256": "0b9ad32c21b0f0a0cea31761997e091709ae5166a33f3b2f90985dece3cedf19"
+    },
+    {
+      "path": "protocols/CONTROL_SCENARIO_LOCK_V2.json",
+      "sha256": "93e177a3de94809bd1ec2c1469d9d0003462be190b91d1ba4db2be3baf893eac"
+    },
+    {
+      "path": "protocols/CONTROL_PLANT_FAMILY_LOCK.json",
+      "sha256": "9b34399ca7dddadaf8d06292e3d2b47a3a700b36e1210caa82062af71ddbf3f7"
+    },
+    {
+      "path": "<outputs>/screening/study/seed_20261101/COISC_final.pt",
+      "sha256": "3ea36c92e40f2d8fe9eadac9e58ad2acefe9d9fc59e42595e8f8f88feb9a319c"
+    },
+    {
+      "path": "<outputs>/screening/study/seed_20261101/L0_final.pt",
+      "sha256": "e83e91790883978743b29606abc9b811c554796e09b751a35473e4ddecdb0c78"
+    },
+    {
+      "path": "<outputs>/screening/study/seed_20261101/results/R0/selected.pt",
+      "sha256": "13355e8246911b1c679f87cde96b8e5a5c44fdc28caaf850fb8f8ff5c84377a7"
+    },
+    {
+      "path": "<outputs>/screening/study/seed_20261102/COISC_final.pt",
+      "sha256": "e9f048bfbd1d215c259745d3b1329e4604e78fa54c0d16b6cc707c3ce3093b64"
+    },
+    {
+      "path": "<outputs>/screening/study/seed_20261102/L0_final.pt",
+      "sha256": "01331414809425cd22dad5778d9d48c27ad5d08ae349f0234e254d0d2939e01b"
+    },
+    {
+      "path": "<outputs>/screening/study/seed_20261102/results/R0/selected.pt",
+      "sha256": "9b2500d1b3279a52e498143cf7460bce0e690a5fba077bbea86b753f81f23ac9"
+    },
+    {
+      "path": "<outputs>/screening/study/seed_20261103/COISC_final.pt",
+      "sha256": "421cf099eb05c6f492e14ac5d24669cccc17da88900aa38b1628e241e0af72d0"
+    },
+    {
+      "path": "<outputs>/screening/study/seed_20261103/L0_final.pt",
+      "sha256": "a0327c61f19ec4e3637932cc110ac26f6e2f381ab95cd64662aee77ac973965d"
+    },
+    {
+      "path": "<outputs>/screening/study/seed_20261103/results/R0/selected.pt",
+      "sha256": "25a9d6fe7c44c0cded282d09dcb9b863e550ae915e1f41bca5f439f4b77ab263"
+    },
+    {
+      "path": "<outputs>/screening/study/seed_20261104/COISC_final.pt",
+      "sha256": "2341d6806244c056e64e5a2e539616efb9247ab417b206ddf5f2c6d779c054c5"
+    },
+    {
+      "path": "<outputs>/screening/study/seed_20261104/L0_final.pt",
+      "sha256": "7112c7d1316e36078531a25893f6254b7a397ff5b50b25f7b4235c4b3010ca10"
+    },
+    {
+      "path": "<outputs>/screening/study/seed_20261104/results/R0/selected.pt",
+      "sha256": "662b293a9705d35bd1c5945a3102f7a433669198918f4a891354f00211b44356"
+    },
+    {
+      "path": "<outputs>/screening/study/seed_20261105/COISC_final.pt",
+      "sha256": "4aa48adc39828320b34e94fe5fce97357d5195306244629022aba44be797d6fa"
+    },
+    {
+      "path": "<outputs>/screening/study/seed_20261105/L0_final.pt",
+      "sha256": "861cc70e212f88daf46e35bc1c14fc9a60c5293011c211ea9e30c8dc64aabbb0"
+    },
+    {
+      "path": "<outputs>/screening/study/seed_20261105/results/R0/selected.pt",
+      "sha256": "db93a91380a6247d928dd736509d5a350f697dfd425f955ef1c8939f18b021ff"
+    },
+    {
+      "path": "<outputs>/screening/study/seed_20261106/COISC_final.pt",
+      "sha256": "728bc7cffbc8bb9f9d4a2f9fce7f066b58c09a4de2f5508956b99530ce01e880"
+    },
+    {
+      "path": "<outputs>/screening/study/seed_20261106/L0_final.pt",
+      "sha256": "cdaa60f90827fa7ee2e6fda7ac6ecc0abd937dce6147a95aa9893a4cc0513b7b"
+    },
+    {
+      "path": "<outputs>/screening/study/seed_20261106/results/R0/selected.pt",
+      "sha256": "f6c4e0d37f5f82e51d3bfb1ab62b551993551da3d172d1e59ad7ce5492f61e69"
+    },
+    {
+      "path": "<outputs>/screening/study/seed_20261107/COISC_final.pt",
+      "sha256": "58f41e6ddc7b31a936f5311377cc7b6701c74a903d298278a5bd915305884620"
+    },
+    {
+      "path": "<outputs>/screening/study/seed_20261107/L0_final.pt",
+      "sha256": "a7cb2cd4369b03ee1f72134953f3c777f62b47670081ec08f8f7f31244fc4233"
+    },
+    {
+      "path": "<outputs>/screening/study/seed_20261107/results/R0/selected.pt",
+      "sha256": "55a9451ab710e530548add27d3bc5f6a1dd615f43fb729c89cb7328d42d415fb"
+    },
+    {
+      "path": "<outputs>/screening/study/seed_20261108/COISC_final.pt",
+      "sha256": "7a2cca5fdbd2845265d10bbb97d5ff1306e9f2356bb00f1e38e8224588112375"
+    },
+    {
+      "path": "<outputs>/screening/study/seed_20261108/L0_final.pt",
+      "sha256": "7e323a3a33011ea8c1e1038e71fe5c94adca881977a60db2352a7a93d938ec6b"
+    },
+    {
+      "path": "<outputs>/screening/study/seed_20261108/results/R0/selected.pt",
+      "sha256": "ac9650bb4b4e3b0caccc89a9001f62ff4f2d5043e53588ee4c49e68803681567"
+    },
+    {
+      "path": "<outputs>/screening/study/seed_20261109/COISC_final.pt",
+      "sha256": "a506bc4fd9e32ca665de951bcfea2e6e7ebac77b2e5162de3b0458bd20427132"
+    },
+    {
+      "path": "<outputs>/screening/study/seed_20261109/L0_final.pt",
+      "sha256": "9c6c0b1733cbfe73500689480325e752442b58e113e3be3834955f09d696a66c"
+    },
+    {
+      "path": "<outputs>/screening/study/seed_20261109/results/R0/selected.pt",
+      "sha256": "cb86948f2c77dcf9c39931bb4c56cb51f1a74908c69176398716188199bc4ed8"
+    },
+    {
+      "path": "<outputs>/screening/study/seed_20261110/COISC_final.pt",
+      "sha256": "744aee04a8feb928739ae10d01e134160dce86105e9768179fc18bb42fa98a95"
+    },
+    {
+      "path": "<outputs>/screening/study/seed_20261110/L0_final.pt",
+      "sha256": "9735c1fa33590405bce455e38ec40b81a28c707008cdf8c4767ae4479672d5e8"
+    },
+    {
+      "path": "<outputs>/screening/study/seed_20261110/results/R0/selected.pt",
+      "sha256": "a0d11314f2d36b39817cf3e15c12ac6adff6e122359c480e473e60b419c8c647"
+    },
+    {
+      "path": "<outputs>/screening/study/seed_20261111/COISC_final.pt",
+      "sha256": "5bfe7b1a3ae0a992d3ebb99f3b8d7a2916986133781421e7f3525ecb23e8010a"
+    },
+    {
+      "path": "<outputs>/screening/study/seed_20261111/L0_final.pt",
+      "sha256": "18c5fcfcb89a01e32f7371bae85ac21d34b862b14fba29a3b62d8dd2879a2b37"
+    },
+    {
+      "path": "<outputs>/screening/study/seed_20261111/results/R0/selected.pt",
+      "sha256": "a832319c0ac21f756f21c5aaa27c1ce15e545710abd708d3c1cbeadfe8ebc129"
+    },
+    {
+      "path": "<outputs>/screening/study/seed_20261112/COISC_final.pt",
+      "sha256": "09715fbdd2b5805e1dd894a977645ce96ff6805b0af7581ebfc303fd01c6b854"
+    },
+    {
+      "path": "<outputs>/screening/study/seed_20261112/L0_final.pt",
+      "sha256": "fa154f3c5b6cf58adb69e66023bceca6ff309fdea21be0c219c68d2c532b4d3b"
+    },
+    {
+      "path": "<outputs>/screening/study/seed_20261112/results/R0/selected.pt",
+      "sha256": "11e524ab00b5a79b564c2a6d4cba795a23b120ba2c610208545fefd3e476bc37"
+    },
+    {
+      "path": "<outputs>/screening/study/seed_20261113/COISC_final.pt",
+      "sha256": "3236357d292b53cad7f042e5e027ab64038d4357e7d471b52705b0e0d5768e6b"
+    },
+    {
+      "path": "<outputs>/screening/study/seed_20261113/L0_final.pt",
+      "sha256": "471924204044b33b3dd305049d4c5643313ff69452164cecc7e820b5ebb36b15"
+    },
+    {
+      "path": "<outputs>/screening/study/seed_20261113/results/R0/selected.pt",
+      "sha256": "723337dbab89c484841277f602c51332e591af0a9d0da2eb49868381fa4f14bf"
+    },
+    {
+      "path": "<outputs>/screening/study/seed_20261114/COISC_final.pt",
+      "sha256": "11d50bc4948a56e35ff6a5506b36961fd4bdaba2b225e3869c6a5a1aa39f7b56"
+    },
+    {
+      "path": "<outputs>/screening/study/seed_20261114/L0_final.pt",
+      "sha256": "6ef35987cf71862f7a8fcef57762addf6dcf1d87519b495080b0fa8a0adbcae9"
+    },
+    {
+      "path": "<outputs>/screening/study/seed_20261114/results/R0/selected.pt",
+      "sha256": "da7796f55d5efe4ec54ea3a226a0b767f2fa03b1604a5d95d62ff4e81ecf9139"
+    },
+    {
+      "path": "<outputs>/screening/study/seed_20261115/COISC_final.pt",
+      "sha256": "029cc4206b1501e1d3ff3e660b998922da22f34a3346b4b9f224493ce697943e"
+    },
+    {
+      "path": "<outputs>/screening/study/seed_20261115/L0_final.pt",
+      "sha256": "e6868d4a8c83d879ce2fbac4fe6fde656588645b1fb33fe68b5618b2c3760ebb"
+    },
+    {
+      "path": "<outputs>/screening/study/seed_20261115/results/R0/selected.pt",
+      "sha256": "3a1c4d81994bc281c5bdd7c55989b14d397e8c0eae49453e40ec20c30960daeb"
+    },
+    {
+      "path": "<outputs>/screening/study/seed_20261116/COISC_final.pt",
+      "sha256": "87fa64a410987ac176d21537d471814cb6309cfb9f84e0f5861999b0d5918d2c"
+    },
+    {
+      "path": "<outputs>/screening/study/seed_20261116/L0_final.pt",
+      "sha256": "e49818dc4d8a9e9777cc686427d5ea22f5e0ae50ad2dd6edc00bc46ffef017b7"
+    },
+    {
+      "path": "<outputs>/screening/study/seed_20261116/results/R0/selected.pt",
+      "sha256": "d1a4513b5105bd9a0d085d2882fffdf427ea08d28267a983170fe1bbf4880a0b"
+    },
+    {
+      "path": "<outputs>/screening/study/seed_20261117/COISC_final.pt",
+      "sha256": "8d95ef0b1b6d9d41290a83dd1c6991b4ff76d939981ee8ef5954682d29060357"
+    },
+    {
+      "path": "<outputs>/screening/study/seed_20261117/L0_final.pt",
+      "sha256": "c89d00082bb61217e3f9675e7dca017597590c460aab9895f631b3140c7b866a"
+    },
+    {
+      "path": "<outputs>/screening/study/seed_20261117/results/R0/selected.pt",
+      "sha256": "9d5c19cf967fa0df45a828da01ccd32320422aee6b0fdb6217ae21b039e6dc3b"
+    },
+    {
+      "path": "<outputs>/screening/study/seed_20261118/COISC_final.pt",
+      "sha256": "f77b1cec6e141548b68056352e0cf50ae4471c379e010a1fcd9e8f5c3f9cbc38"
+    },
+    {
+      "path": "<outputs>/screening/study/seed_20261118/L0_final.pt",
+      "sha256": "22772f0cb3d65114a05ec88498cd170620be833aaefda4a6dd42cae2a242200c"
+    },
+    {
+      "path": "<outputs>/screening/study/seed_20261118/results/R0/selected.pt",
+      "sha256": "a9c14056a8c1c5ebbf3c49ceca605d0661aa9cfea7a95b399a1c7bcfe3857cf6"
+    },
+    {
+      "path": "<outputs>/screening/study/seed_20261119/COISC_final.pt",
+      "sha256": "3434598bfb90618550c0171228c270d0bbc88e877c755f3ee53278c1854147b7"
+    },
+    {
+      "path": "<outputs>/screening/study/seed_20261119/L0_final.pt",
+      "sha256": "0829871c14128f5b524671975ce7cbab0abd95245c886339acf67506b2848254"
+    },
+    {
+      "path": "<outputs>/screening/study/seed_20261119/results/R0/selected.pt",
+      "sha256": "c722f5a015fc5d4a86ffb86d171b531b5a987aac2ce99bf6ea7da850718346cd"
+    },
+    {
+      "path": "<outputs>/screening/study/seed_20261120/COISC_final.pt",
+      "sha256": "9f5b505e14c546dc5c7fd5d58b4e3da51763ea835ae415097b0e88627dce762a"
+    },
+    {
+      "path": "<outputs>/screening/study/seed_20261120/L0_final.pt",
+      "sha256": "61554b871fbebcb2484ecbd5d011c026e4a62fade6869ff1154c0616f4aefb10"
+    },
+    {
+      "path": "<outputs>/screening/study/seed_20261120/results/R0/selected.pt",
+      "sha256": "3be0449f8c36f280853546a5d39c1cace01684b7a0d7fc5ec35eaa7411c61b34"
+    },
+    {
+      "path": "<outputs>/screening/study/seed_20261121/COISC_final.pt",
+      "sha256": "07958601c350b736577c83fcc1c151f9ed589b76574c5ac189c9d84d38e3547d"
+    },
+    {
+      "path": "<outputs>/screening/study/seed_20261121/L0_final.pt",
+      "sha256": "f7e62c3020c57834a766738fcb6f16adc707c1c245901e56a3d1b422831ae630"
+    },
+    {
+      "path": "<outputs>/screening/study/seed_20261121/results/R0/selected.pt",
+      "sha256": "018dbd91d69550edd1eee21825160ff675e4ca1402b45196c95c37fc1e35fd26"
+    },
+    {
+      "path": "<outputs>/screening/study/seed_20261122/COISC_final.pt",
+      "sha256": "d4548450cab23e3572ed4694be98e989f0b0958e20e6c2de2e0857384c20ea9e"
+    },
+    {
+      "path": "<outputs>/screening/study/seed_20261122/L0_final.pt",
+      "sha256": "0bafa9a83b09f933087caea5ff9d1d7a332f648e09b8f25c402dec0d6e585c08"
+    },
+    {
+      "path": "<outputs>/screening/study/seed_20261122/results/R0/selected.pt",
+      "sha256": "514186a9b073e95a337d4bd1275732d999aea12f79547490d9b4ccfccfc25a85"
+    },
+    {
+      "path": "<outputs>/screening/study/seed_20261123/COISC_final.pt",
+      "sha256": "b3b88c5e87ca5e9d2839c35433553ba6063f5478c3abaefd98399390fe39a07e"
+    },
+    {
+      "path": "<outputs>/screening/study/seed_20261123/L0_final.pt",
+      "sha256": "f92c67a202a0ae0dde2a167f47e4996beb367a310e962fd515cabf06bba92ff3"
+    },
+    {
+      "path": "<outputs>/screening/study/seed_20261123/results/R0/selected.pt",
+      "sha256": "39dde7259c3a8e7076a9342b4b1983e5dc30fde1ec41d01e0309395c42582299"
+    },
+    {
+      "path": "<outputs>/screening/study/seed_20261124/COISC_final.pt",
+      "sha256": "971cc15d2b47991c7753885ac42e39509656c07ec3eacdd694dd3cb4df76a664"
+    },
+    {
+      "path": "<outputs>/screening/study/seed_20261124/L0_final.pt",
+      "sha256": "1519c8a7f526ef37d3b9072436e739d19f57d65d14e306b67ed8af1072da845f"
+    },
+    {
+      "path": "<outputs>/screening/study/seed_20261124/results/R0/selected.pt",
+      "sha256": "4c3bd32394ad3944cc46197abffc0659432930c696c55c732c1d0a5a93fb1d29"
+    },
+    {
+      "path": "<outputs>/screening/study/seed_20261125/COISC_final.pt",
+      "sha256": "5419eef339f94e0b5a71ab92424e3ec997820dafde98cdc385a85da9ecbdd640"
+    },
+    {
+      "path": "<outputs>/screening/study/seed_20261125/L0_final.pt",
+      "sha256": "431dfda655f5a6d8f0eb87ab78dc12d0e76951ae6fb8df514447118da88f65b0"
+    },
+    {
+      "path": "<outputs>/screening/study/seed_20261125/results/R0/selected.pt",
+      "sha256": "a0411ceac9f6759942a8e396f2dbd0218ff19891c2f0fc682e86cf2e990e636d"
+    },
+    {
+      "path": "<outputs>/screening/study/seed_20261126/COISC_final.pt",
+      "sha256": "71694aee89f8784ff764394a16d2086585e3d139e73c91cc06ac4562cf6e493a"
+    },
+    {
+      "path": "<outputs>/screening/study/seed_20261126/L0_final.pt",
+      "sha256": "68729c8ff327bcfd6799f5c42ed65b21966be16b50b3b43b82198cadd42d916a"
+    },
+    {
+      "path": "<outputs>/screening/study/seed_20261126/results/R0/selected.pt",
+      "sha256": "27f81758449a337306c4a3b7f9828f1cf7c8c512a9f01d36ee0ea514f97c606a"
+    },
+    {
+      "path": "<outputs>/screening/study/seed_20261127/COISC_final.pt",
+      "sha256": "fc3373e059de442579347b88deddabade15ca35a8c1298fa3fb27f351d1d0ae8"
+    },
+    {
+      "path": "<outputs>/screening/study/seed_20261127/L0_final.pt",
+      "sha256": "3d95ffdcbfd5ad72579ea1fb6359cf46d29b028917d21bbcccaa56344c8d0437"
+    },
+    {
+      "path": "<outputs>/screening/study/seed_20261127/results/R0/selected.pt",
+      "sha256": "15986f297459508717eb16b5a1d3ee5f0ce3662bbbc99c9f8230efdee4bcb3d4"
+    },
+    {
+      "path": "<outputs>/screening/study/seed_20261128/COISC_final.pt",
+      "sha256": "bc4a5bba4c3b79fc39f46b57169df52dbca49515ecd9c92eba9f5c09f18407ed"
+    },
+    {
+      "path": "<outputs>/screening/study/seed_20261128/L0_final.pt",
+      "sha256": "642b7a77753066b1b7cc5c16ab840822e0ef015a50cc1890efeb47b41a366156"
+    },
+    {
+      "path": "<outputs>/screening/study/seed_20261128/results/R0/selected.pt",
+      "sha256": "2a194fa344b888f97bf22710777ce36116024d852bba55c911326f793714dff6"
+    },
+    {
+      "path": "<outputs>/screening/study/seed_20261129/COISC_final.pt",
+      "sha256": "753f6a266cb3a58abf4fece9c6ab600710d79a3c5c8b243ac55bd1bbcf9cb25d"
+    },
+    {
+      "path": "<outputs>/screening/study/seed_20261129/L0_final.pt",
+      "sha256": "58201367f837b18c25a0797e368b8b6b1cfbcd0275b24501e35bec2f61e7fa8b"
+    },
+    {
+      "path": "<outputs>/screening/study/seed_20261129/results/R0/selected.pt",
+      "sha256": "5b2c1f745ca977997e6a8a0e210fa3ef78c611207bbe1868acf22f307344ff07"
+    },
+    {
+      "path": "<outputs>/screening/study/seed_20261130/COISC_final.pt",
+      "sha256": "b66932eb04c84df38b942fddc976278f9771f98141bfafb02e16d4555dae5d92"
+    },
+    {
+      "path": "<outputs>/screening/study/seed_20261130/L0_final.pt",
+      "sha256": "dc96208176923c42516e3d7431d732edf8313e41b7e9b8d2ecbe598468fdc533"
+    },
+    {
+      "path": "<outputs>/screening/study/seed_20261130/results/R0/selected.pt",
+      "sha256": "24c58077ab36e0e29865398c812ebb6047c7ce3b990bbd85d7a5f2739d618e28"
+    },
+    {
+      "path": "<outputs>/screening/study/seed_20261131/COISC_final.pt",
+      "sha256": "5de3ee43028d0c7a4962e5410ec6763260c10a899e68668185e6cf64fae1d115"
+    },
+    {
+      "path": "<outputs>/screening/study/seed_20261131/L0_final.pt",
+      "sha256": "6cfc2f96ffe557e1514d9a16f931ea0d3f3453b9838307ea8eaf47c97de36015"
+    },
+    {
+      "path": "<outputs>/screening/study/seed_20261131/results/R0/selected.pt",
+      "sha256": "d26a423fba62b0f1491129308d9c305b5034e72594739d6a2eb4ad921a6b8b34"
+    },
+    {
+      "path": "<outputs>/screening/study/seed_20261132/COISC_final.pt",
+      "sha256": "df54f88580730f7f9cac36e2067e7cf4412244f98909527abf2bccb42bff244d"
+    },
+    {
+      "path": "<outputs>/screening/study/seed_20261132/L0_final.pt",
+      "sha256": "213b139f0e30fe1070e923bc8c432987c05ca7a8054c50b9bc4b953dab51f601"
+    },
+    {
+      "path": "<outputs>/screening/study/seed_20261132/results/R0/selected.pt",
+      "sha256": "6a39d60646b2dc1d4ba81a8f308a4f6b3a34993809b3ae439887d285539fdd7b"
+    },
+    {
+      "path": "<outputs>/screening/study/seed_20261133/COISC_final.pt",
+      "sha256": "a943d23fa82d984422e77772122036bab8d0b7fdeac17be4884686c17857ba86"
+    },
+    {
+      "path": "<outputs>/screening/study/seed_20261133/L0_final.pt",
+      "sha256": "605c0d989cb837e09cdd2fea871dfebf6ace1750bfe8c4b34deacfaf4a9bf8e0"
+    },
+    {
+      "path": "<outputs>/screening/study/seed_20261133/results/R0/selected.pt",
+      "sha256": "7158018f22228088553fc6a3dd5518f4c4e3e627aea1514d07e57517e22e6cf6"
+    },
+    {
+      "path": "<outputs>/screening/study/seed_20261134/COISC_final.pt",
+      "sha256": "ae8d009fec37f303d8142b4a4209be06e1df9b84873bc3afd9ac82be2d893974"
+    },
+    {
+      "path": "<outputs>/screening/study/seed_20261134/L0_final.pt",
+      "sha256": "66322edff2e8994193127364271afcde8e36363bbd839886ae567d10b8f52228"
+    },
+    {
+      "path": "<outputs>/screening/study/seed_20261134/results/R0/selected.pt",
+      "sha256": "57f4ea6ee787f00f02dcca48df39e9517e5c5c0e9aec6770e680fe28380e53da"
+    },
+    {
+      "path": "<outputs>/screening/study/seed_20261135/COISC_final.pt",
+      "sha256": "24250e55d908fa7a58f551246d32005f0fe8ba390e7273f16512eee168d8f326"
+    },
+    {
+      "path": "<outputs>/screening/study/seed_20261135/L0_final.pt",
+      "sha256": "8c6faf5d99d1670c6fac50afacc5b6ab5fcfc9221ef6a2eeee4181a73efd9c2c"
+    },
+    {
+      "path": "<outputs>/screening/study/seed_20261135/results/R0/selected.pt",
+      "sha256": "df27696a792ec692a9e30e78f07febb778ecc6c73e32e828a6ad5da47cd1bde8"
+    },
+    {
+      "path": "<outputs>/screening/study/seed_20261136/COISC_final.pt",
+      "sha256": "8546fb5ebbb3f8d8970a7e19dc1f41212d65139306ae01c3e0fa5aa3f3e85f7d"
+    },
+    {
+      "path": "<outputs>/screening/study/seed_20261136/L0_final.pt",
+      "sha256": "a76bb372a507a6cfbd85d8e925014d1076c6f21143a497bce2bed4657047f13b"
+    },
+    {
+      "path": "<outputs>/screening/study/seed_20261136/results/R0/selected.pt",
+      "sha256": "6c91e6f76d78fc163d71454786c60ebe8ca2a2844ca1a343f4c5a0a83ff3a4b2"
+    },
+    {
+      "path": "<outputs>/screening/study/seed_20261137/COISC_final.pt",
+      "sha256": "816fca2907a6bad0cc3f657a115310b725d3a6938cabb85f5eff01da0fc60e24"
+    },
+    {
+      "path": "<outputs>/screening/study/seed_20261137/L0_final.pt",
+      "sha256": "ad368fb06ffd02812034b76897462daf52d7f0fe3691bc83f152d7a852e794f3"
+    },
+    {
+      "path": "<outputs>/screening/study/seed_20261137/results/R0/selected.pt",
+      "sha256": "36cc6bf268198a6cdd8c54bd511787c64c9a58653894574ad7e0131367005707"
+    },
+    {
+      "path": "<outputs>/screening/study/seed_20261138/COISC_final.pt",
+      "sha256": "5566c181f0412d233fcf4110799759129e72141a498decf22ddc209fb3a09b3a"
+    },
+    {
+      "path": "<outputs>/screening/study/seed_20261138/L0_final.pt",
+      "sha256": "9a0a91f1a994107e6b7cfdee59436cc2dea8cb1e0408cbf6f68b16a49f663e6f"
+    },
+    {
+      "path": "<outputs>/screening/study/seed_20261138/results/R0/selected.pt",
+      "sha256": "1cd50baeaffb5495bc143a58677585dc8252708c1bb75583885d25e278c4b28c"
+    },
+    {
+      "path": "<outputs>/screening/study/seed_20261139/COISC_final.pt",
+      "sha256": "a089f2fb291ba695f79b8d076a6d4d6eaeb9751605a1db19f1b52acf0272463f"
+    },
+    {
+      "path": "<outputs>/screening/study/seed_20261139/L0_final.pt",
+      "sha256": "5698348c0110c565a43b4829b9497d1911ba96656786f704513021a00500e1a0"
+    },
+    {
+      "path": "<outputs>/screening/study/seed_20261139/results/R0/selected.pt",
+      "sha256": "f11183adab6141511e6d6ff36b04435b23f11ea838f6fe815b8240772bf7fe7b"
+    },
+    {
+      "path": "<outputs>/screening/study/seed_20261140/COISC_final.pt",
+      "sha256": "4ec491c862a845f2b8cce2300758f1bc982e0a8281d3f2f91036ef9b5a293996"
+    },
+    {
+      "path": "<outputs>/screening/study/seed_20261140/L0_final.pt",
+      "sha256": "9cbc4011e085061e939a747ca0a69d3d148f0e6a5bb820db204abffefe51cf61"
+    },
+    {
+      "path": "<outputs>/screening/study/seed_20261140/results/R0/selected.pt",
+      "sha256": "78a3d6578c6e32bcb8a1e1209a011e3aae8f4851615fcd89baad40f19b84091b"
+    }
+  ],
+  "frozen_utc": "2026-11-05T12:33:40Z"
+}

@@ -1,0 +1,37 @@
+{
+  "label": "Sequence study gates G3 (holdout path) and G4 (first-decision path) on stored screening outputs",
+  "G3": {
+    "rows": [
+      {
+        "seed": 20261101,
+        "max_abs_diff": 0.0,
+        "pass_": true
+      },
+      {
+        "seed": 20261120,
+        "max_abs_diff": 0.0,
+        "pass_": true
+      },
+      {
+        "seed": 20261140,
+        "max_abs_diff": 0.0,
+        "pass_": true
+      }
+    ],
+    "pass_": true
+  },
+  "G4": {
+    "seed": 20261109,
+    "variant": "COISC",
+    "scenarios": 12,
+    "exact": 12,
+    "pass_": true,
+    "child_exit": 0
+  },
+  "pass_": true,
+  "code_sha256": {
+    "sq_common.py": "54384bc396d0e240f6f38483d168eada0ab3187f218dda306a92fb4d36f59c71",
+    "sq_eval.py": "0255037e5a40eaa13967ae8639c3b0520dd9eea36cea53f58040712b612e4c09"
+  },
+  "created_utc": "2026-11-13T05:03:32Z"
+}

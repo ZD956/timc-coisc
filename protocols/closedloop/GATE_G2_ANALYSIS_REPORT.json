@@ -1,0 +1,24 @@
+{
+  "label": "Closed-loop study gate G2: metric extraction reproduces stored E2 MAE_track; synthetic analysis selftest",
+  "e2_runs_checked": 576,
+  "mismatches": 0,
+  "selftest": {
+    "checks": {
+      "h1_point": true,
+      "h1_supported": true,
+      "h2_point": true,
+      "h2_supported": true,
+      "verdict": true,
+      "l0_pair": true,
+      "h2_fails_when_worse": true,
+      "verdict_h1_only": true
+    },
+    "pass_": true
+  },
+  "pass_": true,
+  "code_sha256": {
+    "cl_common.py": "ec742dafd2bb57dc69230e073a06a56257e46285a7daadd48467ba59a9884d9a",
+    "cl_analyze.py": "b97a795b7b87ec3b924b901287f40d71e02ceb242fa449fd5775de11e5b907a4"
+  },
+  "created_utc": "2026-11-05T12:25:41Z"
+}

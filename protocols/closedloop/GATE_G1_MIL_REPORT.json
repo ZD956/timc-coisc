@@ -1,0 +1,136 @@
+{
+  "label": "Closed-loop study gate G1: onset_mil.run_one reproduces 12 stored E2 runs bitwise",
+  "rows": [
+    {
+      "task_index": 399,
+      "plant_index": 1,
+      "scenario_index": 0,
+      "seed": 20261001,
+      "variant": "R0",
+      "applied_UH_bitwise": true,
+      "plant_Tp_bitwise": true,
+      "runtime_s": 17.2658109
+    },
+    {
+      "task_index": 1226,
+      "plant_index": 3,
+      "scenario_index": 1,
+      "seed": 20261001,
+      "variant": "L0",
+      "applied_UH_bitwise": true,
+      "plant_Tp_bitwise": true,
+      "runtime_s": 7.852638799999998
+    },
+    {
+      "task_index": 2049,
+      "plant_index": 5,
+      "scenario_index": 2,
+      "seed": 20261001,
+      "variant": "R0",
+      "applied_UH_bitwise": true,
+      "plant_Tp_bitwise": true,
+      "runtime_s": 41.2060539
+    },
+    {
+      "task_index": 2876,
+      "plant_index": 7,
+      "scenario_index": 3,
+      "seed": 20261001,
+      "variant": "L0",
+      "applied_UH_bitwise": true,
+      "plant_Tp_bitwise": true,
+      "runtime_s": 56.19200520000001
+    },
+    {
+      "task_index": 3699,
+      "plant_index": 9,
+      "scenario_index": 4,
+      "seed": 20261001,
+      "variant": "R0",
+      "applied_UH_bitwise": true,
+      "plant_Tp_bitwise": true,
+      "runtime_s": 8.974916899999982
+    },
+    {
+      "task_index": 4526,
+      "plant_index": 11,
+      "scenario_index": 5,
+      "seed": 20261001,
+      "variant": "L0",
+      "applied_UH_bitwise": true,
+      "plant_Tp_bitwise": true,
+      "runtime_s": 48.36554179999999
+    },
+    {
+      "task_index": 5349,
+      "plant_index": 13,
+      "scenario_index": 6,
+      "seed": 20261001,
+      "variant": "R0",
+      "applied_UH_bitwise": true,
+      "plant_Tp_bitwise": true,
+      "runtime_s": 43.173010500000004
+    },
+    {
+      "task_index": 6176,
+      "plant_index": 15,
+      "scenario_index": 7,
+      "seed": 20261001,
+      "variant": "L0",
+      "applied_UH_bitwise": true,
+      "plant_Tp_bitwise": true,
+      "runtime_s": 57.039773499999995
+    },
+    {
+      "task_index": 6999,
+      "plant_index": 17,
+      "scenario_index": 8,
+      "seed": 20261001,
+      "variant": "R0",
+      "applied_UH_bitwise": true,
+      "plant_Tp_bitwise": true,
+      "runtime_s": 49.64009900000002
+    },
+    {
+      "task_index": 7826,
+      "plant_index": 19,
+      "scenario_index": 9,
+      "seed": 20261001,
+      "variant": "L0",
+      "applied_UH_bitwise": true,
+      "plant_Tp_bitwise": true,
+      "runtime_s": 49.36786310000002
+    },
+    {
+      "task_index": 8649,
+      "plant_index": 21,
+      "scenario_index": 10,
+      "seed": 20261001,
+      "variant": "R0",
+      "applied_UH_bitwise": true,
+      "plant_Tp_bitwise": true,
+      "runtime_s": 3.9009235999999987
+    },
+    {
+      "task_index": 9476,
+      "plant_index": 23,
+      "scenario_index": 11,
+      "seed": 20261001,
+      "variant": "L0",
+      "applied_UH_bitwise": true,
+      "plant_Tp_bitwise": true,
+      "runtime_s": 49.04378459999998
+    }
+  ],
+  "pass_": true,
+  "timing": {
+    "mean_runtime_s": 36.00186848333333,
+    "planned_runs": 8964,
+    "est_wall_h_6_workers": 14.940775420583334
+  },
+  "code_sha256": {
+    "cl_common.py": "ec742dafd2bb57dc69230e073a06a56257e46285a7daadd48467ba59a9884d9a",
+    "cl_mil.py": "e70ea453d779f573d2248fa2d4ef377301e6a563408b90359e3058054227f7cc"
+  },
+  "created_utc": "2026-11-05T12:33:03Z"
+}

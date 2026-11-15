@@ -1,0 +1,30 @@
+{
+  "status": "RAW_RUNS_COMPLETE",
+  "protocol_sha256": "355469703fcd2a17071ce07995a174bb38e5e1704021e2bdc0f5176dbdc834d7",
+  "total_runs": 2988,
+  "authorization": {
+    "authorized_by_author": true,
+    "protocol_sha256": "355469703fcd2a17071ce07995a174bb38e5e1704021e2bdc0f5176dbdc834d7",
+    "author_instruction": "authorize execution",
+    "authorized_utc": "2026-11-13T05:29:17Z",
+    "scope": "sq_train.py run, sq_eval.py holdout, sq_eval.py first_action, sq_mil.py execute, sq_analyze.py analyze under this protocol hash"
+  },
+  "started_utc": "2026-11-13T05:55:39Z",
+  "resume_log": [],
+  "workers": 6,
+  "threads_per_worker": 2,
+  "no_tuning": true,
+  "no_plant_deletion": true,
+  "no_scenario_deletion": true,
+  "no_seed_deletion": true,
+  "worker_exit_codes": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "completed_runs": 2988,
+  "finished_utc": "2026-11-13T09:43:17Z"
+}

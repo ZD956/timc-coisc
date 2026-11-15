@@ -1,0 +1,32 @@
+{
+  "label": "Screening study gate G1: trainer and adaptation reproduce onset-aligned E2 seed 20261001 bitwise",
+  "rows": [
+    {
+      "variant": "R0",
+      "state_dict_bitwise_equal": true,
+      "file_sha_equal": true
+    },
+    {
+      "variant": "COISC",
+      "state_dict_bitwise_equal": true,
+      "file_sha_equal": true
+    },
+    {
+      "variant": "COISC_onset",
+      "state_dict_bitwise_equal": true,
+      "file_sha_equal": true
+    },
+    {
+      "variant": "L0",
+      "state_dict_bitwise_equal": true,
+      "file_sha_equal": true
+    }
+  ],
+  "dev_record_max_abs_diff": 0.0,
+  "r0_training_wall_s": 72.3073532,
+  "pass_": true,
+  "code_sha256": {
+    "scr_common.py": "50752fd5511482877fff54492a1c770906ed59ea453845b2987f37ff27584b6c",
+    "scr_train.py": "12c7c8584dd0b11ad12d97d075f4207a1c1ea5f01795429774b6172fe6ed5d17"
+  }
+}

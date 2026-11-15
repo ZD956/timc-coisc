@@ -1,0 +1,32 @@
+{
+  "label": "Sequence-sensitivity study gates G1-G2 (reduction to frozen COISC) and lambda_seq calibration",
+  "G1_calibration": {
+    "lambda_reproduced": 939.1430335805455,
+    "lambda_prior": 939.1430335805455,
+    "records_max_abs_diff": 0.0,
+    "order_ok": true,
+    "time_s": 5.0452823,
+    "pass_": true
+  },
+  "G2_adaptation": {
+    "seed": 20261101,
+    "state_dict_bitwise_equal": true,
+    "wall_s": 10.0114443,
+    "pass_": true
+  },
+  "lambda_seq": {
+    "value": 729.9404878939004,
+    "per_sampler": [
+      736.1038183673356,
+      729.9404878939004
+    ],
+    "calibration_time_s": 1.9602627000000012,
+    "adaptation_wall_s": 8.773842799999997,
+    "adaptation_wall_ratio_vs_coisc": 0.8763813229226073
+  },
+  "all_pass": true,
+  "code_sha256": {
+    "sq_common.py": "54384bc396d0e240f6f38483d168eada0ab3187f218dda306a92fb4d36f59c71",
+    "sq_train.py": "a6c0afd47b9e7fcf3115651b9ddf9ce874e6e769c4f3b0a371925b0e8d8ddc2e"
+  }
+}

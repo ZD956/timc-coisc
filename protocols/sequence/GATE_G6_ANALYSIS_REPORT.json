@@ -1,0 +1,33 @@
+{
+  "label": "Sequence study gate G6: analysis code reproduces stored S4 H2 point, panel-A per-pair COISC-R0 and the Fig. 3(d) seed-level reversal fractions from raw runs; synthetic selftest",
+  "runs_loaded": 8964,
+  "missing": 0,
+  "h2_point_exact": true,
+  "panel_a_exact": [
+    true,
+    true,
+    true,
+    true,
+    true,
+    true
+  ],
+  "fig3d_max_abs_diff": 0.0,
+  "selftest": {
+    "checks": {
+      "h1_point": true,
+      "h2_point": true,
+      "panel_a": true,
+      "verdict": true,
+      "h1_fails": true,
+      "verdict_h2_only": true,
+      "verdict_none": true
+    },
+    "pass_": true
+  },
+  "pass_": true,
+  "code_sha256": {
+    "sq_common.py": "54384bc396d0e240f6f38483d168eada0ab3187f218dda306a92fb4d36f59c71",
+    "sq_analyze.py": "d23606fa984c573c71ee3c0cad4a32140377a70c6109d2b117b0e980dd2e76a0"
+  },
+  "created_utc": "2026-11-13T05:07:53Z"
+}

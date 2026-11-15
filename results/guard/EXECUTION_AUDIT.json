@@ -1,0 +1,30 @@
+{
+  "status": "RAW_RUNS_COMPLETE",
+  "protocol_sha256": "239e8745a00b9f962fa722d88119e8c46c1a804e45e36b4f6686edaee1f167c8",
+  "total_runs": 144,
+  "authorization": {
+    "authorized_by_author": true,
+    "protocol_file": "GUARD_PROTOCOL.json",
+    "protocol_sha256": "239e8745a00b9f962fa722d88119e8c46c1a804e45e36b4f6686edaee1f167c8",
+    "author_statement": "authorize",
+    "authorized_at": "2026-11-12",
+    "scope": "gd_mil.py execute and gd_analyze.py analyze under this protocol hash only"
+  },
+  "started_utc": "2026-11-12T12:01:34Z",
+  "resume_log": [],
+  "workers": 6,
+  "threads_per_worker": 2,
+  "no_tuning": true,
+  "no_plant_deletion": true,
+  "no_pair_deletion": true,
+  "worker_exit_codes": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "completed_runs": 144,
+  "finished_utc": "2026-11-12T12:23:06Z"
+}

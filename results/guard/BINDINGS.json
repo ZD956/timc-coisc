@@ -1,0 +1,38 @@
+[
+  {
+    "seed": 20261109,
+    "variant": "R0",
+    "path": "<outputs>/screening/study/seed_20261109/results/R0/selected.pt",
+    "sha256": "cb86948f2c77dcf9c39931bb4c56cb51f1a74908c69176398716188199bc4ed8"
+  },
+  {
+    "seed": 20261118,
+    "variant": "R0",
+    "path": "<outputs>/screening/study/seed_20261118/results/R0/selected.pt",
+    "sha256": "a9c14056a8c1c5ebbf3c49ceca605d0661aa9cfea7a95b399a1c7bcfe3857cf6"
+  },
+  {
+    "seed": 20261124,
+    "variant": "R0",
+    "path": "<outputs>/screening/study/seed_20261124/results/R0/selected.pt",
+    "sha256": "4c3bd32394ad3944cc46197abffc0659432930c696c55c732c1d0a5a93fb1d29"
+  },
+  {
+    "seed": 20261132,
+    "variant": "R0",
+    "path": "<outputs>/screening/study/seed_20261132/results/R0/selected.pt",
+    "sha256": "6a39d60646b2dc1d4ba81a8f308a4f6b3a34993809b3ae439887d285539fdd7b"
+  },
+  {
+    "seed": 20261135,
+    "variant": "R0",
+    "path": "<outputs>/screening/study/seed_20261135/results/R0/selected.pt",
+    "sha256": "df27696a792ec692a9e30e78f07febb778ecc6c73e32e828a6ad5da47cd1bde8"
+  },
+  {
+    "seed": 20261137,
+    "variant": "R0",
+    "path": "<outputs>/screening/study/seed_20261137/results/R0/selected.pt",
+    "sha256": "36cc6bf268198a6cdd8c54bd511787c64c9a58653894574ad7e0131367005707"
+  }
+]

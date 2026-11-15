@@ -1,0 +1,60 @@
+{
+  "title": "Pre-registered sequence-sensitivity study: does extending the COISC penalty to every planned step reduce later reversed moves?",
+  "version": "DRAFT-1",
+  "status": "DRAFT",
+  "created_utc": "2026-11-13",
+  "author_approval": "Author approved option 3 (sequence sensitivity penalty COISC_seq) on 2026-11-12 and hypothesis set A on 2026-11-13 (H1: whole-trajectory reversal fraction COISC_seq - COISC on panel B; H2: tracking non-inferiority COISC_seq - R0 at 0.10 C).",
+  "question": "Stage S5 showed that blocking the reversed first move does not improve tracking because the R0 controller reverses again at later updates. COISC penalises only the response to a pulse at the first planned step. COISC_seq applies the same penalty to pulses at every step of the 120-s plan. The study asks whether this reduces reversed moves over the whole trajectory without loss of tracking.",
+  "what_is_already_known_before_any_run": [
+    "All S4 closed-loop runs of R0/COISC/L0 (CLOSEDLOOP_PROTOCOL sha c41c0783..., verdict PARTIAL_H2_ONLY) and the S5 rule baseline (GUARD_PROTOCOL sha 239e8745..., NOT_SUPPORTED).",
+    "Post-hoc whole-trajectory reversal fractions over all 24 plants (seed means, manuscript Section 5.5): R0 8.7 %, L0 6.9 %, COISC 2.7 % (plant-judged); 9.1 %, 7.4 %, 2.9 % (controller-judged). COISC is already low, so H1 asks for a further reduction from a low base.",
+    "lambda_seq = 729.94 from the unchanged loss-ratio rule (LAMBDA_SEQ.json); for comparison lambda_prior = 939.14.",
+    "Gate-only COISC_seq checkpoint of seed 20261101 (gates/G1_G2_train): training log only (final prediction loss 0.0912 vs 0.0910 for COISC; penalty/prediction ratio 0.59 vs 0.58). Its holdout and first-decision readouts were not computed. Two smoke MIL runs on plants 1 and 12 (not study cells for this seed) were run only to test the code path; their metrics were not inspected.",
+    "No COISC_seq study checkpoint, holdout readout, first decision or study MIL run exists; all outcomes below are unseen."
+  ],
+  "arm": {
+    "COISC_seq": "head-only adaptation of the screening R0 checkpoint of each of the 40 seeds 20261101-20261140, identical to COISC (75 Adam steps, lr 5e-5, gradient clipping 1, same sampler, same seed, prior lags, eps_pre 1e-3) except that the sensitivity is taken for a +-25 raw (5 % full-scale) u_h pulse at each plan step j = 0..11 and the lag masks are applied to the delay d = 10 i - 10 j (pre: 0 < d < tau - 10; post: d > tau + 10); w_pre = w_sign = lambda_seq.",
+    "reduction_check": "with plan steps (0,) the code reproduces lambda_prior, the stored calibration records and the screening COISC checkpoint bitwise (gates G1, G2).",
+    "no_tuning": "lambda_seq is set once by the frozen rule; no other setting is changed or searched."
+  },
+  "bench": {
+    "runner": "timc_coisc/onset_mil.run_one, unchanged (60 updates, 37 C reference, frozen MPCConfig, no T_p feedback to the controller)",
+    "tasks": "the S4 task list with the arm replaced by COISC_seq: panel B 40 seeds x 12 scenarios x 6 plants (0, 5, 11, 8, 20, 23) = 2880, panel A the other 18 plants on the 6 R0-reversed pairs = 108; 2988 new runs. R0/COISC/L0 runs (8964) are reused from <outputs>/closedloop/study and hash-bound.",
+    "metric_reversal": "among updates at which the plant T_p before the update is more than 2 C from 37 C, the fraction at which the applied command moves away from 37 C (gd_analyze.reversal_counts, unchanged); counts pooled within a plant family over the seed's 12 scenarios on the 6 panel-B plants, then family-equal; one unit per seed",
+    "metric_tracking": "MAE_track (deg C) of plant T_p against 37 C over the 60 updates (onset_analyze_am1.metric_row, unchanged); the S4 H2 seed unit (cl_analyze.seed_units: panel B, R0-reversed pairs excluded, family-equal)",
+    "completeness": "a cell enters a contrast only if all four arms are evaluable there; dropped cells are counted and reported"
+  },
+  "hypotheses": {
+    "H1_primary": "COISC_seq makes fewer reversed moves over whole trajectories than COISC: effect = reversal fraction[COISC_seq] - reversal fraction[COISC]; supported iff all 40 seeds are evaluable and the 95 % percentile bootstrap CI upper bound (20,000 draws over seeds, seed 20261113) is < 0.",
+    "H2_primary": "COISC_seq is non-inferior to R0 in tracking on the pairs without a reversed R0 first move: effect = MAE[COISC_seq] - MAE[R0]; supported iff all 40 seeds are evaluable and the CI upper bound is < 0.10 C (the S4 margin).",
+    "verdict": "SUPPORTED iff both; otherwise PARTIAL_H1_ONLY, PARTIAL_H2_ONLY or NOT_SUPPORTED. Reported whatever it is.",
+    "risk_note": "COISC already has a low reversal fraction, so H1 can fail even if the penalty works as intended. A NOT_SUPPORTED or partial verdict will be reported as such, and the paper will not switch to a secondary outcome as the headline."
+  },
+  "secondary_descriptive": [
+    "reversal fraction COISC_seq - R0, COISC - R0, L0 - R0 (plant-judged), and COISC_seq - COISC, COISC_seq - R0 judged by the controller's own one-step estimate",
+    "tracking COISC_seq - COISC on the same unit as H2, and COISC_seq - R0 on panel B including the reversed pairs",
+    "panel A (6 R0-reversed pairs x 24 plants): COISC_seq - R0, COISC_seq - COISC, COISC - R0 per pair with CI",
+    "panel-B means of MAE_track, total variation and saturation fraction per arm",
+    "holdout readouts (delivered-23 sources) of COISC_seq, COISC, L0: Tp MAE at 10-120 s, all-7 MAE, Tp WSR/PLE/PSM, as in the screening study",
+    "plant-free first decisions of COISC_seq on the 12 locked scenarios: reversed, zero and correct counts against R0 and COISC"
+  ],
+  "gates_before_freeze": {
+    "G1": "calibrate_seq with plan steps (0,) reproduces lambda_prior = 939.1430335805455 and the 16 stored calibration records exactly",
+    "G2": "adapt_seq with plan steps (0,) on screening R0 of seed 20261101 reproduces its screening COISC checkpoint bitwise",
+    "G3": "holdout path reproduces stored screening holdout estimates of R0 (seeds 20261101, 20261120, 20261140) exactly",
+    "G4": "first-decision path reproduces the stored first decisions of screening COISC of seed 20261109 (12 scenarios) exactly",
+    "G5": "onset_mil.run_one reproduces 6 stored S4 runs (R0, COISC, L0; panels A and B) bitwise; timing estimate",
+    "G6": "analysis code reproduces the stored S4 H2 point estimate, the 6 panel-A COISC - R0 per-pair values and the Fig. 3(d) seed-level reversal fractions (both judgments) from raw runs; synthetic selftest of effects and verdict logic",
+    "smoke": "2-step COISC_seq training, holdout and first-decision paths, and two MIL runs outside the study directory"
+  },
+  "execution_order": [
+    "sq_train.py run",
+    "sq_eval.py holdout",
+    "sq_eval.py first_action 6",
+    "sq_mil.py execute 6",
+    "sq_analyze.py analyze"
+  ],
+  "expected_cost": "training about 9 s per seed (40 seeds), holdout and first decisions a few minutes, MIL about 2 h with 6 workers (G5 timing)",
+  "deviations_policy": "Technical interruptions are resumed under the same hash with completed outputs skipped (all steps are deterministic). No seed, plant, scenario or run is removed. Any code change after freeze is a numbered amendment reported in the paper.",
+  "reporting": "The result enters the manuscript whatever the verdict, labelled as a preregistered post-S5 stage (S6) with a new adapted arm on the S4 bench."
+}

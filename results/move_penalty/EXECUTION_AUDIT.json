@@ -1,0 +1,52 @@
+{
+  "status": "RAW_RUNS_COMPLETE",
+  "protocol_sha256": "fc5f571445b1d287110eda0492038088a17b492029378e50929e560682ba8228",
+  "total_runs": 2880,
+  "authorization": {
+    "authorized_by_author": true,
+    "protocol_file": "DU_PROTOCOL.json",
+    "protocol_sha256": "fc5f571445b1d287110eda0492038088a17b492029378e50929e560682ba8228",
+    "author_instruction": "authorize execution",
+    "scope": [
+      "du_mil.py execute 6",
+      "du_analyze.py analyze"
+    ],
+    "authorized_utc": "2026-11-14T04:10:45Z"
+  },
+  "started_utc": "2026-11-14T04:10:58Z",
+  "resume_log": [
+    {
+      "at_utc": "2026-11-14T09:36:54Z",
+      "reason": "same-protocol technical resume"
+    },
+    {
+      "at_utc": "2026-11-14T12:08:27Z",
+      "reason": "same-protocol technical resume"
+    },
+    {
+      "at_utc": "2026-11-14T14:29:34Z",
+      "reason": "same-protocol technical resume"
+    },
+    {
+      "at_utc": "2026-11-15T03:54:42Z",
+      "reason": "same-protocol technical resume"
+    }
+  ],
+  "workers": 6,
+  "threads_per_worker": 2,
+  "lambda_du": 2.0,
+  "no_tuning": true,
+  "no_plant_deletion": true,
+  "no_scenario_deletion": true,
+  "no_seed_deletion": true,
+  "worker_exit_codes": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "completed_runs": 2880,
+  "finished_utc": "2026-11-15T04:12:29Z"
+}

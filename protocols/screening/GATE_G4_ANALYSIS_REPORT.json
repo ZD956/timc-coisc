@@ -1,0 +1,206 @@
+{
+  "label": "Screening study gate G4: analysis code reproduces the exploratory 13-seed numbers (not evidence)",
+  "exploratory_result": {
+    "n_seeds": 13,
+    "n_positive": 3,
+    "n_negative": 10,
+    "r0_wrong_pairs": 7,
+    "wrong_per_seed": {
+      "20260922": 0,
+      "20260923": 3,
+      "20260924": 0,
+      "20261001": 0,
+      "20261002": 1,
+      "20261003": 0,
+      "20261004": 0,
+      "20261005": 3,
+      "20261006": 0,
+      "20261007": 0,
+      "20261008": 0,
+      "20261009": 0,
+      "20261010": 0
+    },
+    "auc": {
+      "Tp_WSR_ONSET": 1.0,
+      "Tp_WSR_PRIOR": 1.0,
+      "Tp_MAE_120": 0.7666666666666667,
+      "all7_MAE_5h": 0.9333333333333333,
+      "dev_Tp_WSR_onset": 0.8333333333333334,
+      "dev_Tp_MAE_120": 0.6,
+      "dev_macro7_MAE": 0.9
+    },
+    "auc_ci95": {
+      "Tp_WSR_ONSET": [
+        1.0,
+        1.0
+      ],
+      "Tp_WSR_PRIOR": [
+        1.0,
+        1.0
+      ],
+      "Tp_MAE_120": [
+        0.5,
+        1.0
+      ],
+      "all7_MAE_5h": [
+        0.8,
+        1.0
+      ],
+      "dev_Tp_WSR_onset": [
+        0.4666666666666667,
+        1.0
+      ],
+      "dev_Tp_MAE_120": [
+        0.1,
+        1.0
+      ],
+      "dev_macro7_MAE": [
+        0.7,
+        1.0
+      ]
+    },
+    "delta_auc_vs_primary": {
+      "Tp_WSR_PRIOR": {
+        "point": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ]
+      },
+      "Tp_MAE_120": {
+        "point": 0.23333333333333328,
+        "ci95": [
+          0.0,
+          0.5
+        ]
+      },
+      "all7_MAE_5h": {
+        "point": 0.06666666666666665,
+        "ci95": [
+          0.0,
+          0.19999999999999996
+        ]
+      },
+      "dev_Tp_WSR_onset": {
+        "point": 0.16666666666666663,
+        "ci95": [
+          0.0,
+          0.5333333333333333
+        ]
+      },
+      "dev_Tp_MAE_120": {
+        "point": 0.4,
+        "ci95": [
+          0.0,
+          0.9
+        ]
+      },
+      "dev_macro7_MAE": {
+        "point": 0.09999999999999998,
+        "ci95": [
+          0.0,
+          0.30000000000000004
+        ]
+      }
+    },
+    "H1": {
+      "auc": 1.0,
+      "ci_low": 1.0,
+      "comparator_auc": 0.7666666666666667,
+      "pass_": true
+    },
+    "H1b_delta_ci_excludes_0": false,
+    "primary_verdict": "SUPPORTED",
+    "threshold_rule": {
+      "threshold": 0.2786,
+      "TP": 3,
+      "FN": 0,
+      "TN": 10,
+      "FP": 0,
+      "sensitivity": 1.0,
+      "sensitivity_ci95": [
+        0.4385029682449545,
+        1.0
+      ],
+      "specificity": 1.0,
+      "specificity_ci95": [
+        0.7224672001371106,
+        0.9999999999999999
+      ]
+    },
+    "spearman_primary_vs_wrong_count": {
+      "rho": 0.7375337578416624,
+      "p": 0.004010851866878905
+    },
+    "correction": {
+      "COISC": {
+        "r0_wrong": 7,
+        "corrected": 7,
+        "corrected_rate": 1.0,
+        "corrected_ci95": [
+          0.6456695649333126,
+          1.0
+        ],
+        "r0_correct": 140,
+        "made_wrong": 0,
+        "made_wrong_rate": 0.0,
+        "made_wrong_ci95": [
+          1.688395603241846e-18,
+          0.026706200369412993
+        ],
+        "total_wrong": 0,
+        "screen_then_adapt_total_wrong": 0
+      },
+      "COISC_onset": {
+        "r0_wrong": 7,
+        "corrected": 7,
+        "corrected_rate": 1.0,
+        "corrected_ci95": [
+          0.6456695649333126,
+          1.0
+        ],
+        "r0_correct": 140,
+        "made_wrong": 12,
+        "made_wrong_rate": 0.08571428571428572,
+        "made_wrong_ci95": [
+          0.04971124458699672,
+          0.14384532143337406
+        ],
+        "total_wrong": 12,
+        "screen_then_adapt_total_wrong": 5
+      },
+      "L0": {
+        "r0_wrong": 7,
+        "corrected": 1,
+        "corrected_rate": 0.14285714285714285,
+        "corrected_ci95": [
+          0.025679624344743555,
+          0.5131278292743189
+        ],
+        "r0_correct": 140,
+        "made_wrong": 0,
+        "made_wrong_rate": 0.0,
+        "made_wrong_ci95": [
+          1.688395603241846e-18,
+          0.026706200369412993
+        ],
+        "total_wrong": 6,
+        "screen_then_adapt_total_wrong": 6
+      }
+    },
+    "r0_total_wrong": 7
+  },
+  "expected_auc": {
+    "Tp_WSR_ONSET": 1.0,
+    "Tp_WSR_PRIOR": 1.0,
+    "Tp_MAE_120": 0.7667,
+    "all7_MAE_5h": 0.9333,
+    "dev_Tp_WSR_onset": 0.8333,
+    "dev_Tp_MAE_120": 0.6
+  },
+  "pass_": true,
+  "code_sha256": {
+    "scr_common.py": "50752fd5511482877fff54492a1c770906ed59ea453845b2987f37ff27584b6c",
+    "scr_analyze.py": "3489582059649c5d43b0f7bfd550b0fa00bdde8add7ecfe9dee45328626c290c"
+  }
+}

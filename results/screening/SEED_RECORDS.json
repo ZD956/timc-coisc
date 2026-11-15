@@ -1,0 +1,1685 @@
+{
+  "note": "SEED_COMPLETE.json of each of the 40 screening seeds, in seed order",
+  "seeds": [
+    {
+      "protocol_sha256": "46fc592f925cc6475074a2e56630b79c3ca12f9e67a731ee7041d72446bb60df",
+      "seed": 20261101,
+      "bindings": [
+        {
+          "seed": 20261101,
+          "variant": "R0",
+          "path": "<outputs>/screening/study/seed_20261101/results/R0/selected.pt",
+          "sha256": "13355e8246911b1c679f87cde96b8e5a5c44fdc28caaf850fb8f8ff5c84377a7"
+        },
+        {
+          "seed": 20261101,
+          "variant": "COISC",
+          "path": "<outputs>/screening/study/seed_20261101/COISC_final.pt",
+          "sha256": "3ea36c92e40f2d8fe9eadac9e58ad2acefe9d9fc59e42595e8f8f88feb9a319c"
+        },
+        {
+          "seed": 20261101,
+          "variant": "COISC_onset",
+          "path": "<outputs>/screening/study/seed_20261101/COISC_onset_final.pt",
+          "sha256": "daac7105dd843d668ef901e05ec68ea6c352e4c6f7340de6a2ce2503cc2ee063"
+        },
+        {
+          "seed": 20261101,
+          "variant": "L0",
+          "path": "<outputs>/screening/study/seed_20261101/L0_final.pt",
+          "sha256": "e83e91790883978743b29606abc9b811c554796e09b751a35473e4ddecdb0c78"
+        }
+      ],
+      "selected": {
+        "stage": 2,
+        "step": 500
+      },
+      "r0_training_wall_s": 63.64226190000001,
+      "r0_dev": {
+        "Tp_MAE_120": 0.33591049909591675,
+        "macro7_MAE": 0.13247100215371907,
+        "Tp_WSR_onset": 0.25496452833217936,
+        "Tp_WSR_prior": 0.18753951052108733,
+        "Tp_PLE_prior": 0.05083533092107099
+      }
+    },
+    {
+      "protocol_sha256": "46fc592f925cc6475074a2e56630b79c3ca12f9e67a731ee7041d72446bb60df",
+      "seed": 20261102,
+      "bindings": [
+        {
+          "seed": 20261102,
+          "variant": "R0",
+          "path": "<outputs>/screening/study/seed_20261102/results/R0/selected.pt",
+          "sha256": "9b2500d1b3279a52e498143cf7460bce0e690a5fba077bbea86b753f81f23ac9"
+        },
+        {
+          "seed": 20261102,
+          "variant": "COISC",
+          "path": "<outputs>/screening/study/seed_20261102/COISC_final.pt",
+          "sha256": "e9f048bfbd1d215c259745d3b1329e4604e78fa54c0d16b6cc707c3ce3093b64"
+        },
+        {
+          "seed": 20261102,
+          "variant": "COISC_onset",
+          "path": "<outputs>/screening/study/seed_20261102/COISC_onset_final.pt",
+          "sha256": "df969cf6461fecef36234a13dc2c405d676c806f52cbc3ff2bf35a510df80284"
+        },
+        {
+          "seed": 20261102,
+          "variant": "L0",
+          "path": "<outputs>/screening/study/seed_20261102/L0_final.pt",
+          "sha256": "01331414809425cd22dad5778d9d48c27ad5d08ae349f0234e254d0d2939e01b"
+        }
+      ],
+      "selected": {
+        "stage": 2,
+        "step": 500
+      },
+      "r0_training_wall_s": 64.19611299999998,
+      "r0_dev": {
+        "Tp_MAE_120": 0.30514922738075256,
+        "macro7_MAE": 0.12862747055254845,
+        "Tp_WSR_onset": 0.10741844526726672,
+        "Tp_WSR_prior": 0.053373069628826875,
+        "Tp_PLE_prior": 0.057228588907807264
+      }
+    },
+    {
+      "protocol_sha256": "46fc592f925cc6475074a2e56630b79c3ca12f9e67a731ee7041d72446bb60df",
+      "seed": 20261103,
+      "bindings": [
+        {
+          "seed": 20261103,
+          "variant": "R0",
+          "path": "<outputs>/screening/study/seed_20261103/results/R0/selected.pt",
+          "sha256": "25a9d6fe7c44c0cded282d09dcb9b863e550ae915e1f41bca5f439f4b77ab263"
+        },
+        {
+          "seed": 20261103,
+          "variant": "COISC",
+          "path": "<outputs>/screening/study/seed_20261103/COISC_final.pt",
+          "sha256": "421cf099eb05c6f492e14ac5d24669cccc17da88900aa38b1628e241e0af72d0"
+        },
+        {
+          "seed": 20261103,
+          "variant": "COISC_onset",
+          "path": "<outputs>/screening/study/seed_20261103/COISC_onset_final.pt",
+          "sha256": "27affcc7fcf816cbc7b9eb7c9109c7561bf14ae08c4512bf7e9c0f9c430fbe2d"
+        },
+        {
+          "seed": 20261103,
+          "variant": "L0",
+          "path": "<outputs>/screening/study/seed_20261103/L0_final.pt",
+          "sha256": "a0327c61f19ec4e3637932cc110ac26f6e2f381ab95cd64662aee77ac973965d"
+        }
+      ],
+      "selected": {
+        "stage": 2,
+        "step": 500
+      },
+      "r0_training_wall_s": 58.110288999999995,
+      "r0_dev": {
+        "Tp_MAE_120": 0.333274245262146,
+        "macro7_MAE": 0.1313704229832984,
+        "Tp_WSR_onset": 0.11700131450876507,
+        "Tp_WSR_prior": 0.05307956290074957,
+        "Tp_PLE_prior": 0.06362677442529441
+      }
+    },
+    {
+      "protocol_sha256": "46fc592f925cc6475074a2e56630b79c3ca12f9e67a731ee7041d72446bb60df",
+      "seed": 20261104,
+      "bindings": [
+        {
+          "seed": 20261104,
+          "variant": "R0",
+          "path": "<outputs>/screening/study/seed_20261104/results/R0/selected.pt",
+          "sha256": "662b293a9705d35bd1c5945a3102f7a433669198918f4a891354f00211b44356"
+        },
+        {
+          "seed": 20261104,
+          "variant": "COISC",
+          "path": "<outputs>/screening/study/seed_20261104/COISC_final.pt",
+          "sha256": "2341d6806244c056e64e5a2e539616efb9247ab417b206ddf5f2c6d779c054c5"
+        },
+        {
+          "seed": 20261104,
+          "variant": "COISC_onset",
+          "path": "<outputs>/screening/study/seed_20261104/COISC_onset_final.pt",
+          "sha256": "54472b36bdba918c62288a2cf1c0aeec20b3b9634092b664cf337907c255dbc7"
+        },
+        {
+          "seed": 20261104,
+          "variant": "L0",
+          "path": "<outputs>/screening/study/seed_20261104/L0_final.pt",
+          "sha256": "7112c7d1316e36078531a25893f6254b7a397ff5b50b25f7b4235c4b3010ca10"
+        }
+      ],
+      "selected": {
+        "stage": 2,
+        "step": 500
+      },
+      "r0_training_wall_s": 58.32691219999998,
+      "r0_dev": {
+        "Tp_MAE_120": 0.3157190680503845,
+        "macro7_MAE": 0.12960952086436095,
+        "Tp_WSR_onset": 0.13292593596034397,
+        "Tp_WSR_prior": 0.07527318703151811,
+        "Tp_PLE_prior": 0.05154190228984879
+      }
+    },
+    {
+      "protocol_sha256": "46fc592f925cc6475074a2e56630b79c3ca12f9e67a731ee7041d72446bb60df",
+      "seed": 20261105,
+      "bindings": [
+        {
+          "seed": 20261105,
+          "variant": "R0",
+          "path": "<outputs>/screening/study/seed_20261105/results/R0/selected.pt",
+          "sha256": "db93a91380a6247d928dd736509d5a350f697dfd425f955ef1c8939f18b021ff"
+        },
+        {
+          "seed": 20261105,
+          "variant": "COISC",
+          "path": "<outputs>/screening/study/seed_20261105/COISC_final.pt",
+          "sha256": "4aa48adc39828320b34e94fe5fce97357d5195306244629022aba44be797d6fa"
+        },
+        {
+          "seed": 20261105,
+          "variant": "COISC_onset",
+          "path": "<outputs>/screening/study/seed_20261105/COISC_onset_final.pt",
+          "sha256": "fd0dd5ade5b87be339869dd4b89dccdce66ac4b76663976f47f1e1b2247c10ae"
+        },
+        {
+          "seed": 20261105,
+          "variant": "L0",
+          "path": "<outputs>/screening/study/seed_20261105/L0_final.pt",
+          "sha256": "861cc70e212f88daf46e35bc1c14fc9a60c5293011c211ea9e30c8dc64aabbb0"
+        }
+      ],
+      "selected": {
+        "stage": 2,
+        "step": 500
+      },
+      "r0_training_wall_s": 57.8694069,
+      "r0_dev": {
+        "Tp_MAE_120": 0.32525357604026794,
+        "macro7_MAE": 0.13072200797597025,
+        "Tp_WSR_onset": 0.2363205795879868,
+        "Tp_WSR_prior": 0.17394789126704596,
+        "Tp_PLE_prior": 0.04812659391410257
+      }
+    },
+    {
+      "protocol_sha256": "46fc592f925cc6475074a2e56630b79c3ca12f9e67a731ee7041d72446bb60df",
+      "seed": 20261106,
+      "bindings": [
+        {
+          "seed": 20261106,
+          "variant": "R0",
+          "path": "<outputs>/screening/study/seed_20261106/results/R0/selected.pt",
+          "sha256": "f6c4e0d37f5f82e51d3bfb1ab62b551993551da3d172d1e59ad7ce5492f61e69"
+        },
+        {
+          "seed": 20261106,
+          "variant": "COISC",
+          "path": "<outputs>/screening/study/seed_20261106/COISC_final.pt",
+          "sha256": "728bc7cffbc8bb9f9d4a2f9fce7f066b58c09a4de2f5508956b99530ce01e880"
+        },
+        {
+          "seed": 20261106,
+          "variant": "COISC_onset",
+          "path": "<outputs>/screening/study/seed_20261106/COISC_onset_final.pt",
+          "sha256": "0f99d0915d8d7c8fd43d3cc8c8c8d2a636ed4cb7fea4ee86784c9fe8ef8eb14c"
+        },
+        {
+          "seed": 20261106,
+          "variant": "L0",
+          "path": "<outputs>/screening/study/seed_20261106/L0_final.pt",
+          "sha256": "cdaa60f90827fa7ee2e6fda7ac6ecc0abd937dce6147a95aa9893a4cc0513b7b"
+        }
+      ],
+      "selected": {
+        "stage": 2,
+        "step": 500
+      },
+      "r0_training_wall_s": 59.623191599999984,
+      "r0_dev": {
+        "Tp_MAE_120": 0.31792938709259033,
+        "macro7_MAE": 0.12771432509745181,
+        "Tp_WSR_onset": 0.07584013165156486,
+        "Tp_WSR_prior": 0.0319470784791836,
+        "Tp_PLE_prior": 0.0551000728062968
+      }
+    },
+    {
+      "protocol_sha256": "46fc592f925cc6475074a2e56630b79c3ca12f9e67a731ee7041d72446bb60df",
+      "seed": 20261107,
+      "bindings": [
+        {
+          "seed": 20261107,
+          "variant": "R0",
+          "path": "<outputs>/screening/study/seed_20261107/results/R0/selected.pt",
+          "sha256": "55a9451ab710e530548add27d3bc5f6a1dd615f43fb729c89cb7328d42d415fb"
+        },
+        {
+          "seed": 20261107,
+          "variant": "COISC",
+          "path": "<outputs>/screening/study/seed_20261107/COISC_final.pt",
+          "sha256": "58f41e6ddc7b31a936f5311377cc7b6701c74a903d298278a5bd915305884620"
+        },
+        {
+          "seed": 20261107,
+          "variant": "COISC_onset",
+          "path": "<outputs>/screening/study/seed_20261107/COISC_onset_final.pt",
+          "sha256": "1d485f70bccb9b2e14f8c655ea3af7d9b6ac928323d37cde5008071f699b659c"
+        },
+        {
+          "seed": 20261107,
+          "variant": "L0",
+          "path": "<outputs>/screening/study/seed_20261107/L0_final.pt",
+          "sha256": "a7cb2cd4369b03ee1f72134953f3c777f62b47670081ec08f8f7f31244fc4233"
+        }
+      ],
+      "selected": {
+        "stage": 2,
+        "step": 500
+      },
+      "r0_training_wall_s": 59.55588840000007,
+      "r0_dev": {
+        "Tp_MAE_120": 0.30711546540260315,
+        "macro7_MAE": 0.12893246098721423,
+        "Tp_WSR_onset": 0.244849834933823,
+        "Tp_WSR_prior": 0.17349634245461934,
+        "Tp_PLE_prior": 0.050645866839384907
+      }
+    },
+    {
+      "protocol_sha256": "46fc592f925cc6475074a2e56630b79c3ca12f9e67a731ee7041d72446bb60df",
+      "seed": 20261108,
+      "bindings": [
+        {
+          "seed": 20261108,
+          "variant": "R0",
+          "path": "<outputs>/screening/study/seed_20261108/results/R0/selected.pt",
+          "sha256": "ac9650bb4b4e3b0caccc89a9001f62ff4f2d5043e53588ee4c49e68803681567"
+        },
+        {
+          "seed": 20261108,
+          "variant": "COISC",
+          "path": "<outputs>/screening/study/seed_20261108/COISC_final.pt",
+          "sha256": "7a2cca5fdbd2845265d10bbb97d5ff1306e9f2356bb00f1e38e8224588112375"
+        },
+        {
+          "seed": 20261108,
+          "variant": "COISC_onset",
+          "path": "<outputs>/screening/study/seed_20261108/COISC_onset_final.pt",
+          "sha256": "71fefdf846c7924b892ca570911b4aa37e930d84eee4ba61562559460707d90e"
+        },
+        {
+          "seed": 20261108,
+          "variant": "L0",
+          "path": "<outputs>/screening/study/seed_20261108/L0_final.pt",
+          "sha256": "7e323a3a33011ea8c1e1038e71fe5c94adca881977a60db2352a7a93d938ec6b"
+        }
+      ],
+      "selected": {
+        "stage": 2,
+        "step": 500
+      },
+      "r0_training_wall_s": 58.317802299999926,
+      "r0_dev": {
+        "Tp_MAE_120": 0.3167745769023895,
+        "macro7_MAE": 0.12637592118205168,
+        "Tp_WSR_onset": 0.19333313264497226,
+        "Tp_WSR_prior": 0.12796893344170504,
+        "Tp_PLE_prior": 0.05029315831736058
+      }
+    },
+    {
+      "protocol_sha256": "46fc592f925cc6475074a2e56630b79c3ca12f9e67a731ee7041d72446bb60df",
+      "seed": 20261109,
+      "bindings": [
+        {
+          "seed": 20261109,
+          "variant": "R0",
+          "path": "<outputs>/screening/study/seed_20261109/results/R0/selected.pt",
+          "sha256": "cb86948f2c77dcf9c39931bb4c56cb51f1a74908c69176398716188199bc4ed8"
+        },
+        {
+          "seed": 20261109,
+          "variant": "COISC",
+          "path": "<outputs>/screening/study/seed_20261109/COISC_final.pt",
+          "sha256": "a506bc4fd9e32ca665de951bcfea2e6e7ebac77b2e5162de3b0458bd20427132"
+        },
+        {
+          "seed": 20261109,
+          "variant": "COISC_onset",
+          "path": "<outputs>/screening/study/seed_20261109/COISC_onset_final.pt",
+          "sha256": "231f2efd6cb820cace6c7cffce93bcb93cd05c6339f444868d5112f5d6b66aa8"
+        },
+        {
+          "seed": 20261109,
+          "variant": "L0",
+          "path": "<outputs>/screening/study/seed_20261109/L0_final.pt",
+          "sha256": "9c6c0b1733cbfe73500689480325e752442b58e113e3be3834955f09d696a66c"
+        }
+      ],
+      "selected": {
+        "stage": 2,
+        "step": 500
+      },
+      "r0_training_wall_s": 57.88160659999994,
+      "r0_dev": {
+        "Tp_MAE_120": 0.32934531569480896,
+        "macro7_MAE": 0.11924225862287338,
+        "Tp_WSR_onset": 0.191627281575805,
+        "Tp_WSR_prior": 0.12503386616093198,
+        "Tp_PLE_prior": 0.05394543403043564
+      }
+    },
+    {
+      "protocol_sha256": "46fc592f925cc6475074a2e56630b79c3ca12f9e67a731ee7041d72446bb60df",
+      "seed": 20261110,
+      "bindings": [
+        {
+          "seed": 20261110,
+          "variant": "R0",
+          "path": "<outputs>/screening/study/seed_20261110/results/R0/selected.pt",
+          "sha256": "a0d11314f2d36b39817cf3e15c12ac6adff6e122359c480e473e60b419c8c647"
+        },
+        {
+          "seed": 20261110,
+          "variant": "COISC",
+          "path": "<outputs>/screening/study/seed_20261110/COISC_final.pt",
+          "sha256": "744aee04a8feb928739ae10d01e134160dce86105e9768179fc18bb42fa98a95"
+        },
+        {
+          "seed": 20261110,
+          "variant": "COISC_onset",
+          "path": "<outputs>/screening/study/seed_20261110/COISC_onset_final.pt",
+          "sha256": "472ac7eb1bcc7b62cfa62f681abe7f313f236c6fd5aa1fd0b54e23c92656f54a"
+        },
+        {
+          "seed": 20261110,
+          "variant": "L0",
+          "path": "<outputs>/screening/study/seed_20261110/L0_final.pt",
+          "sha256": "9735c1fa33590405bce455e38ec40b81a28c707008cdf8c4767ae4479672d5e8"
+        }
+      ],
+      "selected": {
+        "stage": 2,
+        "step": 500
+      },
+      "r0_training_wall_s": 60.87756079999997,
+      "r0_dev": {
+        "Tp_MAE_120": 0.31335511803627014,
+        "macro7_MAE": 0.12496938033278192,
+        "Tp_WSR_onset": 0.15438955617768949,
+        "Tp_WSR_prior": 0.0958073692766188,
+        "Tp_PLE_prior": 0.052082378763763995
+      }
+    },
+    {
+      "protocol_sha256": "46fc592f925cc6475074a2e56630b79c3ca12f9e67a731ee7041d72446bb60df",
+      "seed": 20261111,
+      "bindings": [
+        {
+          "seed": 20261111,
+          "variant": "R0",
+          "path": "<outputs>/screening/study/seed_20261111/results/R0/selected.pt",
+          "sha256": "a832319c0ac21f756f21c5aaa27c1ce15e545710abd708d3c1cbeadfe8ebc129"
+        },
+        {
+          "seed": 20261111,
+          "variant": "COISC",
+          "path": "<outputs>/screening/study/seed_20261111/COISC_final.pt",
+          "sha256": "5bfe7b1a3ae0a992d3ebb99f3b8d7a2916986133781421e7f3525ecb23e8010a"
+        },
+        {
+          "seed": 20261111,
+          "variant": "COISC_onset",
+          "path": "<outputs>/screening/study/seed_20261111/COISC_onset_final.pt",
+          "sha256": "994626a1e9d31003444631d8cb66aad009493c5e7922957765703f590e1a44ba"
+        },
+        {
+          "seed": 20261111,
+          "variant": "L0",
+          "path": "<outputs>/screening/study/seed_20261111/L0_final.pt",
+          "sha256": "18c5fcfcb89a01e32f7371bae85ac21d34b862b14fba29a3b62d8dd2879a2b37"
+        }
+      ],
+      "selected": {
+        "stage": 2,
+        "step": 500
+      },
+      "r0_training_wall_s": 58.520982600000025,
+      "r0_dev": {
+        "Tp_MAE_120": 0.3158372640609741,
+        "macro7_MAE": 0.13394649983559934,
+        "Tp_WSR_onset": 0.20666887423863853,
+        "Tp_WSR_prior": 0.15265736476113068,
+        "Tp_PLE_prior": 0.04344981398445611
+      }
+    },
+    {
+      "protocol_sha256": "46fc592f925cc6475074a2e56630b79c3ca12f9e67a731ee7041d72446bb60df",
+      "seed": 20261112,
+      "bindings": [
+        {
+          "seed": 20261112,
+          "variant": "R0",
+          "path": "<outputs>/screening/study/seed_20261112/results/R0/selected.pt",
+          "sha256": "11e524ab00b5a79b564c2a6d4cba795a23b120ba2c610208545fefd3e476bc37"
+        },
+        {
+          "seed": 20261112,
+          "variant": "COISC",
+          "path": "<outputs>/screening/study/seed_20261112/COISC_final.pt",
+          "sha256": "09715fbdd2b5805e1dd894a977645ce96ff6805b0af7581ebfc303fd01c6b854"
+        },
+        {
+          "seed": 20261112,
+          "variant": "COISC_onset",
+          "path": "<outputs>/screening/study/seed_20261112/COISC_onset_final.pt",
+          "sha256": "cdf673792645497dea0f9c734cab553459768f086fb7a71b53d9583476c2d647"
+        },
+        {
+          "seed": 20261112,
+          "variant": "L0",
+          "path": "<outputs>/screening/study/seed_20261112/L0_final.pt",
+          "sha256": "fa154f3c5b6cf58adb69e66023bceca6ff309fdea21be0c219c68d2c532b4d3b"
+        }
+      ],
+      "selected": {
+        "stage": 2,
+        "step": 500
+      },
+      "r0_training_wall_s": 60.522460199999955,
+      "r0_dev": {
+        "Tp_MAE_120": 0.3153330385684967,
+        "macro7_MAE": 0.1226806102470709,
+        "Tp_WSR_onset": 0.0686153506527389,
+        "Tp_WSR_prior": 0.03448704054908336,
+        "Tp_PLE_prior": 0.0530363213527733
+      }
+    },
+    {
+      "protocol_sha256": "46fc592f925cc6475074a2e56630b79c3ca12f9e67a731ee7041d72446bb60df",
+      "seed": 20261113,
+      "bindings": [
+        {
+          "seed": 20261113,
+          "variant": "R0",
+          "path": "<outputs>/screening/study/seed_20261113/results/R0/selected.pt",
+          "sha256": "723337dbab89c484841277f602c51332e591af0a9d0da2eb49868381fa4f14bf"
+        },
+        {
+          "seed": 20261113,
+          "variant": "COISC",
+          "path": "<outputs>/screening/study/seed_20261113/COISC_final.pt",
+          "sha256": "3236357d292b53cad7f042e5e027ab64038d4357e7d471b52705b0e0d5768e6b"
+        },
+        {
+          "seed": 20261113,
+          "variant": "COISC_onset",
+          "path": "<outputs>/screening/study/seed_20261113/COISC_onset_final.pt",
+          "sha256": "39c0d900a7d1c0bdb74198a5698d787bd7fba74a0fb07d2c55b0c9245a59fcd4"
+        },
+        {
+          "seed": 20261113,
+          "variant": "L0",
+          "path": "<outputs>/screening/study/seed_20261113/L0_final.pt",
+          "sha256": "471924204044b33b3dd305049d4c5643313ff69452164cecc7e820b5ebb36b15"
+        }
+      ],
+      "selected": {
+        "stage": 2,
+        "step": 500
+      },
+      "r0_training_wall_s": 60.448098500000015,
+      "r0_dev": {
+        "Tp_MAE_120": 0.3425736427307129,
+        "macro7_MAE": 0.13776422208367828,
+        "Tp_WSR_onset": 0.15623588909961167,
+        "Tp_WSR_prior": 0.09444143411902826,
+        "Tp_PLE_prior": 0.045196912344023954
+      }
+    },
+    {
+      "protocol_sha256": "46fc592f925cc6475074a2e56630b79c3ca12f9e67a731ee7041d72446bb60df",
+      "seed": 20261114,
+      "bindings": [
+        {
+          "seed": 20261114,
+          "variant": "R0",
+          "path": "<outputs>/screening/study/seed_20261114/results/R0/selected.pt",
+          "sha256": "da7796f55d5efe4ec54ea3a226a0b767f2fa03b1604a5d95d62ff4e81ecf9139"
+        },
+        {
+          "seed": 20261114,
+          "variant": "COISC",
+          "path": "<outputs>/screening/study/seed_20261114/COISC_final.pt",
+          "sha256": "11d50bc4948a56e35ff6a5506b36961fd4bdaba2b225e3869c6a5a1aa39f7b56"
+        },
+        {
+          "seed": 20261114,
+          "variant": "COISC_onset",
+          "path": "<outputs>/screening/study/seed_20261114/COISC_onset_final.pt",
+          "sha256": "71f4592f1427e7d6083d182d37c03a11456893f5302a93c61fd402f890d9f732"
+        },
+        {
+          "seed": 20261114,
+          "variant": "L0",
+          "path": "<outputs>/screening/study/seed_20261114/L0_final.pt",
+          "sha256": "6ef35987cf71862f7a8fcef57762addf6dcf1d87519b495080b0fa8a0adbcae9"
+        }
+      ],
+      "selected": {
+        "stage": 2,
+        "step": 500
+      },
+      "r0_training_wall_s": 63.8197639,
+      "r0_dev": {
+        "Tp_MAE_120": 0.3308233916759491,
+        "macro7_MAE": 0.13096416224189683,
+        "Tp_WSR_onset": 0.19354385542410468,
+        "Tp_WSR_prior": 0.12979770613203287,
+        "Tp_PLE_prior": 0.05008171499711195
+      }
+    },
+    {
+      "protocol_sha256": "46fc592f925cc6475074a2e56630b79c3ca12f9e67a731ee7041d72446bb60df",
+      "seed": 20261115,
+      "bindings": [
+        {
+          "seed": 20261115,
+          "variant": "R0",
+          "path": "<outputs>/screening/study/seed_20261115/results/R0/selected.pt",
+          "sha256": "3a1c4d81994bc281c5bdd7c55989b14d397e8c0eae49453e40ec20c30960daeb"
+        },
+        {
+          "seed": 20261115,
+          "variant": "COISC",
+          "path": "<outputs>/screening/study/seed_20261115/COISC_final.pt",
+          "sha256": "029cc4206b1501e1d3ff3e660b998922da22f34a3346b4b9f224493ce697943e"
+        },
+        {
+          "seed": 20261115,
+          "variant": "COISC_onset",
+          "path": "<outputs>/screening/study/seed_20261115/COISC_onset_final.pt",
+          "sha256": "f8923215a79c69714bc0af81affbd2f6cb804ec7015b4cdbb755414fda30e74f"
+        },
+        {
+          "seed": 20261115,
+          "variant": "L0",
+          "path": "<outputs>/screening/study/seed_20261115/L0_final.pt",
+          "sha256": "e6868d4a8c83d879ce2fbac4fe6fde656588645b1fb33fe68b5618b2c3760ebb"
+        }
+      ],
+      "selected": {
+        "stage": 2,
+        "step": 500
+      },
+      "r0_training_wall_s": 57.8091594,
+      "r0_dev": {
+        "Tp_MAE_120": 0.31343376636505127,
+        "macro7_MAE": 0.12572144094481427,
+        "Tp_WSR_onset": 0.141746189429744,
+        "Tp_WSR_prior": 0.08617809085162106,
+        "Tp_PLE_prior": 0.04826542658949155
+      }
+    },
+    {
+      "protocol_sha256": "46fc592f925cc6475074a2e56630b79c3ca12f9e67a731ee7041d72446bb60df",
+      "seed": 20261116,
+      "bindings": [
+        {
+          "seed": 20261116,
+          "variant": "R0",
+          "path": "<outputs>/screening/study/seed_20261116/results/R0/selected.pt",
+          "sha256": "d1a4513b5105bd9a0d085d2882fffdf427ea08d28267a983170fe1bbf4880a0b"
+        },
+        {
+          "seed": 20261116,
+          "variant": "COISC",
+          "path": "<outputs>/screening/study/seed_20261116/COISC_final.pt",
+          "sha256": "87fa64a410987ac176d21537d471814cb6309cfb9f84e0f5861999b0d5918d2c"
+        },
+        {
+          "seed": 20261116,
+          "variant": "COISC_onset",
+          "path": "<outputs>/screening/study/seed_20261116/COISC_onset_final.pt",
+          "sha256": "71361ef8e55b54f914d43a07bdb9e0401b1dd4c7a1df200dc1777cfd7cf5044a"
+        },
+        {
+          "seed": 20261116,
+          "variant": "L0",
+          "path": "<outputs>/screening/study/seed_20261116/L0_final.pt",
+          "sha256": "e49818dc4d8a9e9777cc686427d5ea22f5e0ae50ad2dd6edc00bc46ffef017b7"
+        }
+      ],
+      "selected": {
+        "stage": 2,
+        "step": 500
+      },
+      "r0_training_wall_s": 59.30816919999984,
+      "r0_dev": {
+        "Tp_MAE_120": 0.3202221095561981,
+        "macro7_MAE": 0.12373477542111777,
+        "Tp_WSR_onset": 0.21005047312281125,
+        "Tp_WSR_prior": 0.14060101146933984,
+        "Tp_PLE_prior": 0.0480713744995893
+      }
+    },
+    {
+      "protocol_sha256": "46fc592f925cc6475074a2e56630b79c3ca12f9e67a731ee7041d72446bb60df",
+      "seed": 20261117,
+      "bindings": [
+        {
+          "seed": 20261117,
+          "variant": "R0",
+          "path": "<outputs>/screening/study/seed_20261117/results/R0/selected.pt",
+          "sha256": "9d5c19cf967fa0df45a828da01ccd32320422aee6b0fdb6217ae21b039e6dc3b"
+        },
+        {
+          "seed": 20261117,
+          "variant": "COISC",
+          "path": "<outputs>/screening/study/seed_20261117/COISC_final.pt",
+          "sha256": "8d95ef0b1b6d9d41290a83dd1c6991b4ff76d939981ee8ef5954682d29060357"
+        },
+        {
+          "seed": 20261117,
+          "variant": "COISC_onset",
+          "path": "<outputs>/screening/study/seed_20261117/COISC_onset_final.pt",
+          "sha256": "21162c4dd5284ae407de2315ed1275a14a29d589c9079fa8a47218df0e50d977"
+        },
+        {
+          "seed": 20261117,
+          "variant": "L0",
+          "path": "<outputs>/screening/study/seed_20261117/L0_final.pt",
+          "sha256": "c89d00082bb61217e3f9675e7dca017597590c460aab9895f631b3140c7b866a"
+        }
+      ],
+      "selected": {
+        "stage": 2,
+        "step": 500
+      },
+      "r0_training_wall_s": 59.21623760000011,
+      "r0_dev": {
+        "Tp_MAE_120": 0.3352581262588501,
+        "macro7_MAE": 0.1171199768133917,
+        "Tp_WSR_onset": 0.13240414622153987,
+        "Tp_WSR_prior": 0.07544251783617809,
+        "Tp_PLE_prior": 0.057670698220238736
+      }
+    },
+    {
+      "protocol_sha256": "46fc592f925cc6475074a2e56630b79c3ca12f9e67a731ee7041d72446bb60df",
+      "seed": 20261118,
+      "bindings": [
+        {
+          "seed": 20261118,
+          "variant": "R0",
+          "path": "<outputs>/screening/study/seed_20261118/results/R0/selected.pt",
+          "sha256": "a9c14056a8c1c5ebbf3c49ceca605d0661aa9cfea7a95b399a1c7bcfe3857cf6"
+        },
+        {
+          "seed": 20261118,
+          "variant": "COISC",
+          "path": "<outputs>/screening/study/seed_20261118/COISC_final.pt",
+          "sha256": "f77b1cec6e141548b68056352e0cf50ae4471c379e010a1fcd9e8f5c3f9cbc38"
+        },
+        {
+          "seed": 20261118,
+          "variant": "COISC_onset",
+          "path": "<outputs>/screening/study/seed_20261118/COISC_onset_final.pt",
+          "sha256": "cb72061499e46b0962ebb781095cb066fae06368c200fdbae19a9f06875d4b4a"
+        },
+        {
+          "seed": 20261118,
+          "variant": "L0",
+          "path": "<outputs>/screening/study/seed_20261118/L0_final.pt",
+          "sha256": "22772f0cb3d65114a05ec88498cd170620be833aaefda4a6dd42cae2a242200c"
+        }
+      ],
+      "selected": {
+        "stage": 2,
+        "step": 500
+      },
+      "r0_training_wall_s": 51.44776830000001,
+      "r0_dev": {
+        "Tp_MAE_120": 0.32056212425231934,
+        "macro7_MAE": 0.12623972024179278,
+        "Tp_WSR_onset": 0.16640075458823766,
+        "Tp_WSR_prior": 0.10785243384809898,
+        "Tp_PLE_prior": 0.0492054556000872
+      }
+    },
+    {
+      "protocol_sha256": "46fc592f925cc6475074a2e56630b79c3ca12f9e67a731ee7041d72446bb60df",
+      "seed": 20261119,
+      "bindings": [
+        {
+          "seed": 20261119,
+          "variant": "R0",
+          "path": "<outputs>/screening/study/seed_20261119/results/R0/selected.pt",
+          "sha256": "c722f5a015fc5d4a86ffb86d171b531b5a987aac2ce99bf6ea7da850718346cd"
+        },
+        {
+          "seed": 20261119,
+          "variant": "COISC",
+          "path": "<outputs>/screening/study/seed_20261119/COISC_final.pt",
+          "sha256": "3434598bfb90618550c0171228c270d0bbc88e877c755f3ee53278c1854147b7"
+        },
+        {
+          "seed": 20261119,
+          "variant": "COISC_onset",
+          "path": "<outputs>/screening/study/seed_20261119/COISC_onset_final.pt",
+          "sha256": "4eeceb1df9c28aef271d0f98afe85341f22714e817d1221e49689f6e0a9d8982"
+        },
+        {
+          "seed": 20261119,
+          "variant": "L0",
+          "path": "<outputs>/screening/study/seed_20261119/L0_final.pt",
+          "sha256": "0829871c14128f5b524671975ce7cbab0abd95245c886339acf67506b2848254"
+        }
+      ],
+      "selected": {
+        "stage": 2,
+        "step": 500
+      },
+      "r0_training_wall_s": 58.67236520000006,
+      "r0_dev": {
+        "Tp_MAE_120": 0.30216217041015625,
+        "macro7_MAE": 0.11791451228171039,
+        "Tp_WSR_onset": 0.09322977813901683,
+        "Tp_WSR_prior": 0.043811523525693126,
+        "Tp_PLE_prior": 0.05506114890009351
+      }
+    },
+    {
+      "protocol_sha256": "46fc592f925cc6475074a2e56630b79c3ca12f9e67a731ee7041d72446bb60df",
+      "seed": 20261120,
+      "bindings": [
+        {
+          "seed": 20261120,
+          "variant": "R0",
+          "path": "<outputs>/screening/study/seed_20261120/results/R0/selected.pt",
+          "sha256": "3be0449f8c36f280853546a5d39c1cace01684b7a0d7fc5ec35eaa7411c61b34"
+        },
+        {
+          "seed": 20261120,
+          "variant": "COISC",
+          "path": "<outputs>/screening/study/seed_20261120/COISC_final.pt",
+          "sha256": "9f5b505e14c546dc5c7fd5d58b4e3da51763ea835ae415097b0e88627dce762a"
+        },
+        {
+          "seed": 20261120,
+          "variant": "COISC_onset",
+          "path": "<outputs>/screening/study/seed_20261120/COISC_onset_final.pt",
+          "sha256": "2715313985f84ff4c268102559ab85cca66829691ccee5ca278b53c71b93bd73"
+        },
+        {
+          "seed": 20261120,
+          "variant": "L0",
+          "path": "<outputs>/screening/study/seed_20261120/L0_final.pt",
+          "sha256": "61554b871fbebcb2484ecbd5d011c026e4a62fade6869ff1154c0616f4aefb10"
+        }
+      ],
+      "selected": {
+        "stage": 2,
+        "step": 500
+      },
+      "r0_training_wall_s": 58.455375400000094,
+      "r0_dev": {
+        "Tp_MAE_120": 0.340026319026947,
+        "macro7_MAE": 0.12849638182895423,
+        "Tp_WSR_onset": 0.18401115827287595,
+        "Tp_WSR_prior": 0.1309040007224781,
+        "Tp_PLE_prior": 0.05863203422228385
+      }
+    },
+    {
+      "protocol_sha256": "46fc592f925cc6475074a2e56630b79c3ca12f9e67a731ee7041d72446bb60df",
+      "seed": 20261121,
+      "bindings": [
+        {
+          "seed": 20261121,
+          "variant": "R0",
+          "path": "<outputs>/screening/study/seed_20261121/results/R0/selected.pt",
+          "sha256": "018dbd91d69550edd1eee21825160ff675e4ca1402b45196c95c37fc1e35fd26"
+        },
+        {
+          "seed": 20261121,
+          "variant": "COISC",
+          "path": "<outputs>/screening/study/seed_20261121/COISC_final.pt",
+          "sha256": "07958601c350b736577c83fcc1c151f9ed589b76574c5ac189c9d84d38e3547d"
+        },
+        {
+          "seed": 20261121,
+          "variant": "COISC_onset",
+          "path": "<outputs>/screening/study/seed_20261121/COISC_onset_final.pt",
+          "sha256": "0fab4ccb4feaaeac76dcf03f27a1b0d1a0c4385ab394561a3fa098c72d20b0c4"
+        },
+        {
+          "seed": 20261121,
+          "variant": "L0",
+          "path": "<outputs>/screening/study/seed_20261121/L0_final.pt",
+          "sha256": "f7e62c3020c57834a766738fcb6f16adc707c1c245901e56a3d1b422831ae630"
+        }
+      ],
+      "selected": {
+        "stage": 2,
+        "step": 500
+      },
+      "r0_training_wall_s": 57.63505149999992,
+      "r0_dev": {
+        "Tp_MAE_120": 0.3326314389705658,
+        "macro7_MAE": 0.12896338248218536,
+        "Tp_WSR_onset": 0.1394081700231795,
+        "Tp_WSR_prior": 0.08860516571841416,
+        "Tp_PLE_prior": 0.05175371015110635
+      }
+    },
+    {
+      "protocol_sha256": "46fc592f925cc6475074a2e56630b79c3ca12f9e67a731ee7041d72446bb60df",
+      "seed": 20261122,
+      "bindings": [
+        {
+          "seed": 20261122,
+          "variant": "R0",
+          "path": "<outputs>/screening/study/seed_20261122/results/R0/selected.pt",
+          "sha256": "514186a9b073e95a337d4bd1275732d999aea12f79547490d9b4ccfccfc25a85"
+        },
+        {
+          "seed": 20261122,
+          "variant": "COISC",
+          "path": "<outputs>/screening/study/seed_20261122/COISC_final.pt",
+          "sha256": "d4548450cab23e3572ed4694be98e989f0b0958e20e6c2de2e0857384c20ea9e"
+        },
+        {
+          "seed": 20261122,
+          "variant": "COISC_onset",
+          "path": "<outputs>/screening/study/seed_20261122/COISC_onset_final.pt",
+          "sha256": "90c8b738df026cc8b7c22cc568d4bcdf45303a64762863e37128115aae337341"
+        },
+        {
+          "seed": 20261122,
+          "variant": "L0",
+          "path": "<outputs>/screening/study/seed_20261122/L0_final.pt",
+          "sha256": "0bafa9a83b09f933087caea5ff9d1d7a332f648e09b8f25c402dec0d6e585c08"
+        }
+      ],
+      "selected": {
+        "stage": 2,
+        "step": 400
+      },
+      "r0_training_wall_s": 59.07919140000013,
+      "r0_dev": {
+        "Tp_MAE_120": 0.31419384479522705,
+        "macro7_MAE": 0.12381272988582635,
+        "Tp_WSR_onset": 0.1922594499132023,
+        "Tp_WSR_prior": 0.12768671543393842,
+        "Tp_PLE_prior": 0.0422621795309302
+      }
+    },
+    {
+      "protocol_sha256": "46fc592f925cc6475074a2e56630b79c3ca12f9e67a731ee7041d72446bb60df",
+      "seed": 20261123,
+      "bindings": [
+        {
+          "seed": 20261123,
+          "variant": "R0",
+          "path": "<outputs>/screening/study/seed_20261123/results/R0/selected.pt",
+          "sha256": "39dde7259c3a8e7076a9342b4b1983e5dc30fde1ec41d01e0309395c42582299"
+        },
+        {
+          "seed": 20261123,
+          "variant": "COISC",
+          "path": "<outputs>/screening/study/seed_20261123/COISC_final.pt",
+          "sha256": "b3b88c5e87ca5e9d2839c35433553ba6063f5478c3abaefd98399390fe39a07e"
+        },
+        {
+          "seed": 20261123,
+          "variant": "COISC_onset",
+          "path": "<outputs>/screening/study/seed_20261123/COISC_onset_final.pt",
+          "sha256": "13ae14d19838e40a790f1f50fb4656a379d87ad5a5b21404370c31aee0c8bf67"
+        },
+        {
+          "seed": 20261123,
+          "variant": "L0",
+          "path": "<outputs>/screening/study/seed_20261123/L0_final.pt",
+          "sha256": "f92c67a202a0ae0dde2a167f47e4996beb367a310e962fd515cabf06bba92ff3"
+        }
+      ],
+      "selected": {
+        "stage": 2,
+        "step": 500
+      },
+      "r0_training_wall_s": 66.43846210000001,
+      "r0_dev": {
+        "Tp_MAE_120": 0.32841965556144714,
+        "macro7_MAE": 0.1236173536788257,
+        "Tp_WSR_onset": 0.15943686845881372,
+        "Tp_WSR_prior": 0.09747809988259731,
+        "Tp_PLE_prior": 0.05338353059340308
+      }
+    },
+    {
+      "protocol_sha256": "46fc592f925cc6475074a2e56630b79c3ca12f9e67a731ee7041d72446bb60df",
+      "seed": 20261124,
+      "bindings": [
+        {
+          "seed": 20261124,
+          "variant": "R0",
+          "path": "<outputs>/screening/study/seed_20261124/results/R0/selected.pt",
+          "sha256": "4c3bd32394ad3944cc46197abffc0659432930c696c55c732c1d0a5a93fb1d29"
+        },
+        {
+          "seed": 20261124,
+          "variant": "COISC",
+          "path": "<outputs>/screening/study/seed_20261124/COISC_final.pt",
+          "sha256": "971cc15d2b47991c7753885ac42e39509656c07ec3eacdd694dd3cb4df76a664"
+        },
+        {
+          "seed": 20261124,
+          "variant": "COISC_onset",
+          "path": "<outputs>/screening/study/seed_20261124/COISC_onset_final.pt",
+          "sha256": "37a93b05d9c7f22dca8381aa349494f76e00f3115f39ebfc564cc840960d78fe"
+        },
+        {
+          "seed": 20261124,
+          "variant": "L0",
+          "path": "<outputs>/screening/study/seed_20261124/L0_final.pt",
+          "sha256": "1519c8a7f526ef37d3b9072436e739d19f57d65d14e306b67ed8af1072da845f"
+        }
+      ],
+      "selected": {
+        "stage": 2,
+        "step": 500
+      },
+      "r0_training_wall_s": 56.0220128,
+      "r0_dev": {
+        "Tp_MAE_120": 0.3679555654525757,
+        "macro7_MAE": 0.1284774929600076,
+        "Tp_WSR_onset": 0.14799763187733928,
+        "Tp_WSR_prior": 0.0926239501490111,
+        "Tp_PLE_prior": 0.03413187840054818
+      }
+    },
+    {
+      "protocol_sha256": "46fc592f925cc6475074a2e56630b79c3ca12f9e67a731ee7041d72446bb60df",
+      "seed": 20261125,
+      "bindings": [
+        {
+          "seed": 20261125,
+          "variant": "R0",
+          "path": "<outputs>/screening/study/seed_20261125/results/R0/selected.pt",
+          "sha256": "a0411ceac9f6759942a8e396f2dbd0218ff19891c2f0fc682e86cf2e990e636d"
+        },
+        {
+          "seed": 20261125,
+          "variant": "COISC",
+          "path": "<outputs>/screening/study/seed_20261125/COISC_final.pt",
+          "sha256": "5419eef339f94e0b5a71ab92424e3ec997820dafde98cdc385a85da9ecbdd640"
+        },
+        {
+          "seed": 20261125,
+          "variant": "COISC_onset",
+          "path": "<outputs>/screening/study/seed_20261125/COISC_onset_final.pt",
+          "sha256": "30b5b5d33709edc980470cd07352bf831d759373d04d9b2c57b84b6838aed754"
+        },
+        {
+          "seed": 20261125,
+          "variant": "L0",
+          "path": "<outputs>/screening/study/seed_20261125/L0_final.pt",
+          "sha256": "431dfda655f5a6d8f0eb87ab78dc12d0e76951ae6fb8df514447118da88f65b0"
+        }
+      ],
+      "selected": {
+        "stage": 2,
+        "step": 500
+      },
+      "r0_training_wall_s": 56.86558479999999,
+      "r0_dev": {
+        "Tp_MAE_120": 0.32504701614379883,
+        "macro7_MAE": 0.13197248403166312,
+        "Tp_WSR_onset": 0.16594920577581104,
+        "Tp_WSR_prior": 0.1003341461211957,
+        "Tp_PLE_prior": 0.05130845080690287
+      }
+    },
+    {
+      "protocol_sha256": "46fc592f925cc6475074a2e56630b79c3ca12f9e67a731ee7041d72446bb60df",
+      "seed": 20261126,
+      "bindings": [
+        {
+          "seed": 20261126,
+          "variant": "R0",
+          "path": "<outputs>/screening/study/seed_20261126/results/R0/selected.pt",
+          "sha256": "27f81758449a337306c4a3b7f9828f1cf7c8c512a9f01d36ee0ea514f97c606a"
+        },
+        {
+          "seed": 20261126,
+          "variant": "COISC",
+          "path": "<outputs>/screening/study/seed_20261126/COISC_final.pt",
+          "sha256": "71694aee89f8784ff764394a16d2086585e3d139e73c91cc06ac4562cf6e493a"
+        },
+        {
+          "seed": 20261126,
+          "variant": "COISC_onset",
+          "path": "<outputs>/screening/study/seed_20261126/COISC_onset_final.pt",
+          "sha256": "2698098d2ed9d2ef11b3e5e937422c90558ca024879fb128e8b581cbdb5e6fca"
+        },
+        {
+          "seed": 20261126,
+          "variant": "L0",
+          "path": "<outputs>/screening/study/seed_20261126/L0_final.pt",
+          "sha256": "68729c8ff327bcfd6799f5c42ed65b21966be16b50b3b43b82198cadd42d916a"
+        }
+      ],
+      "selected": {
+        "stage": 2,
+        "step": 500
+      },
+      "r0_training_wall_s": 55.84548619999998,
+      "r0_dev": {
+        "Tp_MAE_120": 0.3323711156845093,
+        "macro7_MAE": 0.13648529537609932,
+        "Tp_WSR_onset": 0.1870315181071074,
+        "Tp_WSR_prior": 0.12439040910322406,
+        "Tp_PLE_prior": 0.040538418703760654
+      }
+    },
+    {
+      "protocol_sha256": "46fc592f925cc6475074a2e56630b79c3ca12f9e67a731ee7041d72446bb60df",
+      "seed": 20261127,
+      "bindings": [
+        {
+          "seed": 20261127,
+          "variant": "R0",
+          "path": "<outputs>/screening/study/seed_20261127/results/R0/selected.pt",
+          "sha256": "15986f297459508717eb16b5a1d3ee5f0ce3662bbbc99c9f8230efdee4bcb3d4"
+        },
+        {
+          "seed": 20261127,
+          "variant": "COISC",
+          "path": "<outputs>/screening/study/seed_20261127/COISC_final.pt",
+          "sha256": "fc3373e059de442579347b88deddabade15ca35a8c1298fa3fb27f351d1d0ae8"
+        },
+        {
+          "seed": 20261127,
+          "variant": "COISC_onset",
+          "path": "<outputs>/screening/study/seed_20261127/COISC_onset_final.pt",
+          "sha256": "30017f340ca497a349d4f429095011ce92aa7afa06100291a2e2b292899d9a02"
+        },
+        {
+          "seed": 20261127,
+          "variant": "L0",
+          "path": "<outputs>/screening/study/seed_20261127/L0_final.pt",
+          "sha256": "3d95ffdcbfd5ad72579ea1fb6359cf46d29b028917d21bbcccaa56344c8d0437"
+        }
+      ],
+      "selected": {
+        "stage": 2,
+        "step": 500
+      },
+      "r0_training_wall_s": 58.95901319999996,
+      "r0_dev": {
+        "Tp_MAE_120": 0.31591758131980896,
+        "macro7_MAE": 0.12614086706024838,
+        "Tp_WSR_onset": 0.12596204983092005,
+        "Tp_WSR_prior": 0.06866928564977874,
+        "Tp_PLE_prior": 0.04279135512133617
+      }
+    },
+    {
+      "protocol_sha256": "46fc592f925cc6475074a2e56630b79c3ca12f9e67a731ee7041d72446bb60df",
+      "seed": 20261128,
+      "bindings": [
+        {
+          "seed": 20261128,
+          "variant": "R0",
+          "path": "<outputs>/screening/study/seed_20261128/results/R0/selected.pt",
+          "sha256": "2a194fa344b888f97bf22710777ce36116024d852bba55c911326f793714dff6"
+        },
+        {
+          "seed": 20261128,
+          "variant": "COISC",
+          "path": "<outputs>/screening/study/seed_20261128/COISC_final.pt",
+          "sha256": "bc4a5bba4c3b79fc39f46b57169df52dbca49515ecd9c92eba9f5c09f18407ed"
+        },
+        {
+          "seed": 20261128,
+          "variant": "COISC_onset",
+          "path": "<outputs>/screening/study/seed_20261128/COISC_onset_final.pt",
+          "sha256": "d4178c5aafa1c49f4e28be3efcdb4c91f7036dc01fedc30f6ec5e4ec5a8e99fa"
+        },
+        {
+          "seed": 20261128,
+          "variant": "L0",
+          "path": "<outputs>/screening/study/seed_20261128/L0_final.pt",
+          "sha256": "642b7a77753066b1b7cc5c16ab840822e0ef015a50cc1890efeb47b41a366156"
+        }
+      ],
+      "selected": {
+        "stage": 2,
+        "step": 500
+      },
+      "r0_training_wall_s": 57.97993229999997,
+      "r0_dev": {
+        "Tp_MAE_120": 0.35305678844451904,
+        "macro7_MAE": 0.13516355770091187,
+        "Tp_WSR_onset": 0.17242140542059264,
+        "Tp_WSR_prior": 0.12146663054276167,
+        "Tp_PLE_prior": 0.04637317160043891
+      }
+    },
+    {
+      "protocol_sha256": "46fc592f925cc6475074a2e56630b79c3ca12f9e67a731ee7041d72446bb60df",
+      "seed": 20261129,
+      "bindings": [
+        {
+          "seed": 20261129,
+          "variant": "R0",
+          "path": "<outputs>/screening/study/seed_20261129/results/R0/selected.pt",
+          "sha256": "5b2c1f745ca977997e6a8a0e210fa3ef78c611207bbe1868acf22f307344ff07"
+        },
+        {
+          "seed": 20261129,
+          "variant": "COISC",
+          "path": "<outputs>/screening/study/seed_20261129/COISC_final.pt",
+          "sha256": "753f6a266cb3a58abf4fece9c6ab600710d79a3c5c8b243ac55bd1bbcf9cb25d"
+        },
+        {
+          "seed": 20261129,
+          "variant": "COISC_onset",
+          "path": "<outputs>/screening/study/seed_20261129/COISC_onset_final.pt",
+          "sha256": "7ee55547d77269dff9d7d2de1160356fba3ea51ec770a7814673b8d7cab346c7"
+        },
+        {
+          "seed": 20261129,
+          "variant": "L0",
+          "path": "<outputs>/screening/study/seed_20261129/L0_final.pt",
+          "sha256": "58201367f837b18c25a0797e368b8b6b1cfbcd0275b24501e35bec2f61e7fa8b"
+        }
+      ],
+      "selected": {
+        "stage": 2,
+        "step": 500
+      },
+      "r0_training_wall_s": 57.079530999999974,
+      "r0_dev": {
+        "Tp_MAE_120": 0.3266757130622864,
+        "macro7_MAE": 0.13349467534121234,
+        "Tp_WSR_onset": 0.20447133668482897,
+        "Tp_WSR_prior": 0.12975255125079022,
+        "Tp_PLE_prior": 0.046697437287616966
+      }
+    },
+    {
+      "protocol_sha256": "46fc592f925cc6475074a2e56630b79c3ca12f9e67a731ee7041d72446bb60df",
+      "seed": 20261130,
+      "bindings": [
+        {
+          "seed": 20261130,
+          "variant": "R0",
+          "path": "<outputs>/screening/study/seed_20261130/results/R0/selected.pt",
+          "sha256": "24c58077ab36e0e29865398c812ebb6047c7ce3b990bbd85d7a5f2739d618e28"
+        },
+        {
+          "seed": 20261130,
+          "variant": "COISC",
+          "path": "<outputs>/screening/study/seed_20261130/COISC_final.pt",
+          "sha256": "b66932eb04c84df38b942fddc976278f9771f98141bfafb02e16d4555dae5d92"
+        },
+        {
+          "seed": 20261130,
+          "variant": "COISC_onset",
+          "path": "<outputs>/screening/study/seed_20261130/COISC_onset_final.pt",
+          "sha256": "94e3a6593514c06aaeda48da080454defaefcf406528d49ecf5f2d02092f4196"
+        },
+        {
+          "seed": 20261130,
+          "variant": "L0",
+          "path": "<outputs>/screening/study/seed_20261130/L0_final.pt",
+          "sha256": "dc96208176923c42516e3d7431d732edf8313e41b7e9b8d2ecbe598468fdc533"
+        }
+      ],
+      "selected": {
+        "stage": 2,
+        "step": 500
+      },
+      "r0_training_wall_s": 55.87613859999999,
+      "r0_dev": {
+        "Tp_MAE_120": 0.3235893249511719,
+        "macro7_MAE": 0.12799026748683748,
+        "Tp_WSR_onset": 0.1856367339976118,
+        "Tp_WSR_prior": 0.1149643276438183,
+        "Tp_PLE_prior": 0.0413851017939877
+      }
+    },
+    {
+      "protocol_sha256": "46fc592f925cc6475074a2e56630b79c3ca12f9e67a731ee7041d72446bb60df",
+      "seed": 20261131,
+      "bindings": [
+        {
+          "seed": 20261131,
+          "variant": "R0",
+          "path": "<outputs>/screening/study/seed_20261131/results/R0/selected.pt",
+          "sha256": "d26a423fba62b0f1491129308d9c305b5034e72594739d6a2eb4ad921a6b8b34"
+        },
+        {
+          "seed": 20261131,
+          "variant": "COISC",
+          "path": "<outputs>/screening/study/seed_20261131/COISC_final.pt",
+          "sha256": "5de3ee43028d0c7a4962e5410ec6763260c10a899e68668185e6cf64fae1d115"
+        },
+        {
+          "seed": 20261131,
+          "variant": "COISC_onset",
+          "path": "<outputs>/screening/study/seed_20261131/COISC_onset_final.pt",
+          "sha256": "5e2fbe108837157e3d60e8a90066fbec2a6d43658831a0520ef4f7d4b73ef6c4"
+        },
+        {
+          "seed": 20261131,
+          "variant": "L0",
+          "path": "<outputs>/screening/study/seed_20261131/L0_final.pt",
+          "sha256": "6cfc2f96ffe557e1514d9a16f931ea0d3f3453b9838307ea8eaf47c97de36015"
+        }
+      ],
+      "selected": {
+        "stage": 2,
+        "step": 400
+      },
+      "r0_training_wall_s": 58.040226300000086,
+      "r0_dev": {
+        "Tp_MAE_120": 0.3174195885658264,
+        "macro7_MAE": 0.12316169170624286,
+        "Tp_WSR_onset": 0.15763067320910723,
+        "Tp_WSR_prior": 0.10119208886480628,
+        "Tp_PLE_prior": 0.04479324653184952
+      }
+    },
+    {
+      "protocol_sha256": "46fc592f925cc6475074a2e56630b79c3ca12f9e67a731ee7041d72446bb60df",
+      "seed": 20261132,
+      "bindings": [
+        {
+          "seed": 20261132,
+          "variant": "R0",
+          "path": "<outputs>/screening/study/seed_20261132/results/R0/selected.pt",
+          "sha256": "6a39d60646b2dc1d4ba81a8f308a4f6b3a34993809b3ae439887d285539fdd7b"
+        },
+        {
+          "seed": 20261132,
+          "variant": "COISC",
+          "path": "<outputs>/screening/study/seed_20261132/COISC_final.pt",
+          "sha256": "df54f88580730f7f9cac36e2067e7cf4412244f98909527abf2bccb42bff244d"
+        },
+        {
+          "seed": 20261132,
+          "variant": "COISC_onset",
+          "path": "<outputs>/screening/study/seed_20261132/COISC_onset_final.pt",
+          "sha256": "1063996f73f90924967560fb04634133585564746799d0790124f88ce204930b"
+        },
+        {
+          "seed": 20261132,
+          "variant": "L0",
+          "path": "<outputs>/screening/study/seed_20261132/L0_final.pt",
+          "sha256": "213b139f0e30fe1070e923bc8c432987c05ca7a8054c50b9bc4b953dab51f601"
+        }
+      ],
+      "selected": {
+        "stage": 2,
+        "step": 500
+      },
+      "r0_training_wall_s": 57.67177800000002,
+      "r0_dev": {
+        "Tp_MAE_120": 0.32838883996009827,
+        "macro7_MAE": 0.13259365254166905,
+        "Tp_WSR_onset": 0.2876165246796512,
+        "Tp_WSR_prior": 0.2313961889280231,
+        "Tp_PLE_prior": 0.06301158205251234
+      }
+    },
+    {
+      "protocol_sha256": "46fc592f925cc6475074a2e56630b79c3ca12f9e67a731ee7041d72446bb60df",
+      "seed": 20261133,
+      "bindings": [
+        {
+          "seed": 20261133,
+          "variant": "R0",
+          "path": "<outputs>/screening/study/seed_20261133/results/R0/selected.pt",
+          "sha256": "7158018f22228088553fc6a3dd5518f4c4e3e627aea1514d07e57517e22e6cf6"
+        },
+        {
+          "seed": 20261133,
+          "variant": "COISC",
+          "path": "<outputs>/screening/study/seed_20261133/COISC_final.pt",
+          "sha256": "a943d23fa82d984422e77772122036bab8d0b7fdeac17be4884686c17857ba86"
+        },
+        {
+          "seed": 20261133,
+          "variant": "COISC_onset",
+          "path": "<outputs>/screening/study/seed_20261133/COISC_onset_final.pt",
+          "sha256": "1d6d906879a202f19b82e1c1568100643c32f9346259f6992b607f4fe58a7a39"
+        },
+        {
+          "seed": 20261133,
+          "variant": "L0",
+          "path": "<outputs>/screening/study/seed_20261133/L0_final.pt",
+          "sha256": "605c0d989cb837e09cdd2fea871dfebf6ace1750bfe8c4b34deacfaf4a9bf8e0"
+        }
+      ],
+      "selected": {
+        "stage": 2,
+        "step": 500
+      },
+      "r0_training_wall_s": 44.58032360000004,
+      "r0_dev": {
+        "Tp_MAE_120": 0.3103945851325989,
+        "macro7_MAE": 0.12344716182013069,
+        "Tp_WSR_onset": 0.34016677202805623,
+        "Tp_WSR_prior": 0.2939131220084891,
+        "Tp_PLE_prior": 0.04947289163430007
+      }
+    },
+    {
+      "protocol_sha256": "46fc592f925cc6475074a2e56630b79c3ca12f9e67a731ee7041d72446bb60df",
+      "seed": 20261134,
+      "bindings": [
+        {
+          "seed": 20261134,
+          "variant": "R0",
+          "path": "<outputs>/screening/study/seed_20261134/results/R0/selected.pt",
+          "sha256": "57f4ea6ee787f00f02dcca48df39e9517e5c5c0e9aec6770e680fe28380e53da"
+        },
+        {
+          "seed": 20261134,
+          "variant": "COISC",
+          "path": "<outputs>/screening/study/seed_20261134/COISC_final.pt",
+          "sha256": "ae8d009fec37f303d8142b4a4209be06e1df9b84873bc3afd9ac82be2d893974"
+        },
+        {
+          "seed": 20261134,
+          "variant": "COISC_onset",
+          "path": "<outputs>/screening/study/seed_20261134/COISC_onset_final.pt",
+          "sha256": "7232ee73ad27dd71bcf2e6145d7a4ee74404afe81b7af9c12f694ea0fc442e02"
+        },
+        {
+          "seed": 20261134,
+          "variant": "L0",
+          "path": "<outputs>/screening/study/seed_20261134/L0_final.pt",
+          "sha256": "66322edff2e8994193127364271afcde8e36363bbd839886ae567d10b8f52228"
+        }
+      ],
+      "selected": {
+        "stage": 2,
+        "step": 500
+      },
+      "r0_training_wall_s": 37.26093119999996,
+      "r0_dev": {
+        "Tp_MAE_120": 0.3113552927970886,
+        "macro7_MAE": 0.12291793661136746,
+        "Tp_WSR_onset": 0.13866562308718905,
+        "Tp_WSR_prior": 0.07549896143773142,
+        "Tp_PLE_prior": 0.04824947926593332
+      }
+    },
+    {
+      "protocol_sha256": "46fc592f925cc6475074a2e56630b79c3ca12f9e67a731ee7041d72446bb60df",
+      "seed": 20261135,
+      "bindings": [
+        {
+          "seed": 20261135,
+          "variant": "R0",
+          "path": "<outputs>/screening/study/seed_20261135/results/R0/selected.pt",
+          "sha256": "df27696a792ec692a9e30e78f07febb778ecc6c73e32e828a6ad5da47cd1bde8"
+        },
+        {
+          "seed": 20261135,
+          "variant": "COISC",
+          "path": "<outputs>/screening/study/seed_20261135/COISC_final.pt",
+          "sha256": "24250e55d908fa7a58f551246d32005f0fe8ba390e7273f16512eee168d8f326"
+        },
+        {
+          "seed": 20261135,
+          "variant": "COISC_onset",
+          "path": "<outputs>/screening/study/seed_20261135/COISC_onset_final.pt",
+          "sha256": "3f53e622270793c03f7ae4a1f36c9a58bab164936514eab02d6f3650c63e3c8b"
+        },
+        {
+          "seed": 20261135,
+          "variant": "L0",
+          "path": "<outputs>/screening/study/seed_20261135/L0_final.pt",
+          "sha256": "8c6faf5d99d1670c6fac50afacc5b6ab5fcfc9221ef6a2eeee4181a73efd9c2c"
+        }
+      ],
+      "selected": {
+        "stage": 2,
+        "step": 500
+      },
+      "r0_training_wall_s": 43.4434169000001,
+      "r0_dev": {
+        "Tp_MAE_120": 0.3322015404701233,
+        "macro7_MAE": 0.1287268560477801,
+        "Tp_WSR_onset": 0.16966194045576327,
+        "Tp_WSR_prior": 0.10973765013998013,
+        "Tp_PLE_prior": 0.053091217036418094
+      }
+    },
+    {
+      "protocol_sha256": "46fc592f925cc6475074a2e56630b79c3ca12f9e67a731ee7041d72446bb60df",
+      "seed": 20261136,
+      "bindings": [
+        {
+          "seed": 20261136,
+          "variant": "R0",
+          "path": "<outputs>/screening/study/seed_20261136/results/R0/selected.pt",
+          "sha256": "6c91e6f76d78fc163d71454786c60ebe8ca2a2844ca1a343f4c5a0a83ff3a4b2"
+        },
+        {
+          "seed": 20261136,
+          "variant": "COISC",
+          "path": "<outputs>/screening/study/seed_20261136/COISC_final.pt",
+          "sha256": "8546fb5ebbb3f8d8970a7e19dc1f41212d65139306ae01c3e0fa5aa3f3e85f7d"
+        },
+        {
+          "seed": 20261136,
+          "variant": "COISC_onset",
+          "path": "<outputs>/screening/study/seed_20261136/COISC_onset_final.pt",
+          "sha256": "3a5c453f3ace550838a554b165fc658da922e5fb7c0104a97aefcc102b81d600"
+        },
+        {
+          "seed": 20261136,
+          "variant": "L0",
+          "path": "<outputs>/screening/study/seed_20261136/L0_final.pt",
+          "sha256": "a76bb372a507a6cfbd85d8e925014d1076c6f21143a497bce2bed4657047f13b"
+        }
+      ],
+      "selected": {
+        "stage": 2,
+        "step": 500
+      },
+      "r0_training_wall_s": 50.90640439999993,
+      "r0_dev": {
+        "Tp_MAE_120": 0.33344829082489014,
+        "macro7_MAE": 0.1345536441163223,
+        "Tp_WSR_onset": 0.11762344842810842,
+        "Tp_WSR_prior": 0.05246997200397363,
+        "Tp_PLE_prior": 0.04551520172903228
+      }
+    },
+    {
+      "protocol_sha256": "46fc592f925cc6475074a2e56630b79c3ca12f9e67a731ee7041d72446bb60df",
+      "seed": 20261137,
+      "bindings": [
+        {
+          "seed": 20261137,
+          "variant": "R0",
+          "path": "<outputs>/screening/study/seed_20261137/results/R0/selected.pt",
+          "sha256": "36cc6bf268198a6cdd8c54bd511787c64c9a58653894574ad7e0131367005707"
+        },
+        {
+          "seed": 20261137,
+          "variant": "COISC",
+          "path": "<outputs>/screening/study/seed_20261137/COISC_final.pt",
+          "sha256": "816fca2907a6bad0cc3f657a115310b725d3a6938cabb85f5eff01da0fc60e24"
+        },
+        {
+          "seed": 20261137,
+          "variant": "COISC_onset",
+          "path": "<outputs>/screening/study/seed_20261137/COISC_onset_final.pt",
+          "sha256": "99278b27f1972ea362b3a14695b89c1acad7e272245efa4b97168ba40d476421"
+        },
+        {
+          "seed": 20261137,
+          "variant": "L0",
+          "path": "<outputs>/screening/study/seed_20261137/L0_final.pt",
+          "sha256": "ad368fb06ffd02812034b76897462daf52d7f0fe3691bc83f152d7a852e794f3"
+        }
+      ],
+      "selected": {
+        "stage": 2,
+        "step": 400
+      },
+      "r0_training_wall_s": 37.97752409999998,
+      "r0_dev": {
+        "Tp_MAE_120": 0.318091481924057,
+        "macro7_MAE": 0.12922105647160506,
+        "Tp_WSR_onset": 0.20618722217205013,
+        "Tp_WSR_prior": 0.14717104669014722,
+        "Tp_PLE_prior": 0.055896108755129646
+      }
+    },
+    {
+      "protocol_sha256": "46fc592f925cc6475074a2e56630b79c3ca12f9e67a731ee7041d72446bb60df",
+      "seed": 20261138,
+      "bindings": [
+        {
+          "seed": 20261138,
+          "variant": "R0",
+          "path": "<outputs>/screening/study/seed_20261138/results/R0/selected.pt",
+          "sha256": "1cd50baeaffb5495bc143a58677585dc8252708c1bb75583885d25e278c4b28c"
+        },
+        {
+          "seed": 20261138,
+          "variant": "COISC",
+          "path": "<outputs>/screening/study/seed_20261138/COISC_final.pt",
+          "sha256": "5566c181f0412d233fcf4110799759129e72141a498decf22ddc209fb3a09b3a"
+        },
+        {
+          "seed": 20261138,
+          "variant": "COISC_onset",
+          "path": "<outputs>/screening/study/seed_20261138/COISC_onset_final.pt",
+          "sha256": "b57abadfd599d1cf9be3ea15bb28b57c92fbb98f793c0cd19a23d611c881ef68"
+        },
+        {
+          "seed": 20261138,
+          "variant": "L0",
+          "path": "<outputs>/screening/study/seed_20261138/L0_final.pt",
+          "sha256": "9a0a91f1a994107e6b7cfdee59436cc2dea8cb1e0408cbf6f68b16a49f663e6f"
+        }
+      ],
+      "selected": {
+        "stage": 2,
+        "step": 500
+      },
+      "r0_training_wall_s": 43.24606820000008,
+      "r0_dev": {
+        "Tp_MAE_120": 0.3347803056240082,
+        "macro7_MAE": 0.13373506473060415,
+        "Tp_WSR_onset": 0.1580922564395878,
+        "Tp_WSR_prior": 0.1004696107649237,
+        "Tp_PLE_prior": 0.04964913863376463
+      }
+    },
+    {
+      "protocol_sha256": "46fc592f925cc6475074a2e56630b79c3ca12f9e67a731ee7041d72446bb60df",
+      "seed": 20261139,
+      "bindings": [
+        {
+          "seed": 20261139,
+          "variant": "R0",
+          "path": "<outputs>/screening/study/seed_20261139/results/R0/selected.pt",
+          "sha256": "f11183adab6141511e6d6ff36b04435b23f11ea838f6fe815b8240772bf7fe7b"
+        },
+        {
+          "seed": 20261139,
+          "variant": "COISC",
+          "path": "<outputs>/screening/study/seed_20261139/COISC_final.pt",
+          "sha256": "a089f2fb291ba695f79b8d076a6d4d6eaeb9751605a1db19f1b52acf0272463f"
+        },
+        {
+          "seed": 20261139,
+          "variant": "COISC_onset",
+          "path": "<outputs>/screening/study/seed_20261139/COISC_onset_final.pt",
+          "sha256": "1bbf44d96ebc50fef0ad024cafcb816423a1bdbf7a9654be1d09dd6f5acb8085"
+        },
+        {
+          "seed": 20261139,
+          "variant": "L0",
+          "path": "<outputs>/screening/study/seed_20261139/L0_final.pt",
+          "sha256": "5698348c0110c565a43b4829b9497d1911ba96656786f704513021a00500e1a0"
+        }
+      ],
+      "selected": {
+        "stage": 2,
+        "step": 500
+      },
+      "r0_training_wall_s": 58.46153800000002,
+      "r0_dev": {
+        "Tp_MAE_120": 0.34602612257003784,
+        "macro7_MAE": 0.12756682078533804,
+        "Tp_WSR_onset": 0.2645875352458934,
+        "Tp_WSR_prior": 0.20043122911586742,
+        "Tp_PLE_prior": 0.04593092916314127
+      }
+    },
+    {
+      "protocol_sha256": "46fc592f925cc6475074a2e56630b79c3ca12f9e67a731ee7041d72446bb60df",
+      "seed": 20261140,
+      "bindings": [
+        {
+          "seed": 20261140,
+          "variant": "R0",
+          "path": "<outputs>/screening/study/seed_20261140/results/R0/selected.pt",
+          "sha256": "78a3d6578c6e32bcb8a1e1209a011e3aae8f4851615fcd89baad40f19b84091b"
+        },
+        {
+          "seed": 20261140,
+          "variant": "COISC",
+          "path": "<outputs>/screening/study/seed_20261140/COISC_final.pt",
+          "sha256": "4ec491c862a845f2b8cce2300758f1bc982e0a8281d3f2f91036ef9b5a293996"
+        },
+        {
+          "seed": 20261140,
+          "variant": "COISC_onset",
+          "path": "<outputs>/screening/study/seed_20261140/COISC_onset_final.pt",
+          "sha256": "c21263927e3d6f1ac63be0cedaa00ba5127c438079531aa3b03403d1133f46e6"
+        },
+        {
+          "seed": 20261140,
+          "variant": "L0",
+          "path": "<outputs>/screening/study/seed_20261140/L0_final.pt",
+          "sha256": "9cbc4011e085061e939a747ca0a69d3d148f0e6a5bb820db204abffefe51cf61"
+        }
+      ],
+      "selected": {
+        "stage": 2,
+        "step": 500
+      },
+      "r0_training_wall_s": 60.32750420000002,
+      "r0_dev": {
+        "Tp_MAE_120": 0.30944281816482544,
+        "macro7_MAE": 0.12095815616695549,
+        "Tp_WSR_onset": 0.0962702068093561,
+        "Tp_WSR_prior": 0.03015217194978777,
+        "Tp_PLE_prior": 0.05839869128130647
+      }
+    }
+  ]
+}

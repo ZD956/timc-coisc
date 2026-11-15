@@ -1,0 +1,58 @@
+{
+  "label": "Guard study gate G2: panel-A per-pair contrasts reproduced bitwise from raw runs; synthetic analysis selftest",
+  "runs_loaded": 432,
+  "missing": 0,
+  "rows": [
+    {
+      "contrast": "COISC - R0",
+      "exact": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "contrast": "L0 - R0",
+      "exact": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "contrast": "COISC - L0",
+      "exact": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    }
+  ],
+  "selftest": {
+    "checks": {
+      "h1_point": true,
+      "h2_point": true,
+      "guard_r0": true,
+      "verdict": true,
+      "fired": true,
+      "h1_fails": true,
+      "verdict_h2_only": true
+    },
+    "pass_": true
+  },
+  "pass_": true,
+  "code_sha256": {
+    "gd_common.py": "288869b3708e05642c2b4024509e74390e9b33af6bd6a499bcc3963999a1a465",
+    "gd_analyze.py": "e1bc16255bb5fbf5b84ed9423ae7c55219bc4ed0bd48b8d4fa81272760f931f9"
+  },
+  "created_utc": "2026-11-12T11:53:45Z"
+}

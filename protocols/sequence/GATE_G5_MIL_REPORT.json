@@ -1,0 +1,81 @@
+{
+  "label": "Sequence study gate G5: onset_mil.run_one reproduces 6 stored stage-S4 runs bitwise (screening checkpoints)",
+  "rows": [
+    {
+      "task_index": 1,
+      "plant_index": 0,
+      "scenario_index": 0,
+      "seed": 20261101,
+      "variant": "COISC",
+      "applied_UH_bitwise": true,
+      "plant_Tp_bitwise": true,
+      "runtime_s": 8.890851699999999
+    },
+    {
+      "task_index": 4320,
+      "plant_index": 8,
+      "scenario_index": 0,
+      "seed": 20261101,
+      "variant": "R0",
+      "applied_UH_bitwise": true,
+      "plant_Tp_bitwise": true,
+      "runtime_s": 4.0102923
+    },
+    {
+      "task_index": 8637,
+      "plant_index": 23,
+      "scenario_index": 11,
+      "seed": 20261140,
+      "variant": "R0",
+      "applied_UH_bitwise": true,
+      "plant_Tp_bitwise": true,
+      "runtime_s": 39.22970910000001
+    },
+    {
+      "task_index": 8640,
+      "plant_index": 1,
+      "scenario_index": 11,
+      "seed": 20261109,
+      "variant": "R0",
+      "applied_UH_bitwise": true,
+      "plant_Tp_bitwise": true,
+      "runtime_s": 28.3693595
+    },
+    {
+      "task_index": 8803,
+      "plant_index": 1,
+      "scenario_index": 3,
+      "seed": 20261132,
+      "variant": "COISC",
+      "applied_UH_bitwise": true,
+      "plant_Tp_bitwise": true,
+      "runtime_s": 56.341222200000004
+    },
+    {
+      "task_index": 8963,
+      "plant_index": 22,
+      "scenario_index": 11,
+      "seed": 20261137,
+      "variant": "L0",
+      "applied_UH_bitwise": true,
+      "plant_Tp_bitwise": true,
+      "runtime_s": 29.379589100000004
+    }
+  ],
+  "pass_": true,
+  "variants_covered": [
+    "COISC",
+    "L0",
+    "R0"
+  ],
+  "timing": {
+    "mean_runtime_s": 27.703503983333334,
+    "planned_runs": 2988,
+    "est_wall_h_6_workers": 3.832318051027778
+  },
+  "code_sha256": {
+    "sq_common.py": "54384bc396d0e240f6f38483d168eada0ab3187f218dda306a92fb4d36f59c71",
+    "sq_mil.py": "c9674f8ba7dc4837cc3df82f9e5029beb09cbbbfe9b92076de3efff62e12ea23"
+  },
+  "created_utc": "2026-11-13T05:14:36Z"
+}

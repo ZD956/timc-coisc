@@ -1,0 +1,23 @@
+{
+  "label": "Move-penalty study gate G2: S4 H2 COISC - R0 point reproduced from raw runs; synthetic selftest",
+  "missing": 0,
+  "point": -0.026961168669891684,
+  "stored": -0.026961168669891684,
+  "exact": true,
+  "selftest": {
+    "checks": {
+      "point": true,
+      "verdict": true,
+      "cost": true,
+      "matched": true,
+      "fails": true
+    },
+    "pass_": true
+  },
+  "pass_": true,
+  "code_sha256": {
+    "du_common.py": "a60215f82cbedbb5992bb68866c8443829d6d3ef57d03a1a84118484a300ff91",
+    "du_analyze.py": "3bc62d6fbff55821b2afa806d39d7f3eefe23e0d489051e8c46f44b3faacd62e"
+  },
+  "created_utc": "2026-11-13T12:17:14Z"
+}

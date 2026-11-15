@@ -1,0 +1,101 @@
+{
+  "label": "Move-penalty study gate G1: run_task with lambda_du = 1.0 reproduces 6 stored S4 runs bitwise, R0_DU at 1.0 equals stored R0 runs, and the MPCConfig replacement changes lambda_du only",
+  "rows": [
+    {
+      "task_index": 2,
+      "plant_index": 0,
+      "scenario_index": 0,
+      "seed": 20261101,
+      "variant": "L0",
+      "applied_UH_bitwise": true,
+      "plant_Tp_bitwise": true,
+      "runtime_s": 12.0580865
+    },
+    {
+      "task_index": 700,
+      "plant_index": 0,
+      "scenario_index": 5,
+      "seed": 20261120,
+      "variant": "COISC",
+      "applied_UH_bitwise": true,
+      "plant_Tp_bitwise": true,
+      "runtime_s": 38.8168032
+    },
+    {
+      "task_index": 1501,
+      "plant_index": 5,
+      "scenario_index": 8,
+      "seed": 20261102,
+      "variant": "COISC",
+      "applied_UH_bitwise": true,
+      "plant_Tp_bitwise": true,
+      "runtime_s": 54.910298
+    },
+    {
+      "task_index": 2402,
+      "plant_index": 5,
+      "scenario_index": 8,
+      "seed": 20261127,
+      "variant": "L0",
+      "applied_UH_bitwise": true,
+      "plant_Tp_bitwise": true,
+      "runtime_s": 62.03667030000001
+    },
+    {
+      "task_index": 3303,
+      "plant_index": 11,
+      "scenario_index": 9,
+      "seed": 20261112,
+      "variant": "R0",
+      "applied_UH_bitwise": true,
+      "plant_Tp_bitwise": true,
+      "runtime_s": 20.9559347
+    },
+    {
+      "task_index": 8639,
+      "plant_index": 23,
+      "scenario_index": 11,
+      "seed": 20261140,
+      "variant": "L0",
+      "applied_UH_bitwise": true,
+      "plant_Tp_bitwise": true,
+      "runtime_s": 46.407241699999986
+    },
+    {
+      "task_index": 9,
+      "plant_index": 0,
+      "scenario_index": 3,
+      "seed": 20261101,
+      "variant": "R0_DU",
+      "applied_UH_bitwise": true,
+      "plant_Tp_bitwise": true,
+      "runtime_s": 55.731958899999995
+    },
+    {
+      "task_index": 4806,
+      "plant_index": 8,
+      "scenario_index": 6,
+      "seed": 20261114,
+      "variant": "R0_DU",
+      "applied_UH_bitwise": true,
+      "plant_Tp_bitwise": true,
+      "runtime_s": 18.66728710000001
+    }
+  ],
+  "unit_test": {
+    "lambda_du_set": true,
+    "others_default": true,
+    "reset": true
+  },
+  "pass_": true,
+  "timing": {
+    "mean_runtime_s_at_lambda_1": 38.69803505,
+    "planned_runs": 2880,
+    "est_wall_h_6_workers": 5.159738006666667
+  },
+  "code_sha256": {
+    "du_common.py": "a60215f82cbedbb5992bb68866c8443829d6d3ef57d03a1a84118484a300ff91",
+    "du_mil.py": "8eb628d0e13c760a8a83527dd9ba7ba519bc5ba3de0232caa1e684de2529c323"
+  },
+  "created_utc": "2026-11-13T12:15:00Z"
+}

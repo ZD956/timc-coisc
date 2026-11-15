@@ -1,0 +1,39 @@
+{
+  "rule": "(fixed before any calibration run): lambda_du is the smallest grid value at which the mean total variation of the R0 command\nover the calibration runs is at most that of COISC at lambda_du = 1. If no GRID value qualifies, GRID_EXTENSION is run and searched\nin the same way. Matching from above favours the baseline: R0_DU is at least as smooth as COISC on the development seeds.",
+  "dev_seeds": [
+    20260922,
+    20260923,
+    20260924
+  ],
+  "plants": [
+    0,
+    5,
+    11,
+    8,
+    20,
+    23
+  ],
+  "coisc_tv_target": 203.12879630901193,
+  "r0_tv_by_lambda": {
+    "1.0": 219.07740742012308,
+    "2.0": 155.60101853123416,
+    "4.0": 131.72509260530825,
+    "8.0": 117.00101853123417,
+    "16.0": 94.5709259386416
+  },
+  "non_evaluable": {
+    "COISC@1.0": 0,
+    "R0_DU@1.0": 0,
+    "R0_DU@2.0": 0,
+    "R0_DU@4.0": 0,
+    "R0_DU@8.0": 0,
+    "R0_DU@16.0": 0
+  },
+  "lambda_du": 2.0,
+  "code_sha256": {
+    "du_common.py": "a60215f82cbedbb5992bb68866c8443829d6d3ef57d03a1a84118484a300ff91",
+    "du_mil.py": "8eb628d0e13c760a8a83527dd9ba7ba519bc5ba3de0232caa1e684de2529c323",
+    "du_calibrate.py": "a38420a73dc96427d2bc04a74e95935b572bc9b768362177740657f3782ebdcb"
+  },
+  "at": "2026-11-14T03:52:41Z"
+}

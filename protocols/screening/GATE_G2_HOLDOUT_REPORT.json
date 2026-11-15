@@ -1,0 +1,30 @@
+{
+  "label": "Screening study gate G2: holdout estimates of existing seed-20261001 models reproduce stored summary",
+  "rows": [
+    {
+      "variant": "R0",
+      "max_abs_diff": 0.0,
+      "pass_": true
+    },
+    {
+      "variant": "COISC",
+      "max_abs_diff": 0.0,
+      "pass_": true
+    },
+    {
+      "variant": "COISC_onset",
+      "max_abs_diff": 0.0,
+      "pass_": true
+    },
+    {
+      "variant": "L0",
+      "max_abs_diff": 0.0,
+      "pass_": true
+    }
+  ],
+  "pass_": true,
+  "code_sha256": {
+    "scr_common.py": "50752fd5511482877fff54492a1c770906ed59ea453845b2987f37ff27584b6c",
+    "scr_holdout.py": "f5db67c537c817ec05397735216008380663f7f56397f752e6b5ad6c29d1f9bd"
+  }
+}

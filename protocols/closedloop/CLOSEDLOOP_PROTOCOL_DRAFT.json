@@ -1,0 +1,50 @@
+{
+  "title": "Pre-registered closed-loop confirmation: does head-only COISC adaptation remove the closed-loop cost of R0 reversed first moves without degrading other operating points?",
+  "version": "DRAFT-1",
+  "status": "DRAFT",
+  "created_utc": "2026-11-05",
+  "author_approval": "Author approved option B on 2026-11-05 (panel A: R0-wrong pairs on all 24 plants; panel B: 40 seeds x 12 scenarios x 6 fixed plants).",
+  "what_is_already_known_before_any_run": [
+    "The 40 seeds 20261101-20261140, their R0/COISC/L0 checkpoints and holdout metrics (SCREENING_PROTOCOL sha 46fc592f...).",
+    "Plant-free first decisions of every model on the 12 locked scenarios; the 6 R0-wrong pairs are (20261109,S12), (20261118,S10), (20261124,S10), (20261132,S04), (20261135,S04), (20261137,S12). COISC first move is correct on 4, zero on 1, wrong on 1 of them.",
+    "Closed-loop MIL of R0/COISC/L0 on 13 earlier seeds (onset-aligned study), where any COISC benefit was concentrated on seeds with R0-wrong first moves.",
+    "No closed-loop run of any of the 40 new seeds exists; the outcomes below are unseen."
+  ],
+  "models": {
+    "variants": [
+      "R0",
+      "COISC",
+      "L0"
+    ],
+    "source": "<outputs>/screening/study/seed_*/ (R0 = results/R0/selected.pt, COISC_final.pt, L0_final.pt); all checkpoint SHA-256 bound at freeze",
+    "no_retraining": true,
+    "COISC_onset_excluded_reason": "secondary variant of the screening study; not part of this paper's main comparison"
+  },
+  "bench": {
+    "runner": "timc_coisc/onset_mil.run_one, unchanged (60 control updates, 37 C reference, frozen MPCConfig, no T_p feedback to the controller)",
+    "scenarios": "12 locked scenarios S01-S12 (CONTROL_SCENARIO_LOCK_V2)",
+    "plants": "24 primary learned plants in 4 families (CONTROL_PLANT_FAMILY_LOCK), family-equal weighting",
+    "panel_A": "R0-wrong pairs x all 24 plants x 3 variants",
+    "panel_B": "40 seeds x 12 scenarios x plants (0,5,11,8,20,23) x 3 variants; plants fixed by model id before any run: F1 = P, A1, A3 (first seed of each); F2 = A2; F3 = B2; F4 = B1",
+    "metric": "MAE_track (deg C) of plant T_p against 37 C over the 60 updates (analyze_formal_control_v3.trace_metrics, unchanged)"
+  },
+  "hypotheses": {
+    "H1_primary": "On the R0-wrong pairs, COISC improves closed-loop tracking over R0: unit = pair, effect = family-equal mean over 24 plants of MAE[COISC] - MAE[R0]; supported iff every pair is evaluable and the 95% percentile bootstrap CI upper bound (20,000 draws over pairs, seed 20261105) is < 0.",
+    "H2_primary": "On all other seed-scenario pairs, COISC is non-inferior to R0: unit = seed, effect = mean over that seed's non-R0-wrong scenarios of the family-equal mean over the 6 panel-B plants of MAE[COISC] - MAE[R0]; supported iff all 40 seeds are evaluable and the 95% bootstrap CI upper bound (over seeds) is < 0.10 C.",
+    "verdict": "SUPPORTED iff H1 and H2 are both supported; otherwise PARTIAL_H1_ONLY, PARTIAL_H2_ONLY or NOT_SUPPORTED. The verdict is reported whatever it is.",
+    "margin_justification": "0.10 C is about 5% of the mean closed-loop MAE_track of R0 on this bench (1.95 C over the 13 earlier seeds); it is fixed a priori as a small fraction of the bench MAE, before any closed-loop run of these 40 seeds. No physical tolerance is claimed for it."
+  },
+  "secondary_descriptive": [
+    "Panel A: L0 - R0 and COISC - L0 (matched fine-tuning control), point, CI, per-pair values; number of pairs improved",
+    "Panel B: the same three contrasts over unaffected pairs and over all pairs",
+    "Panel B: mean MAE_track, total variation of u, saturation fraction and solver success rate per variant"
+  ],
+  "missing_data_rule": "A run is non-evaluable only by trace_metrics (non-finite or out-of-range trace). A (seed, scenario, plant) cell is used only if all three variants are evaluable; dropped cells are counted and reported. No run, plant, scenario or seed is deleted for any other reason.",
+  "gates_before_freeze": {
+    "G1": "cl_mil.py gate: 12 stored E2 runs of seed 20261001 (R0 and L0) re-executed bitwise (applied_UH and plant_Tp)",
+    "G2": "cl_analyze.py gate: metric extraction reproduces all 576 stored E2 R0/L0 MAE_track values of seed 20261001 exactly; synthetic selftest recovers planted effects and verdict logic",
+    "smoke": "cl_mil.py smoke and cl_analyze.py smoke on screening smoke checkpoints (seed 1), outside the study directory"
+  },
+  "execution": "cl_mil.py execute 6, then cl_analyze.py analyze; same-hash resume skips finished runs; the Windows power-throttling (EcoQoS) flag of the worker processes may be cleared without affecting results",
+  "deviations_policy": "Any change after freeze is logged as an amendment with reason and disclosed in the manuscript."
+}

@@ -1,0 +1,50 @@
+{
+  "pauses": [
+    {
+      "at_utc": "2026-11-05T15:10Z",
+      "reason": "author request (pause the experiment)",
+      "completed_raw_runs": 1609,
+      "planned_runs": 8964,
+      "all_npz_readable": true,
+      "partial_tmp_files": 0,
+      "worker_audits_backup": "pause1_worker_audits/",
+      "resume": "same protocol hash: cl_mil.py execute 6 (skips finished runs); then clear the power-throttling flag of the worker processes"
+    },
+    {
+      "at_utc": "2026-11-07T16:53Z",
+      "reason": "author request (pause training)",
+      "completed_raw_runs": 3007,
+      "planned_runs": 8964,
+      "all_npz_readable": true,
+      "worker_audits_backup": "pause2_worker_audits/"
+    },
+    {
+      "at_utc": "2026-11-08T11:52Z",
+      "reason": "author request (pause training; all raw runs had already finished when the request arrived)",
+      "completed_raw_runs": 8964,
+      "planned_runs": 8964,
+      "all_npz_readable": true,
+      "partial_tmp_files": 0,
+      "worker_audits_backup": "pause3_worker_audits/",
+      "analysis": "not_run_by_request"
+    }
+  ],
+  "resumes": [
+    {
+      "at_utc": "2026-11-07T15:14Z",
+      "reason": "author request (continue)",
+      "completed_before": 1609,
+      "command": "cl_mil.py execute 6 (same hash)",
+      "unthrottle_applied": true,
+      "log": "resume1_execute.log"
+    },
+    {
+      "at_utc": "2026-11-08T03:48Z",
+      "reason": "author request (resume)",
+      "completed_before": 3007,
+      "command": "cl_mil.py execute 6 (same hash)",
+      "unthrottle_applied": true,
+      "log": "resume2_execute.log"
+    }
+  ]
+}

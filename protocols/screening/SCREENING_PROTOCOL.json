@@ -1,0 +1,198 @@
+{
+  "protocol_name": "R0_ACTUATION_SIGN_SCREENING_V1",
+  "version": "FROZEN-1",
+  "created": "2026-11-03",
+  "status": "FROZEN_BEFORE_ANY_STUDY_SEED_TRAINED",
+  "approval": "Author approved running this confirmatory experiment on 2026-11-03. Approval of the experiment is not execution authorization: execution requires EXECUTION_AUTHORIZATION.json naming the frozen protocol SHA-256, written only on the author's explicit instruction.",
+  "question": "Among LSTM surrogates trained with the unchanged R0 recipe and selected by prediction error, does a cheap actuator-response diagnostic (holdout T_p wrong-sign rate, WSR, onset window) identify the models whose MPC first move points away from 37 C better than prediction error does?",
+  "evidence_tier": "Confirmatory on fresh training seeds for the screening rule; the delivered-23 holdout data and the 12 MIL scenarios are reused, so the evaluation data are not independent of the exploratory observation. Reported whatever the direction.",
+  "prior_exposure_disclosure": [
+    "The hypothesis was formed after looking at 13 existing seeds (20260922-24, 20261001-10): holdout R0 Tp_WSR_ONSET separated the 3 seeds with wrong-direction R0 first moves with AUC 1.00, Tp_MAE_120 had AUC 0.77, development-set WSR/MAE had 0.83/0.60.",
+    "These 13 seeds are excluded from the confirmatory analysis and appear only in gate G4 and in a descriptive pooled summary.",
+    "No model has ever been trained with seeds 20261101-20261140 (checked by searching all project code and JSON on 2026-11-03)."
+  ],
+  "new_seeds": [
+    20261101,
+    20261102,
+    20261103,
+    20261104,
+    20261105,
+    20261106,
+    20261107,
+    20261108,
+    20261109,
+    20261110,
+    20261111,
+    20261112,
+    20261113,
+    20261114,
+    20261115,
+    20261116,
+    20261117,
+    20261118,
+    20261119,
+    20261120,
+    20261121,
+    20261122,
+    20261123,
+    20261124,
+    20261125,
+    20261126,
+    20261127,
+    20261128,
+    20261129,
+    20261130,
+    20261131,
+    20261132,
+    20261133,
+    20261134,
+    20261135,
+    20261136,
+    20261137,
+    20261138,
+    20261139,
+    20261140
+  ],
+  "seed_note": "Integers used only as RNG seeds; 20261131-20261140 are not calendar dates. All 40 are reported; none may be dropped or replaced.",
+  "models_per_seed": {
+    "R0": "screen.train_variant('R0', excitation=False, dbasr=False), unchanged 3-stage recipe, checkpoint chosen by minimum selection-set source-macro MAE (identical to onset-aligned E2).",
+    "COISC": "head-only adaptation, 75 steps, lambda 939.143 on both terms, prior lag masks (onset_train.adapt_variants).",
+    "COISC_onset": "head-only adaptation, 75 steps, lambda_onset 7485.005, onset lag masks (frozen value of the onset-aligned protocol).",
+    "L0": "head-only adaptation, 75 steps, lambda 0 (matched fine-tuning control)."
+  },
+  "measurements": {
+    "holdout": "R0 only: delivered-23 holdout estimates via onset_holdout.model_estimates (source-mean, as in the onset-aligned study). Run in its own process.",
+    "development": "R0 selection-set Tp MAE120, macro-7 MAE, Tp WSR (onset and prior masks) via onset_train.dev_record.",
+    "first_action": "All four models: onset_mil.first_decision on the 12 locked scenarios (MPCConfig default, no plant involved), classified by onset_mil.first_action_class as correct / wrong / zero relative to the side of 37 C.",
+    "label": "A seed is POSITIVE if R0 has at least one 'wrong' first action in the 12 scenarios."
+  },
+  "analysis_rules": {
+    "primary_score": "Tp_WSR_ONSET",
+    "primary_comparator": "Tp_MAE_120",
+    "scores": [
+      "Tp_WSR_ONSET",
+      "Tp_WSR_PRIOR",
+      "Tp_MAE_120",
+      "all7_MAE_5h",
+      "dev_Tp_WSR_onset",
+      "dev_Tp_MAE_120",
+      "dev_macro7_MAE"
+    ],
+    "score_direction": "higher value predicts POSITIVE for every score",
+    "auc_min": 0.75,
+    "min_class_size": 3,
+    "bootstrap_draws": 2000,
+    "bootstrap_rng_seed": 20261103,
+    "bootstrap": "stratified seed-level resampling (positives and negatives resampled separately), percentile 95% CI",
+    "threshold": 0.2786,
+    "threshold_source": "Midpoint of the largest negative (0.2733) and smallest positive (0.2838) holdout R0 Tp_WSR_ONSET among the 13 exploratory seeds, rounded to 4 decimals; fixed before any new seed is trained.",
+    "H1_primary": "SUPPORTED iff AUC(Tp_WSR_ONSET) >= 0.75 AND its 95% CI lower bound > 0.5 AND AUC(Tp_WSR_ONSET) > AUC(Tp_MAE_120). Otherwise NOT_SUPPORTED. If fewer than 3 positives or 3 negatives: INCONCLUSIVE_LOW_PREVALENCE.",
+    "H1b_secondary": "Paired bootstrap CI of AUC(Tp_WSR_ONSET) - AUC(Tp_MAE_120) excludes 0 (reported, not required for H1).",
+    "secondary_descriptive": [
+      "Sensitivity/specificity of the fixed threshold with Wilson 95% CI.",
+      "Spearman rho between Tp_WSR_ONSET and number of R0 wrong first actions.",
+      "For COISC, COISC_onset and L0: fraction of R0-wrong pairs turned correct, fraction of R0-correct pairs turned wrong (Wilson CI), and total wrong first actions.",
+      "Screen-then-adapt policy: use the adapted model only when R0 Tp_WSR_ONSET > threshold, else R0; total wrong first actions compared with R0 alone. COISC is the pre-specified adaptation for the paper; COISC_onset and L0 are reported alongside.",
+      "Development-set scores (dev_*) show whether the diagnostic works without the holdout.",
+      "Descriptive pooled summary over all 53 seeds."
+    ],
+    "no_closed_loop": "Full MIL closed-loop tracking is not run in this study; claims are limited to the first decision."
+  },
+  "reproduction_gates_before_freeze": {
+    "G1": "scr_train.py gate: retrain seed 20261001 (R0 + 3 adaptations) and require bitwise-equal state dicts with onset-aligned E2 checkpoints and identical development record.",
+    "G2": "scr_holdout.py gate: seed-20261001 models reproduce HOLDOUT_SUMMARY.csv metrics to 1e-12.",
+    "G3": "scr_first_action.py gate: seed-20261001 models reproduce stored FIRST_ACTION_CHECK.csv first_u exactly (repr) and class.",
+    "G4": "scr_analyze.py gate: analysis code applied to the 13 exploratory seeds reproduces the motivating AUCs and the zero-error threshold split.",
+    "smoke": "scr_train.py smoke, scr_holdout.py smoke, scr_first_action.py smoke on throwaway seed 1."
+  },
+  "execution_order": [
+    "scr_train.py run",
+    "scr_holdout.py run (separate process)",
+    "scr_first_action.py run 6",
+    "scr_analyze.py analyze"
+  ],
+  "technical_resume": "Any step may be resumed under the same protocol hash; completed seed folders and result files are skipped, incomplete seed folders stop the run for inspection.",
+  "manuscript_use": "The manuscript reports H1 whatever its outcome. If NOT_SUPPORTED or INCONCLUSIVE, the screening claim is dropped and the paper returns to the 'three properties disagree' line.",
+  "amendments": [],
+  "execution_authorized": false,
+  "execution_authorization_rule": "scr_train run, scr_holdout run, scr_first_action run and scr_analyze analyze require EXECUTION_AUTHORIZATION.json written on the author's explicit instruction, naming this file's SHA-256",
+  "gate_summary": {
+    "GATE_G1_TRAIN_REPORT.json": true,
+    "GATE_G2_HOLDOUT_REPORT.json": true,
+    "GATE_G3_FIRST_ACTION_REPORT.json": true,
+    "GATE_G4_ANALYSIS_REPORT.json": true
+  },
+  "gate_reports_sha256": {
+    "GATE_G1_TRAIN_REPORT.json": "1654352ac91c0008782131547a55212c6f34ce4d75083567e3908c1d6924d996",
+    "GATE_G2_HOLDOUT_REPORT.json": "5afe8912be4de926d430483ed04c543f0e93cf3e48fd3166bd6c270709f0e639",
+    "GATE_G3_FIRST_ACTION_REPORT.json": "20774ebb009758e8988ff61c237ec769bbad717926e2af2e149a6ccf32cf023a",
+    "GATE_G4_ANALYSIS_REPORT.json": "ca2f77f7fabcd80763a28e9b8d048c6309af481709bc0dc05210770fec1595cd"
+  },
+  "code_sha256": {
+    "scr_common.py": "50752fd5511482877fff54492a1c770906ed59ea453845b2987f37ff27584b6c",
+    "scr_train.py": "12c7c8584dd0b11ad12d97d075f4207a1c1ea5f01795429774b6172fe6ed5d17",
+    "scr_holdout.py": "f5db67c537c817ec05397735216008380663f7f56397f752e6b5ad6c29d1f9bd",
+    "scr_first_action.py": "848f148f716e6bcb01f27dcef4237fe23aa8a5e4ec4fa2b71ef549b95ede52a9",
+    "scr_analyze.py": "3489582059649c5d43b0f7bfd550b0fa00bdde8add7ecfe9dee45328626c290c",
+    "scr_freeze.py": "a7208b74fe293b570416da9af44b4580bbcdde46bd36ef0df495a204ab5b8db7"
+  },
+  "bound_files": [
+    {
+      "path": "timc_coisc/onset_common.py",
+      "sha256": "727c7b0c999f41b820f038cba34c2d888ce9a8c4db8fbbec341fbcfe10b3545d"
+    },
+    {
+      "path": "timc_coisc/onset_train.py",
+      "sha256": "3186fec1550824ba945b1cc680caa664bc8744f3f330c05182597252c0eebeda"
+    },
+    {
+      "path": "timc_coisc/onset_holdout.py",
+      "sha256": "dd58b3d595d54712cf017b145cb7fb43495759c0f6d5d9c7ecad71743448582c"
+    },
+    {
+      "path": "timc_coisc/onset_mil.py",
+      "sha256": "c8d9310d21f7d22ab519c232fb404c3939e09973256bc2fb2edafeb365d89b4c"
+    },
+    {
+      "path": "protocols/posthoc_onset_aligned/POSTHOC_ONSET_ALIGNED_PROTOCOL.json",
+      "sha256": "23b8f695253145d91ebb0f9b843b35b94ed3b731547d00ec0ce2a275cbcb7210"
+    },
+    {
+      "path": "<outputs>/posthoc_onset_aligned/HOLDOUT_SUMMARY.csv",
+      "sha256": "6ea1c56d69b80c64da013bd24476d1ec7195c4dedcf94f903cf40aa250ca5beb"
+    },
+    {
+      "path": "<outputs>/posthoc_onset_aligned/mil_execution_20261003T104638Z_23b8f69525/FIRST_ACTION_CHECK.csv",
+      "sha256": "f97c00656203be8757ffbb8363dd1bf2765cc2e2140807879a5ec6a88f5d11d1"
+    },
+    {
+      "path": "<outputs>/posthoc_onset_aligned/e1/E1_DEVELOPMENT_RESULTS.json",
+      "sha256": "53ab2bf28b52fb6afdd9078a8c56ff6e1d7031f382e5ba17407a6ec6c8aa37ca"
+    },
+    {
+      "path": "<outputs>/posthoc_onset_aligned/e2/E2_DEVELOPMENT_RESULTS.json",
+      "sha256": "3fee189f8f05bbc6751db16b19820f77ee2e95efa0a9220cc3ede50e6d656e0d"
+    },
+    {
+      "path": "timc_coisc/screen.py",
+      "sha256": "2f1872e262c359a05b8cd678debe11ed4bf84402e76de4dffc282f3a321257eb"
+    },
+    {
+      "path": "timc_coisc/control_mpc.py",
+      "sha256": "8ef305db879183fa7c812a28247c466b346b4b9e9c10079a657d8e9f823a08a9"
+    },
+    {
+      "path": "timc_coisc/run_formal_control_v3a.py",
+      "sha256": "16011f3275fefe705ebb7c7294afcafcc5bb7bbae0495b8a43f105476ca9331e"
+    },
+    {
+      "path": "protocols/CONTROL_VALIDATION_PROTOCOL_V3.json",
+      "sha256": "0b9ad32c21b0f0a0cea31761997e091709ae5166a33f3b2f90985dece3cedf19"
+    },
+    {
+      "path": "protocols/CONTROL_SCENARIO_LOCK_V2.json",
+      "sha256": "93e177a3de94809bd1ec2c1469d9d0003462be190b91d1ba4db2be3baf893eac"
+    }
+  ],
+  "frozen_utc": "2026-11-03T11:00:36Z"
+}

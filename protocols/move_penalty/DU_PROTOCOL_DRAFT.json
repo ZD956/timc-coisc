@@ -1,0 +1,55 @@
+{
+  "title": "Pre-registered move-penalty baseline: at matched command smoothness, does COISC track better than R0 with a larger MPC move weight?",
+  "version": "DRAFT-1",
+  "status": "DRAFT",
+  "created_utc": "2026-11-13",
+  "author_approval": "Author approved on 2026-11-13: (1) report saturation-independent smoothness of the S4 runs descriptively; (2) write and freeze a protocol for a smoothness-matched R0 baseline obtained by raising the MPC move weight, to be run only after author authorization.",
+  "question": "COISC changed the heater command 31 % less than R0 on the S4 bench. A reviewer can ask whether the same smoothness is available by tuning the controller: raising the move weight lambda_du of the MPC objective for R0. This study adds that arm, with lambda_du set on development seeds to match the COISC command variation, and compares tracking.",
+  "what_is_already_known_before_any_run": [
+    "All S4 runs of R0/COISC/L0 (CLOSEDLOOP_PROTOCOL sha c41c0783..., verdict PARTIAL_H2_ONLY), S5 (sha 239e8745..., NOT_SUPPORTED) and S6 (sha 35546970..., PARTIAL_H2_ONLY).",
+    "S4 panel B (6 plants): mean total variation of u_h R0 270.9, L0 251.5, COISC 187.0 percentage points; saturation 0.60/0.64/0.68; COISC - R0 tracking on the H2 unit -0.027 C [-0.048; -0.009].",
+    "Post-hoc (timc_coisc/posthoc_tg.py): away from the bounds, total variation R0 181, COISC 101; direction changes per run R0 8.2, L0 7.4, COISC 4.5.",
+    "MPC objective (control_mpc.objective): mean squared T_p error / sigma_y^2 + lambda_du * mean squared move / 100^2 + lambda_u * ...; defaults sigma_y = 1, lambda_du = 1, lambda_u = 0.",
+    "No run with lambda_du != 1 exists on any seed before the calibration below; no R0_DU run of the 40 study seeds exists."
+  ],
+  "arm": {
+    "R0_DU": "the screening R0 checkpoint of each of the 40 seeds 20261101-20261140 inside the unchanged MPC and runner (onset_mil.run_one), with MPCConfig.lambda_du = lambda_du and every other setting at its default. No retraining.",
+    "implementation_note": "onset_mil.run_one builds MPCConfig() internally; the worker replaces the module-level MPCConfig with functools.partial(MPCConfig, lambda_du=value) before each task. Gate G1 shows bitwise reproduction of stored S4 runs at value 1.0 and a unit test shows that only lambda_du changes."
+  },
+  "lambda_du_rule": {
+    "population": "development seeds 1-3 (formal R0 and COISC checkpoints of seeds 20260922-20260924), never part of the study population; panel-B plants (0, 5, 11, 8, 20, 23) x 12 scenarios",
+    "rule": "lambda_du is the smallest value in the grid (1, 2, 4, 8, 16) at which the mean total variation of the R0 command over the calibration runs is at most that of COISC at lambda_du = 1. If none qualifies, the extension (32, 64, 128, 256) is run and searched in the same way.",
+    "direction_note": "Matching from above makes R0_DU at least as smooth as COISC on the development seeds, which favours the baseline in a tracking comparison.",
+    "fixed_before_calibration": "this rule and du_calibrate.py were written before any calibration run; the calibration result (LAMBDA_DU.json) is bound into the frozen protocol"
+  },
+  "bench": {
+    "runner": "timc_coisc/onset_mil.run_one, unchanged (60 updates, 37 C reference, no T_p feedback)",
+    "tasks": "R0_DU on S4 panel B: 6 plants x 40 seeds x 12 scenarios = 2880 new runs; R0/COISC/L0 panel-B runs (8640) reused from <outputs>/closedloop/study and hash-bound",
+    "metric_tracking": "MAE_track (deg C) of plant T_p against 37 C (onset_analyze_am1.metric_row, unchanged)",
+    "unit": "cl_analyze.seed_units, unchanged: panel B, the six R0-reversed pairs excluded, family-equal over the 6 plants, one unit per seed (the S4 H2 unit)",
+    "completeness": "a cell enters a contrast only if all four arms are evaluable there; dropped cells are counted"
+  },
+  "hypotheses": {
+    "H_primary": "At matched smoothness COISC tracks better than the tuned baseline: effect = MAE[COISC] - MAE[R0_DU]; supported iff all 40 seeds are evaluable and the 95 % percentile bootstrap CI upper bound (20,000 draws over seeds, seed 20261114) is < 0.",
+    "verdict": "SUPPORTED or NOT_SUPPORTED, reported whatever it is.",
+    "matching_check": "The matching is judged on the study seeds as well: the ratio of mean total variation R0_DU / COISC on panel B is reported with its seed-level CI. If R0_DU is rougher than COISC on the study seeds (CI lower bound of TV[R0_DU] - TV[COISC] > 0), the paper states that the comparison is not at matched smoothness; the verdict is not changed.",
+    "risk_note": "If raising lambda_du does not cost R0 tracking, COISC's smoothness advantage reduces to something the controller can obtain by tuning, and the paper will say so."
+  },
+  "secondary_descriptive": [
+    "R0_DU - R0 tracking on the same unit (cost of smoothing the baseline)",
+    "COISC - R0_DU tracking over all panel-B pairs, and on the six R0-reversed pairs (panel B plants only)",
+    "per arm: mean total variation, total variation away from the bounds, direction changes per run, saturation fraction, mean command",
+    "the reversal fraction of Section 5.5 (plant-judged, |error| > 2 C) per arm"
+  ],
+  "gates_before_freeze": {
+    "G1": "run_task with lambda_du = 1.0 reproduces 6 stored S4 panel-B runs (R0, COISC, L0) bitwise; R0_DU at 1.0 equals 2 stored R0 runs; MPCConfig replacement changes lambda_du only",
+    "G2": "analysis code reproduces the stored S4 H2 COISC - R0 point estimate from raw runs; synthetic selftest of effect recovery and verdict logic",
+    "smoke": "two R0_DU runs (lambda_du 4) on plants outside panel B, outside the study directory; metric path on them"
+  },
+  "execution_order": [
+    "du_mil.py execute 6",
+    "du_analyze.py analyze"
+  ],
+  "deviations_policy": "Technical interruptions are resumed under the same hash with completed runs skipped. No run, plant, scenario or seed is removed. Any code change after freeze is a numbered amendment reported in the paper.",
+  "reporting": "The result enters the manuscript whatever the verdict, labelled as a preregistered post-S6 stage (S7) with a tuned-controller baseline on the S4 bench."
+}

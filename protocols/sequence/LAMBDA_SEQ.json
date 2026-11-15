@@ -1,0 +1,172 @@
+{
+  "lambda_seq": 729.9404878939004,
+  "per_sampler": [
+    736.1038183673356,
+    729.9404878939004
+  ],
+  "steps": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11
+  ],
+  "records": [
+    {
+      "excitation": false,
+      "batch": 0,
+      "prediction": 0.2616499662399292,
+      "regularizer": 3.624858072726056e-05,
+      "pre": 3.556486626621336e-05,
+      "sign": 6.837134947090817e-07,
+      "gradient_norm": 0.0012461990118026733
+    },
+    {
+      "excitation": false,
+      "batch": 1,
+      "prediction": 0.24300983548164368,
+      "regularizer": 4.023923975182697e-05,
+      "pre": 3.9239814213942736e-05,
+      "sign": 9.99425651571073e-07,
+      "gradient_norm": 0.001764654996804893
+    },
+    {
+      "excitation": false,
+      "batch": 2,
+      "prediction": 0.2892816364765167,
+      "regularizer": 3.772449417738244e-05,
+      "pre": 3.730819298652932e-05,
+      "sign": 4.163021287695301e-07,
+      "gradient_norm": 0.001346950768493116
+    },
+    {
+      "excitation": false,
+      "batch": 3,
+      "prediction": 0.26464056968688965,
+      "regularizer": 3.797351018874906e-05,
+      "pre": 3.763464337680489e-05,
+      "sign": 3.388665561487869e-07,
+      "gradient_norm": 0.0013903292128816247
+    },
+    {
+      "excitation": false,
+      "batch": 4,
+      "prediction": 0.2871643304824829,
+      "regularizer": 3.9007936720736325e-05,
+      "pre": 3.814495721599087e-05,
+      "sign": 8.629806984572497e-07,
+      "gradient_norm": 0.0015252981102094054
+    },
+    {
+      "excitation": false,
+      "batch": 5,
+      "prediction": 0.2982996702194214,
+      "regularizer": 3.613869921537116e-05,
+      "pre": 3.5658125852933154e-05,
+      "sign": 4.805733055945893e-07,
+      "gradient_norm": 0.0012488473439589143
+    },
+    {
+      "excitation": false,
+      "batch": 6,
+      "prediction": 0.2591610550880432,
+      "regularizer": 3.4863976907217875e-05,
+      "pre": 3.456907506915741e-05,
+      "sign": 2.949007864572195e-07,
+      "gradient_norm": 0.0011060981778427958
+    },
+    {
+      "excitation": false,
+      "batch": 7,
+      "prediction": 0.2790384888648987,
+      "regularizer": 3.426249895710498e-05,
+      "pre": 3.407396798138507e-05,
+      "sign": 1.885319562688892e-07,
+      "gradient_norm": 0.0010871824342757463
+    },
+    {
+      "excitation": true,
+      "batch": 0,
+      "prediction": 0.2792612612247467,
+      "regularizer": 3.467023998382501e-05,
+      "pre": 3.4182474337285385e-05,
+      "sign": 4.877671813119377e-07,
+      "gradient_norm": 0.0012951036915183067
+    },
+    {
+      "excitation": true,
+      "batch": 1,
+      "prediction": 0.2264508605003357,
+      "regularizer": 3.782017665798776e-05,
+      "pre": 3.7205325497779995e-05,
+      "sign": 6.148510465209256e-07,
+      "gradient_norm": 0.00158969359472394
+    },
+    {
+      "excitation": true,
+      "batch": 2,
+      "prediction": 0.2732466459274292,
+      "regularizer": 3.708511212607846e-05,
+      "pre": 3.677194763440639e-05,
+      "sign": 3.131656001187366e-07,
+      "gradient_norm": 0.0013550128787755966
+    },
+    {
+      "excitation": true,
+      "batch": 3,
+      "prediction": 0.2604931592941284,
+      "regularizer": 3.991518678958528e-05,
+      "pre": 3.9233385905390605e-05,
+      "sign": 6.818024758104002e-07,
+      "gradient_norm": 0.0018185715889558196
+    },
+    {
+      "excitation": true,
+      "batch": 4,
+      "prediction": 0.2739390432834625,
+      "regularizer": 3.822931830654852e-05,
+      "pre": 3.7639387301169336e-05,
+      "sign": 5.899306074752531e-07,
+      "gradient_norm": 0.001658405177295208
+    },
+    {
+      "excitation": true,
+      "batch": 5,
+      "prediction": 0.3039916753768921,
+      "regularizer": 3.585864760680124e-05,
+      "pre": 3.525580541463569e-05,
+      "sign": 6.028416805747838e-07,
+      "gradient_norm": 0.0014669187366962433
+    },
+    {
+      "excitation": true,
+      "batch": 6,
+      "prediction": 0.2573763430118561,
+      "regularizer": 3.666625707410276e-05,
+      "pre": 3.6154644476482645e-05,
+      "sign": 5.116130523674656e-07,
+      "gradient_norm": 0.0013268180191516876
+    },
+    {
+      "excitation": true,
+      "batch": 7,
+      "prediction": 0.27967360615730286,
+      "regularizer": 3.49068759533111e-05,
+      "pre": 3.457706407061778e-05,
+      "sign": 3.298104900295584e-07,
+      "gradient_norm": 0.0011780663626268506
+    }
+  ],
+  "time_s": 1.9602627000000012,
+  "code_sha256": {
+    "sq_common.py": "54384bc396d0e240f6f38483d168eada0ab3187f218dda306a92fb4d36f59c71",
+    "sq_train.py": "a6c0afd47b9e7fcf3115651b9ddf9ce874e6e769c4f3b0a371925b0e8d8ddc2e"
+  }
+}

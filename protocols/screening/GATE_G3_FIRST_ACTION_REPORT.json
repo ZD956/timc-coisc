@@ -1,0 +1,35 @@
+{
+  "label": "Screening study gate G3: plant-free first decisions of seed-20261001 models reproduce the stored check",
+  "rows": [
+    {
+      "variant": "R0",
+      "scenarios": 12,
+      "exact": 12,
+      "pass_": true
+    },
+    {
+      "variant": "COISC",
+      "scenarios": 12,
+      "exact": 12,
+      "pass_": true
+    },
+    {
+      "variant": "COISC_onset",
+      "scenarios": 12,
+      "exact": 12,
+      "pass_": true
+    },
+    {
+      "variant": "L0",
+      "scenarios": 12,
+      "exact": 12,
+      "pass_": true
+    }
+  ],
+  "previous_consistency": true,
+  "pass_": true,
+  "code_sha256": {
+    "scr_common.py": "50752fd5511482877fff54492a1c770906ed59ea453845b2987f37ff27584b6c",
+    "scr_first_action.py": "848f148f716e6bcb01f27dcef4237fe23aa8a5e4ec4fa2b71ef549b95ede52a9"
+  }
+}

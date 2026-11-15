@@ -1,0 +1,9074 @@
+[
+  {
+    "plant_index": 0,
+    "scenario_index": 0,
+    "seed": 20260922,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 0,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 0,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 0,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 0,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 0,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 1,
+    "seed": 20260922,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 1,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 1,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 1,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 1,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 1,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 2,
+    "seed": 20260922,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 2,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 2,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 2,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 2,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 2,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 3,
+    "seed": 20260922,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 3,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 3,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 3,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 3,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 3,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 4,
+    "seed": 20260922,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 4,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 4,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 4,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 4,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 4,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 5,
+    "seed": 20260922,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 5,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 5,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 5,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 5,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 5,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 6,
+    "seed": 20260922,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 6,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 6,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 6,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 6,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 6,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 7,
+    "seed": 20260922,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 7,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 7,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 7,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 7,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 7,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 8,
+    "seed": 20260922,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 8,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 8,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 8,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 8,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 8,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 9,
+    "seed": 20260922,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 9,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 9,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 9,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 9,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 9,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 10,
+    "seed": 20260922,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 10,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 10,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 10,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 10,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 10,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 11,
+    "seed": 20260922,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 11,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 11,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 11,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 11,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 11,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 0,
+    "seed": 20260923,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 0,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 0,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 0,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 0,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 0,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 1,
+    "seed": 20260923,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 1,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 1,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 1,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 1,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 1,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 2,
+    "seed": 20260923,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 2,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 2,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 2,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 2,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 2,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 3,
+    "seed": 20260923,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 3,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 3,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 3,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 3,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 3,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 4,
+    "seed": 20260923,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 4,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 4,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 4,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 4,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 4,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 5,
+    "seed": 20260923,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 5,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 5,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 5,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 5,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 5,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 6,
+    "seed": 20260923,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 6,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 6,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 6,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 6,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 6,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 7,
+    "seed": 20260923,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 7,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 7,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 7,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 7,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 7,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 8,
+    "seed": 20260923,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 8,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 8,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 8,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 8,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 8,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 9,
+    "seed": 20260923,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 9,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 9,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 9,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 9,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 9,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 10,
+    "seed": 20260923,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 10,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 10,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 10,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 10,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 10,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 11,
+    "seed": 20260923,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 11,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 11,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 11,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 11,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 11,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 0,
+    "seed": 20260924,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 0,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 0,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 0,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 0,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 0,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 1,
+    "seed": 20260924,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 1,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 1,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 1,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 1,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 1,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 2,
+    "seed": 20260924,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 2,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 2,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 2,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 2,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 2,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 3,
+    "seed": 20260924,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 3,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 3,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 3,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 3,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 3,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 4,
+    "seed": 20260924,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 4,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 4,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 4,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 4,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 4,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 5,
+    "seed": 20260924,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 5,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 5,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 5,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 5,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 5,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 6,
+    "seed": 20260924,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 6,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 6,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 6,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 6,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 6,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 7,
+    "seed": 20260924,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 7,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 7,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 7,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 7,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 7,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 8,
+    "seed": 20260924,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 8,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 8,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 8,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 8,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 8,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 9,
+    "seed": 20260924,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 9,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 9,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 9,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 9,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 9,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 10,
+    "seed": 20260924,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 10,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 10,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 10,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 10,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 10,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 11,
+    "seed": 20260924,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 11,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 11,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 11,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 11,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 0,
+    "scenario_index": 11,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 0,
+    "seed": 20260922,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 0,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 0,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 0,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 0,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 0,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 1,
+    "seed": 20260922,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 1,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 1,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 1,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 1,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 1,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 2,
+    "seed": 20260922,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 2,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 2,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 2,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 2,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 2,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 3,
+    "seed": 20260922,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 3,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 3,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 3,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 3,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 3,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 4,
+    "seed": 20260922,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 4,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 4,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 4,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 4,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 4,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 5,
+    "seed": 20260922,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 5,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 5,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 5,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 5,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 5,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 6,
+    "seed": 20260922,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 6,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 6,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 6,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 6,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 6,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 7,
+    "seed": 20260922,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 7,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 7,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 7,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 7,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 7,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 8,
+    "seed": 20260922,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 8,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 8,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 8,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 8,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 8,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 9,
+    "seed": 20260922,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 9,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 9,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 9,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 9,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 9,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 10,
+    "seed": 20260922,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 10,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 10,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 10,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 10,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 10,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 11,
+    "seed": 20260922,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 11,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 11,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 11,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 11,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 11,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 0,
+    "seed": 20260923,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 0,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 0,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 0,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 0,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 0,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 1,
+    "seed": 20260923,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 1,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 1,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 1,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 1,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 1,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 2,
+    "seed": 20260923,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 2,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 2,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 2,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 2,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 2,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 3,
+    "seed": 20260923,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 3,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 3,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 3,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 3,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 3,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 4,
+    "seed": 20260923,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 4,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 4,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 4,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 4,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 4,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 5,
+    "seed": 20260923,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 5,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 5,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 5,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 5,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 5,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 6,
+    "seed": 20260923,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 6,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 6,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 6,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 6,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 6,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 7,
+    "seed": 20260923,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 7,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 7,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 7,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 7,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 7,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 8,
+    "seed": 20260923,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 8,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 8,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 8,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 8,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 8,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 9,
+    "seed": 20260923,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 9,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 9,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 9,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 9,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 9,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 10,
+    "seed": 20260923,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 10,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 10,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 10,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 10,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 10,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 11,
+    "seed": 20260923,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 11,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 11,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 11,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 11,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 11,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 0,
+    "seed": 20260924,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 0,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 0,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 0,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 0,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 0,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 1,
+    "seed": 20260924,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 1,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 1,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 1,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 1,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 1,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 2,
+    "seed": 20260924,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 2,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 2,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 2,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 2,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 2,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 3,
+    "seed": 20260924,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 3,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 3,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 3,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 3,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 3,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 4,
+    "seed": 20260924,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 4,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 4,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 4,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 4,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 4,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 5,
+    "seed": 20260924,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 5,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 5,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 5,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 5,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 5,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 6,
+    "seed": 20260924,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 6,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 6,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 6,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 6,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 6,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 7,
+    "seed": 20260924,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 7,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 7,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 7,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 7,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 7,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 8,
+    "seed": 20260924,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 8,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 8,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 8,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 8,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 8,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 9,
+    "seed": 20260924,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 9,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 9,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 9,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 9,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 9,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 10,
+    "seed": 20260924,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 10,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 10,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 10,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 10,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 10,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 11,
+    "seed": 20260924,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 11,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 11,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 11,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 11,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 5,
+    "scenario_index": 11,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 0,
+    "seed": 20260922,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 0,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 0,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 0,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 0,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 0,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 1,
+    "seed": 20260922,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 1,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 1,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 1,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 1,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 1,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 2,
+    "seed": 20260922,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 2,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 2,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 2,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 2,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 2,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 3,
+    "seed": 20260922,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 3,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 3,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 3,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 3,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 3,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 4,
+    "seed": 20260922,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 4,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 4,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 4,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 4,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 4,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 5,
+    "seed": 20260922,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 5,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 5,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 5,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 5,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 5,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 6,
+    "seed": 20260922,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 6,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 6,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 6,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 6,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 6,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 7,
+    "seed": 20260922,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 7,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 7,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 7,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 7,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 7,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 8,
+    "seed": 20260922,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 8,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 8,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 8,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 8,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 8,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 9,
+    "seed": 20260922,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 9,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 9,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 9,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 9,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 9,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 10,
+    "seed": 20260922,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 10,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 10,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 10,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 10,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 10,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 11,
+    "seed": 20260922,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 11,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 11,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 11,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 11,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 11,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 0,
+    "seed": 20260923,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 0,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 0,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 0,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 0,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 0,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 1,
+    "seed": 20260923,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 1,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 1,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 1,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 1,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 1,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 2,
+    "seed": 20260923,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 2,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 2,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 2,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 2,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 2,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 3,
+    "seed": 20260923,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 3,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 3,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 3,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 3,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 3,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 4,
+    "seed": 20260923,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 4,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 4,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 4,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 4,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 4,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 5,
+    "seed": 20260923,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 5,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 5,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 5,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 5,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 5,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 6,
+    "seed": 20260923,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 6,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 6,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 6,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 6,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 6,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 7,
+    "seed": 20260923,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 7,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 7,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 7,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 7,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 7,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 8,
+    "seed": 20260923,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 8,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 8,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 8,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 8,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 8,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 9,
+    "seed": 20260923,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 9,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 9,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 9,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 9,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 9,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 10,
+    "seed": 20260923,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 10,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 10,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 10,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 10,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 10,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 11,
+    "seed": 20260923,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 11,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 11,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 11,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 11,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 11,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 0,
+    "seed": 20260924,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 0,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 0,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 0,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 0,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 0,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 1,
+    "seed": 20260924,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 1,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 1,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 1,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 1,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 1,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 2,
+    "seed": 20260924,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 2,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 2,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 2,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 2,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 2,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 3,
+    "seed": 20260924,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 3,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 3,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 3,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 3,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 3,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 4,
+    "seed": 20260924,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 4,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 4,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 4,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 4,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 4,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 5,
+    "seed": 20260924,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 5,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 5,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 5,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 5,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 5,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 6,
+    "seed": 20260924,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 6,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 6,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 6,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 6,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 6,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 7,
+    "seed": 20260924,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 7,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 7,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 7,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 7,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 7,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 8,
+    "seed": 20260924,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 8,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 8,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 8,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 8,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 8,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 9,
+    "seed": 20260924,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 9,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 9,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 9,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 9,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 9,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 10,
+    "seed": 20260924,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 10,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 10,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 10,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 10,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 10,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 11,
+    "seed": 20260924,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 11,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 11,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 11,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 11,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 11,
+    "scenario_index": 11,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 0,
+    "seed": 20260922,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 0,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 0,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 0,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 0,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 0,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 1,
+    "seed": 20260922,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 1,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 1,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 1,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 1,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 1,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 2,
+    "seed": 20260922,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 2,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 2,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 2,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 2,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 2,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 3,
+    "seed": 20260922,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 3,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 3,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 3,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 3,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 3,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 4,
+    "seed": 20260922,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 4,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 4,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 4,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 4,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 4,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 5,
+    "seed": 20260922,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 5,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 5,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 5,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 5,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 5,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 6,
+    "seed": 20260922,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 6,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 6,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 6,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 6,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 6,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 7,
+    "seed": 20260922,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 7,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 7,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 7,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 7,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 7,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 8,
+    "seed": 20260922,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 8,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 8,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 8,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 8,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 8,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 9,
+    "seed": 20260922,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 9,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 9,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 9,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 9,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 9,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 10,
+    "seed": 20260922,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 10,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 10,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 10,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 10,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 10,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 11,
+    "seed": 20260922,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 11,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 11,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 11,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 11,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 11,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 0,
+    "seed": 20260923,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 0,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 0,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 0,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 0,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 0,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 1,
+    "seed": 20260923,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 1,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 1,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 1,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 1,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 1,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 2,
+    "seed": 20260923,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 2,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 2,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 2,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 2,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 2,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 3,
+    "seed": 20260923,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 3,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 3,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 3,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 3,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 3,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 4,
+    "seed": 20260923,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 4,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 4,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 4,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 4,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 4,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 5,
+    "seed": 20260923,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 5,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 5,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 5,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 5,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 5,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 6,
+    "seed": 20260923,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 6,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 6,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 6,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 6,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 6,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 7,
+    "seed": 20260923,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 7,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 7,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 7,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 7,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 7,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 8,
+    "seed": 20260923,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 8,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 8,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 8,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 8,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 8,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 9,
+    "seed": 20260923,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 9,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 9,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 9,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 9,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 9,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 10,
+    "seed": 20260923,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 10,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 10,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 10,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 10,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 10,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 11,
+    "seed": 20260923,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 11,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 11,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 11,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 11,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 11,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 0,
+    "seed": 20260924,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 0,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 0,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 0,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 0,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 0,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 1,
+    "seed": 20260924,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 1,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 1,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 1,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 1,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 1,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 2,
+    "seed": 20260924,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 2,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 2,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 2,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 2,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 2,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 3,
+    "seed": 20260924,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 3,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 3,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 3,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 3,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 3,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 4,
+    "seed": 20260924,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 4,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 4,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 4,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 4,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 4,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 5,
+    "seed": 20260924,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 5,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 5,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 5,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 5,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 5,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 6,
+    "seed": 20260924,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 6,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 6,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 6,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 6,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 6,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 7,
+    "seed": 20260924,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 7,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 7,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 7,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 7,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 7,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 8,
+    "seed": 20260924,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 8,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 8,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 8,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 8,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 8,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 9,
+    "seed": 20260924,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 9,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 9,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 9,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 9,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 9,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 10,
+    "seed": 20260924,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 10,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 10,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 10,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 10,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 10,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 11,
+    "seed": 20260924,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 11,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 11,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 11,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 11,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 8,
+    "scenario_index": 11,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 0,
+    "seed": 20260922,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 0,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 0,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 0,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 0,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 0,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 1,
+    "seed": 20260922,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 1,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 1,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 1,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 1,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 1,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 2,
+    "seed": 20260922,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 2,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 2,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 2,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 2,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 2,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 3,
+    "seed": 20260922,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 3,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 3,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 3,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 3,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 3,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 4,
+    "seed": 20260922,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 4,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 4,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 4,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 4,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 4,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 5,
+    "seed": 20260922,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 5,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 5,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 5,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 5,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 5,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 6,
+    "seed": 20260922,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 6,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 6,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 6,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 6,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 6,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 7,
+    "seed": 20260922,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 7,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 7,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 7,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 7,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 7,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 8,
+    "seed": 20260922,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 8,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 8,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 8,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 8,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 8,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 9,
+    "seed": 20260922,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 9,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 9,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 9,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 9,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 9,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 10,
+    "seed": 20260922,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 10,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 10,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 10,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 10,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 10,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 11,
+    "seed": 20260922,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 11,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 11,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 11,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 11,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 11,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 0,
+    "seed": 20260923,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 0,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 0,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 0,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 0,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 0,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 1,
+    "seed": 20260923,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 1,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 1,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 1,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 1,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 1,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 2,
+    "seed": 20260923,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 2,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 2,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 2,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 2,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 2,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 3,
+    "seed": 20260923,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 3,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 3,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 3,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 3,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 3,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 4,
+    "seed": 20260923,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 4,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 4,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 4,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 4,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 4,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 5,
+    "seed": 20260923,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 5,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 5,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 5,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 5,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 5,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 6,
+    "seed": 20260923,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 6,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 6,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 6,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 6,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 6,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 7,
+    "seed": 20260923,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 7,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 7,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 7,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 7,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 7,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 8,
+    "seed": 20260923,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 8,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 8,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 8,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 8,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 8,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 9,
+    "seed": 20260923,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 9,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 9,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 9,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 9,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 9,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 10,
+    "seed": 20260923,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 10,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 10,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 10,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 10,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 10,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 11,
+    "seed": 20260923,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 11,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 11,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 11,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 11,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 11,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 0,
+    "seed": 20260924,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 0,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 0,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 0,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 0,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 0,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 1,
+    "seed": 20260924,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 1,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 1,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 1,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 1,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 1,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 2,
+    "seed": 20260924,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 2,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 2,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 2,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 2,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 2,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 3,
+    "seed": 20260924,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 3,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 3,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 3,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 3,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 3,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 4,
+    "seed": 20260924,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 4,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 4,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 4,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 4,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 4,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 5,
+    "seed": 20260924,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 5,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 5,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 5,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 5,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 5,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 6,
+    "seed": 20260924,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 6,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 6,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 6,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 6,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 6,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 7,
+    "seed": 20260924,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 7,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 7,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 7,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 7,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 7,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 8,
+    "seed": 20260924,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 8,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 8,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 8,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 8,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 8,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 9,
+    "seed": 20260924,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 9,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 9,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 9,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 9,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 9,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 10,
+    "seed": 20260924,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 10,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 10,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 10,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 10,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 10,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 11,
+    "seed": 20260924,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 11,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 11,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 11,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 11,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 20,
+    "scenario_index": 11,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 0,
+    "seed": 20260922,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 0,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 0,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 0,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 0,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 0,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 1,
+    "seed": 20260922,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 1,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 1,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 1,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 1,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 1,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 2,
+    "seed": 20260922,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 2,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 2,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 2,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 2,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 2,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 3,
+    "seed": 20260922,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 3,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 3,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 3,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 3,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 3,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 4,
+    "seed": 20260922,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 4,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 4,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 4,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 4,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 4,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 5,
+    "seed": 20260922,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 5,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 5,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 5,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 5,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 5,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 6,
+    "seed": 20260922,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 6,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 6,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 6,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 6,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 6,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 7,
+    "seed": 20260922,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 7,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 7,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 7,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 7,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 7,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 8,
+    "seed": 20260922,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 8,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 8,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 8,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 8,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 8,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 9,
+    "seed": 20260922,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 9,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 9,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 9,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 9,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 9,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 10,
+    "seed": 20260922,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 10,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 10,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 10,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 10,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 10,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 11,
+    "seed": 20260922,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 11,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 11,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 11,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 11,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 11,
+    "seed": 20260922,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 0,
+    "seed": 20260923,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 0,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 0,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 0,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 0,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 0,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 1,
+    "seed": 20260923,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 1,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 1,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 1,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 1,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 1,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 2,
+    "seed": 20260923,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 2,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 2,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 2,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 2,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 2,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 3,
+    "seed": 20260923,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 3,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 3,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 3,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 3,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 3,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 4,
+    "seed": 20260923,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 4,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 4,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 4,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 4,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 4,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 5,
+    "seed": 20260923,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 5,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 5,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 5,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 5,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 5,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 6,
+    "seed": 20260923,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 6,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 6,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 6,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 6,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 6,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 7,
+    "seed": 20260923,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 7,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 7,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 7,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 7,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 7,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 8,
+    "seed": 20260923,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 8,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 8,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 8,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 8,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 8,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 9,
+    "seed": 20260923,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 9,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 9,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 9,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 9,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 9,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 10,
+    "seed": 20260923,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 10,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 10,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 10,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 10,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 10,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 11,
+    "seed": 20260923,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 11,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 11,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 11,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 11,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 11,
+    "seed": 20260923,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 0,
+    "seed": 20260924,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 0,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 0,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 0,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 0,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 0,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 1,
+    "seed": 20260924,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 1,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 1,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 1,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 1,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 1,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 2,
+    "seed": 20260924,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 2,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 2,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 2,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 2,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 2,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 3,
+    "seed": 20260924,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 3,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 3,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 3,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 3,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 3,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 4,
+    "seed": 20260924,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 4,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 4,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 4,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 4,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 4,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 5,
+    "seed": 20260924,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 5,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 5,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 5,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 5,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 5,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 6,
+    "seed": 20260924,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 6,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 6,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 6,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 6,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 6,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 7,
+    "seed": 20260924,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 7,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 7,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 7,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 7,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 7,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 8,
+    "seed": 20260924,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 8,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 8,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 8,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 8,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 8,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 9,
+    "seed": 20260924,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 9,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 9,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 9,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 9,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 9,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 10,
+    "seed": 20260924,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 10,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 10,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 10,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 10,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 10,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 11,
+    "seed": 20260924,
+    "variant": "COISC",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 11,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 1.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 11,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 2.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 11,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 4.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 11,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 8.0
+  },
+  {
+    "plant_index": 23,
+    "scenario_index": 11,
+    "seed": 20260924,
+    "variant": "R0_DU",
+    "lambda_du": 16.0
+  }
+]

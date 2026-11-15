@@ -1,0 +1,40 @@
+[
+  {
+    "at_utc": "2026-11-14T05:03Z",
+    "reason": "author requested pause ('pause training')",
+    "completed_runs": 921,
+    "total_runs": 2880,
+    "npz_readable": true,
+    "tmp_leftovers": 0,
+    "audits_backup": "pause1_worker_audits/",
+    "resume": "du_mil.py execute 6 under the same protocol hash (skips existing npz); then clear the power-throttling flag of the worker processes"
+  },
+  {
+    "event": "unexpected_stop_2",
+    "detected_utc": "2026-11-14T10:48:04Z",
+    "last_worker_log_utc": "2026-11-14T10:47:23Z",
+    "npz_count": 1550,
+    "npz_unreadable": 0,
+    "tmp_files": 0,
+    "cause": "background execute process ended without log output; not requested by author",
+    "audit_backup": "pause2_worker_audits/"
+  },
+  {
+    "event": "pause_3_author_requested",
+    "stopped_utc": "2026-11-14T12:29:52Z",
+    "npz_count": 1790,
+    "npz_unreadable": 0,
+    "tmp_files": 0,
+    "audit_backup": "pause3_worker_audits/"
+  },
+  {
+    "event": "pause_4_author_requested",
+    "stopped_utc": "2026-11-14T16:38:25Z",
+    "npz_count": 2838,
+    "npz_unreadable": 0,
+    "tmp_files": 0,
+    "audit_backup": "pause4_worker_audits/",
+    "remaining": 42,
+    "note": "all remaining tasks belong to worker 3"
+  }
+]

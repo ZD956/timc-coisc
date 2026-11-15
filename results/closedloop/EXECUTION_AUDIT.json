@@ -1,0 +1,40 @@
+{
+  "status": "RAW_RUNS_COMPLETE",
+  "protocol_sha256": "c41c0783613121e6cfe24fa9bd4034ec5a4ccdd5a54b893c416a7e3683463326",
+  "total_runs": 8964,
+  "authorization": {
+    "authorized_by_author": true,
+    "protocol_file": "CLOSEDLOOP_PROTOCOL.json",
+    "protocol_sha256": "c41c0783613121e6cfe24fa9bd4034ec5a4ccdd5a54b893c416a7e3683463326",
+    "author_statement": "authorize execution",
+    "authorized_at": "2026-11-05",
+    "scope": "cl_mil.py execute and cl_analyze.py analyze under this protocol hash only"
+  },
+  "started_utc": "2026-11-05T12:45:15Z",
+  "resume_log": [
+    {
+      "at_utc": "2026-11-07T15:14:29Z",
+      "reason": "same-protocol technical resume"
+    },
+    {
+      "at_utc": "2026-11-08T03:48:49Z",
+      "reason": "same-protocol technical resume"
+    }
+  ],
+  "workers": 6,
+  "threads_per_worker": 2,
+  "no_tuning": true,
+  "no_plant_deletion": true,
+  "no_scenario_deletion": true,
+  "no_seed_deletion": true,
+  "worker_exit_codes": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "completed_runs": 8964,
+  "finished_utc": "2026-11-08T11:52:45Z"
+}
